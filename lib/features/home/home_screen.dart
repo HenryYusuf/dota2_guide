@@ -17,10 +17,19 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Aegis Codex'),
         actions: [
-          IconButton(
+          // Top-bar menu: currently only About; the last-updated line and
+          // source attributions slot in here too (spec navigation decision).
+          PopupMenuButton<String>(
             icon: const Icon(Icons.menu),
-            tooltip: 'About & sources',
-            onPressed: () => context.push(AboutScreen.routeLocation),
+            tooltip: 'Menu',
+            onSelected: (value) {
+              if (value == 'about') {
+                context.push(AboutScreen.routeLocation);
+              }
+            },
+            itemBuilder: (context) => const [
+              PopupMenuItem(value: 'about', child: Text('About & sources')),
+            ],
           ),
         ],
       ),

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Modify this file to customize your launch splash screen -->
+<!-- Launch background (API 21+ variant — this file shadows drawable/ on every
+     device this app supports). Aegis Codex is dark-only: a dark background
+     prevents a white flash when the system is in light mode. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="?android:colorBackground" />
+    <item android:drawable="@color/launch_background" />
 
     <!-- You can insert your own image assets here -->
     <!-- <item>

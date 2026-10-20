@@ -9,6 +9,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:dota2_guide/app.dart';
 
 void main() {
+  /// Finds a bottom-navigation destination label by its visible text.
+  Finder navLabel(String label) => find.descendant(
+    of: find.byType(NavigationBar),
+    matching: find.text(label),
+  );
+
   Future<void> pumpApp(WidgetTester tester) async {
     await tester.pumpWidget(const ProviderScope(child: AegisApp()));
     await tester.pumpAndSettle();
@@ -21,27 +27,9 @@ void main() {
 
     expect(find.text('Home'), findsWidgets);
     expect(find.byType(NavigationBar), findsOneWidget);
-    expect(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Heroes'),
-      ),
-      findsOneWidget,
-    );
-    expect(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Items'),
-      ),
-      findsOneWidget,
-    );
-    expect(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Patches'),
-      ),
-      findsOneWidget,
-    );
+    expect(navLabel('Heroes'), findsOneWidget);
+    expect(navLabel('Items'), findsOneWidget);
+    expect(navLabel('Patches'), findsOneWidget);
   });
 
   testWidgets('theme is dark-only regardless of platform brightness', (
@@ -82,17 +70,25 @@ void main() {
     await expectSelected('Home');
 
     for (final label in ['Heroes', 'Items', 'Patches', 'Home']) {
-      await tester.tap(
-        find.descendant(
-          of: find.byType(NavigationBar),
-          matching: find.text(label),
-        ),
-      );
+      await tester.tap(navLabel(label));
       await tester.pumpAndSettle();
       await expectSelected(label);
       // The selected tab's screen is the one on screen.
       expect(find.text('$label tab'), findsWidgets);
     }
+  });
+
+  testWidgets('About opens from the Home top-bar menu', (
+    WidgetTester tester,
+  ) async {
+    await pumpApp(tester);
+
+    await tester.tap(find.byIcon(Icons.menu));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('About & sources'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('About tab'), findsOneWidget);
   });
 
   testWidgets('scroll state is preserved when switching tabs', (
@@ -106,27 +102,18 @@ void main() {
     final scrollable = tester.state<ScrollableState>(
       find.byType(Scrollable).first,
     );
-    expect(scrollable.position.pixels, greaterThan(0));
+    final savedOffset = scrollable.position.pixels;
+    expect(savedOffset, greaterThan(0));
 
     // Switch away and back.
-    await tester.tap(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Heroes'),
-      ),
-    );
+    await tester.tap(navLabel('Heroes'));
     await tester.pumpAndSettle();
-    await tester.tap(
-      find.descendant(
-        of: find.byType(NavigationBar),
-        matching: find.text('Home'),
-      ),
-    );
+    await tester.tap(navLabel('Home'));
     await tester.pumpAndSettle();
 
     final restored = tester.state<ScrollableState>(
       find.byType(Scrollable).first,
     );
-    expect(restored.position.pixels, greaterThan(0));
+    expect(restored.position.pixels, savedOffset);
   });
 }

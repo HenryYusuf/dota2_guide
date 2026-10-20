@@ -15,12 +15,7 @@ class AppShell extends StatelessWidget {
       body: navigationShell,
       bottomNavigationBar: NavigationBar(
         selectedIndex: navigationShell.currentIndex,
-        onDestinationSelected: (index) => navigationShell.goBranch(
-          index,
-          // Re-tapping the current tab returns it to its root, matching
-          // platform convention.
-          initialLocation: index == navigationShell.currentIndex,
-        ),
+        onDestinationSelected: navigationShell.goBranch,
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
