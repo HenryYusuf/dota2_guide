@@ -14,6 +14,8 @@ import 'package:dota2_guide/features/heroes/heroes_providers.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
 import 'package:dota2_guide/features/heroes/heroes_screen.dart';
 
+import '../../core/data/refresh_seam_overrides.dart';
+
 const _cdn = 'https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes';
 
 /// Deliberately NOT alphabetical, so any ordering the screen presents is the
@@ -191,10 +193,17 @@ void main() {
     WidgetTester tester,
   ) async {
     // Full app with default providers: real repository, real asset bundle,
-    // only the CDN portrait layer stubbed — nothing else can reach a network.
+    // only the CDN portrait layer, the file store, and the datafeed stubbed —
+    // real dart:io futures never complete inside the fake-async test zone,
+    // and no widget test may touch HTTP or the device file system (spec).
+    // The feed stub fails its probe, so the cold-start refresh is a silent
+    // no-op — exactly the first-launch offline experience.
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [portraitBuilderProvider.overrideWithValue(_stubPortrait)],
+        overrides: [
+          portraitBuilderProvider.overrideWithValue(_stubPortrait),
+          ...refreshSeamOverrides(),
+        ],
         child: const AegisApp(),
       ),
     );

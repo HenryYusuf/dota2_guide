@@ -1,7 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/data/asset_loader.dart';
+import '../../core/data/refresh_epoch.dart';
+import '../../core/data/snapshot_source.dart';
 import 'hero_index.dart';
 import 'heroes_repository.dart';
 import 'widgets/hero_portrait.dart';
@@ -17,16 +18,18 @@ typedef PortraitBuilder = Widget Function(
 );
 
 /// The Hero roster contract the Heroes tab consumes (the spec's single test
-/// seam: UI → repository provider, never UI → HTTP/files).
+/// seam: UI → repository provider, never UI → HTTP/files). Reads prefer a
+/// committed refresh override and fall back to the bundled snapshot.
 final heroesRepositoryProvider = Provider<HeroesRepository>(
-  (ref) => AssetHeroesRepository(ref.watch(assetLoaderProvider)),
+  (ref) => SnapshotHeroesRepository(ref.watch(snapshotSourceProvider)),
 );
 
-/// The bundled roster, parsed once per app run. Always available offline;
-/// issue 03 adds refresh overrides behind the same repository contract.
-final heroesProvider = FutureProvider<List<HeroSummary>>(
-  (ref) => ref.watch(heroesRepositoryProvider).loadHeroes(),
-);
+/// The bundled roster, parsed once per app run — plus re-read after every
+/// successful refresh (epoch bump), so a version bump shows up live.
+final heroesProvider = FutureProvider<List<HeroSummary>>((ref) {
+  ref.watch(refreshEpochProvider);
+  return ref.watch(heroesRepositoryProvider).loadHeroes();
+});
 
 /// Default portrait widget: streams from the CDN with a quiet fallback while
 /// loading or when offline.

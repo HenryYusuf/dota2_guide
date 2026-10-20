@@ -1,11 +1,17 @@
-// Repository seam: the Hero roster is read asset-first — a bundled file behind
-// an injectable loader, never HTTP (spec: usable offline on first launch;
-// issue 03 layers the override store onto this same read path).
+// Repository seam: the Hero roster is read override-first — a committed
+// refresh override when present, else the bundled file behind an injectable
+// loader, never HTTP (spec: usable offline on first launch; "override
+// preferred over asset" pinned below).
 
 import 'package:dota2_guide/core/data/asset_loader.dart';
+import 'package:dota2_guide/core/data/override_store.dart';
+import 'package:dota2_guide/core/data/snapshot_manifest.dart';
+import 'package:dota2_guide/core/data/snapshot_source.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+import '../../core/data/in_memory_file_store.dart';
 
 /// A minimal but schema-complete index, so this test pins repository
 /// behaviour (which asset, what comes back) independently of the real
@@ -35,6 +41,25 @@ const _bundledIndex = '''
 }
 ''';
 
+/// What a refresh would have committed: same schema, different roster —
+/// only the pieces the assertions need.
+const _refreshedIndex = '''
+{
+  "schema_version": 1,
+  "locale": "english",
+  "heroes": [
+    {
+      "id": 99,
+      "valve_key": "npc_dota_hero_refreshed",
+      "localized_name": "Refreshed Mage",
+      "primary_attribute": "intelligence",
+      "complexity": 2,
+      "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/refreshed.png"
+    }
+  ]
+}
+''';
+
 /// In-memory stand-in for the asset bundle: records what was asked for and
 /// serves canned content. No Flutter binding, no file system, no network.
 class _FakeAssetLoader implements AssetLoader {
@@ -53,10 +78,22 @@ class _FakeAssetLoader implements AssetLoader {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('returns the roster parsed from the loader\'s asset content', () async {
-    final repository = AssetHeroesRepository(_FakeAssetLoader(_bundledIndex));
+  /// Builds a repository over a fake asset bundle and a (optionally
+  /// pre-committed) override store — the same fakes the refresh tests use.
+  SnapshotHeroesRepository repository({
+    required AssetLoader assets,
+    InMemoryFileStore? files,
+  }) => SnapshotHeroesRepository(
+    SnapshotSource(
+      overrides: OverrideStore(files ?? InMemoryFileStore()),
+      assets: assets,
+    ),
+  );
 
-    final heroes = await repository.loadHeroes();
+  test('returns the roster parsed from the loader\'s asset content', () async {
+    final repo = repository(assets: _FakeAssetLoader(_bundledIndex));
+
+    final heroes = await repo.loadHeroes();
 
     expect(heroes, hasLength(2));
     expect(heroes.first.id, 1);
@@ -71,9 +108,30 @@ void main() {
   test('reads exactly the bundled English hero index', () async {
     final loader = _FakeAssetLoader(_bundledIndex);
 
-    await AssetHeroesRepository(loader).loadHeroes();
+    await repository(assets: loader).loadHeroes();
 
     expect(loader.requestedPaths, ['assets/data/heroes.english.json']);
+  });
+
+  test('a committed override is preferred over the bundled asset', () async {
+    final files = InMemoryFileStore();
+    await OverrideStore(files).commit(
+      manifest: SnapshotManifest(
+        dataVersion: 99,
+        fetchedAt: DateTime.utc(2026, 10, 21, 8),
+      ),
+      blobs: {'heroes.english.json': _refreshedIndex},
+    );
+
+    final repo = repository(
+      assets: _FakeAssetLoader(_bundledIndex),
+      files: files,
+    );
+
+    final heroes = await repo.loadHeroes();
+
+    expect(heroes, hasLength(1));
+    expect(heroes.single.localizedName, 'Refreshed Mage');
   });
 
   test(

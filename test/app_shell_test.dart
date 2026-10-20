@@ -11,6 +11,8 @@ import 'package:dota2_guide/features/heroes/hero_index.dart';
 import 'package:dota2_guide/features/heroes/heroes_providers.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
 
+import 'core/data/refresh_seam_overrides.dart';
+
 /// In-memory roster for shell tests: these cover navigation, theme, and
 /// scroll-state preservation — not data loading (spec: widget tests render
 /// over in-memory fake repositories). The real bundled-asset read path is
@@ -34,7 +36,9 @@ void main() {
   Future<void> pumpApp(WidgetTester tester) async {
     // Portraits stream from the Valve CDN (ADR-0001); the shell tests care
     // about navigation and theme, so the CDN layer is stubbed — no widget
-    // test touches HTTP (spec: widget tests render over fakes).
+    // test touches HTTP (spec: widget tests render over fakes). The refresh
+    // trigger also runs on cold start, so its feed and storage seams are
+    // stubbed the same way (probe fails → silent no-op by design).
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
@@ -43,6 +47,7 @@ void main() {
                 SizedBox(key: ValueKey<String>(hero.portraitUrl)),
           ),
           heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
+          ...refreshSeamOverrides(),
         ],
         child: const AegisApp(),
       ),

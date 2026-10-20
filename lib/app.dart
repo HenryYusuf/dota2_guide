@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'core/data/refresh_trigger.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 
@@ -9,19 +10,24 @@ import 'core/theme/app_theme.dart';
 /// Dark-only by construction — the same dark theme is supplied as both
 /// [MaterialApp.theme] and [MaterialApp.darkTheme] with [ThemeMode.dark]
 /// forced, so the app can never render a light frame.
+///
+/// Wrapped in [RefreshTrigger]: snapshot refreshes run on cold start and
+/// foreground, silently, behind everything the user sees.
 class AegisApp extends ConsumerWidget {
   const AegisApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
-    return MaterialApp.router(
-      title: 'Aegis Codex — Dota 2 reference',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark(),
-      darkTheme: AppTheme.dark(),
-      themeMode: ThemeMode.dark,
-      routerConfig: router,
+    return RefreshTrigger(
+      child: MaterialApp.router(
+        title: 'Aegis Codex — Dota 2 reference',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.dark(),
+        darkTheme: AppTheme.dark(),
+        themeMode: ThemeMode.dark,
+        routerConfig: router,
+      ),
     );
   }
 }
