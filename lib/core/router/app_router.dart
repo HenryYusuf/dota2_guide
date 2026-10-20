@@ -1,0 +1,63 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/about/about_screen.dart';
+import '../../features/heroes/heroes_screen.dart';
+import '../../features/home/home_screen.dart';
+import '../../features/items/items_screen.dart';
+import '../../features/patches/patches_screen.dart';
+import '../shell/app_shell.dart';
+
+/// The app's single navigation configuration, exposed as a Riverpod provider
+/// so it is the one place routes are declared and tests can override it.
+final routerProvider = Provider<GoRouter>((ref) {
+  return GoRouter(
+    initialLocation: HomeScreen.routeLocation,
+    routes: [
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, navigationShell) =>
+            AppShell(navigationShell: navigationShell),
+        branches: [
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: HomeScreen.routeLocation,
+                builder: (context, state) => const HomeScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: HeroesScreen.routeLocation,
+                builder: (context, state) => const HeroesScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: ItemsScreen.routeLocation,
+                builder: (context, state) => const ItemsScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: PatchesScreen.routeLocation,
+                builder: (context, state) => const PatchesScreen(),
+              ),
+            ],
+          ),
+        ],
+      ),
+      // About sits outside the tab shell: it is pushed from Home's top-bar
+      // menu, per the spec's navigation decision.
+      GoRoute(
+        path: AboutScreen.routeLocation,
+        builder: (context, state) => const AboutScreen(),
+      ),
+    ],
+  );
+});

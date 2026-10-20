@@ -4,7 +4,7 @@
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** ready-for-agent (claimed by agent 2026-10-20)
 
 - [ ] App launches to Home; bottom nav switches between all four tabs with preserved scroll/nav state
 - [ ] Dark-only theme applied globally, no light-mode flicker on startup

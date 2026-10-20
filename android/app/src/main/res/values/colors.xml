@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aegis Codex is dark-only: both the launch and normal themes are dark
+         in every system mode, so no light frame is ever shown. -->
+    <color name="launch_background">#101010</color>
+</resources>
