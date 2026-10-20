@@ -7,6 +7,22 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:dota2_guide/app.dart';
+import 'package:dota2_guide/features/heroes/hero_index.dart';
+import 'package:dota2_guide/features/heroes/heroes_providers.dart';
+import 'package:dota2_guide/features/heroes/heroes_repository.dart';
+
+/// In-memory roster for shell tests: these cover navigation, theme, and
+/// scroll-state preservation — not data loading (spec: widget tests render
+/// over in-memory fake repositories). The real bundled-asset read path is
+/// owned by `heroes_screen_test.dart` and the repository tests.
+///
+/// Loading the real asset here would also hang: flutter_test's fake-async
+/// zone never completes a `rootBundle` load after the first one in an
+/// isolate, so any later widget test touching the bundle deadlocks.
+class _FakeHeroesRepository implements HeroesRepository {
+  @override
+  Future<List<HeroSummary>> loadHeroes() async => const [];
+}
 
 void main() {
   /// Finds a bottom-navigation destination label by its visible text.
@@ -16,7 +32,21 @@ void main() {
   );
 
   Future<void> pumpApp(WidgetTester tester) async {
-    await tester.pumpWidget(const ProviderScope(child: AegisApp()));
+    // Portraits stream from the Valve CDN (ADR-0001); the shell tests care
+    // about navigation and theme, so the CDN layer is stubbed — no widget
+    // test touches HTTP (spec: widget tests render over fakes).
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          portraitBuilderProvider.overrideWithValue(
+            (context, hero) =>
+                SizedBox(key: ValueKey<String>(hero.portraitUrl)),
+          ),
+          heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
+        ],
+        child: const AegisApp(),
+      ),
+    );
     await tester.pumpAndSettle();
   }
 
@@ -73,8 +103,14 @@ void main() {
       await tester.tap(navLabel(label));
       await tester.pumpAndSettle();
       await expectSelected(label);
-      // The selected tab's screen is the one on screen.
-      expect(find.text('$label tab'), findsWidgets);
+      // The selected tab's screen is the one on screen. The Heroes tab is no
+      // longer a placeholder (issue 02) — it carries the search field that
+      // marks the real grid screen.
+      if (label == 'Heroes') {
+        expect(find.byType(TextField), findsOneWidget);
+      } else {
+        expect(find.text('$label tab'), findsWidgets);
+      }
     }
   });
 
