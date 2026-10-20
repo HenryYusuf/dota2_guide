@@ -1,0 +1,29 @@
+#!/bin/sh
+# Pre-commit hook: format check staged Dart files, then analyze and test.
+
+STAGED_DART=$(git diff --cached --name-only --diff-filter=ACM | grep '\.dart$' || true)
+
+if [ -n "$STAGED_DART" ]; then
+  echo ">> dart format (staged files)"
+  echo "$STAGED_DART" | xargs dart format --set-exit-if-changed
+  if [ $? -ne 0 ]; then
+    echo "ERROR: dart format found unformatted files. Fix formatting and re-stage."
+    exit 1
+  fi
+fi
+
+echo ">> flutter analyze"
+flutter analyze
+if [ $? -ne 0 ]; then
+  echo "ERROR: flutter analyze reported issues."
+  exit 1
+fi
+
+echo ">> flutter test"
+flutter test
+if [ $? -ne 0 ]; then
+  echo "ERROR: flutter test failed."
+  exit 1
+fi
+
+exit 0
