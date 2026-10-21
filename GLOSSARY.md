@@ -44,6 +44,34 @@ _Avoid_: crafting
 A numbered game update (e.g. 7.41f) together with its structured change notes.
 _Avoid_: version, hotfix
 
+**Patch Delta**:
+A structured record of changes applied to a specific hero, ability, or talent within a patch.
+_Avoid_: patch diff, balance change
+
+**Role**:
+An official combat classification defined by Valve (e.g. Carry, Disabler, Initiator, Support).
+_Avoid_: position, class
+
+**Position**:
+A player's farm priority and lane assignment, numbered 1 (Safe Lane) to 5 (Hard Support).
+_Avoid_: lane role, job
+
+**Draft Picker**:
+An interactive drafting board and counter-selection screen that evaluates hero advantages and team composition balance.
+_Avoid_: draft assistant, draft helper, counter tool
+
+**Matchup Matrix**:
+A precomputed pairwise dataset recording wins and games played between every pair of heroes.
+_Avoid_: counter table, matchup database
+
+**Advantage**:
+The statistical edge one hero holds against an opposing hero, normalized against baseline win rates.
+_Avoid_: counter score, matchup rating
+
+**Composition Diagnostic**:
+An evaluation of a drafted team's balance across essential combat roles (Disabler, Durable, Initiator, Support).
+_Avoid_: draft audit, team synergy warning
+
 ## Deferred content concepts
 
 **Guide**:
