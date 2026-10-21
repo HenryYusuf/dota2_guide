@@ -1,10 +1,10 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+﻿<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Streaming media and feed refreshes from the Valve CDN at runtime
-         (media is never bundled — ADR-0001). Debug/profile manifests add
+         (media is never bundled â€” ADR-0001). Debug/profile manifests add
          this too, but the main manifest is what release builds ship. -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="Aegis Codex"
+        android:label="Aegis Codex — Dota 2 reference"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

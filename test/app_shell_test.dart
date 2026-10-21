@@ -181,7 +181,10 @@ void main() {
     await tester.tap(find.text('About & sources'));
     await tester.pumpAndSettle();
 
-    expect(find.text('About tab'), findsOneWidget);
+    expect(
+      find.textContaining('Unofficial — not affiliated with Valve'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('scroll state is preserved when switching tabs', (
