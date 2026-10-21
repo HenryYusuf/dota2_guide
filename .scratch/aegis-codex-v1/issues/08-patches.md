@@ -4,12 +4,18 @@
 
 **Blocked by:** 04 (hero detail) and 06 (items list & detail) — entity icon jumps need both pages.
 
-**Status:** ready-for-agent
+**Status:** ready-for-human
 
-- [ ] Snapshot tool emits the patch index and the latest Patch from the official patch feeds; parsing tests pin both schemas
-- [ ] Patch list shows number and date with the latest pinned at top
-- [ ] Patch detail groups changes by section; entity headers show icon and name; indent levels are respected
-- [ ] Hero and Item icons in a Patch navigate to their detail pages
-- [ ] Older Patches (not bundled) are fetched on demand; an opened Patch stays available offline thereafter
-- [ ] A failed on-demand fetch shows an inline retry; the tab never shows a full-screen error
-- [ ] Repository tests cover on-demand fetch, permanent cache, and failure path; widget tests cover list and detail
+- [x] Snapshot tool emits the patch index and the latest Patch from the official patch feeds; parsing tests pin both schemas
+- [x] Patch list shows number and date with the latest pinned at top
+- [x] Patch detail groups changes by section; entity headers show icon and name; indent levels are respected
+- [x] Hero and Item icons in a Patch navigate to their detail pages
+- [x] Older Patches (not bundled) are fetched on demand; an opened Patch stays available offline thereafter
+- [x] A failed on-demand fetch shows an inline retry; the tab never shows a full-screen error
+- [x] Repository tests cover on-demand fetch, permanent cache, and failure path; widget tests cover list and detail
+
+## Comments
+
+### 2026-10-21 — implementation complete
+
+Delivered on branch `main`, analyzer clean (`flutter analyze` reporting no issues), full suite green (174 tests).

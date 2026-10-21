@@ -13,6 +13,9 @@ import 'package:dota2_guide/features/heroes/heroes_repository.dart';
 import 'package:dota2_guide/features/items/item_index.dart';
 import 'package:dota2_guide/features/items/items_providers.dart';
 import 'package:dota2_guide/features/items/items_repository.dart';
+import 'package:dota2_guide/features/patches/patch_index.dart';
+import 'package:dota2_guide/features/patches/patches_providers.dart';
+import 'package:dota2_guide/features/patches/patches_repository.dart';
 
 import 'core/data/refresh_seam_overrides.dart';
 
@@ -33,6 +36,21 @@ class _FakeItemsRepository implements ItemsRepository {
   @override
   Future<ItemIndex> loadItems() async =>
       const ItemIndex(schemaVersion: 1, locale: 'english', items: []);
+}
+
+class _FakePatchesRepository implements PatchesRepository {
+  @override
+  Future<PatchIndex> loadPatchIndex() async => const PatchIndex(
+    schemaVersion: 1,
+    locale: 'english',
+    patches: [
+      PatchSummary(
+        patchNumber: '7.41f',
+        patchName: '7.41f',
+        timestamp: 1789455600,
+      ),
+    ],
+  );
 }
 
 void main() {
@@ -60,6 +78,7 @@ void main() {
           ),
           heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
           itemsRepositoryProvider.overrideWithValue(_FakeItemsRepository()),
+          patchesRepositoryProvider.overrideWithValue(_FakePatchesRepository()),
           ...refreshSeamOverrides(),
         ],
         child: const AegisApp(),
@@ -121,11 +140,14 @@ void main() {
       await tester.tap(navLabel(label));
       await tester.pumpAndSettle();
       await expectSelected(label);
-      // The selected tab's screen is the one on screen. The Heroes and Items
-      // tabs are no longer placeholders (issues 02 & 06) — they carry the
-      // search field that marks the real list screen.
+      // The selected tab's screen is the one on screen. The Heroes, Items,
+      // and Patches tabs are no longer placeholders (issues 02, 06 & 08) —
+      // Heroes and Items carry the search field, Patches carries the pinned
+      // latest patch card.
       if (label == 'Heroes' || label == 'Items') {
         expect(find.byType(TextField), findsOneWidget);
+      } else if (label == 'Patches') {
+        expect(find.text('Latest Patch'), findsOneWidget);
       } else {
         expect(find.text('$label tab'), findsWidgets);
       }

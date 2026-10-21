@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "patch_number": "7.41f",
+  "patch_name": "7.41f",
+  "timestamp": 1789455600,
+  "sections": [
+    {
+      "title": "Items",
+      "groups": [
+        {
+          "title": "Infused Raindrops",
+          "item_id": 265,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/infused_raindrop.png",
+          "lines": [
+            {
+              "text": "Mana Regen bonus decreased from +0.8 to +0.6",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Battle Fury",
+          "item_id": 145,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bfury.png",
+          "lines": [
+            {
+              "text": "Chop Tree cooldown decreased from 4s to 3s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Daedalus",
+          "item_id": 141,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/greater_crit.png",
+          "lines": [
+            {
+              "text": "Recipe cost increased from 900 to 1000. Total cost increased from 5100g to 5200g",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Dragon Lance",
+          "item_id": 236,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dragon_lance.png",
+          "lines": [
+            {
+              "text": "Recipe cost increased from 450 to 550. Total cost increased from 1900g to 2000g",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Essence Distiller",
+          "item_id": 1852,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/essence_distiller.png",
+          "lines": [
+            {
+              "text": "Mana Regen bonus decreased from +1.75 to +1.5",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Heart of Tarrasque",
+          "item_id": 114,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/heart.png",
+          "lines": [
+            {
+              "text": "Recipe cost increased from 700 to 800. Total cost increased from 5200g to 5300g",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Heaven's Halberd",
+          "item_id": 210,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/heavens_halberd.png",
+          "lines": [
+            {
+              "text": "Recipe cost decreased from 450 to 350. Total cost decreased from 3400g to 3300g",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Hurricane Pike",
+          "item_id": 263,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+          "lines": [
+            {
+              "text": "Total cost increased from 4450g to 4550g (due to Dragon Lance cost increase)",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Hydra's Breath",
+          "item_id": 1858,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/hydras_breath.png",
+          "lines": [
+            {
+              "text": "Recipe cost decreased from 1100 to 1000. Total cost unchanged at 5900g (due to Dragon Lance cost increase)",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Manta Style",
+          "item_id": 147,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/manta.png",
+          "lines": [
+            {
+              "text": "Mirror Image ranged images damage decreased from 28% to 25%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Mask of Madness",
+          "item_id": 172,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mask_of_madness.png",
+          "lines": [
+            {
+              "text": "Lifesteal bonus decreased from +24% to +22%",
+              "indent_level": 1
+            },
+            {
+              "text": "Creep lifesteal decreased from +14.4% to +13.2%",
+              "indent_level": 2
+            }
+          ]
+        },
+        {
+          "title": "Mjollnir",
+          "item_id": 158,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png",
+          "lines": [
+            {
+              "text": "Static Charge duration decreased from 15s to 12s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Octarine Core",
+          "item_id": 235,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+          "lines": [
+            {
+              "text": "Recipe cost increased from 200 to 400. Total cost increased from 4900g to 5100g",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Satanic",
+          "item_id": 156,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/satanic.png",
+          "lines": [
+            {
+              "text": "Lifesteal bonus decreased from +30% to +25%",
+              "indent_level": 1
+            },
+            {
+              "text": "Creep lifesteal decreased from +18% to +15%",
+              "indent_level": 2
+            }
+          ]
+        },
+        {
+          "title": "Shiva's Guard",
+          "item_id": 119,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png",
+          "lines": [
+            {
+              "text": "Arctic Blast damage decreased from 260 to 225",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Silver Edge",
+          "item_id": 249,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/silver_edge.png",
+          "lines": [
+            {
+              "text": "Shadow Walk cooldown increased from 22s to 23s",
+              "indent_level": 1
+            },
+            {
+              "text": "Shadow Walk bonus movement speed decreased from 22% to 20%",
+              "indent_level": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Neutral Items",
+      "groups": [
+        {
+          "title": "Enchantment Changes",
+          "lines": []
+        },
+        {
+          "title": "Greedy",
+          "item_id": 1593,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_greedy.png",
+          "lines": [
+            {
+              "text": "Attack Damage penalty increased from 30/60 to 35/70",
+              "indent_level": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Heroes",
+      "groups": [
+        {
+          "title": "Anti-Mage",
+          "hero_id": 1,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/antimage.png",
+          "lines": [
+            {
+              "text": "Mana Burned as Damage increased from 60% to 65%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Bane",
+          "hero_id": 3,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/bane.png",
+          "lines": [
+            {
+              "text": "Base Armor decreased by 1",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Mirana",
+          "hero_id": 9,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/mirana.png",
+          "lines": [
+            {
+              "text": "Base Charge Restore Time increased from 6s to 7s",
+              "indent_level": 1
+            },
+            {
+              "text": "Maximum Stun decreased from 2.6/3.4/4.2/5s to 2.3/3.2/4.1/5s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Shadow Fiend",
+          "hero_id": 11,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png",
+          "lines": [
+            {
+              "text": "Damage per soul changed from 1.35 + 0.15 damage per level to 1 + 0.8 damage per 6 levels",
+              "indent_level": 1
+            },
+            {
+              "text": "Bonus Damage Per Soul decreased from 3 to 2",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 15 Talent Presence Armor Reduction decreased from +2 to +1.5",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Lina",
+          "hero_id": 25,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png",
+          "lines": [
+            {
+              "text": "Base Intelligence decreased from 30 to 28",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 decreased from 51-59 to 49-57",
+              "indent_level": 2
+            },
+            {
+              "text": "Attack Speed Bonus decreased from 8/16/24/32 to 7/14/21/28",
+              "indent_level": 1
+            },
+            {
+              "text": "Duration decreased from 18s to 16s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Slardar",
+          "hero_id": 28,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/slardar.png",
+          "lines": [
+            {
+              "text": "Base Health Regen decreased by 0.25",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage decreased from 75/150/225/300 to 60/140/220/300",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Enigma",
+          "hero_id": 33,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/enigma.png",
+          "lines": [
+            {
+              "text": "Eidolon Attack Range decreased from 425/450/475/500 to 380/420/460/500",
+              "indent_level": 1
+            },
+            {
+              "text": "Aghanim's Scepter pull speed decreased from 175 to 150",
+              "indent_level": 1,
+              "badge": "scepter"
+            },
+            {
+              "text": "Level 20 Talent Eidolon Damage decreased from +40 to +30",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Necrophos",
+          "hero_id": 36,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/necrolyte.png",
+          "lines": [
+            {
+              "text": "Hero Kill Multiplier decreased from 6 to 4",
+              "indent_level": 1
+            },
+            {
+              "text": "Restoration Amplification decreased from 55/65/75/85% to 45/55/65/75%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Warlock",
+          "hero_id": 37,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png",
+          "lines": [
+            {
+              "text": "Base Attack Speed increased from 90 to 95",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Clockwerk",
+          "hero_id": 51,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/rattletrap.png",
+          "lines": [
+            {
+              "text": "Mana Cost increased from 75 to 90",
+              "indent_level": 1
+            },
+            {
+              "text": "Knockback Duration decreased from 0.8s to 0.7s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Lifestealer",
+          "hero_id": 54,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/life_stealer.png",
+          "lines": [
+            {
+              "text": "Cooldown increased from 20/19/18/17s to 21/20/19/18s",
+              "indent_level": 1
+            },
+            {
+              "text": "Aghanim's Scepter Enemy Duration decreased from 5s to 4s",
+              "indent_level": 1,
+              "badge": "scepter"
+            },
+            {
+              "text": "Level 10 Talent Movement Speed decreased from +20 to +15",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Huskar",
+          "hero_id": 59,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/huskar.png",
+          "lines": [
+            {
+              "text": "Base Strength decreased from 23 to 22",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 decreased from 44-49 to 43-48",
+              "indent_level": 2
+            },
+            {
+              "text": "Strength gain increased from 3.3 to 3.4",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Broodmother",
+          "hero_id": 61,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png",
+          "lines": [
+            {
+              "text": "Mana Cost decreased from 80 to 70",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Bounty Hunter",
+          "hero_id": 62,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/bounty_hunter.png",
+          "lines": [
+            {
+              "text": "Self bonus gold decreased from 130/225/320 to 80/160/240",
+              "indent_level": 1
+            },
+            {
+              "text": "Allies bonus gold decreased from 50/90/130 to 40/80/120",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 10 Talent Shuriken Toss Slow decreased from +0.6s to +0.35s",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 20 Talent Track Grants Shared Vision replaced with +190 Shuriken Toss Damage",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 25 Talent +250 Shuriken Toss Damage replaced with Track Grants Shared Vision",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Batrider",
+          "hero_id": 65,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/batrider.png",
+          "lines": [
+            {
+              "text": "Intelligence gain increased from 2.9 to 3.2",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage gain per level increased from 3.5 to 3.6",
+              "indent_level": 2
+            }
+          ]
+        },
+        {
+          "title": "Chen",
+          "hero_id": 66,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/chen.png",
+          "lines": [
+            {
+              "text": "Strength gain increased from 2.0 to 2.2",
+              "indent_level": 1
+            },
+            {
+              "text": "Zealot respawn time changed from 60s to 60s - 1s per hero level",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Spectre",
+          "hero_id": 67,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/spectre.png",
+          "lines": [
+            {
+              "text": "Damage decreased from 23 + 2 per level to 23.5 + 1.5 per level",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Ursa",
+          "hero_id": 70,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ursa.png",
+          "lines": [
+            {
+              "text": "Health As Damage increased from 1.25% to 1.75%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Invoker",
+          "hero_id": 74,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/invoker.png",
+          "lines": [
+            {
+              "text": "Cooldown increased from 18s to 19s",
+              "indent_level": 1
+            },
+            {
+              "text": "Aghanim's Shard no longer applies damage to non-Hero units",
+              "indent_level": 1,
+              "badge": "shard"
+            }
+          ]
+        },
+        {
+          "title": "Lone Druid",
+          "hero_id": 80,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/lone_druid.png",
+          "lines": [
+            {
+              "text": "Stack Duration decreased from 10s to 7/8/9/10s",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Treant Protector",
+          "hero_id": 83,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/treant.png",
+          "lines": [
+            {
+              "text": "Base Intelligence decreased from 20 to 17",
+              "indent_level": 1
+            },
+            {
+              "text": "Invisibility linger when leaving trees decreased from 2s to 1s",
+              "indent_level": 1
+            },
+            {
+              "text": "Now costs 35 mana",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage to Healing rescaled from 20% to 10/15/20/25%",
+              "indent_level": 1
+            },
+            {
+              "text": "Minimum damage block decreased from 20 to 10",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 10 Talent +3 Living Armor Heal per Second replaced with +3s Living Armor Duration",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Undying",
+          "hero_id": 85,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/undying.png",
+          "lines": [
+            {
+              "text": "Base Health Regen decreased by 0.25",
+              "indent_level": 1
+            },
+            {
+              "text": "Mana Cost increased from 100 to 110",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Disruptor",
+          "hero_id": 87,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/disruptor.png",
+          "lines": [
+            {
+              "text": "Base Intelligence increased from 20 to 21",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 increased from 47-51 to 48-52",
+              "indent_level": 2
+            }
+          ]
+        },
+        {
+          "title": "Keeper of the Light",
+          "hero_id": 90,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/keeper_of_the_light.png",
+          "lines": [
+            {
+              "text": "Base Attack Speed decreased from 100 to 90",
+              "indent_level": 1
+            },
+            {
+              "text": "Cooldown Reduction decreased from 3/4/5/6s to 2.5/3.5/4.5/5.5s",
+              "indent_level": 1
+            },
+            {
+              "text": "Illuminate Heal decreased from 70% to 60%",
+              "indent_level": 1
+            },
+            {
+              "text": "Illuminate Heal with Aghanim's Shard unchanged at 100%",
+              "indent_level": 2,
+              "badge": "shard"
+            }
+          ]
+        },
+        {
+          "title": "Io",
+          "hero_id": 91,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/wisp.png",
+          "lines": [
+            {
+              "text": "Level 15 Talent Spirits Damage decreased from +50% to +40%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Centaur Warrunner",
+          "hero_id": 96,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/centaur.png",
+          "lines": [
+            {
+              "text": "Base Damage decreased by 2",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 decreased from 64-66 to 62-64",
+              "indent_level": 2
+            },
+            {
+              "text": "Base Movement Speed decreased from 300 to 295",
+              "indent_level": 1
+            },
+            {
+              "text": "Cast Range decreased from 250 to 200",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Ember Spirit",
+          "hero_id": 106,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ember_spirit.png",
+          "lines": [
+            {
+              "text": "Base Agility decreased from 22 to 21",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 decreased from 52-56 to 51-55",
+              "indent_level": 2
+            }
+          ]
+        },
+        {
+          "title": "Earth Spirit",
+          "hero_id": 107,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/earth_spirit.png",
+          "lines": [
+            {
+              "text": "Base Attack Speed decreased from 100 to 95",
+              "indent_level": 1
+            },
+            {
+              "text": "Charges changed from (7 + 1 per 4 levels) to (7 + 1 per 5 levels)",
+              "indent_level": 1
+            },
+            {
+              "text": "Max charges decreased from 14 at level 28 to 13 at level 30",
+              "indent_level": 2
+            },
+            {
+              "text": "Level 20 Talent +25% Magnetize Damage & Duration replaced with +35 Magnetize Damage Per Second",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 20 Talent +175% Rolling Boulder Damage from Strength replaced with +200 Geomagnetic Grip Remnant Damage",
+              "indent_level": 1
+            },
+            {
+              "text": "Level 25 Talent +250 Geomagnetic Grip Remnant Damage replaced with +250% Rolling Boulder Damage from Strength",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Underlord",
+          "hero_id": 108,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/abyssal_underlord.png",
+          "lines": [
+            {
+              "text": "No longer upgraded with Aghanim's Scepter",
+              "indent_level": 1
+            },
+            {
+              "text": "Aghanim's Scepter Cooldown decreased from 100/95/90s to 90/85/80s",
+              "indent_level": 1,
+              "badge": "scepter"
+            }
+          ]
+        },
+        {
+          "title": "Winter Wyvern",
+          "hero_id": 112,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/winter_wyvern.png",
+          "lines": [
+            {
+              "text": "Cooldown increased from 26/24/22/20s to 29/26/23/20s",
+              "indent_level": 1
+            },
+            {
+              "text": "Max HP Heal per second decreased from 2.25/3/3.75/4.5% to 1.5/2.5/3.5/4.5%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Hoodwink",
+          "hero_id": 123,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/hoodwink.png",
+          "lines": [
+            {
+              "text": "Base Strength decreased from 17 to 16",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Mars",
+          "hero_id": 129,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/mars.png",
+          "lines": [
+            {
+              "text": "Base Armor increased by 1",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Marci",
+          "hero_id": 136,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/marci.png",
+          "lines": [
+            {
+              "text": "Ally bonus movement speed rescaled from 15/20/25/30% to 25%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Kez",
+          "hero_id": 145,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/kez.png",
+          "lines": [
+            {
+              "text": "Base Damage decreased by 1",
+              "indent_level": 1
+            },
+            {
+              "text": "Damage at level 1 decreased from 50-56 to 49-55",
+              "indent_level": 2
+            },
+            {
+              "text": "Level 20 Talent Kazurai Katana Damage Per Second decreased from +4% to +3.5%",
+              "indent_level": 1
+            }
+          ]
+        },
+        {
+          "title": "Largo",
+          "hero_id": 155,
+          "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/largo.png",
+          "lines": [
+            {
+              "text": "Heal rescaled from 34/56/78 to 30/55/80",
+              "indent_level": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

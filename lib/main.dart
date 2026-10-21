@@ -7,6 +7,7 @@ import 'core/data/file_store.dart';
 import 'core/data/snapshot_refresher.dart';
 import 'features/heroes/heroes_snapshot_unit.dart';
 import 'features/items/items_snapshot_unit.dart';
+import 'features/patches/patches_snapshot_unit.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,6 +25,7 @@ Future<void> main() async {
           heroDetailSnapshotUnit,
           itemsSnapshotUnit,
           itemDetailSnapshotUnit,
+          patchesSnapshotUnit,
         ]),
       ],
       child: const AegisApp(),
