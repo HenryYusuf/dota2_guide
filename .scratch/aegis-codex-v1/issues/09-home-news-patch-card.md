@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] News repository fetches official Dota 2 news filtered to Valve's own announcements, with a 24 h cache
-- [ ] Latest-Patch card shows the current Patch from the patches data and navigates into its detail
-- [ ] News items render title, date, and open externally
-- [ ] Quick entries navigate to Heroes and Items tabs
-- [ ] Failed news load shows a small inline retry; Home never shows a full-screen error
-- [ ] Repository and widget tests follow the established pattern
+- [x] News repository fetches official Dota 2 news filtered to Valve's own announcements, with a 24 h cache
+- [x] Latest-Patch card shows the current Patch from the patches data and navigates into its detail
+- [x] News items render title, date, and open externally
+- [x] Quick entries navigate to Heroes and Items tabs
+- [x] Failed news load shows a small inline retry; Home never shows a full-screen error
+- [x] Repository and widget tests follow the established pattern

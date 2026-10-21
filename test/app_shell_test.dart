@@ -19,6 +19,9 @@ import 'package:dota2_guide/features/patches/patches_repository.dart';
 
 import 'core/data/refresh_seam_overrides.dart';
 
+import 'package:dota2_guide/features/home/home_providers.dart';
+import 'package:dota2_guide/features/home/news_repository.dart';
+
 /// In-memory roster for shell tests: these cover navigation, theme, and
 /// scroll-state preservation — not data loading (spec: widget tests render
 /// over in-memory fake repositories). The real bundled-asset read path is
@@ -36,6 +39,19 @@ class _FakeItemsRepository implements ItemsRepository {
   @override
   Future<ItemIndex> loadItems() async =>
       const ItemIndex(schemaVersion: 1, locale: 'english', items: []);
+}
+
+class _FakeNewsRepository implements NewsRepository {
+  @override
+  Future<List<NewsItem>> loadNews() async => [
+    for (var i = 0; i < 20; i++)
+      NewsItem(
+        id: '$i',
+        title: 'News $i',
+        url: 'https://x/$i',
+        timestamp: 1789497865,
+      ),
+  ];
 }
 
 class _FakePatchesRepository implements PatchesRepository {
@@ -79,6 +95,7 @@ void main() {
           heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
           itemsRepositoryProvider.overrideWithValue(_FakeItemsRepository()),
           patchesRepositoryProvider.overrideWithValue(_FakePatchesRepository()),
+          newsRepositoryProvider.overrideWithValue(_FakeNewsRepository()),
           ...refreshSeamOverrides(),
         ],
         child: const AegisApp(),
@@ -149,7 +166,7 @@ void main() {
       } else if (label == 'Patches') {
         expect(find.text('Latest Patch'), findsOneWidget);
       } else {
-        expect(find.text('$label tab'), findsWidgets);
+        expect(find.text('VALVE NEWS'), findsOneWidget);
       }
     }
   });
@@ -172,7 +189,7 @@ void main() {
   ) async {
     await pumpApp(tester);
 
-    // Home's placeholder list is long enough to scroll.
+    // Home's news list is long enough to scroll.
     await tester.drag(find.byType(ListView).first, const Offset(0, -400));
     await tester.pumpAndSettle();
     final scrollable = tester.state<ScrollableState>(
