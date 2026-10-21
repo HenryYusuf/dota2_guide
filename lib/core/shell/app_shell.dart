@@ -37,6 +37,11 @@ class AppShell extends StatelessWidget {
             selectedIcon: Icon(Icons.history),
             label: 'Patches',
           ),
+          NavigationDestination(
+            icon: Icon(Icons.shield_outlined),
+            selectedIcon: Icon(Icons.shield),
+            label: 'Draft',
+          ),
         ],
       ),
     );

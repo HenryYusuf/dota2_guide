@@ -12,6 +12,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:dota2_guide/app.dart';
+import 'package:dota2_guide/features/draft/draft_providers.dart';
+import 'package:dota2_guide/features/draft/matchup_matrix_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_detail.dart';
 import 'package:dota2_guide/features/heroes/hero_detail_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
@@ -243,6 +245,11 @@ class _FakePatchesRepository implements PatchesRepository {
   );
 }
 
+class _FakeMatchupMatrixRepository implements MatchupMatrixRepository {
+  @override
+  Future<MatchupMatrix> loadMatchupMatrix() async => MatchupMatrix.empty();
+}
+
 class _FakePatchDetailRepository implements PatchDetailRepository {
   @override
   Future<PatchDetail> loadPatchDetail(String patchNumber) async {
@@ -307,6 +314,9 @@ void main() {
           patchesRepositoryProvider.overrideWithValue(_FakePatchesRepository()),
           patchDetailRepositoryProvider.overrideWithValue(
             _FakePatchDetailRepository(),
+          ),
+          matchupMatrixRepositoryProvider.overrideWithValue(
+            _FakeMatchupMatrixRepository(),
           ),
           newsRepositoryProvider.overrideWithValue(_FakeNewsRepository()),
           ...refreshSeamOverrides(),
@@ -440,6 +450,14 @@ void main() {
       await tester.tap(find.byType(BackButton));
       await tester.pumpAndSettle();
       expect(find.text('Latest Patch'), findsOneWidget);
+
+      // --- Bottom Nav -> Draft Tab ---
+      await tester.tap(navLabel('Draft'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Draft Picker'), findsOneWidget);
+      expect(find.text('Allies'), findsOneWidget);
+      expect(find.text('Enemies'), findsOneWidget);
 
       // --- Bottom Nav -> Home Tab ---
       await tester.tap(navLabel('Home'));

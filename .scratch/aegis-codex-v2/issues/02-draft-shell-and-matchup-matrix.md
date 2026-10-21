@@ -4,11 +4,11 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** ready-for-human
 
-- [ ] An independent snapshot script fetches pairwise hero matchup data from OpenDota with rate throttling and compiles a bundled JSON matchup matrix.
-- [ ] A dedicated repository interface exposes the precomputed matchup matrix, backed by the bundled asset.
-- [ ] The app shell navigation bar and declarative router are updated with the 5th "Draft" destination.
-- [ ] Navigating to the Draft tab renders a baseline 5v5 draft screen with 5 allied slots, 5 enemy slots, and the hero roster.
-- [ ] In the absence of draft selections, the hero roster is sorted by baseline win rate.
-- [ ] Repository and screen tests verify that the 5th tab navigates correctly and loads the matrix without network calls.
+- [x] An independent snapshot script fetches pairwise hero matchup data from OpenDota with rate throttling and compiles a bundled JSON matchup matrix.
+- [x] A dedicated repository interface exposes the precomputed matchup matrix, backed by the bundled asset.
+- [x] The app shell navigation bar and declarative router are updated with the 5th "Draft" destination.
+- [x] Navigating to the Draft tab renders a baseline 5v5 draft screen with 5 allied slots, 5 enemy slots, and the hero roster.
+- [x] In the absence of draft selections, the hero roster is sorted by baseline win rate.
+- [x] Repository and screen tests verify that the 5th tab navigates correctly and loads the matrix without network calls.

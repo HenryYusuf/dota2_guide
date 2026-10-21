@@ -7,6 +7,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:dota2_guide/app.dart';
+import 'package:dota2_guide/features/draft/draft_providers.dart';
+import 'package:dota2_guide/features/draft/matchup_matrix_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
 import 'package:dota2_guide/features/heroes/heroes_providers.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
@@ -69,6 +71,11 @@ class _FakePatchesRepository implements PatchesRepository {
   );
 }
 
+class _FakeMatchupMatrixRepository implements MatchupMatrixRepository {
+  @override
+  Future<MatchupMatrix> loadMatchupMatrix() async => MatchupMatrix.empty();
+}
+
 void main() {
   /// Finds a bottom-navigation destination label by its visible text.
   Finder navLabel(String label) => find.descendant(
@@ -95,6 +102,9 @@ void main() {
           heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
           itemsRepositoryProvider.overrideWithValue(_FakeItemsRepository()),
           patchesRepositoryProvider.overrideWithValue(_FakePatchesRepository()),
+          matchupMatrixRepositoryProvider.overrideWithValue(
+            _FakeMatchupMatrixRepository(),
+          ),
           newsRepositoryProvider.overrideWithValue(_FakeNewsRepository()),
           ...refreshSeamOverrides(),
         ],
@@ -114,6 +124,7 @@ void main() {
     expect(navLabel('Heroes'), findsOneWidget);
     expect(navLabel('Items'), findsOneWidget);
     expect(navLabel('Patches'), findsOneWidget);
+    expect(navLabel('Draft'), findsOneWidget);
   });
 
   testWidgets('theme is dark-only regardless of platform brightness', (
@@ -135,12 +146,12 @@ void main() {
     );
   });
 
-  testWidgets('bottom nav switches between all four tabs', (
+  testWidgets('bottom nav switches between all five tabs', (
     WidgetTester tester,
   ) async {
     await pumpApp(tester);
 
-    const tabLabels = ['Home', 'Heroes', 'Items', 'Patches'];
+    const tabLabels = ['Home', 'Heroes', 'Items', 'Patches', 'Draft'];
 
     Future<void> expectSelected(String label) async {
       final navBar = tester.widget<NavigationBar>(find.byType(NavigationBar));
@@ -153,18 +164,18 @@ void main() {
 
     await expectSelected('Home');
 
-    for (final label in ['Heroes', 'Items', 'Patches', 'Home']) {
+    for (final label in ['Heroes', 'Items', 'Patches', 'Draft', 'Home']) {
       await tester.tap(navLabel(label));
       await tester.pumpAndSettle();
       await expectSelected(label);
-      // The selected tab's screen is the one on screen. The Heroes, Items,
-      // and Patches tabs are no longer placeholders (issues 02, 06 & 08) —
-      // Heroes and Items carry the search field, Patches carries the pinned
-      // latest patch card.
       if (label == 'Heroes' || label == 'Items') {
         expect(find.byType(TextField), findsOneWidget);
       } else if (label == 'Patches') {
         expect(find.text('Latest Patch'), findsOneWidget);
+      } else if (label == 'Draft') {
+        expect(find.text('Draft Picker'), findsOneWidget);
+        expect(find.text('Allies'), findsOneWidget);
+        expect(find.text('Enemies'), findsOneWidget);
       } else {
         expect(find.text('VALVE NEWS'), findsOneWidget);
       }

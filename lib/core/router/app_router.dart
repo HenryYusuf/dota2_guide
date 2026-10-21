@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/about/about_screen.dart';
+import '../../features/draft/draft_screen.dart';
 import '../../features/heroes/hero_detail_screen.dart';
 import '../../features/heroes/heroes_screen.dart';
 import '../../features/home/home_screen.dart';
@@ -81,6 +82,14 @@ final routerProvider = Provider<GoRouter>((ref) {
                     ),
                   ),
                 ],
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: DraftScreen.routeLocation,
+                builder: (context, state) => const DraftScreen(),
               ),
             ],
           ),
