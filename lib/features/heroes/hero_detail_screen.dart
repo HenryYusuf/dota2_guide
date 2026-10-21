@@ -12,6 +12,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/cdn/cdn_urls.dart';
 import '../../core/theme/app_theme.dart';
+import '../patches/hero_patch_deltas.dart';
+import '../patches/patches_providers.dart';
 import 'ability_video_repository.dart';
 import 'hero_detail.dart';
 import 'hero_index.dart';
@@ -35,6 +37,7 @@ class HeroDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final detailAsync = ref.watch(heroDetailProvider(heroId));
+    final patchHistoryAsync = ref.watch(heroPatchHistoryProvider(heroId));
     final buildHeader = ref.watch(heroHeaderBuilderProvider);
     final buildIcon = ref.watch(abilityIconBuilderProvider);
 
@@ -45,6 +48,9 @@ class HeroDetailScreen extends ConsumerWidget {
             const Center(child: Text("Couldn't load this hero.")),
         data: (detail) => _DetailBody(
           detail: detail,
+          patchHistory:
+              patchHistoryAsync.value ??
+              HeroPatchHistory(heroId: heroId, deltas: const []),
           buildHeader: buildHeader,
           buildIcon: buildIcon,
         ),
@@ -56,11 +62,13 @@ class HeroDetailScreen extends ConsumerWidget {
 class _DetailBody extends StatelessWidget {
   const _DetailBody({
     required this.detail,
+    required this.patchHistory,
     required this.buildHeader,
     required this.buildIcon,
   });
 
   final HeroDetail detail;
+  final HeroPatchHistory patchHistory;
   final HeroHeaderBuilder buildHeader;
   final AbilityIconBuilder buildIcon;
 
@@ -111,7 +119,11 @@ class _DetailBody extends StatelessWidget {
               const SizedBox(height: 12),
               _CombatCard(profile: hero),
               const SizedBox(height: 12),
-              _AbilitiesSection(detail: detail, buildIcon: buildIcon),
+              _AbilitiesSection(
+                detail: detail,
+                patchHistory: patchHistory,
+                buildIcon: buildIcon,
+              ),
               if (detail.facets.isNotEmpty) ...[
                 const SizedBox(height: 12),
                 _FacetsCard(facets: detail.facets),
@@ -122,6 +134,11 @@ class _DetailBody extends StatelessWidget {
                 const SizedBox(height: 12),
                 _LoreCard(bio: hero.bio),
               ],
+              const SizedBox(height: 12),
+              _HeroChangelogCard(
+                patchHistory: patchHistory,
+                abilities: detail.abilities,
+              ),
             ]),
           ),
         ),
@@ -351,9 +368,14 @@ class _CombatCard extends StatelessWidget {
 }
 
 class _AbilitiesSection extends StatelessWidget {
-  const _AbilitiesSection({required this.detail, required this.buildIcon});
+  const _AbilitiesSection({
+    required this.detail,
+    required this.patchHistory,
+    required this.buildIcon,
+  });
 
   final HeroDetail detail;
+  final HeroPatchHistory patchHistory;
   final AbilityIconBuilder buildIcon;
 
   @override
@@ -374,6 +396,7 @@ class _AbilitiesSection extends StatelessWidget {
         for (final ability in detail.abilities) ...[
           _AbilityCard(
             ability: ability,
+            patchDeltas: patchHistory.deltasForAbility(ability.name),
             buildIcon: buildIcon,
             heroKey: heroKey,
           ),
@@ -404,11 +427,13 @@ enum AbilityMark {
 class _AbilityCard extends StatefulWidget {
   const _AbilityCard({
     required this.ability,
+    this.patchDeltas = const [],
     required this.buildIcon,
     required this.heroKey,
   });
 
   final AbilityDetail ability;
+  final List<HeroAbilityDeltaRecord> patchDeltas;
   final AbilityIconBuilder buildIcon;
 
   /// The hero's Valve CDN folder name (e.g. `antimage`) — the demo-video
@@ -422,6 +447,8 @@ class _AbilityCard extends StatefulWidget {
 class _AbilityCardState extends State<_AbilityCard> {
   bool _expanded = false;
 
+  String? get _latestPatch => widget.patchDeltas.firstOrNull?.patchNumber;
+
   List<AbilityMark> get _marks => [
     if (widget.ability.isInnate) AbilityMark.innate,
     if (widget.ability.isUltimate) AbilityMark.ultimate,
@@ -433,6 +460,8 @@ class _AbilityCardState extends State<_AbilityCard> {
   Widget build(BuildContext context) {
     final ability = widget.ability;
     final text = Theme.of(context).textTheme;
+    final latestPatch = _latestPatch;
+
     return Card(
       key: ValueKey<String>('ability-${ability.name}'),
       child: Column(
@@ -459,14 +488,40 @@ class _AbilityCardState extends State<_AbilityCard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(ability.displayName, style: text.titleSmall),
-                        if (_marks.isNotEmpty)
+                        if (_marks.isNotEmpty || latestPatch != null)
                           Padding(
                             padding: const EdgeInsets.only(top: 4),
                             child: Wrap(
                               spacing: 6,
+                              runSpacing: 4,
                               children: [
                                 for (final mark in _marks)
                                   _MarkBadge(mark: mark),
+                                if (latestPatch != null)
+                                  GestureDetector(
+                                    onTap: () =>
+                                        setState(() => _expanded = true),
+                                    child: Container(
+                                      key: ValueKey<String>(
+                                        'ability-patch-chip-${ability.name}',
+                                      ),
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFF2E7D32),
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Text(
+                                        'Changed in $latestPatch',
+                                        style: text.labelSmall?.copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                               ],
                             ),
                           ),
@@ -484,7 +539,11 @@ class _AbilityCardState extends State<_AbilityCard> {
           if (_expanded)
             Padding(
               padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-              child: _ExpandedBody(ability: ability, heroKey: widget.heroKey),
+              child: _ExpandedBody(
+                ability: ability,
+                patchDeltas: widget.patchDeltas,
+                heroKey: widget.heroKey,
+              ),
             ),
         ],
       ),
@@ -518,9 +577,14 @@ class _MarkBadge extends StatelessWidget {
 }
 
 class _ExpandedBody extends StatelessWidget {
-  const _ExpandedBody({required this.ability, required this.heroKey});
+  const _ExpandedBody({
+    required this.ability,
+    this.patchDeltas = const [],
+    required this.heroKey,
+  });
 
   final AbilityDetail ability;
+  final List<HeroAbilityDeltaRecord> patchDeltas;
 
   /// The hero's Valve CDN folder name (e.g. `antimage`) — the demo-video
   /// path is keyed on it.
@@ -583,6 +647,10 @@ class _ExpandedBody extends StatelessWidget {
           const SizedBox(height: 8),
           for (final special in ability.specialValues)
             _SpecialRow(special: special),
+        ],
+        if (patchDeltas.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          _AbilityPatchNotesSection(deltas: patchDeltas),
         ],
         if (ability.scepterText case final String scepterText) ...[
           const SizedBox(height: 8),
@@ -958,6 +1026,273 @@ class _LoreCard extends StatelessWidget {
     return _SectionCard(
       title: 'Lore',
       children: [Text(bio, style: Theme.of(context).textTheme.bodyMedium)],
+    );
+  }
+}
+
+class _AbilityPatchNotesSection extends StatelessWidget {
+  const _AbilityPatchNotesSection({required this.deltas});
+
+  final List<HeroAbilityDeltaRecord> deltas;
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: const Color(0xFF1B2A1E),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+          color: const Color(0xFF2E7D32).withValues(alpha: 0.4),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.history, size: 16, color: Color(0xFF81C784)),
+              const SizedBox(width: 6),
+              Text(
+                'Recent Patch Changes',
+                style: text.labelMedium?.copyWith(
+                  color: const Color(0xFF81C784),
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          for (final delta in deltas) ...[
+            Padding(
+              padding: const EdgeInsets.only(top: 4, bottom: 2),
+              child: Text(
+                'Patch ${delta.patchNumber}',
+                style: text.labelSmall?.copyWith(
+                  color: Colors.white70,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            for (final line in delta.lines)
+              Padding(
+                padding: EdgeInsets.only(
+                  left: (line.indentLevel - 1) * 12.0 + 4,
+                  bottom: 2,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '• ',
+                      style: text.bodySmall?.copyWith(
+                        color: const Color(0xFF81C784),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        line.text,
+                        style: text.bodySmall?.copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _HeroChangelogCard extends StatefulWidget {
+  const _HeroChangelogCard({
+    required this.patchHistory,
+    required this.abilities,
+  });
+
+  final HeroPatchHistory patchHistory;
+  final List<AbilityDetail> abilities;
+
+  @override
+  State<_HeroChangelogCard> createState() => _HeroChangelogCardState();
+}
+
+class _HeroChangelogCardState extends State<_HeroChangelogCard> {
+  bool _expanded = true;
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+    final deltas = widget.patchHistory.deltas;
+
+    return Card(
+      key: const ValueKey<String>('hero-changelog-section'),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            InkWell(
+              onTap: () => setState(() => _expanded = !_expanded),
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.change_history,
+                    size: 18,
+                    color: AppTheme.primary,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(child: Text('Changelog', style: text.titleMedium)),
+                  Icon(
+                    _expanded ? Icons.expand_less : Icons.expand_more,
+                    color: Colors.white54,
+                  ),
+                ],
+              ),
+            ),
+            if (_expanded) ...[
+              const SizedBox(height: 8),
+              if (deltas.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Text(
+                    'No patch deltas in recent patches.',
+                    style: text.bodySmall?.copyWith(color: Colors.white54),
+                  ),
+                )
+              else
+                for (final delta in deltas) ...[
+                  _PatchDeltaEntry(delta: delta, abilities: widget.abilities),
+                  if (delta != deltas.last)
+                    const Divider(height: 16, color: Colors.white12),
+                ],
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _PatchDeltaEntry extends StatelessWidget {
+  const _PatchDeltaEntry({required this.delta, required this.abilities});
+
+  final HeroPatchDelta delta;
+  final List<AbilityDetail> abilities;
+
+  String _resolveAbilityName(HeroAbilityPatchDelta abilityDelta) {
+    for (final ability in abilities) {
+      if (ability.name == abilityDelta.abilityName) {
+        return ability.displayName;
+      }
+    }
+    return abilityDelta.abilityName ?? 'Ability #${abilityDelta.abilityId}';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              decoration: BoxDecoration(
+                color: AppTheme.primary.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Text(
+                'Patch ${delta.patchNumber}',
+                style: text.labelMedium?.copyWith(
+                  color: AppTheme.primary,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ],
+        ),
+        if (delta.stats.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.only(left: 4),
+            child: Text(
+              'Stats',
+              style: text.labelSmall?.copyWith(
+                color: Colors.white54,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          for (final line in delta.stats)
+            Padding(
+              padding: EdgeInsets.only(
+                left: (line.indentLevel - 1) * 12.0 + 8,
+                top: 2,
+              ),
+              child: Text('• ${line.text}', style: text.bodySmall),
+            ),
+        ],
+        if (delta.abilities.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.only(left: 4),
+            child: Text(
+              'Abilities',
+              style: text.labelSmall?.copyWith(
+                color: Colors.white54,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          for (final ability in delta.abilities) ...[
+            Padding(
+              padding: const EdgeInsets.only(left: 8, top: 2),
+              child: Text(
+                _resolveAbilityName(ability),
+                style: text.bodySmall?.copyWith(
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white70,
+                ),
+              ),
+            ),
+            for (final line in ability.lines)
+              Padding(
+                padding: EdgeInsets.only(
+                  left: (line.indentLevel - 1) * 12.0 + 16,
+                  top: 1,
+                ),
+                child: Text('• ${line.text}', style: text.bodySmall),
+              ),
+          ],
+        ],
+        if (delta.talents.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.only(left: 4),
+            child: Text(
+              'Talents',
+              style: text.labelSmall?.copyWith(
+                color: Colors.white54,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          for (final line in delta.talents)
+            Padding(
+              padding: EdgeInsets.only(
+                left: (line.indentLevel - 1) * 12.0 + 8,
+                top: 2,
+              ),
+              child: Text('• ${line.text}', style: text.bodySmall),
+            ),
+        ],
+      ],
     );
   }
 }

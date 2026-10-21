@@ -10,6 +10,7 @@ import '../heroes/heroes_providers.dart';
 import '../heroes/widgets/hero_portrait.dart';
 import '../items/items_providers.dart';
 import '../items/widgets/item_icon.dart';
+import 'hero_patch_deltas_repository.dart';
 import 'patch_detail.dart';
 import 'patch_detail_repository.dart';
 import 'patch_index.dart';
@@ -71,3 +72,19 @@ final patchItemIconBuilderProvider = Provider<PatchItemIconBuilder>(
   (ref) =>
       (context, url, itemName) => ItemIcon(url: url ?? '', itemName: itemName),
 );
+
+/// Contract providing hero patch deltas across recent patches.
+final heroPatchDeltaRepositoryProvider = Provider<HeroPatchDeltaRepository>(
+  (ref) => SnapshotHeroPatchDeltaRepository(ref.watch(snapshotSourceProvider)),
+);
+
+/// Patch deltas for one hero across recent patches.
+final heroPatchHistoryProvider = FutureProvider.family<HeroPatchHistory, int>((
+  ref,
+  heroId,
+) {
+  ref.watch(refreshEpochProvider);
+  return ref
+      .watch(heroPatchDeltaRepositoryProvider)
+      .loadHeroPatchHistory(heroId);
+});

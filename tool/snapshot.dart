@@ -40,6 +40,7 @@ import 'package:dota2_guide/features/items/item_detail.dart';
 import 'package:dota2_guide/features/items/item_feed_to_detail.dart';
 import 'package:dota2_guide/features/items/item_feed_to_index.dart';
 import 'package:dota2_guide/features/items/item_index.dart';
+import 'package:dota2_guide/features/patches/hero_patch_inverter.dart';
 import 'package:dota2_guide/features/patches/patch_detail.dart';
 import 'package:dota2_guide/features/patches/patch_feed_to_detail.dart';
 import 'package:dota2_guide/features/patches/patch_feed_to_index.dart';
@@ -227,6 +228,67 @@ Future<void> main(List<String> arguments) async {
       );
       _writeJson(file.path, detail);
       stdout.writeln('Emitted latest patch detail → ${file.path}');
+    }
+
+    final recentPatches = parsedIndex.patches.take(5).toList();
+    if (recentPatches.isNotEmpty) {
+      stdout.writeln(
+        'Fetching recent ${recentPatches.length} patch feeds for hero patch history…',
+      );
+      final rawPatchFeeds = <Map<String, dynamic>>[];
+      for (final p in recentPatches) {
+        final feedDoc = await feed.fetchJson(
+          '$datafeedBaseUrl/patchnotes?version=${p.patchNumber}&language=$locale',
+        );
+        rawPatchFeeds.add(feedDoc);
+      }
+
+      final changedHeroIds = <int>{};
+      for (final f in rawPatchFeeds) {
+        final heroes = f['heroes'] as List? ?? [];
+        for (final h in heroes) {
+          if (h is Map<String, dynamic> && h['hero_id'] is num) {
+            changedHeroIds.add((h['hero_id'] as num).toInt());
+          }
+        }
+      }
+
+      final heroAbilityMap = <int, Map<int, String>>{};
+      await mapConcurrently(
+        changedHeroIds.toList(),
+        heroDetailFetchConcurrency,
+        (heroId) async {
+          final heroFeed = await feed.fetchJson(
+            heroDataFeedUrl(heroId, locale: locale),
+          );
+          final heroes =
+              (heroFeed['result']?['data']?['heroes'] as List?) ?? [];
+          if (heroes.isNotEmpty) {
+            final hero = heroes.first as Map<String, dynamic>;
+            final abilities = hero['abilities'] as List? ?? [];
+            final map = <int, String>{};
+            for (final a in abilities) {
+              if (a is Map<String, dynamic> &&
+                  a['id'] is num &&
+                  a['name'] is String) {
+                map[(a['id'] as num).toInt()] = a['name'] as String;
+              }
+            }
+            heroAbilityMap[heroId] = map;
+          }
+          return heroId;
+        },
+      );
+
+      final inverted = invertPatchHistory(
+        rawPatchFeeds: rawPatchFeeds,
+        heroAbilityMap: heroAbilityMap,
+        locale: locale,
+      );
+      _writeJson('$outDir/hero_patch_deltas.$locale.json', inverted);
+      stdout.writeln(
+        'Emitted hero patch history → $outDir/hero_patch_deltas.$locale.json',
+      );
     }
   }
 }
