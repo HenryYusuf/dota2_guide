@@ -25,18 +25,11 @@ class MatchupMatrix {
       MatchupMatrix(matchups: const {}, baselineWinRates: const {});
 
   /// Deserializes from compact JSON mapping hero IDs to opponent record pairs `[wins, total_games]`.
-  /// Supports both direct maps `{ "1": { "2": [wins, total] } }` and `{ "matchups": { ... } }`.
   factory MatchupMatrix.fromJson(Map<String, dynamic> json) {
-    final rawMap = (json['matchups'] is Map<String, dynamic>)
-        ? json['matchups'] as Map<String, dynamic>
-        : (json['heroes'] is Map<String, dynamic>)
-        ? json['heroes'] as Map<String, dynamic>
-        : json;
-
     final parsedMatchups = <int, Map<int, MatchupRecord>>{};
     final computedBaselines = <int, double>{};
 
-    for (final entry in rawMap.entries) {
+    for (final entry in json.entries) {
       final heroId = int.tryParse(entry.key);
       if (heroId == null || entry.value is! Map) continue;
 
@@ -74,11 +67,6 @@ class MatchupMatrix {
   /// Returns matchup record for [heroId] against [opponentHeroId], if known.
   MatchupRecord? getMatchup(int heroId, int opponentHeroId) {
     return matchups[heroId]?[opponentHeroId];
-  }
-
-  /// Returns win rate for [heroId] against [opponentHeroId], or null if unknown.
-  double? getPairwiseWinRate(int heroId, int opponentHeroId) {
-    return matchups[heroId]?[opponentHeroId]?.winRate;
   }
 
   /// Returns empirical baseline win rate for [heroId]. Defaults to 0.50 if unknown.

@@ -2,19 +2,24 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:dota2_guide/core/data/asset_loader.dart';
+import 'package:dota2_guide/core/data/override_store.dart';
 import 'package:dota2_guide/core/data/snapshot_source.dart';
 import 'package:dota2_guide/features/draft/matchup_matrix_repository.dart';
 
-class _FakeSnapshotSource implements SnapshotSource {
-  _FakeSnapshotSource(this._content);
+import '../../core/data/in_memory_file_store.dart';
 
-  final String _content;
+class _FakeAssetLoader implements AssetLoader {
+  _FakeAssetLoader(this.content);
+
+  final String content;
+  final List<String> requestedPaths = [];
 
   @override
-  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
-
-  @override
-  Future<String> readUnit(String unit, String assetPath) async => _content;
+  Future<String> readAsString(String assetPath) async {
+    requestedPaths.add(assetPath);
+    return content;
+  }
 }
 
 void main() {
@@ -79,34 +84,32 @@ void main() {
   });
 
   group('SnapshotMatchupMatrixRepository', () {
-    test('loads and caches MatchupMatrix from SnapshotSource', () async {
+    test('loads MatchupMatrix from SnapshotSource', () async {
       final sampleJson = {
         '1': {
           '2': [25, 50],
         },
       };
 
-      final source = _FakeSnapshotSource(jsonEncode(sampleJson));
+      final source = SnapshotSource(
+        overrides: OverrideStore(InMemoryFileStore()),
+        assets: _FakeAssetLoader(jsonEncode(sampleJson)),
+      );
       final repo = SnapshotMatchupMatrixRepository(source);
 
-      final matrix1 = await repo.loadMatchupMatrix();
-      expect(matrix1.getBaseWinRate(1), 0.50);
-
-      // Subsequent call returns cached instance without re-reading
-      final matrix2 = await repo.loadMatchupMatrix();
-      expect(identical(matrix1, matrix2), isTrue);
+      final matrix = await repo.loadMatchupMatrix();
+      expect(matrix.getBaseWinRate(1), 0.50);
+      expect(matrix.getMatchup(1, 2)?.wins, 25);
     });
 
-    test(
-      'gracefully returns empty matrix when source throws or is invalid',
-      () async {
-        final source = _FakeSnapshotSource('invalid json');
-        final repo = SnapshotMatchupMatrixRepository(source);
+    test('throws FormatException when JSON is invalid format', () async {
+      final source = SnapshotSource(
+        overrides: OverrideStore(InMemoryFileStore()),
+        assets: _FakeAssetLoader('not-a-map'),
+      );
+      final repo = SnapshotMatchupMatrixRepository(source);
 
-        final matrix = await repo.loadMatchupMatrix();
-        expect(matrix.getBaseWinRate(1), 0.50);
-        expect(matrix.getMatchup(1, 2), isNull);
-      },
-    );
+      expect(() => repo.loadMatchupMatrix(), throwsA(isA<FormatException>()));
+    });
   });
 }

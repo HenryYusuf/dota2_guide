@@ -22,28 +22,14 @@ class SnapshotMatchupMatrixRepository implements MatchupMatrixRepository {
   SnapshotMatchupMatrixRepository(this._source);
 
   final SnapshotSource _source;
-  MatchupMatrix? _cachedMatrix;
 
   @override
   Future<MatchupMatrix> loadMatchupMatrix() async {
-    if (_cachedMatrix != null) {
-      return _cachedMatrix!;
+    final raw = await _source.readUnit(heroMatchupsUnit, heroMatchupsAssetPath);
+    final json = jsonDecode(raw);
+    if (json is! Map<String, dynamic>) {
+      throw const FormatException('Hero matchups file is not a JSON object');
     }
-
-    try {
-      final raw = await _source.readUnit(
-        heroMatchupsUnit,
-        heroMatchupsAssetPath,
-      );
-      final json = jsonDecode(raw);
-      if (json is Map<String, dynamic>) {
-        _cachedMatrix = MatchupMatrix.fromJson(json);
-        return _cachedMatrix!;
-      }
-    } catch (_) {
-      // Quiet fallback when asset read or JSON parse fails
-    }
-
-    return MatchupMatrix.empty();
+    return MatchupMatrix.fromJson(json);
   }
 }

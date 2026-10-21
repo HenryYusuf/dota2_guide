@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../heroes/heroes_providers.dart';
 import 'draft_providers.dart';
 
-/// Draft tab: the offline Draft Picker 5v5 drafting screen and counter recommendation tool.
+/// Draft tab: the offline Draft Picker 5v5 drafting screen.
 class DraftScreen extends ConsumerStatefulWidget {
   const DraftScreen({super.key});
 

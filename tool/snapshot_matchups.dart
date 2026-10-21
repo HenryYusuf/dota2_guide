@@ -67,7 +67,7 @@ Future<void> main(List<String> arguments) async {
           url,
           headers: {
             'Accept': 'application/json',
-            'User-Agent': 'AegisCodex-SnapshotTool/1.0',
+            'User-Agent': 'Dota2CompanionApp-SnapshotTool/1.0',
           },
         );
       } catch (e) {
