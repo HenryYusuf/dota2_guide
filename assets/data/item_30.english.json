@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 30,
+    "valve_key": "item_gem",
+    "name": "Gem of True Sight",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gem.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Reveal",
+        "text": "Gives True Sight over a 300 radius revealing wards and units even in Fog of War."
+      },
+      {
+        "kind": "passive",
+        "title": "True Sight",
+        "text": "Grants the ability to see invisible units and wards to any allied vision within 900 range of its carrier."
+      },
+      {
+        "kind": "passive",
+        "title": "Everlasting",
+        "text": "Dropped on death, and cannot be destroyed."
+      }
+    ],
+    "notes": [
+      "Disabled while on a courier."
+    ],
+    "lore": "Not one thrall creature of the depths,\nNor spirit bound in drowning's keep,\nNor Maelrawn the Tentacular,\nShall rest till seas, gem comes to sleep."
+  }
+}

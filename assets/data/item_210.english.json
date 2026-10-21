@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 210,
+    "valve_key": "item_heavens_halberd",
+    "name": "Heaven's Halberd",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/heavens_halberd.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 3300,
+    "combination_cost": 350,
+    "components": [
+      32,
+      1847,
+      56
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          9
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          6.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Disarm",
+        "text": "Prevents a target from attacking for 3.5 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not."
+  }
+}

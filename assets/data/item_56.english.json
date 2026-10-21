@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 56,
+    "valve_key": "item_ring_of_health",
+    "name": "Ring of Health",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ring_of_health.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 700,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          4.5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A shiny ring found beneath a fat halfling's corpse."
+  }
+}

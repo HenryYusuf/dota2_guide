@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 837,
+    "valve_key": "item_heavy_blade",
+    "name": "Witchbane",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/heavy_blade.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Cleanse",
+        "text": "Dispel all enemies and allies in a 300 unit radius.\n\nDispel Type: Basic Dispel"
+      },
+      {
+        "kind": "passive",
+        "title": "Subjugate",
+        "text": "Your attacks deal bonus magical damage equal to 4% of your target's Max Mana."
+      }
+    ],
+    "notes": [],
+    "lore": "With ready access to test subjects, untold cruelties have been dreamed up and loosed upon the world from within the walls of the Tyler Estate."
+  }
+}

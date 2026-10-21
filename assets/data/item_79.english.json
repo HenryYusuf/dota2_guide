@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 79,
+    "valve_key": "item_mekansm",
+    "name": "Mekansm",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mekansm.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 1775,
+    "combination_cost": 850,
+    "components": [
+      94,
+      4
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Restore",
+        "text": "Restores 250 health to allied units in a 1200 radius."
+      },
+      {
+        "kind": "passive",
+        "title": "Mekansm Aura",
+        "text": "Grants 2.5 health regeneration to allied units in a 1200 radius."
+      }
+    ],
+    "notes": [
+      "Restore does not affect units that have been affected by Restore or Guardian Greaves Mend within Mekansm's cooldown.",
+      "Multiple instances of Mekansm Aura do not stack."
+    ],
+    "lore": "A glowing jewel formed out of assorted parts that somehow fit together perfectly."
+  }
+}

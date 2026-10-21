@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1090,
+    "valve_key": "item_muertas_gun",
+    "name": "Mercy & Grace",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/muertas_gun.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "BONUS CAST RANGE",
+        "values": [
+          100
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "",
+        "label": "SPELL AMPLIFICATION",
+        "values": [
+          100
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "",
+        "label": "HEALTH PENALTY",
+        "values": [
+          70
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Dead Shot",
+        "text": "Fires a ghostly bullet at an enemy unit or tree. When the bullet strikes it will deal 300 damage and slow the target by -100% for 0.5 seconds, then ricochet in the vector-targeted direction. The ricochet will damage all units that it passes through, stopping when it hits a hero. Heroes hit by the ricochet will be feared for 2 seconds in the direction of the shot."
+      }
+    ],
+    "notes": [
+      "Feared enemies are phased and unslowable.",
+      "The ricochet will travel 1x Dead Shot's cast range."
+    ],
+    "lore": "One to deliver the body, the other to claim the soul."
+  }
+}

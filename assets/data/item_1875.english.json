@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1875,
+    "valve_key": "item_tidehunter_fish",
+    "name": "Leviathan's Fish",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tidehunter_fish.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Yummy Fish"
+      }
+    ],
+    "notes": []
+  }
+}

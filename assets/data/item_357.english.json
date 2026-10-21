@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 357,
+    "valve_key": "item_nether_shawl",
+    "name": "Nether Shawl",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/nether_shawl.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          6
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "-",
+        "label": "Armor",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An otherworldly garment tethered to our plane by unknown means."
+  }
+}

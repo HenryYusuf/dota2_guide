@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 71,
+    "valve_key": "item_poor_mans_shield",
+    "name": "Poor Man's Shield",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/poor_mans_shield.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Damage Block",
+        "text": "Gives a 100% chance to block 30 damage from incoming attacks on melee heroes, and 20 damage on ranged.\n\nHas a 50% chance to block damage from creeps."
+      }
+    ],
+    "notes": [
+      "Multiple sources of damage block do not stack."
+    ],
+    "lore": "A busted old shield that seems to block more than it should."
+  }
+}

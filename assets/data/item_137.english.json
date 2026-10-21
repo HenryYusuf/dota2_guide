@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 137,
+    "valve_key": "item_radiance",
+    "name": "Radiance",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/radiance.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 4700,
+    "combination_cost": null,
+    "components": [
+      54,
+      32
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          55
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "toggle",
+        "title": "Burn",
+        "text": "When active, scorches enemies for 60 magical damage per second. Illusions deal 35 magical damage per second.\n\nRadius: 650"
+      }
+    ],
+    "notes": [],
+    "lore": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies."
+  }
+}

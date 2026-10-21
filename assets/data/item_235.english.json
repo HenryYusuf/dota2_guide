@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 235,
+    "valve_key": "item_octarine_core",
+    "name": "Octarine Core",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5100,
+    "combination_cost": 400,
+    "components": [
+      129,
+      1802
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cooldown Reduction",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "At the core of spellcraft are spectrums only the very gifted can sense."
+  }
+}

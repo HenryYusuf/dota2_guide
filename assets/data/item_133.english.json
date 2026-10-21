@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 133,
+    "valve_key": "item_rapier",
+    "name": "Divine Rapier",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5600,
+    "combination_cost": null,
+    "components": [
+      54,
+      51
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          100
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "toggle",
+        "title": "Transmute",
+        "text": "Toggle to gain either 25% bonus spell amplification or 250 bonus attack damage."
+      },
+      {
+        "kind": "passive",
+        "title": "Everlasting",
+        "text": "Dropped on death, and cannot be destroyed. \n\nBecomes unusable if picked up by an ally of its owner until it is returned to its owner. It is immediately usable by anybody if an enemy of the owner picks it up and is killed. A dropped Rapier cannot be picked up by a courier."
+      }
+    ],
+    "notes": [
+      "If Divine Rapier is dropped and picked up by an enemy of its original owner, it cannot be dropped again except by death.",
+      "Spell Amplification from multiple Rapiers does not stack."
+    ],
+    "lore": "So powerful, it cannot have a single owner."
+  }
+}

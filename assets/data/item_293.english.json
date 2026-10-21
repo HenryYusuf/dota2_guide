@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 293,
+    "valve_key": "item_phoenix_ash",
+    "name": "Phoenix Ash",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/phoenix_ash.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Rebirth",
+        "text": "Lethal damage is prevented and instead the wearer is healed to half health and non-ultimate ability cooldowns reset. Gets consumed on trigger."
+      }
+    ],
+    "notes": []
+  }
+}

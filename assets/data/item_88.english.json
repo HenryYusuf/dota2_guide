@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 88,
+    "valve_key": "item_ring_of_basilius",
+    "name": "Ring of Basilius",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ring_of_basilius.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 425,
+    "combination_cost": 250,
+    "components": [
+      28
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Basilius Aura",
+        "text": "Grants 1 mana regeneration to allies.  \n\nRadius: 1200"
+      }
+    ],
+    "notes": [],
+    "lore": "Ring given as a reward to the greatest mages."
+  }
+}

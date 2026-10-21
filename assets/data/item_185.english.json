@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 185,
+    "valve_key": "item_ancient_janggo",
+    "name": "Drum of Endurance",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ancient_janggo.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 1625,
+    "combination_cost": 525,
+    "components": [
+      94,
+      17,
+      244
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          8
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Endurance",
+        "text": "Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds.\n\nRadius: 1200"
+      },
+      {
+        "kind": "passive",
+        "title": "Swiftness Aura",
+        "text": "Grants 15 movement speed and 2.5 health regeneration to allies.  \n\nRadius: 1200"
+      }
+    ],
+    "notes": [],
+    "lore": "A relic that enchants the bodies of those around it for swifter movement in times of crisis."
+  }
+}

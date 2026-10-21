@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 675,
+    "valve_key": "item_psychic_headband",
+    "name": "Psychic Headband",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/psychic_headband.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Psychic Push",
+        "text": "Pushes the target unit away from you 400 distance."
+      }
+    ],
+    "notes": [
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "A failed experiment in finer telekinetic control, still fit for other ends."
+  }
+}

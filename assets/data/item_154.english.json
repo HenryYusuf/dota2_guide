@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 154,
+    "valve_key": "item_sange_and_yasha",
+    "name": "Sange and Yasha",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/sange_and_yasha.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4200,
+    "combination_cost": null,
+    "components": [
+      162,
+      170
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Status Resistance",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Restoration Amplification",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Slow Resistance",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Yasha-based movement speed bonuses from multiple items do not stack."
+    ],
+    "lore": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination."
+  }
+}

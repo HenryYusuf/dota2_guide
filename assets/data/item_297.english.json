@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 297,
+    "valve_key": "item_vampire_fangs",
+    "name": "Vampire Fangs",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/vampire_fangs.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Lifesteal",
+        "values": [
+          12,
+          16,
+          20
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          8,
+          12,
+          16
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

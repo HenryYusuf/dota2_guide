@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 6,
+    "valve_key": "item_helm_of_iron_will",
+    "name": "Helm of Iron Will",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_iron_will.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 975,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "The helmet of a legendary warrior who fell in battle."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 485,
+    "valve_key": "item_blitz_knuckles",
+    "name": "Blitz Knuckles",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/blitz_knuckles.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An underground arcanist's update of a back-alley classic."
+  }
+}

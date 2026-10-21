@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 368,
+    "valve_key": "item_woodland_striders",
+    "name": "Woodland Striders",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/woodland_striders.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          140
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          60
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Woodland Stride",
+        "text": "Create a path of trees behind you for 3 seconds. Trees last up to 15 seconds."
+      },
+      {
+        "kind": "passive",
+        "title": "Tree Walking",
+        "text": "Removes movement speed limit and allows free pathing through trees.\n \nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": []
+  }
+}

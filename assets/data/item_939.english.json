@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 939,
+    "valve_key": "item_harpoon",
+    "name": "Harpoon",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/harpoon.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4700,
+    "combination_cost": 1000,
+    "components": [
+      252,
+      1122
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Draw Forth",
+        "text": "When targeting an enemy, fire a harpoon at them, that pulls you and the target closer together, up to 35% of the distance between you and your target. If the caster is melee, the hero and target are always pulled to within melee distance of each other. Targeting a tree always pulls you all the way to that tree."
+      },
+      {
+        "kind": "passive",
+        "title": "Echo Strike",
+        "text": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 1 seconds on the first strike. Echo Strike cooldown: 5s"
+      }
+    ],
+    "notes": [],
+    "lore": "A perfect solution for the flight of foes."
+  }
+}

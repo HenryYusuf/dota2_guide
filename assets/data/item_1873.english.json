@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1873,
+    "valve_key": "item_partisans_brand",
+    "name": "Partisan's Brand",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/partisans_brand.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Brand",
+        "text": "Increases spell damage dealt to player controlled targets by 9%."
+      }
+    ],
+    "notes": [
+      "Player controlled targets includes heroes and any creep summoned or converted by them."
+    ]
+  }
+}

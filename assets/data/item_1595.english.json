@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1595,
+    "valve_key": "item_enhancement_keen_eyed",
+    "name": "Keen-eyed",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_keen_eyed.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          125,
+          135,
+          145
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1,
+          1.5,
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "-",
+        "label": "Max Mana",
+        "values": [
+          10,
+          12,
+          14
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

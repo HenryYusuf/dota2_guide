@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1869,
+    "valve_key": "item_foragers_health",
+    "name": "Vital Toadstool",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/foragers_health.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Munch",
+        "text": "Grants 1% max health regeneration to the target for 10 seconds.\n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
+      }
+    ],
+    "notes": [
+      "Hold Control to use on a nearby allied hero."
+    ]
+  }
+}

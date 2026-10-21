@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 229,
+    "valve_key": "item_solar_crest",
+    "name": "Solar Crest",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/solar_crest.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 2575,
+    "combination_cost": 500,
+    "components": [
+      1128,
+      4,
+      244
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Shine",
+        "text": "When cast on an ally, grants them 5 armor, 60 attack speed, 15% movement speed and a 350 physical damage barrier. \n\nDoes not grant bonus armor, movement or attack speed if used on self. \n\nDuration: 7"
+      }
+    ],
+    "notes": [
+      "Shares cooldown with Pavise."
+    ],
+    "lore": "A talisman forged to honor the daytime sky."
+  }
+}

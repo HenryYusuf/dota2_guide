@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 129,
+    "valve_key": "item_soul_booster",
+    "name": "Soul Booster",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/soul_booster.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 3000,
+    "combination_cost": null,
+    "components": [
+      60,
+      61,
+      59
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          425
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          425
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Regain lost courage."
+  }
+}

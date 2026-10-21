@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 45,
+    "valve_key": "item_courier",
+    "name": "Animal Courier",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/courier.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 50,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [],
+    "notes": []
+  }
+}

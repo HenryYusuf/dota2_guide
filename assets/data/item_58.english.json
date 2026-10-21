@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 58,
+    "valve_key": "item_mystic_staff",
+    "name": "Mystic Staff",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mystic_staff.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 2800,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Enigmatic staff made of only the most expensive crystals."
+  }
+}

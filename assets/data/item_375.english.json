@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 375,
+    "valve_key": "item_faded_broach",
+    "name": "Faded Broach",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/faded_broach.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          150
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A life-saving jewel bestowed upon a young queen by a kindly vizier."
+  }
+}

@@ -53,6 +53,22 @@ String heroDataFeedUrl(int heroId, {String locale = 'english'}) =>
 /// × 1 request per fan-out).
 const int heroDetailFetchConcurrency = 4;
 
+/// Valve's English itemlist feed: every Item's id, Valve key, localized
+/// name, neutral tier, and recipe sets (~544 entries). Verified live
+/// 2026-10-21: entries answer under `result.data.itemabilities[]`.
+const String itemListFeedUrl = '$datafeedBaseUrl/itemlist?language=english';
+
+/// Valve's per-Item itemdata feed: one Item's complete document (cost,
+/// description, special values, notes, lore) in the same ability-shaped
+/// envelope herodata uses. The `itemdetail` URL you would guess returns an
+/// empty body — `itemdata` is the detail feed (verified live 2026-10-21).
+String itemDataFeedUrl(int itemId, {String locale = 'english'}) =>
+    '$datafeedBaseUrl/itemdata?language=$locale&item_id=$itemId';
+
+/// Parallel per-Item detail fetches, shared by the refresh unit and the
+/// snapshot tool (the corpus is 544 documents — stay polite).
+const int itemDetailFetchConcurrency = 8;
+
 /// Production client over `package:http`.
 class HttpDatafeedClient implements DatafeedClient {
   HttpDatafeedClient({http.Client? client}) : _client = client ?? http.Client();

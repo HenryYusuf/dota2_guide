@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 81,
+    "valve_key": "item_vladmir",
+    "name": "Vladmir's Offering",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/vladmir.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 2200,
+    "combination_cost": null,
+    "components": [
+      86,
+      88,
+      26,
+      2
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          1
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Vladmir's Aura",
+        "text": "Grants 20% lifesteal, 18% bonus damage, 1 mana regeneration, and 2 armor to nearby allies.\n\nRadius: 1200"
+      }
+    ],
+    "notes": [
+      "Lifesteal on attacks against creeps is reduced to 12%."
+    ],
+    "lore": "An eerie mask that is haunted with the malice of a fallen vampire."
+  }
+}

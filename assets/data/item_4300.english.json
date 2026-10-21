@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4300,
+    "valve_key": "item_ofrenda",
+    "name": "Beloved Memory",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ofrenda.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Honor the Dead",
+        "text": "Place this Offering on an Altar to honor the dead with a memory from those they left behind."
+      }
+    ],
+    "notes": [],
+    "lore": "Take joy in remembering those beloved who've passed now beyond the veil."
+  }
+}

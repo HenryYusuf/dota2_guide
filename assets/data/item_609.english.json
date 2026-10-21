@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 609,
+    "valve_key": "item_aghanims_shard",
+    "name": "Aghanim's Shard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/aghanims_shard.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 1400,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Ability Upgrade",
+        "text": "Upgrades an existing ability or adds a new ability to your hero."
+      }
+    ],
+    "notes": [],
+    "lore": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself."
+  }
+}

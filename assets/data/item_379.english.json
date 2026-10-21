@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 379,
+    "valve_key": "item_the_leveller",
+    "name": "The Leveller",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/the_leveller.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Level",
+        "text": "Attacks deal 35% more damage to buildings."
+      }
+    ],
+    "notes": [],
+    "lore": "A demonic blade that struck the final blow to crack the gates of the Sanctum of Solanas."
+  }
+}

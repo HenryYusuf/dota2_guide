@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 598,
+    "valve_key": "item_mage_slayer",
+    "name": "Mage Slayer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mage_slayer.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 3100,
+    "combination_cost": null,
+    "components": [
+      69,
+      31,
+      2,
+      181
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          5.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Mage Slayer",
+        "text": "Places a debuff when you attack enemies, dealing 35 physical damage per second and causing them to do 40% less spell damage for 3 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King."
+  }
+}

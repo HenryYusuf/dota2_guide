@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1648,
+    "valve_key": "item_enhancement_dominant",
+    "name": "Dominant",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_dominant.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          15
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          205
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

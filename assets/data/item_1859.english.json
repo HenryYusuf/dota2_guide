@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1859,
+    "valve_key": "item_spellslinger",
+    "name": "Spellslinger",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/spellslinger.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Salvo",
+        "text": "20% of the mana used to cast abilities is recovered over 10 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

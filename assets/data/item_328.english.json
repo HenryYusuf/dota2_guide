@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 328,
+    "valve_key": "item_mango_tree",
+    "name": "Mango Tree",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mango_tree.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant a Mango Tree",
+        "text": "Targets the ground to plant a mango tree that provides unlimited mango power. The tree generates Enchanted Mangoes every 60 seconds, and provides unobstructed vision in the area ."
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 298,
+    "valve_key": "item_craggy_coat",
+    "name": "Craggy Coat",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/craggy_coat.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Toughen Up",
+        "text": "Grants you an extra 6 bonus armor at the cost of -20 movement speed. Lasts 6 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

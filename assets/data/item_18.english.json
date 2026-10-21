@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 18,
+    "valve_key": "item_boots_of_elves",
+    "name": "Band of Elvenskin",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/boots_of_elves.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A tensile fabric often used for its light weight and ease of movement."
+  }
+}

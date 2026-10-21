@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 277,
+    "valve_key": "item_yasha_and_kaya",
+    "name": "Yasha and Kaya",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/yasha_and_kaya.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4200,
+    "combination_cost": null,
+    "components": [
+      170,
+      259
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana Regen Amplification",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Cast Speed Bonus",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Yasha and Kaya when paired together share a natural resonance."
+  }
+}

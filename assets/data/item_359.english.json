@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 359,
+    "valve_key": "item_essence_ring",
+    "name": "Essence Ring",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/essence_ring.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Life Essence",
+        "text": "Increases your current and max health by 240 for 10 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "An ancient bauble blessed by the breath of Verodicia."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 123,
+    "valve_key": "item_sphere",
+    "name": "Linken's Sphere",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/sphere.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 4800,
+    "combination_cost": 600,
+    "components": [
+      69,
+      24
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          6.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          4.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Spellblock",
+        "text": "Blocks most targeted spells once every 14 seconds."
+      },
+      {
+        "kind": "active",
+        "title": "Transfer Spellblock",
+        "text": "Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for 14 seconds."
+      }
+    ],
+    "notes": [
+      "Targeted abilities from neutral items do not trigger Spellblock."
+    ],
+    "lore": "This magical sphere once protected one of the most famous heroes in history."
+  }
+}

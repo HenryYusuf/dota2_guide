@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 135,
+    "valve_key": "item_monkey_king_bar",
+    "name": "Monkey King Bar",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/monkey_king_bar.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5000,
+    "combination_cost": 900,
+    "components": [
+      51,
+      485,
+      7
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed_range_melee",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Pierce",
+        "text": "Grants each attack a 80% chance to pierce through evasion and deal 70 bonus magical damage."
+      }
+    ],
+    "notes": [],
+    "lore": "A powerful staff used by a master warrior."
+  }
+}

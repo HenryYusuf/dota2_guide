@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 372,
+    "valve_key": "item_pirate_hat",
+    "name": "Pirate Hat",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pirate_hat.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Plunder",
+        "text": "Steals 150 gold from enemy heroes that die within 2400 units. If the wearer is the killer, there is no range limit and an additional 400 gold is stolen."
+      },
+      {
+        "kind": "passive",
+        "title": "Buried Treasure",
+        "text": "Gold loss on death reduced by 100%."
+      }
+    ],
+    "notes": [],
+    "lore": "A salty skulltopper cursed with endless good fortune."
+  }
+}

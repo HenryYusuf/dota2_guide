@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 360,
+    "valve_key": "item_clumsy_net",
+    "name": "Clumsy Net",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/clumsy_net.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Ensnare",
+        "text": "Ensnares the target enemy and yourself for 1.75 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1802,
+    "valve_key": "item_tiara_of_selemene",
+    "name": "Tiara of Selemene",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tiara_of_selemene.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1700,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A symbol of favor bestowed upon the high priestess of Selemene."
+  }
+}

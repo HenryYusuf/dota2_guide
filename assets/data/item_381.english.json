@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 381,
+    "valve_key": "item_titan_sliver",
+    "name": "Titan Sliver",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/titan_sliver.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Base Attack Damage",
+        "values": [
+          15,
+          25
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Status Resistance",
+        "values": [
+          10,
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Though many desire this brilliant shard for its obvious qualities, a school of study exists to determine the true size and purpose of its incomprehensible whole."
+  }
+}

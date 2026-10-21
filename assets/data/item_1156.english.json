@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1156,
+    "valve_key": "item_ancient_guardian",
+    "name": "Ancient Guardian",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ancient_guardian.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Ancient Power",
+        "text": "Grants 50 extra bonus damage as long as the unit is within 2000 range of an ancient."
+      }
+    ],
+    "notes": []
+  }
+}

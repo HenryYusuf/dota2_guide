@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 374,
+    "valve_key": "item_ex_machina",
+    "name": "Ex Machina",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ex_machina.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Reset Cooldowns",
+        "text": "Reset the cooldown on all items (except Refresher Orb)."
+      }
+    ],
+    "notes": [],
+    "lore": "The remains of an ancient universe, preserved within a single sphere."
+  }
+}

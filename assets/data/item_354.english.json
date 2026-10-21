@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 354,
+    "valve_key": "item_ocean_heart",
+    "name": "Ocean Heart",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ocean_heart.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Water Regen",
+        "text": "Provides you with 10 HP regen and 5 mana regen while in the river."
+      }
+    ],
+    "notes": [],
+    "lore": "A charm blessed by the Council of the Brine."
+  }
+}

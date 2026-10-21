@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 589,
+    "valve_key": "item_mysterious_hat",
+    "name": "Fairy's Trinket",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mysterious_hat.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          5
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Manacost_reduction",
+        "values": [
+          5
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A small token imbued with the fortune of the fae in recognition of an intriguing display of mortal kindness."
+  }
+}

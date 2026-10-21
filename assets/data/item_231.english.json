@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 231,
+    "valve_key": "item_guardian_greaves",
+    "name": "Guardian Greaves",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/guardian_greaves.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 4450,
+    "combination_cost": 1175,
+    "components": [
+      180,
+      79
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          150
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Mend",
+        "text": "Restores 325 health and 200 mana to nearby allies, and removes most negative effects from the caster.\n\nRadius: 1200\nDispel Type: Basic Dispel"
+      },
+      {
+        "kind": "passive",
+        "title": "Guardian Aura",
+        "text": "Grants 2.5 health regeneration and 1.5 mana regeneration to allied units. If the wearer's health falls below 25%, their health regeneration is increased to 14.5. \n\nRadius: 1200 \nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [
+      "Mend does not affect units that have been affected by Mend or Mekansm Restore within Guardian Greaves' cooldown."
+    ],
+    "lore": "One of many holy instruments constructed to honor the Omniscience."
+  }
+}

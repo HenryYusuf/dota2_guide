@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4302,
+    "valve_key": "item_ofrenda_pledge",
+    "name": "Forebearer's Fortune",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ofrenda_pledge.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Undying Promise",
+        "text": "Signal to the spirits of the other realm your commitment to honoring them. If everyone in the battle makes an Undying Promise before the fight begins, the dead might be willing to listen."
+      }
+    ],
+    "notes": [],
+    "lore": "This item seems unstable. Like it might just disappear."
+  }
+}

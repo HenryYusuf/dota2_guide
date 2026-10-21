@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 223,
+    "valve_key": "item_meteor_hammer",
+    "name": "Meteor Hammer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/meteor_hammer.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2850,
+    "combination_cost": 300,
+    "components": [
+      259,
+      261
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          24
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana Regen Amplification",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Meteor Hammer",
+        "text": "CHANNELED - After a successful channel, summons a meteor that strikes a 400 AoE, stunning enemies for 0.75 seconds and dealing impact damage. Continues to deal damage over time to enemies units and buildings for 6 seconds. Non-building units are also slowed for 20% for the duration of the burn. \n\nBuilding Impact Damage: 90 \nBuilding Over Time Damage: 50 \n\nNon-Building Impact Damage: 130 \nNon-Building Over Time Damage: 50 \n\nChannel Duration: 2 seconds.\nLanding Time: 0.5 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm."
+  }
+}

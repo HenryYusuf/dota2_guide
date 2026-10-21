@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 125,
+    "valve_key": "item_vanguard",
+    "name": "Vanguard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/vanguard.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 1700,
+    "combination_cost": null,
+    "components": [
+      61,
+      56
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          4.5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Damage Block",
+        "text": "Grants a 60% chance to block 50 damage from incoming attacks on melee heroes, and 25 damage on ranged."
+      }
+    ],
+    "notes": [
+      "Multiple sources of damage block do not stack."
+    ],
+    "lore": "A powerful shield that defends its wielder from even the most vicious of attacks."
+  }
+}

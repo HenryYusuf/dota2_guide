@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 677,
+    "valve_key": "item_book_of_shadows",
+    "name": "Book of Shadows",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/book_of_shadows.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Shadows",
+        "text": "Target an enemy, ally or self. Causes the target to become untargetable from enemies to the caster, but also silenced, muted and disarmed for 4 seconds. Applies a Basic Dispel.\n\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "An impossible tome filled with unreadable prose of unknowable thoughts."
+  }
+}

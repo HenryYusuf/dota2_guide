@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 145,
+    "valve_key": "item_bfury",
+    "name": "Battle Fury",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bfury.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 3900,
+    "combination_cost": 400,
+    "components": [
+      69,
+      3,
+      3,
+      11
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          7.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Chop Tree",
+        "text": "Destroy a target tree."
+      },
+      {
+        "kind": "passive",
+        "title": "Quell",
+        "text": "Increases attack damage against non-hero units by 10 for melee heroes, and 5 for ranged."
+      },
+      {
+        "kind": "passive",
+        "title": "Cleave",
+        "text": "Deals 60% of attack damage as physical damage in a cone up to 650 around the target. Deals 40% against creeps. (Melee Only)"
+      }
+    ],
+    "notes": [
+      "Cleave damage goes through spell immunity.",
+      "If multiple sources of Cleave are present, each Cleave's damage is applied separately."
+    ],
+    "lore": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once."
+  }
+}

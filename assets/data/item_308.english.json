@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 308,
+    "valve_key": "item_repair_kit",
+    "name": "Repair Kit",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/repair_kit.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Building Repair",
+        "text": "Targets a building, restoring 40% of it's health over 30 seconds. Also grants +10 armor during this period."
+      }
+    ],
+    "notes": []
+  }
+}

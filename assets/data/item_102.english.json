@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 102,
+    "valve_key": "item_force_staff",
+    "name": "Force Staff",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/force_staff.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2200,
+    "combination_cost": 950,
+    "components": [
+      23,
+      593
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          175
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Force",
+        "text": "Pushes any target unit 600 units in the direction it is facing."
+      }
+    ],
+    "notes": [
+      "Self-cast will cause you to use Force on yourself.",
+      "Force Staff doesn't interrupt the target's actions.",
+      "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
+      "Force Staff has 850 cast range when cast on enemies."
+    ],
+    "lore": "Allows you to manipulate others, for good or evil."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 172,
+    "valve_key": "item_mask_of_madness",
+    "name": "Mask of Madness",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mask_of_madness.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 1900,
+    "combination_cost": null,
+    "components": [
+      3,
+      26
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Lifesteal",
+        "values": [
+          22
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Berserk",
+        "text": "Gives 100 attack speed, 6% / 12% movement speed (ranged/melee), and 15%/30% slow resistance (ranged/melee), but reduces your armor by 7 and silences you.  Lasts 6 seconds."
+      },
+      {
+        "kind": "passive",
+        "title": "Lifesteal",
+        "text": "Heals the attacker for a percentage of physical damage dealt."
+      }
+    ],
+    "notes": [],
+    "lore": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force."
+  }
+}

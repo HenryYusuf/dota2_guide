@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 218,
+    "valve_key": "item_ward_dispenser",
+    "name": "Observer and Sentry Wards",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ward_dispenser.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 50,
+    "combination_cost": null,
+    "components": [
+      43,
+      42
+    ],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "OBSERVER VISION RANGE:",
+        "values": [
+          1600
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "OBSERVER DURATION (MINUTES):",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "SENTRY DURATION (MINUTES):",
+        "values": [
+          8
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "SENTRY TRUE SIGHT RANGE:",
+        "values": [
+          1050
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant",
+        "text": "Plant the currently active ward.  Double-Click to switch the currently active ward."
+      }
+    ],
+    "notes": [
+      "Hold Control to give one ward to an allied hero."
+    ],
+    "lore": "Advancements in stacking efficiency have made wards easier to carry than ever."
+  }
+}

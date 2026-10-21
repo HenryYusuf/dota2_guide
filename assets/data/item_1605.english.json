@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1605,
+    "valve_key": "item_serrated_shiv",
+    "name": "Serrated Shiv",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/serrated_shiv.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Gut 'Em",
+        "text": "Attacks have a 20% chance to have True Strike and deal 8% of the target's current health as bonus physical damage. Deals a flat bonus of 200 against Roshan."
+      }
+    ],
+    "notes": [],
+    "lore": "Too dangerous for taskwork, this blade's only purpose is vile murder."
+  }
+}

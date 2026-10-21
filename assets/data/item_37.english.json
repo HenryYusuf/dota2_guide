@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 37,
+    "valve_key": "item_ghost",
+    "name": "Ghost Scepter",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ghost.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 1500,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Ghost Form",
+        "text": "You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and -30% more vulnerable to magic damage."
+      }
+    ],
+    "notes": [
+      "Ends if you become Debuff Immune, and will have no effect if you are already Debuff Immune.",
+      "Shares cooldown with all Ghost Scepter upgrades."
+    ],
+    "lore": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage."
+  }
+}

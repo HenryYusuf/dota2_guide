@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 356,
+    "valve_key": "item_trusty_shovel",
+    "name": "Trusty Shovel",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/trusty_shovel.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Dig",
+        "text": "Channel for 1 second. \nCan find a Bounty Rune, a Healing Salve, an Enchanted Mango, or a Kobold. If digging in a river, always digs up a Water Rune."
+      }
+    ],
+    "notes": [
+      "16% chance for a Bounty Rune.",
+      "28% chance each for a Flask, an Enchanted Mango, or a kobold.",
+      "The same Trusty Shovel cannot find the same reward twice in a row."
+    ],
+    "lore": "Former plaything of a young deity, received as a gift from his uncle."
+  }
+}

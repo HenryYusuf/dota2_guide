@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1590,
+    "valve_key": "item_enhancement_boundless",
+    "name": "Boundless",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_boundless.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed_range_all",
+        "values": [
+          150
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          275
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

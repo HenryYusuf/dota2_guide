@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1642,
+    "valve_key": "item_dezun_bloodrite",
+    "name": "Dezun Bloodrite",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dezun_bloodrite.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Blood Invocation",
+        "text": "Spells have a 20% larger Area of Effect, but now additionally cost health equal to 35% of their mana cost."
+      }
+    ],
+    "notes": [],
+    "lore": "The gateway to a lost lineage of power, unlocked only with blood."
+  }
+}

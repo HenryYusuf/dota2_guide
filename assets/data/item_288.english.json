@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 288,
+    "valve_key": "item_grove_bow",
+    "name": "Grove Bow",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/grove_bow.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Magic Amp",
+        "text": "Reduces magic resistance of the attacked enemy by 20%."
+      }
+    ],
+    "notes": [],
+    "lore": "A gift from the moon goddess to one of her prized disciples many memories ago."
+  }
+}

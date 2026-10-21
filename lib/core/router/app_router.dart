@@ -5,6 +5,7 @@ import '../../features/about/about_screen.dart';
 import '../../features/heroes/hero_detail_screen.dart';
 import '../../features/heroes/heroes_screen.dart';
 import '../../features/home/home_screen.dart';
+import '../../features/items/item_detail_screen.dart';
 import '../../features/items/items_screen.dart';
 import '../../features/patches/patches_screen.dart';
 import '../shell/app_shell.dart';
@@ -51,6 +52,16 @@ final routerProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: ItemsScreen.routeLocation,
                 builder: (context, state) => const ItemsScreen(),
+                // Detail nests inside the Items tab: pushing it keeps the
+                // tab shell (back returns to the list), same as Heroes.
+                routes: [
+                  GoRoute(
+                    path: ItemDetailScreen.routePath,
+                    builder: (context, state) => ItemDetailScreen(
+                      itemId: int.parse(state.pathParameters['id']!),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

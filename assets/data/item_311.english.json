@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 311,
+    "valve_key": "item_spell_prism",
+    "name": "Spell Prism",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/spell_prism.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cooldown Reduction",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Cooldown Reduction",
+        "text": "Reduces the cooldown time of all spells and items."
+      }
+    ],
+    "notes": [],
+    "lore": "Even the slightest flaw in the components of a spell prism can result in the death of its user."
+  }
+}

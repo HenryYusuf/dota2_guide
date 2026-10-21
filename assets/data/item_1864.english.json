@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1864,
+    "valve_key": "item_conjurers_catalyst",
+    "name": "Conjurer's Catalyst",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/conjurers_catalyst.png",
+    "shop_category": "neutral",
+    "neutral_tier": 3,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Spellover",
+        "text": "Dealing 200 spell damage to an enemy causes them to overheat and deal damage to their allies in a 300 unit radius. Hero targets deal 80 damage to their allies, other targets deal 20 damage."
+      }
+    ],
+    "notes": [
+      "Spellover has a 0.1s cooldown between overheats.",
+      "Accumulated damage resets if no damage is dealt to the target for 6s."
+    ]
+  }
+}

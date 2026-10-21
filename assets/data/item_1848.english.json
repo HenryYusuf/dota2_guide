@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1848,
+    "valve_key": "item_shawl",
+    "name": "Shawl",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/shawl.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Stacks multiplicatively with other sources of magic resistance."
+    ]
+  }
+}

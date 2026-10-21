@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 365,
+    "valve_key": "item_panic_button",
+    "name": "Magic Lamp",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/panic_button.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Rejuvenate",
+        "text": "When the wearer's health falls below 20%, they will receive a strong dispel and be healed for 1500 health.\n\nDispel Type: Strong Dispel"
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 20,
+    "valve_key": "item_circlet",
+    "name": "Circlet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/circlet.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 155,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An elegant circlet designed for human princesses."
+  }
+}

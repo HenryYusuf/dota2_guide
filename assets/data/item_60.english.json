@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 60,
+    "valve_key": "item_point_booster",
+    "name": "Point Booster",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/point_booster.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 1200,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          175
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          175
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A perfectly formed amethyst that nourishes body and mind when held."
+  }
+}

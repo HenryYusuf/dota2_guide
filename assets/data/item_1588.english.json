@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1588,
+    "valve_key": "item_enhancement_fleetfooted",
+    "name": "Fleetfooted",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_fleetfooted.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          115
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Does not stack with Movement Speed bonuses from boots"
+    ]
+  }
+}

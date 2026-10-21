@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 98,
+    "valve_key": "item_orchid",
+    "name": "Orchid Malevolence",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/orchid.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 3275,
+    "combination_cost": 300,
+    "components": [
+      67,
+      5
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Soul Burn",
+        "text": "Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage."
+      }
+    ],
+    "notes": [],
+    "lore": "A garnet rod constructed from the essence of a fire demon."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 100,
+    "valve_key": "item_cyclone",
+    "name": "Eul's Scepter of Divinity",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/cyclone.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2600,
+    "combination_cost": 675,
+    "components": [
+      23,
+      57,
+      244
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Cyclone",
+        "text": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself.\n\nEnemy units take 50 magical damage upon landing.\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "You cannot cyclone allies.",
+      "Cyclones cast on yourself go through spell immunity.",
+      "Cyclone can dispel some buffs and debuffs.",
+      "Cyclone duration is unaffected by status resistance."
+    ],
+    "lore": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil."
+  }
+}

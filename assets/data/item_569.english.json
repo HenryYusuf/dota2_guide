@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 569,
+    "valve_key": "item_orb_of_corrosion",
+    "name": "Orb of Corrosion",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/orb_of_corrosion.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 1050,
+    "combination_cost": null,
+    "components": [
+      18,
+      1575,
+      240
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Corrosion",
+        "text": "Your attacks reduce the target's armor by -2, slows their movement by -16% (-8% against melee targets), and reduces Health Restoration by 18%. Lasts for 3 seconds."
+      }
+    ],
+    "notes": [
+      "Armor reduction does not stack with its components, Desolator, or Stygian Desolator."
+    ],
+    "lore": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 908,
+    "valve_key": "item_wraith_pact",
+    "name": "Wraith Pact",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/wraith_pact.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 3800,
+    "combination_cost": 400,
+    "components": [
+      81,
+      60
+    ],
+    "attributes": [],
+    "effects": [],
+    "notes": []
+  }
+}

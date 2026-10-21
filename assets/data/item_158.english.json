@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 158,
+    "valve_key": "item_mjollnir",
+    "name": "Mjollnir",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 5500,
+    "combination_cost": 550,
+    "components": [
+      166,
+      55
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          90
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Static Charge",
+        "text": "Places a charged shield on a target unit for 12 seconds which has a 20% chance to release a 225 magical damage shocking bolt at a nearby attacker and 4 additional enemies."
+      },
+      {
+        "kind": "passive",
+        "title": "Chain Lightning",
+        "text": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 12 targets within a 650 radius, dealing 180 magical damage to each. Lightning proc pierces evasion."
+      }
+    ],
+    "notes": [
+      "Static Charge cannot trigger more than once per second.",
+      "Static Charge's shock deals magical damage centered on hero with the Static Charge. Static Charge's targets cannot be more than 900 range away.",
+      "Static Charge procs will not bounce to heroes that are invisible or hidden by Fog of War."
+    ],
+    "lore": "Thor's magical hammer, made for him by the dwarves Brok and Eitri."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 131,
+    "valve_key": "item_hood_of_defiance",
+    "name": "Hood of Defiance",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/hood_of_defiance.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          8.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Barrier",
+        "text": "Creates a spell shield that absorbs up to 350 magical damage.  Lasts 12 seconds."
+      }
+    ],
+    "notes": [
+      "Stacks multiplicatively with other sources of magic resistance."
+    ],
+    "lore": "A furred, magic resistant headpiece that is feared by wizards."
+  }
+}

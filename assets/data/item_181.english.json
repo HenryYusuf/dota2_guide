@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 181,
+    "valve_key": "item_orb_of_venom",
+    "name": "Orb of Venom",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/orb_of_venom.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 350,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Poison Attack",
+        "text": "Poisons the target, dealing 12 magical damage per second. Lasts for 3 seconds."
+      }
+    ],
+    "notes": [
+      "Does not stack with its upgrades."
+    ],
+    "lore": "Envenoms your veapon with the venom of a venomous viper."
+  }
+}

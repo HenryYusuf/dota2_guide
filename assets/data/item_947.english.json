@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 947,
+    "valve_key": "item_occult_bracelet",
+    "name": "Occult Bracelet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/occult_bracelet.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Rites of Eloshar",
+        "text": "Each time the wearer is attacked, they gain a stack of 0.4 mana regen, up to 5 stacks. Stacks last for 5 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "A band that bears effigy of the dark goddess Eloshar's unsleeping eye."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4204,
+    "valve_key": "item_famango",
+    "name": "Healing Lotus",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/famango.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Eat Lotus",
+        "text": "Instantly restores 125 health and mana."
+      }
+    ],
+    "notes": [
+      "Hold Control to use on a nearby allied hero."
+    ]
+  }
+}

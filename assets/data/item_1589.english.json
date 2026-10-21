@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1589,
+    "valve_key": "item_enhancement_crude",
+    "name": "Crude",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_crude.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Restoration",
+        "values": [
+          9,
+          12,
+          15
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "-",
+        "label": "Base Attack Time",
+        "values": [
+          6,
+          9,
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "-",
+        "label": "Intelligence",
+        "values": [
+          -9
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

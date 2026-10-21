@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 206,
+    "valve_key": "item_rod_of_atos",
+    "name": "Rod of Atos",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/rod_of_atos.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2250,
+    "combination_cost": 250,
+    "components": [
+      23,
+      61
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          275
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Cripple",
+        "text": "Roots the target for 2 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand."
+  }
+}

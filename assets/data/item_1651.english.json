@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1651,
+    "valve_key": "item_enhancement_curious",
+    "name": "Unleashed",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_curious.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Artifact Potency",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

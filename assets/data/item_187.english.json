@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 187,
+    "valve_key": "item_medallion_of_courage",
+    "name": "Medallion of Courage",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/medallion_of_courage.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [
+      4,
+      28,
+      240
+    ],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Valor",
+        "text": "Increases armor by 7 or decreases armor by -4 for 8s depending on if cast on an ally or enemy. Cannot be cast on self."
+      }
+    ],
+    "notes": []
+  }
+}

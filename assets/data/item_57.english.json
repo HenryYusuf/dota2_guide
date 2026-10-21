@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 57,
+    "valve_key": "item_void_stone",
+    "name": "Void Stone",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/void_stone.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 700,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy."
+  }
+}

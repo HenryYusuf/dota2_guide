@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1097,
+    "valve_key": "item_disperser",
+    "name": "Disperser",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/disperser.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 6100,
+    "combination_cost": 800,
+    "components": [
+      174,
+      52
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Suppress",
+        "text": "Dispels both the wearer and the target. Enemy targets are slowed for 4 seconds. Allied targets gain bonus movespeed and 40% slow resistance for 4 seconds. Caster is always granted the ally benefit on cast.\n\nBoth movement speed reduction and increase start at 100% and gradually decrease to 0% over the course of the buff duration.\nDispel Type: Basic Dispel"
+      },
+      {
+        "kind": "passive",
+        "title": "Manabreak",
+        "text": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. \n\nIllusions do not burn mana."
+      }
+    ],
+    "notes": [],
+    "lore": "Once entrusted to an Apostle General of the Rumusque Faithful's expeditionary force."
+  }
+}

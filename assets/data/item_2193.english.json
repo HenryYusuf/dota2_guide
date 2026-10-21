@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 2193,
+    "valve_key": "item_gossamer_cape",
+    "name": "Gossamer Cape",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gossamer_cape.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Sixth Sense",
+        "text": "Automatically dodge an attack from an enemy hero."
+      }
+    ],
+    "notes": []
+  }
+}

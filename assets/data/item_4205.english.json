@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4205,
+    "valve_key": "item_great_famango",
+    "name": "Great Healing Lotus",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/great_famango.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [
+      4204,
+      4204,
+      4204
+    ],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Eat Lotus",
+        "text": "Instantly restores 400 health and mana."
+      }
+    ],
+    "notes": [
+      "Hold Control to use on a nearby allied hero."
+    ]
+  }
+}

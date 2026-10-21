@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 10,
+    "valve_key": "item_quarterstaff",
+    "name": "Quarterstaff",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/quarterstaff.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 875,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A basic staff that allows you to strike quickly."
+  }
+}

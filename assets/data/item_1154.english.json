@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1154,
+    "valve_key": "item_royale_with_cheese",
+    "name": "Block of Cheese",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/royale_with_cheese.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 2,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Scrumptious",
+        "text": "Try me!"
+      }
+    ],
+    "notes": [],
+    "lore": "First there was the Belt of Strength. Then there were the Boots of Travel. Now, at long last, the Block of Cheese."
+  }
+}

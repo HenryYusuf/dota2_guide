@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 43,
+    "valve_key": "item_ward_sentry",
+    "name": "Sentry Ward",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ward_sentry.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 50,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant",
+        "text": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a 1050 radius.\nLasts 7 minutes.\n\nDoes not grant ground vision.\nHold Control to give one Sentry Ward to an allied hero."
+      }
+    ],
+    "notes": [],
+    "lore": "A form of plant originally grown in the garden of a fearful king."
+  }
+}

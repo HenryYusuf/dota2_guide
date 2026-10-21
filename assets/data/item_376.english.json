@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 376,
+    "valve_key": "item_paladin_sword",
+    "name": "Paladin Sword",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/paladin_sword.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Lifesteal",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          8
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "The sigil blade of the legendary Brother Yhols of Gausra, stripped from its scabbard on the day of his controversial excommunication."
+  }
+}

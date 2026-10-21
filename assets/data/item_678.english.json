@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 678,
+    "valve_key": "item_giants_ring",
+    "name": "Giant's Ring",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/giants_ring.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Model Scale",
+        "values": [
+          60
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Giant's Foot",
+        "text": "Can path over any terrain and deals 100% of your strength per second to units you are standing ontop of."
+      }
+    ],
+    "notes": [],
+    "lore": "Prized procurement of an otherwise unremarkable ruler of Elze who abdicated his position and vanished."
+  }
+}

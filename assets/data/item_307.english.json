@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 307,
+    "valve_key": "item_tome_of_aghanim",
+    "name": "Tome of Aghanim",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tome_of_aghanim.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Consume",
+        "text": "Temporarily grants an allied target the Aghanim's Scepter buff for 3 minutes."
+      }
+    ],
+    "notes": []
+  }
+}

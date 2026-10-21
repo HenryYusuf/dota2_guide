@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 42,
+    "valve_key": "item_ward_observer",
+    "name": "Observer Ward",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ward_observer.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant",
+        "text": "Plants an Observer Ward, an invisible watcher that gives ground vision in a 1600 radius to your team. Lasts 6 minutes.\n\nHold Control to give one Observer Ward to an allied hero."
+      }
+    ],
+    "notes": [],
+    "lore": "A form of half-sentient plant, often cultivated by apprentice wizards."
+  }
+}

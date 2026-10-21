@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 41,
+    "valve_key": "item_bottle",
+    "name": "Bottle",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bottle.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 675,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Regenerate",
+        "text": "Consumes a charge to restore 110 health and 60 mana over 2.7 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nThe Bottle automatically refills at the fountain.\n\nHold Control to use on an allied hero."
+      },
+      {
+        "kind": "passive",
+        "title": "Store Rune",
+        "text": "Runes can be stored in the Bottle for later use by right-clicking them. Unused runes will automatically activate after 90 seconds.\n\nUsing a stored rune fully refills the Bottle."
+      }
+    ],
+    "notes": [
+      "Bottle is shareable. Stored runes cannot be shared.",
+      "Using a stored Bounty or Water rune fully refills the bottle if the bottle was full when the rune was stored; otherwise, it refills two charges."
+    ],
+    "lore": "An old bottle that survived the ages, the contents placed inside become enchanted."
+  }
+}

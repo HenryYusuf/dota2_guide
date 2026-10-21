@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1639,
+    "valve_key": "item_sisters_shroud",
+    "name": "Sister's Shroud",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/sisters_shroud.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Veiled",
+        "text": "When falling below 50% HP, gain 150% evasion for 5 seconds. While active, dodging an attack decreases the evasion bonus by 75% of its current value."
+      },
+      {
+        "kind": "passive",
+        "title": "Last Caress",
+        "text": "Veiled cooldown is only reset if the wearer dies or kills an enemy hero."
+      }
+    ],
+    "notes": [
+      "Does not trigger from damage by non-player controlled creeps"
+    ],
+    "lore": "A pall that draped the sarcophagus of the First Sister."
+  }
+}

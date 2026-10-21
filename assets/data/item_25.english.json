@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 25,
+    "valve_key": "item_gloves",
+    "name": "Gloves of Haste",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gloves.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A pair of magical gloves that seems to render weapons weightless."
+  }
+}

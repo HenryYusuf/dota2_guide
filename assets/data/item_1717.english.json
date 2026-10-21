@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1717,
+    "valve_key": "item_ash_legion_shield",
+    "name": "Ash Legion Shield",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ash_legion_shield.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Shield Wall",
+        "text": "Reduce your own movement speed by 20 to provide a 160 physical damage barrier to allied player controlled targets in a 800 unit radius. Lasts for 6 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

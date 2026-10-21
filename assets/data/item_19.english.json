@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 19,
+    "valve_key": "item_robe",
+    "name": "Robe of the Magi",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/robe.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "This robe corrupts the soul of the user, but provides wisdom in return."
+  }
+}

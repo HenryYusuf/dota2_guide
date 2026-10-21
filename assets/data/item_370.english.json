@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 370,
+    "valve_key": "item_demonicon",
+    "name": "Book of the Dead",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/demonicon.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Greater Demonic Summoning",
+        "text": "Summon 2 demonic warriors and 2 demonic archers that last 65 seconds. The Warrior burns mana every hit and deals magical damage to whoever kills it. The Archer has a basic dispel ability with a slow and a passive movement speed aura."
+      }
+    ],
+    "notes": [
+      "The Demonic Warrior has 1600 Health, 4 Armor, 40% Magic Resistance, 380 Movement Speed, 134 Attack Damage, 50 Mana Burn on Hit, and deals 800 Damage on Death.",
+      "The Demonic Archer has 1300 Health, 4 Armor, 40% Magic Resistance, 425 Movement Speed, 131 Attack Damage, a basic dispel ability with a slow on a 15s Cooldown, and a 9% Bonus Movement Speed Aura."
+    ],
+    "lore": "A record of the final reckoning. With one page torn out."
+  }
+}

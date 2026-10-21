@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 835,
+    "valve_key": "item_paintball",
+    "name": "Fae Grenade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/paintball.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Shadow Brand",
+        "text": "Throws a Mark towards an enemy within 900 range applying a debuff that deals 40 damage every second and provides vision of the unit for 7 seconds."
+      }
+    ],
+    "notes": [
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "Those marked for death by the fae shine brightly to all manner of creatures in the shadow realm."
+  }
+}

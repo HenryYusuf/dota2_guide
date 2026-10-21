@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1806,
+    "valve_key": "item_devastator",
+    "name": "Parasma",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/devastator.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5975,
+    "combination_cost": 400,
+    "components": [
+      534,
+      58
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Projectile Speed",
+        "values": [
+          300
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Witch Blade",
+        "text": "Causes your next attack to have true strike, apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second."
+      },
+      {
+        "kind": "passive",
+        "title": "Magic Corruption",
+        "text": "Your attacks reduce the enemy's Magic resistance by 20% for 4 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Warning: There is no antidote if picked up by the wrong end."
+  }
+}

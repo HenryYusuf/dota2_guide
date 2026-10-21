@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1874,
+    "valve_key": "item_enhancement_nimble",
+    "name": "Nimble",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_nimble.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          6,
+          8,
+          10
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          10,
+          15,
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "-",
+        "label": "Health Regeneration",
+        "values": [
+          1.5,
+          2.25,
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

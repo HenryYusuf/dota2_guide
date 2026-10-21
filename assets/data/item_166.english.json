@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 166,
+    "valve_key": "item_maelstrom",
+    "name": "Maelstrom",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/maelstrom.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 2950,
+    "combination_cost": null,
+    "components": [
+      8,
+      7,
+      25
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Chain Lightning",
+        "text": "Grants a 25% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 110 magical damage to each. Lightning proc pierces evasion."
+      }
+    ],
+    "notes": [],
+    "lore": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 265,
+    "valve_key": "item_infused_raindrop",
+    "name": "Infused Raindrops",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/infused_raindrop.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 225,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Magical Damage Block",
+        "text": "Consumes a charge to block 120 magic damage from damage instances over 75 damage. \n\nComes with 6 charges. When the charges are gone, the item disappears."
+      }
+    ],
+    "notes": [
+      "Uses at most one charge per damage instance."
+    ],
+    "lore": "Elemental protection from magical assaults."
+  }
+}

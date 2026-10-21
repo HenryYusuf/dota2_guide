@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1803,
+    "valve_key": "item_doubloon",
+    "name": "Doubloon",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/doubloon.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "toggle",
+        "title": "Flip",
+        "text": "Toggle to convert 30% of your Max Health to Max Mana, or 30% of your Max Mana to Max Health."
+      }
+    ],
+    "notes": []
+  }
+}

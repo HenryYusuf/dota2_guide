@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 635,
+    "valve_key": "item_helm_of_the_overlord",
+    "name": "Helm of the Overlord",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_the_overlord.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 5650,
+    "combination_cost": 300,
+    "components": [
+      164,
+      24
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          21
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Dominate",
+        "text": "Takes control of one neutral target unit and sets its movement speed to 380 and max health to a minimum of 1900. Also provides the unit with +70 base attack damage, +12 health regen, +4 mana regen, +7 armor, and levels up some abilities of the target by 1 level. \n\nDominated units with a max health of greater than 1900 retain their original max health. Grants the caster the gold and experience bounty of the dominated creep. Dominated unit's bounty is set to 250 gold and it can no longer be killed by abilities that instantly kill creeps otherwise.\n\nThe Helm cannot be used for 3 seconds after the dominated creep takes damage from an enemy hero or Roshan."
+      }
+    ],
+    "notes": [
+      "Can also Dominate enemy lane creeps and summoned units.",
+      "Selling will cause dominated units to die."
+    ],
+    "lore": "The powerful headpiece of an undead necromancer."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 188,
+    "valve_key": "item_smoke_of_deceit",
+    "name": "Smoke of Deceit",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/smoke_of_deceit.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 50,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Disguise",
+        "text": "Turns the caster and all allied player-controlled targets in a 1200 radius invisible, and grants 15% bonus movement speed for 45 seconds. \n\n While the caster is still disguised, any allies that come within 300 range of them will also get the buff applied to them. Each smoke can only be applied once to allies. \n\nAttacking or moving within 1025 range of an enemy hero or tower, will break the invisibility. \n\nDisguise grants invisibility that is immune to True Sight. \n\nSmoke of Deceit is usable from the backpack and has no cooldown when swapped into the main inventory."
+      }
+    ],
+    "notes": [],
+    "lore": "The charlatan wizard Myrddin's only true contribution to the arcane arts."
+  }
+}

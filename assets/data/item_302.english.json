@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 302,
+    "valve_key": "item_elixer",
+    "name": "Elixir",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/elixer.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Consume",
+        "text": "Restores 500 health and 250 mana to the target over 6 seconds.\n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
+      }
+    ],
+    "notes": []
+  }
+}

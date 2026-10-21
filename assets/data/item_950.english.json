@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 950,
+    "valve_key": "item_defiant_shell",
+    "name": "Defiant Shell",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/defiant_shell.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Reciprocity",
+        "text": "When attacked, the hero counter-attacks a target within their attack range for 80% of their regular attack damage."
+      }
+    ],
+    "notes": []
+  }
+}

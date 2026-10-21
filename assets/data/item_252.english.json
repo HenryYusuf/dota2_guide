@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 252,
+    "valve_key": "item_echo_sabre",
+    "name": "Echo Sabre",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/echo_sabre.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 2700,
+    "combination_cost": null,
+    "components": [
+      21,
+      3,
+      57
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Echo Strike",
+        "text": "Causes melee attacks to attack twice in quick succession. The double attacks apply a 100% movement slow for 0.8 seconds on the first strike."
+      }
+    ],
+    "notes": [],
+    "lore": "A deceptively swift blade imbued with resonant magic."
+  }
+}

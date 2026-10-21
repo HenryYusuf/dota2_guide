@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 638,
+    "valve_key": "item_penta_edged_sword",
+    "name": "Penta-Edged Sword",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/penta_edged_sword.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          45
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed_range_melee",
+        "values": [
+          100
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Maim",
+        "text": "Each attack has a 25% chance to reduce enemy hero movement speed by 20% and attack speed by 60 for 3 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "The final, twisted work of a severely pious blacksmith, completed immediately before the taking of his own life."
+  }
+}

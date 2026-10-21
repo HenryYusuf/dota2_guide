@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 828,
+    "valve_key": "item_misericorde",
+    "name": "Brigand's Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/misericorde.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Dark Mercy",
+        "text": "Your attacks deal 3 more damage to enemies for each 7% HP they are missing."
+      }
+    ],
+    "notes": [],
+    "lore": "An infamous assassin's blade stolen and smuggled out of White Spire after its owner's mysterious demise."
+  }
+}

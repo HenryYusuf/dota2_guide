@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 104,
+    "valve_key": "item_dagon",
+    "name": "Dagon",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dagon.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 3000,
+    "combination_cost": 1100,
+    "components": [
+      60,
+      261,
+      1849
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          200,
+          210,
+          220,
+          230,
+          240
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          350,
+          375,
+          400,
+          425,
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          60,
+          90,
+          120,
+          150,
+          180
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Energy Burst",
+        "text": "Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.\n\nDamage: 400\n Mana Cost: 120"
+      }
+    ],
+    "notes": [
+      "Instantly kills illusions.",
+      "Cast Range bonuses from Aether Lens and Dagon do not stack."
+    ],
+    "lore": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user."
+  }
+}

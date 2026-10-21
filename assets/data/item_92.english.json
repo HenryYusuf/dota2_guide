@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 92,
+    "valve_key": "item_urn_of_shadows",
+    "name": "Urn of Shadows",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/urn_of_shadows.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 825,
+    "combination_cost": 320,
+    "components": [
+      28,
+      12,
+      20
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Soul Release",
+        "text": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies.\n\nLasts 8 seconds.\n\nGains charges every time an enemy hero dies within 1500 units."
+      }
+    ],
+    "notes": [
+      "Empty urns gain 2 charges.",
+      "If the allied unit is attacked by an enemy hero or Roshan, the effect is lost.",
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "Contains the ashes of powerful demons."
+  }
+}

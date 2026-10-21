@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1847,
+    "valve_key": "item_splintmail",
+    "name": "Splintmail",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/splintmail.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 950,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

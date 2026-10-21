@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1862,
+    "valve_key": "item_enchanters_bauble",
+    "name": "Enchanter's Bauble",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enchanters_bauble.png",
+    "shop_category": "neutral",
+    "neutral_tier": 3,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "CURRENT BONUS:",
+        "values": [
+          0
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Enchant",
+        "text": "Increases the bonuses of the item's Neutral Enchantment by 10%. Every time this item is crafted again the bonus is increased by 35%."
+      }
+    ],
+    "notes": []
+  }
+}

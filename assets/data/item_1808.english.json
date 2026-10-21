@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1808,
+    "valve_key": "item_angels_demise",
+    "name": "Khanda",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/angels_demise.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 5600,
+    "combination_cost": null,
+    "components": [
+      1107,
+      129
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          8
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Empower Spell",
+        "text": "The next Unit Target spell you cast on an enemy deals a separate 250 additional damage, disables their passives, and slows their movement speed by 30% for 4s."
+      }
+    ],
+    "notes": [
+      "The slow debuff is dispellable.",
+      "The break debuff is not dispellable."
+    ],
+    "lore": "A blade sharp enough to slice through magic itself."
+  }
+}

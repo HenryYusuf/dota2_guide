@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 119,
+    "valve_key": "item_shivas_guard",
+    "name": "Shiva's Guard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 4500,
+    "combination_cost": 1250,
+    "components": [
+      9,
+      1847,
+      1872
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          17
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "AOE Bonus",
+        "values": [
+          75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Arctic Blast",
+        "text": "Emits a freezing wave that deals 225 magical damage to enemies and slows their movement by -40% for 4 seconds.\n\nRadius: 825"
+      },
+      {
+        "kind": "passive",
+        "title": "Freezing Aura",
+        "text": "Reduces the attack speed of all enemies by -40. \n\nRadius: 1200"
+      }
+    ],
+    "notes": [
+      "The wave extends at a speed of 400 to a max size of 825.",
+      "The Arctic Blast follows its caster.",
+      "Multiple instances of Freezing Aura do not stack.",
+      "AoE bonuses from multiple Chasm Stones or its upgrades do not stack."
+    ],
+    "lore": "Said to have belonged to a goddess, today it retains much of its former power."
+  }
+}

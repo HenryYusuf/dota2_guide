@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1158,
+    "valve_key": "item_whisper_of_the_dread",
+    "name": "Whisper of the Dread",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/whisper_of_the_dread.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Tunnel Vision",
+        "text": "Equipped Hero has their daytime vision reduced by 15% but their Spell damage increased by 10%."
+      }
+    ],
+    "notes": [],
+    "lore": "The air that passes through this amulet makes a dreadful sound."
+  }
+}

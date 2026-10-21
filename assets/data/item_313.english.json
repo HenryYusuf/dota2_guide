@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 313,
+    "valve_key": "item_fusion_rune",
+    "name": "Fusion Rune",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/fusion_rune.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Consume",
+        "text": "Grants the target the bonuses of every Power Rune for 50 seconds. Each use consumes a charge."
+      }
+    ],
+    "notes": []
+  }
+}

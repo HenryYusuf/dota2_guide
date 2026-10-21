@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 692,
+    "valve_key": "item_eternal_shroud",
+    "name": "Eternal Shroud",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/eternal_shroud.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 3900,
+    "combination_cost": 900,
+    "components": [
+      31,
+      21,
+      61
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Shroud",
+        "text": "Restores mana equal to 25% of incoming enemy spell damage before reductions."
+      },
+      {
+        "kind": "passive",
+        "title": "Eternal Endurance",
+        "text": "For every 300 spell damage that equipped hero receives, it gains a stack of Endurance for 5s up to a maximum of 6 charges. Each charge increases Eternal Shroud's magic resistance by 3.5% ."
+      }
+    ],
+    "notes": [],
+    "lore": "A pristine hood that feeds upon strife to empower its owner."
+  }
+}

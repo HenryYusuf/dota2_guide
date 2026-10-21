@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1598,
+    "valve_key": "item_unrelenting_eye",
+    "name": "Unrelenting Eye",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/unrelenting_eye.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Relentless",
+        "text": "Increases slow resistance by 50%. This bonus is reduced by 10% for every enemy hero within the wearer's attack radius."
+      }
+    ],
+    "notes": [],
+    "lore": "A serpent's eye the size of a melon (and just as moist)."
+  }
+}

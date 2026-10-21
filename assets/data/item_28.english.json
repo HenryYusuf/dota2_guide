@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 28,
+    "valve_key": "item_sobi_mask",
+    "name": "Sage's Mask",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/sobi_mask.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 175,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A mask commonly used by mages and warlocks for various rituals."
+  }
+}

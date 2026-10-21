@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 236,
+    "valve_key": "item_dragon_lance",
+    "name": "Dragon Lance",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dragon_lance.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 2000,
+    "combination_cost": 550,
+    "components": [
+      22,
+      17
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed_range",
+        "values": [
+          130
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
+    ],
+    "lore": "The forward charge of the wyvern host grants no quarter."
+  }
+}

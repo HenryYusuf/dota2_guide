@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 24,
+    "valve_key": "item_ultimate_orb",
+    "name": "Ultimate Orb",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_orb.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 2800,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A mystical orb containing the essence of life."
+  }
+}

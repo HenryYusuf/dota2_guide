@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1586,
+    "valve_key": "item_enhancement_tough",
+    "name": "Tough",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_tough.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          6,
+          9,
+          12,
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          0,
+          4,
+          6,
+          8
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Knockback Resistance",
+        "values": [
+          0,
+          0,
+          0,
+          40
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

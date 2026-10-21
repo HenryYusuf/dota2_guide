@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 226,
+    "valve_key": "item_lotus_orb",
+    "name": "Lotus Orb",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/lotus_orb.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 3850,
+    "combination_cost": 250,
+    "components": [
+      69,
+      9,
+      59
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          6.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Echo Shell",
+        "text": "Applies a shield to the target unit for 5 seconds which re-casts most targeted spells back to their caster.\n\nThe shielded unit will still take damage from the spell.\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "Targeted abilities from neutral items do not trigger Echo Shell."
+    ],
+    "lore": "The jewel at its center still reflects a pale image of its creator."
+  }
+}

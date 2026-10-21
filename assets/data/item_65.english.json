@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 65,
+    "valve_key": "item_hand_of_midas",
+    "name": "Hand of Midas",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/hand_of_midas.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 2200,
+    "combination_cost": 1750,
+    "components": [
+      25
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Transmute",
+        "text": "Kills a non-hero target for 160 gold. Killing a neutral creep additionally grants a madstone bundle. \n\n Cannot be used on Ancient creeps."
+      }
+    ],
+    "notes": [
+      "The gold given is unreliable gold (you do not get the normal creep bounty).",
+      "Experience gained by using Transmute is not shared."
+    ],
+    "lore": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets."
+  }
+}

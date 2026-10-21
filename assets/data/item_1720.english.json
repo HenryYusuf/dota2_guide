@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1720,
+    "valve_key": "item_idol_of_screeauk",
+    "name": "Idol of Scree'auk",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/idol_of_screeauk.png",
+    "shop_category": "neutral",
+    "neutral_tier": 3,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "False Flight",
+        "text": "Gain 50% slow resistance, phased movement, and 35% evasion for 6.5 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

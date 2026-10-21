@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1125,
+    "valve_key": "item_cornucopia",
+    "name": "Cornucopia",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/cornucopia.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1200,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A source of spiritual and physical nourishment."
+  }
+}

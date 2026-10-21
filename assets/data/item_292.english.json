@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 292,
+    "valve_key": "item_desolator_2",
+    "name": "Stygian Desolator",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/desolator_2.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Greater Corruption",
+        "text": "Your attacks reduce the target's armor by -13 for 7 seconds."
+      }
+    ],
+    "notes": [
+      "Armor reduction works on buildings."
+    ],
+    "lore": "The original demonic favorite that served as basis for the beloved mortal design."
+  }
+}

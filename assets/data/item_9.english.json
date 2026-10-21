@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 9,
+    "valve_key": "item_platemail",
+    "name": "Platemail",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/platemail.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 1400,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Thick metal plates that protect the entire upper body. Avoid dropping on feet."
+  }
+}

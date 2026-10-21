@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 215,
+    "valve_key": "item_shadow_amulet",
+    "name": "Shadow Amulet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/shadow_amulet.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "FADE TIME:",
+        "values": [
+          1.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Fade",
+        "text": "Grants invisibility to you or a target allied hero for 3.5s. Movement speed during the invisibility is reduced by 35%."
+      }
+    ],
+    "notes": [
+      "Takes 1.25s of the 3.5s for the hero to fully fade into invisibility."
+    ],
+    "lore": "A small talisman that clouds the senses of one's enemies when held perfectly still."
+  }
+}

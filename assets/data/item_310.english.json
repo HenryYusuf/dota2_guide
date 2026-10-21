@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 310,
+    "valve_key": "item_third_eye",
+    "name": "Third Eye",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/third_eye.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "BONUS VISION",
+        "values": [
+          300
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "True Sight",
+        "text": "Grants the ability to see invisible units and wards to any allied vision within 500 range of its carrier."
+      },
+      {
+        "kind": "passive",
+        "title": "Charge Loss",
+        "text": "Loses a charge on death. After all charges are lost, the item disappears."
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 585,
+    "valve_key": "item_stormcrafter",
+    "name": "Stormcrafter",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/stormcrafter.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Bottled Lightning",
+        "text": "Zaps 2 enemy targets within 700 range, dealing 70 damage and a 40% slow for 0.4 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "The accidental byproduct of a spell conjured to entrap a lesser god."
+  }
+}

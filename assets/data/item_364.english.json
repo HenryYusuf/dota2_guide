@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 364,
+    "valve_key": "item_havoc_hammer",
+    "name": "Havoc Hammer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/havoc_hammer.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Havoc",
+        "text": "Pulls enemies in a 400 range around you, slowing them by 50% for 3 seconds and dealing 175 + 1.5x your str as magical damage."
+      }
+    ],
+    "notes": []
+  }
+}

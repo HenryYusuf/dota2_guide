@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 33,
+    "valve_key": "item_cheese",
+    "name": "Cheese",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/cheese.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Fondue",
+        "text": "Instantly restores 2500 health and 1500 mana."
+      }
+    ],
+    "notes": [
+      "Cheese is shareable."
+    ],
+    "lore": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it."
+  }
+}

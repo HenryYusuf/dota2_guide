@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 13,
+    "valve_key": "item_gauntlets",
+    "name": "Gauntlets of Strength",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gauntlets.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 140,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Studded leather gloves that add brute strength."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1871,
+    "valve_key": "item_foragers_mana",
+    "name": "Tomo'kan Ringcap",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/foragers_mana.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Munch",
+        "text": "Instantly restores 50 mana + 5% of the target's max mana when consumed"
+      }
+    ],
+    "notes": [
+      "Hold Control to use on a nearby allied hero."
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1852,
+    "valve_key": "item_essence_distiller",
+    "name": "Essence Distiller",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/essence_distiller.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1775,
+    "combination_cost": 200,
+    "components": [
+      92,
+      4,
+      1849
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          150
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Soul Release",
+        "text": "Provides 40 health regeneration when cast on allies.\n\nCan be ground targeted to lie dormant for up to 15s and attach to the first enemy that comes within 450 radius. When on enemies, deals 25 damage per second and provides True Sight over them and shares their vision with the wearer's team.\n\nLasts 8 seconds.\n\nGains charges every time an enemy hero dies within 1500 units."
+      }
+    ],
+    "notes": [
+      "Empty distillers gain 2 charges.",
+      "Only the closest Essence Distiller to the dying hero will gain a charge.",
+      "If the allied unit is attacked by an enemy hero or Roshan, the effect is lost.",
+      "Does not trigger spell block or spell reflect.",
+      "While dormant, provides vision in 450 radius. Vision lingers for 0.5s after latching."
+    ]
+  }
+}

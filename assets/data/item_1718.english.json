@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1718,
+    "valve_key": "item_riftshadow_prism",
+    "name": "Riftshadow Prism",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/riftshadow_prism.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Refract",
+        "text": "Spend 8% of your current life total to create a full health illusion that lasts for 20 seconds. The illusion has 60% outgoing damage and takes 200% of incoming damage."
+      }
+    ],
+    "notes": []
+  }
+}

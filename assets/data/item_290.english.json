@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 290,
+    "valve_key": "item_philosophers_stone",
+    "name": "Philosopher's Stone",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/philosophers_stone.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "GPM BONUS",
+        "values": [
+          75,
+          100
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          200,
+          250
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "-",
+        "label": "Attack Damage",
+        "values": [
+          -30,
+          -60
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A weightless charm created by an enchanter with a powerful scorn for brute force."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1602,
+    "valve_key": "item_gale_guard",
+    "name": "Gale Guard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gale_guard.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Cyclonic Shield",
+        "text": "Envelops the caster in an all damage barrier that absorbs 75% of incoming damage up to a max of 225. Lasts for up to 10 seconds and while the barrier is active you have 50% Slow Resistance."
+      }
+    ],
+    "notes": [],
+    "lore": "If one truly listens, they can always rely upon the wind to make its will known."
+  }
+}

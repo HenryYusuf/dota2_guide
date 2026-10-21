@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1637,
+    "valve_key": "item_kobold_cup",
+    "name": "Kobold Cup",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/kobold_cup.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "One for the Road",
+        "text": "Increases movement speed of all allied units by 10% in a 1000 unit radius around the caster for 6 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "The Kobold King will sip when he damn well pleases."
+  }
+}

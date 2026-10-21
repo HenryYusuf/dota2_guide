@@ -90,6 +90,7 @@ class CdnAbilityVideoRepository implements AbilityVideoRepository {
       return file;
     }
     await _download(cdnUrl, file);
+    await _touch(file);
     await _enforceCap();
     return file;
   }

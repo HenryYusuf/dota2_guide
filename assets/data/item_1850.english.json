@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1850,
+    "valve_key": "item_eldwurms_edda",
+    "name": "Eldwurm's Edda",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/eldwurms_edda.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Forbidden Knowledge",
+        "text": "When consumed, increases Winter Wyvern's base intelligence by 25% of its current value at the time of consumption, and increases the current and maximum level of a basic ability by one. All values except for Mana Cost scale by 50% of the difference between their existing levels for the additional level"
+      }
+    ],
+    "notes": []
+  }
+}

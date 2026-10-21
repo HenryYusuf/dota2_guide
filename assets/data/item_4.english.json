@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4,
+    "valve_key": "item_chainmail",
+    "name": "Chainmail",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/chainmail.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 500,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A medium weave of metal chains."
+  }
+}

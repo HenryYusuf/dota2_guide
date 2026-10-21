@@ -29,6 +29,18 @@ abstract final class CdnUrls {
   static String abilityIcon(String abilityName) =>
       '$_abilityIcons/$abilityName.png';
 
+  /// Directory holding item icons, named by the Valve item key minus its
+  /// `item_` prefix (`item_blink` → `blink.png`).
+  ///
+  /// Verified live 2026-10-21: every shop, neutral, and event item serves
+  /// under this convention; `item_recipe_*` entries have NO icon (404) —
+  /// callers degrade to the fallback rather than assume it exists.
+  static const _itemIcons = '$host/apps/dota2/images/dota_react/items';
+
+  /// Icon for the item with the given Valve item key — a 64×64 PNG.
+  static String itemIcon(String valveItemKey) =>
+      '$_itemIcons/${itemKeyFromValveName(valveItemKey)}.png';
+
   /// Directory holding ability demo videos — TWO levels deep, unlike the
   /// flat icon path: the hero's folder, then the full ability name
   /// (`abilities/antimage/antimage_blink.webm`, verified live 2026-10-21;
@@ -49,4 +61,9 @@ abstract final class CdnUrls {
   /// CDN key (`npc_dota_hero_antimage` → `antimage`).
   static String heroKeyFromValveName(String valveHeroName) =>
       valveHeroName.replaceFirst('npc_dota_hero_', '');
+
+  /// Strips the `item_` prefix from a Valve item name, returning the CDN key
+  /// (`item_blink` → `blink`).
+  static String itemKeyFromValveName(String valveItemName) =>
+      valveItemName.replaceFirst('item_', '');
 }

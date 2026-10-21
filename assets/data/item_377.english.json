@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 377,
+    "valve_key": "item_minotaur_horn",
+    "name": "Minotaur Horn",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/minotaur_horn.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Lesser Avatar",
+        "text": "Applies a basic dispel. Grants 60% magic resistance and immunity to reflected and pure damage for 2s. For the duration of the effect, any negative effect from enemy spells has no effect.\n\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [],
+    "lore": "The trophy from a mighty beast ambushed and slain in the recesses of its own home."
+  }
+}

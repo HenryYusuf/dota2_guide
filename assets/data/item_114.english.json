@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 114,
+    "valve_key": "item_heart",
+    "name": "Heart of Tarrasque",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/heart.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5300,
+    "combination_cost": 800,
+    "components": [
+      53,
+      279
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Max Health Regen",
+        "values": [
+          1
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Behemoth's Blood",
+        "text": "Your health regeneration is increased by 1.5% of your missing health."
+      }
+    ],
+    "notes": [
+      "Multiple instances of Behemoth's Blood do not stack."
+    ],
+    "lore": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1609,
+    "valve_key": "item_madstone_bundle",
+    "name": "Madstone Bundle",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/madstone_bundle.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Collect to craft new Neutral Items."
+      }
+    ],
+    "notes": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 949,
+    "valve_key": "item_ogre_seal_totem",
+    "name": "Ogre Seal Totem",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ogre_seal_totem.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Ogre Seal Flop",
+        "text": "Flop forward like an ogre seal 2 times, dealing 250 damage and slowing enemies in a 275 radius by -100% for 1.5 second on each bounce. 400 bounce distance."
+      }
+    ],
+    "notes": []
+  }
+}

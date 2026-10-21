@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1583,
+    "valve_key": "item_enhancement_mystical",
+    "name": "Mystical",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_mystical.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.8,
+          1.6,
+          2.4,
+          3.2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          0,
+          10,
+          13,
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana Cost/Mana Loss Reduction",
+        "values": [
+          0,
+          0,
+          0,
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

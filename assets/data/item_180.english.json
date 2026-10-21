@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 180,
+    "valve_key": "item_arcane_boots",
+    "name": "Arcane Boots",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/arcane_boots.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 1500,
+    "combination_cost": 325,
+    "components": [
+      29,
+      88,
+      1849
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          45
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          0.25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          125
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Replenish",
+        "text": "Restores 150 mana to all nearby allies.\n\nRadius: 1200"
+      },
+      {
+        "kind": "passive",
+        "title": "Basilius Aura",
+        "text": "Grants 1 mana regeneration to allies.  \n\nRadius: 1200\nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [
+      "Does not work on Meepo clones."
+    ],
+    "lore": "Magi equipped with these boots are valued in battle."
+  }
+}

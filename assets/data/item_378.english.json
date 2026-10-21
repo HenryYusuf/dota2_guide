@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 378,
+    "valve_key": "item_orb_of_destruction",
+    "name": "Orb of Destruction",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/orb_of_destruction.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "ARMOR REDUCTION:",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "SLOW (MELEE):",
+        "values": [
+          8
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "",
+        "label": "SLOW (RANGE):",
+        "values": [
+          4
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "",
+        "label": "DURATION:",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Impeding Corruption",
+        "text": "Attacks reduce the target's armor and movement speed. Slow amount varies based on whether the wearer is melee or ranged."
+      }
+    ],
+    "notes": [],
+    "lore": "An ingot of chaos suspended in wizard's ether, housed within an arcanist's orb."
+  }
+}

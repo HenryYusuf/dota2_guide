@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1804,
+    "valve_key": "item_roshans_banner",
+    "name": "Roshan's Banner",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/roshans_banner.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "EFFECT RADIUS:",
+        "values": [
+          600,
+          900,
+          1200
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "HITS TO KILL:",
+        "values": [
+          6,
+          8,
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Place Banner",
+        "text": "Creates a banner at the target location. Lane creeps in the area of effect become damage immune while the Banner is up. Lasts 120 seconds.\n\n Can be destroyed. Melee hero attacks deal 2x damage to the banner."
+      }
+    ],
+    "notes": []
+  }
+}

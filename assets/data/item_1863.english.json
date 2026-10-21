@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1863,
+    "valve_key": "item_harmonizer",
+    "name": "Harmonizer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/harmonizer.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Balance",
+        "text": "Gain 7% spell mana cost reduction for every ability off cooldown and 6% spell amplification for every ability on cooldown."
+      }
+    ],
+    "notes": [
+      "Only considers abilities that are visible and have a cooldown."
+    ]
+  }
+}

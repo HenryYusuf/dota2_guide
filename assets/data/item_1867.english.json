@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1867,
+    "valve_key": "item_enhancement_manic",
+    "name": "Manic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_manic.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "-",
+        "label": "Base Attack Time",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Cast Speed Bonus",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "-",
+        "label": "Vision",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

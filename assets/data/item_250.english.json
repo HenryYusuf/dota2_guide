@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 250,
+    "valve_key": "item_bloodthorn",
+    "name": "Bloodthorn",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bloodthorn.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 6400,
+    "combination_cost": 600,
+    "components": [
+      98,
+      67,
+      7
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          70
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Soul Rend",
+        "text": "Silences a target for 5 seconds. At the end of the silence, an additional 60% of all damage taken during the silence will be dealt to the target as magical damage.\n\nAll attacks on the silenced target will deal additional damage equal to 50 if the attacker is a hero, and 25, if the attacker is a creep. Provides True Strike for your attacks and attacks from your controlled units against the silenced target."
+      },
+      {
+        "kind": "passive",
+        "title": "Pierce",
+        "text": "Grants each attack a 40% chance to pierce through evasion and deal 60 bonus magical damage."
+      }
+    ],
+    "notes": [],
+    "lore": "A reviled blade that bites deeper with each wriggle of its victim's final throes."
+  }
+}

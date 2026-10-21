@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 94,
+    "valve_key": "item_headdress",
+    "name": "Headdress",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/headdress.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 425,
+    "combination_cost": 250,
+    "components": [
+      27
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          0.5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Regeneration Aura",
+        "text": "Grants 2 health regeneration to allies.\n\nRadius: 1200"
+      }
+    ],
+    "notes": [],
+    "lore": "Creates a soothing aura that restores allies in battle."
+  }
+}

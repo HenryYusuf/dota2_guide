@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 2095,
+    "valve_key": "item_tier5_token",
+    "name": "Tier 5 Token",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tier5_token.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Activate to redeem a Tier 5 Neutral Item. The resulting neutral item isn't shareable and a hero can only redeem a single token per tier."
+      }
+    ],
+    "notes": []
+  }
+}

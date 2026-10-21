@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 32,
+    "valve_key": "item_talisman_of_evasion",
+    "name": "Talisman of Evasion",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/talisman_of_evasion.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 1300,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Stacks diminishingly with other sources of Evasion."
+    ],
+    "lore": "A necklace that allows you to anticipate enemy attacks."
+  }
+}

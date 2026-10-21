@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 267,
+    "valve_key": "item_spirit_vessel",
+    "name": "Spirit Vessel",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/spirit_vessel.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 2725,
+    "combination_cost": 900,
+    "components": [
+      92,
+      1122
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.75
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Soul Release",
+        "text": "When used against enemies, it reduces health by 4% of current health per second, and reduces Health Restoration by 70%. Deals 25 damage per second. \n\nWhen used on allies, it provides 40 health regeneration per second. \n\nLasts 8 seconds.\n\nGains charges every time an enemy hero dies within 1500 units or the user dies."
+      }
+    ],
+    "notes": [
+      "Empty vessels gain 2 charges.",
+      "Only the closest Spirit Vessel to the dying hero will gain a charge.",
+      "If the allied unit is attacked by an enemy hero or Roshan, the effect is lost.",
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "Forged by a god to entrap the soul of another."
+  }
+}

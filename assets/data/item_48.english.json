@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 48,
+    "valve_key": "item_travel_boots",
+    "name": "Boots of Travel",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/travel_boots.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 2500,
+    "combination_cost": 2000,
+    "components": [
+      29
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          90
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "TOWN PORTAL SCROLL COOLDOWN:",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "Upgrade: Town Portal Scroll",
+        "text": "Upgrades your Town Portal Scroll, allowing it to target units, reduces cooldown and does not consume a charge on usage. \nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [],
+    "lore": "Winged boots that grant omnipresence."
+  }
+}

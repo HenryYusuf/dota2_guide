@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 287,
+    "valve_key": "item_keen_optic",
+    "name": "Keen Optic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/keen_optic.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          75
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Stolen from a tinker's shop ages ago, this handy lens has seen service to many owners."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 11,
+    "valve_key": "item_quelling_blade",
+    "name": "Quelling Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/quelling_blade.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 100,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Chop Tree",
+        "text": "Destroy a target tree."
+      },
+      {
+        "kind": "passive",
+        "title": "Quell",
+        "text": "Increases attack damage against non-hero units by 8 for melee heroes, and 4 for ranged."
+      }
+    ],
+    "notes": [
+      "Effects of multiple quelling blades do not stack."
+    ],
+    "lore": "The axe of a fallen gnome, it allows you to effectively maneuver the forest."
+  }
+}

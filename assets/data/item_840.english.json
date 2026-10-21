@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 840,
+    "valve_key": "item_pogo_stick",
+    "name": "Tumbler's Toy",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pogo_stick.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Vault",
+        "text": "Propels your hero forward 300 units. Tumbler's Toy gets disabled for 3 seconds if its owner receives damage from a player source."
+      }
+    ],
+    "notes": [],
+    "lore": "An antique plaything found in the ruins of an Ozenja circus bazaar."
+  }
+}

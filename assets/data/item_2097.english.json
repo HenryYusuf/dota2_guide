@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 2097,
+    "valve_key": "item_duelist_gloves",
+    "name": "Duelist Gloves",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/duelist_gloves.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Boldness",
+        "text": "Grants 20 attack speed as long as there are enemy heroes within 1200 units."
+      }
+    ],
+    "notes": []
+  }
+}

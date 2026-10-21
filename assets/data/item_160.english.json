@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 160,
+    "valve_key": "item_skadi",
+    "name": "Eye of Skadi",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5900,
+    "combination_cost": null,
+    "components": [
+      24,
+      24,
+      1575
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Cold Attack",
+        "text": "Attacks lower enemy movement by -25% if they are melee and -50% if they are ranged. Attacks also lower enemy attack speed by -25% and Health Restoration by 50%. Lasts for 3 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Extremely rare artifact, guarded by the azure dragons."
+  }
+}

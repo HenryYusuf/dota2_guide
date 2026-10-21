@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 362,
+    "valve_key": "item_ninja_gear",
+    "name": "Ninja Gear",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ninja_gear.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Solitary Disguise",
+        "text": "Casts Smoke of Deceit on yourself only that lasts for up to 15 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Valuable equipment recovered by a young explorer sifting through the flotsam and detritus drifting in the void."
+  }
+}

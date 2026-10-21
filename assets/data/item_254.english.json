@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 254,
+    "valve_key": "item_glimmer_cape",
+    "name": "Glimmer Cape",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/glimmer_cape.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 2150,
+    "combination_cost": 800,
+    "components": [
+      215,
+      1848
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Glimmer",
+        "text": "After a 0.5 second delay, grants invisibility, 20 movement speed and a magic damage barrier that absorbs up to 375 damage to you or a target allied unit for 5 seconds.\n\nCan be cast while channeling."
+      }
+    ],
+    "notes": [],
+    "lore": "The stolen cape of a master illusionist."
+  }
+}

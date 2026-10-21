@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 194,
+    "valve_key": "item_necronomicon_3",
+    "name": "Necronomicon",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/necronomicon_3.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 5200,
+    "combination_cost": null,
+    "components": [
+      193,
+      105
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          6,
+          12,
+          18
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Demonic Summoning",
+        "text": "Summons a Warrior and an Archer to fight for you for 60 seconds."
+      },
+      {
+        "kind": "other",
+        "title": "Warrior",
+        "text": "Burns mana every hit, and deals magical damage to whoever kills it.  Gains True Sight at level 3.\nHealth: 800\nDamage: 25\nMana Break Damage: 30\nLast Will Damage: 600"
+      },
+      {
+        "kind": "other",
+        "title": "Archer",
+        "text": "Has a passive movement and attack speed aura. Gains Purge at Level 3.\nHealth: 800\nDamage: 37\nAura Move Speed: 5\nAura Radius: 1200"
+      }
+    ],
+    "notes": [],
+    "lore": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages."
+  }
+}

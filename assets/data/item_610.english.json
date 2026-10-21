@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 610,
+    "valve_key": "item_wind_waker",
+    "name": "Wind Waker",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/wind_waker.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 6800,
+    "combination_cost": 1400,
+    "components": [
+      100,
+      58
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Cyclone",
+        "text": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can be cast on yourself, enemy units or allied units. When cast on yourself, you can move the tornado at a speed of 300.\n\nEnemy units take 50 magical damage upon landing.\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "Cyclone can dispel some buffs and debuffs.",
+      "When cast on yourself, the cyclone can be moved anywhere at a speed of 360.",
+      "Cyclone duration is unaffected by status resistance."
+    ],
+    "lore": "Proof enough to some that unseen forces manipulate the happenings of the material plane."
+  }
+}

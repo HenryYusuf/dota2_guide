@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 239,
+    "valve_key": "item_iron_talon",
+    "name": "Iron Talon",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/iron_talon.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": 1,
+    "components": [
+      11,
+      12
+    ],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Chop",
+        "text": "Targets a non-player enemy unit to remove 80% of its current HP.\n\nIf cast on a tree, instantly destroys it."
+      }
+    ],
+    "notes": [
+      "Has a 4 second cooldown on Trees."
+    ],
+    "lore": "A simple but effective weapon devised to quell a great Hellbear uprising."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 473,
+    "valve_key": "item_voodoo_mask",
+    "name": "Voodoo Mask",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/voodoo_mask.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 650,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Spell Lifesteal",
+        "text": "Heals the wearer for a percentage of spell damage dealt to enemies."
+      }
+    ],
+    "notes": [
+      "Does not heal from Pure or Reflected damage."
+    ],
+    "lore": "A mask tuned to sip the arcane bindings that pass between caster and foe."
+  }
+}

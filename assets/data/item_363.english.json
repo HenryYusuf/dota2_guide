@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 363,
+    "valve_key": "item_illusionsts_cape",
+    "name": "Illusionist's Cape",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/illusionsts_cape.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "IMAGE DURATION:",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "IMAGE DAMAGE:",
+        "values": [
+          50
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "",
+        "label": "IMAGE DAMAGE TAKEN:",
+        "values": [
+          200
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Create Illusion",
+        "text": "Creates an image under your control."
+      },
+      {
+        "kind": "passive",
+        "title": "Illusion Mastery",
+        "text": "Increases outgoing damage of all units and illusions controlled by the hero by 6%."
+      }
+    ],
+    "notes": [],
+    "lore": "A dashing cape whose creator insists on calling 'Cloak of Apparition' as opposed to his assistant's 'Illusion' drivel."
+  }
+}

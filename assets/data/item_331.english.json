@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 331,
+    "valve_key": "item_vambrace",
+    "name": "Vambrace",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/vambrace.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Switch Attributes",
+        "text": "Activate to switch the active attribute between Strength, Agility, and Intelligence. Vambrace provides +10 of the selected attribute and +4 of the other two attributes."
+      }
+    ],
+    "notes": [],
+    "lore": "The coveted treasure that divided the heirs of Queen Raiya upon her death, resulting in the eventual downfall of her kingdom."
+  }
+}

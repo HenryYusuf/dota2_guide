@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 326,
+    "valve_key": "item_spider_legs",
+    "name": "Spider Legs",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/spider_legs.png",
+    "shop_category": "neutral",
+    "neutral_tier": 4,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Skitter",
+        "text": "Grants you 20% bonus movement speed, 50% improved turn rate, and free pathing for 12 seconds. Walking over trees causes them to be destroyed."
+      }
+    ],
+    "notes": [],
+    "lore": "A horrifying yet useful mixture of necromancy and artificing."
+  }
+}

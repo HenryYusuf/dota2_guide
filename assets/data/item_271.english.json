@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 271,
+    "valve_key": "item_ultimate_scepter_2",
+    "name": "Aghanim's Blessing",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter_2.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5800,
+    "combination_cost": 1600,
+    "components": [
+      108
+    ],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Ability Upgrade",
+        "text": "Upgrades the ultimate, and some abilities, of all heroes."
+      }
+    ],
+    "notes": [],
+    "lore": "The scepter of a wizard with demigod-like powers."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 304,
+    "valve_key": "item_ironwood_tree",
+    "name": "Ironwood Tree",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ironwood_tree.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant Tree",
+        "text": "Targets the ground to plant a happy little tree that lasts for 20 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "Precious. And hearty as a weed."
+  }
+}

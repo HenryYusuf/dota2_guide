@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 27,
+    "valve_key": "item_ring_of_regen",
+    "name": "Ring of Regen",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ring_of_regen.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 175,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          1.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "This ring is considered a good luck charm among the Gnomes."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 208,
+    "valve_key": "item_abyssal_blade",
+    "name": "Abyssal Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/abyssal_blade.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 6250,
+    "combination_cost": 1275,
+    "components": [
+      143,
+      162
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Slow Resistance",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Restoration Amplification",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Overwhelm",
+        "text": "Stuns a target enemy unit for 1.6 seconds. \n\nPierces Debuff Immunity."
+      },
+      {
+        "kind": "passive",
+        "title": "Bash",
+        "text": "Grants melee heroes a 25% chance on hit to stun the target for 1.2 seconds and deal 120 bonus physical damage.  Bash chance for ranged heroes is 10%."
+      }
+    ],
+    "notes": [
+      "The stun is melee range.",
+      "Does not stack with other bashes, and does not grant bash to Clones and Tempest Doubles.",
+      "Multiple sources of damage block do not stack.",
+      "The following heroes cannot trigger Bash on this item: Spirit Breaker, Faceless Void, Slardar, and Kez while in Sai mode."
+    ],
+    "lore": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul."
+  }
+}

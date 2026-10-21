@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 110,
+    "valve_key": "item_refresher",
+    "name": "Refresher Orb",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/refresher.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5000,
+    "combination_cost": 1600,
+    "components": [
+      279,
+      1802
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Reset Cooldowns",
+        "text": "Resets the cooldowns of all your abilities. Shares a cooldown with Refresher Shard. This item's cooldown only progresses in your hero's main inventory."
+      }
+    ],
+    "notes": [],
+    "lore": "A powerful artifact created for wizards."
+  }
+}

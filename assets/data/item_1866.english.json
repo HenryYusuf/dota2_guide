@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1866,
+    "valve_key": "item_enhancement_hulking",
+    "name": "Hulking",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_hulking.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          5
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Max Health Regen",
+        "values": [
+          1.5
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "-",
+        "label": "Attack Speed",
+        "values": [
+          -30
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

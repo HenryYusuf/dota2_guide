@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 300,
+    "valve_key": "item_timeless_relic",
+    "name": "Timeless Relic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/timeless_relic.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Debuff Amplification",
+        "values": [
+          10,
+          15
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          10,
+          20
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Increases all outgoing spell damage and debuff duration."
+      }
+    ],
+    "notes": [],
+    "lore": "An unmarred discovery from the excavated ruins of an ancient wizard's academy."
+  }
+}

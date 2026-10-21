@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 156,
+    "valve_key": "item_satanic",
+    "name": "Satanic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/satanic.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5050,
+    "combination_cost": null,
+    "components": [
+      53,
+      5,
+      26
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          25
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Lifesteal",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Unholy Rage",
+        "text": "Increases Lifesteal percentage to 175% for 6 seconds. \n\nDispel Type: Basic Dispel"
+      },
+      {
+        "kind": "passive",
+        "title": "Lifesteal",
+        "text": "Heals the attacker for a percentage of physical damage dealt."
+      }
+    ],
+    "notes": [],
+    "lore": "Immense power at the cost of your soul."
+  }
+}

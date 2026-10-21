@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1645,
+    "valve_key": "item_divine_regalia_broken",
+    "name": "Disgraced Regalia",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/divine_regalia_broken.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Fallen",
+        "text": "You have died and thus get nothing."
+      }
+    ],
+    "notes": [],
+    "lore": "It cannot abide failure."
+  }
+}

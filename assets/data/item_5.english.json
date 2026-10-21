@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 5,
+    "valve_key": "item_claymore",
+    "name": "Claymore",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/claymore.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 1350,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen."
+  }
+}

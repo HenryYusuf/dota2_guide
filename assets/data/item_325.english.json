@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 325,
+    "valve_key": "item_princes_knife",
+    "name": "Prince's Knife",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/princes_knife.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Projectile Speed",
+        "values": [
+          60
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Hex Strike",
+        "text": "The next attack hexes the hit enemy into a frog for 1.5 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

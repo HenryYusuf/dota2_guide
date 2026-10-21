@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 593,
+    "valve_key": "item_fluffy_hat",
+    "name": "Fluffy Hat",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/fluffy_hat.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 250,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          125
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Fine and functional foppery for the fashion-forward fighter."
+  }
+}

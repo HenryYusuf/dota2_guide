@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 299,
+    "valve_key": "item_greater_faerie_fire",
+    "name": "Greater Faerie Fire",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/greater_faerie_fire.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Imbue",
+        "text": "Instantly restores 250 health."
+      }
+    ],
+    "notes": []
+  }
+}

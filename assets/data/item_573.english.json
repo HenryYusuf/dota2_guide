@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 573,
+    "valve_key": "item_elven_tunic",
+    "name": "Elven Tunic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/elven_tunic.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          26
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          7
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Even simple items of elven make seem imbued with inexplicable efficacy."
+  }
+}

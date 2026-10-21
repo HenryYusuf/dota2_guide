@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 596,
+    "valve_key": "item_falcon_blade",
+    "name": "Falcon Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/falcon_blade.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 1125,
+    "combination_cost": 250,
+    "components": [
+      2,
+      593,
+      28
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.8
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An enchanted blade that long ago raised a hopeless urchin from pauper to king."
+  }
+}

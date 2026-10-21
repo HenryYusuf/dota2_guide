@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 4301,
+    "valve_key": "item_ofrenda_shovel",
+    "name": "Scrying Shovel",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ofrenda_shovel.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Dig",
+        "text": "Search the map for Offerings to the dead."
+      }
+    ],
+    "notes": [],
+    "lore": "You don't know where it came from, but it knows where you need to go. All you need to do is dig."
+  }
+}

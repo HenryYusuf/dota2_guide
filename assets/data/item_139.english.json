@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 139,
+    "valve_key": "item_butterfly",
+    "name": "Butterfly",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5450,
+    "combination_cost": null,
+    "components": [
+      52,
+      5,
+      32
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          35
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed_pct",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Stacks diminishingly with other sources of Evasion."
+    ],
+    "lore": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat."
+  }
+}

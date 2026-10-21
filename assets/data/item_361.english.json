@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 361,
+    "valve_key": "item_enchanted_quiver",
+    "name": "Enchanted Quiver",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enchanted_quiver.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Certain Strike",
+        "text": "Empowers your next attack with 250 bonus magical damage and True Strike. Ranged Attackers have +350 bonus range for the attack."
+      }
+    ],
+    "notes": [],
+    "lore": "A graceful gift blessed by the goddess of the hunt."
+  }
+}

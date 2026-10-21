@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 17,
+    "valve_key": "item_belt_of_strength",
+    "name": "Belt of Strength",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/belt_of_strength.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A valued accessory for improving vitality."
+  }
+}

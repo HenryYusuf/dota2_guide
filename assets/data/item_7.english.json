@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 7,
+    "valve_key": "item_javelin",
+    "name": "Javelin",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/javelin.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Pierce",
+        "text": "Grants each attack a 25% chance to pierce through evasion and deal 60 bonus magical damage."
+      }
+    ],
+    "notes": [],
+    "lore": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack."
+  }
+}

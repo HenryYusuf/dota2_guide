@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1032,
+    "valve_key": "item_pocket_roshan",
+    "name": "Pocket Roshan",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pocket_roshan.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [],
+    "notes": []
+  }
+}

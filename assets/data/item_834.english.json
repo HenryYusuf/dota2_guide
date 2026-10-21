@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 834,
+    "valve_key": "item_black_powder_bag",
+    "name": "Blast Rig",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/black_powder_bag.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Hair Trigger",
+        "text": "The next time you get attacked by a hero within 400 range, explode dealing 250 damage to all enemies within a 400 radius and causing them to miss 100% of their attacks for 2 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "One of a set of custom rigs once worn by infamous road agents in the Outlands, its siblings have been lost to misfires and the various tides of time."
+  }
+}

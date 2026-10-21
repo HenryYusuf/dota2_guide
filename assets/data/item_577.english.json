@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 577,
+    "valve_key": "item_possessed_mask",
+    "name": "Possessed Mask",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/possessed_mask.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Lifesteal",
+        "text": "Heals the attacker for 5 HP on each attack."
+      }
+    ],
+    "notes": [
+      "Grants 1/3rd of the value to each attribute for Universal Heroes."
+    ],
+    "lore": "Even when discarded with specific purpose and great care, this frightening mask always finds its way onto the face of a new owner."
+  }
+}

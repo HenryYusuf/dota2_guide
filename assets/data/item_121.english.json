@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 121,
+    "valve_key": "item_bloodstone",
+    "name": "Bloodstone",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bloodstone.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 4700,
+    "combination_cost": null,
+    "components": [
+      190,
+      129
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          625
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Bloodpact",
+        "text": "Increases Bloodstone's Spell Lifesteal to 60%. Lasts 5 seconds."
+      },
+      {
+        "kind": "passive",
+        "title": "Spell Weakness Aura",
+        "text": "Enemy units take 10% increased damage from spells. \n\nRadius: 1200"
+      }
+    ],
+    "notes": [
+      "Spell Weakness Aura does not stack with Veil of Discord's Spell Weakness."
+    ],
+    "lore": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit."
+  }
+}

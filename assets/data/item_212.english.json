@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 212,
+    "valve_key": "item_ring_of_aquila",
+    "name": "Ring of Aquila",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ring_of_aquila.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          9
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Aquila Aura",
+        "text": "Grants 1 mana regeneration and 2 armor to nearby allies.\n\nRadius: 1200"
+      },
+      {
+        "kind": "toggle",
+        "title": "Aura",
+        "text": "Deactivate to stop affecting non-hero units."
+      }
+    ],
+    "notes": [
+      "Multiple instances of Aquila Aura do not stack."
+    ],
+    "lore": "The ring of the fallen Warlord Aquila continues to support armies in battle."
+  }
+}

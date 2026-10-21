@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 15,
+    "valve_key": "item_mantle",
+    "name": "Mantle of Intelligence",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mantle.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 140,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A beautiful sapphire mantle worn by generations of queens."
+  }
+}

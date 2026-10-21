@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 358,
+    "valve_key": "item_dragon_scale",
+    "name": "Dragon Scale",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dragon_scale.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Afterburn",
+        "text": "Causes attacks to burn the enemy, dealing 22 damage per second for 3 seconds. Affects buildings."
+      }
+    ],
+    "notes": [],
+    "lore": "The remains of a dragon always outvalue the wealth of even the most prodigious hoard."
+  }
+}

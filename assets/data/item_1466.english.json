@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1466,
+    "valve_key": "item_gungir",
+    "name": "Gleipnir",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gungir.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4650,
+    "combination_cost": 300,
+    "components": [
+      206,
+      60,
+      1872
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          450
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "AOE Bonus",
+        "values": [
+          75
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Eternal Chains",
+        "text": "Roots all enemies in a 400 radius for 2 seconds."
+      }
+    ],
+    "notes": [
+      "AoE bonuses from multiple Chasm Stones or its upgrades do not stack."
+    ],
+    "lore": "Bindings forged by impossible means to leash an ancient evil."
+  }
+}

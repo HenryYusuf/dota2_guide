@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 330,
+    "valve_key": "item_witless_shako",
+    "name": "Witless Shako",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/witless_shako.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Max Health Increase",
+        "values": [
+          1350
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "-",
+        "label": "Max Mana",
+        "values": [
+          400
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Increases the wearer's max health, while reducing their max mana."
+      }
+    ],
+    "notes": []
+  }
+}

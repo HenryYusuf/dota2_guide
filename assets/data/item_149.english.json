@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 149,
+    "valve_key": "item_lesser_crit",
+    "name": "Crystalys",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/lesser_crit.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 2000,
+    "combination_cost": 200,
+    "components": [
+      5,
+      2
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          32
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Critical Strike",
+        "text": "Grants each attack a 30% chance to deal 160% damage."
+      }
+    ],
+    "notes": [
+      "Critical Strike does not work against buildings."
+    ],
+    "lore": "A blade forged from rare crystals, it seeks weak points in enemy armor."
+  }
+}

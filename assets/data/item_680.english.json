@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 680,
+    "valve_key": "item_bullwhip",
+    "name": "Bullwhip",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bullwhip.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Whip",
+        "text": "Grants 25% movement speed when cast on allies, and slows by 25% when cast on enemies. Lasts 4 seconds."
+      }
+    ],
+    "notes": [
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "Once the favored lash of an infamous broker of pit fighters and other live trade."
+  }
+}

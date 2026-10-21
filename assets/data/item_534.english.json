@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 534,
+    "valve_key": "item_witch_blade",
+    "name": "Witch Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/witch_blade.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2775,
+    "combination_cost": 300,
+    "components": [
+      67,
+      4,
+      181
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          40
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Projectile Speed",
+        "values": [
+          300
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Witch Blade",
+        "text": "Causes your next attack to apply a poison for 4 seconds, slowing by 25% and dealing 0.75x your intelligence as damage every second. This attack has True Strike."
+      }
+    ],
+    "notes": [],
+    "lore": "A spiteful blade inadvertently possessed by the soul of its incautious creator."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1077,
+    "valve_key": "item_dagger_of_ristul",
+    "name": "Dagger of Ristul",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dagger_of_ristul.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Imbrue",
+        "text": "Consume health to temporarily gain 25 damage for 8 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "A sinister shiv that grants favor to those willing to stain its blade with a sacrifice of their own blood."
+  }
+}

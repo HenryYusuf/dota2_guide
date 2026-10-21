@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1600,
+    "valve_key": "item_rippers_lash",
+    "name": "Ripper's Lash",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/rippers_lash.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "BONUS DAMAGE (HEROES):",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "BONUS DAMAGE (CREEPS):",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Flay",
+        "text": "Embeds thorns into all enemies in a 200 unit radius. Affected units take additional damage when attacked for 10 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "The Fae horticulturists of Revtel are known to push the boundaries of both cross pollination and safety."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1854,
+    "valve_key": "item_consecrated_wraps",
+    "name": "Consecrated Wraps",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/consecrated_wraps.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 2600,
+    "combination_cost": 700,
+    "components": [
+      61,
+      1848,
+      261
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Hallowed",
+        "text": "Gain a charge every 4s, up to a maximum of 3 charges. Upon gaining a charge, your movement speed is increased by 15% for 5s.\n\nWhenever you take damage from a player-controlled source or Roshan, consume all charges to gain an all damage barrier for 5s that absorbs 120 damage per charge (360 max)."
+      }
+    ],
+    "notes": [
+      "Charges cannot be gained for 4s after you take damage from a player-controlled source or Roshan.",
+      "Self-damage and HP Loss damage cannot remove charges.",
+      "Movement speed buff does not stack."
+    ]
+  }
+}

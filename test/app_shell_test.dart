@@ -10,6 +10,9 @@ import 'package:dota2_guide/app.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
 import 'package:dota2_guide/features/heroes/heroes_providers.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
+import 'package:dota2_guide/features/items/item_index.dart';
+import 'package:dota2_guide/features/items/items_providers.dart';
+import 'package:dota2_guide/features/items/items_repository.dart';
 
 import 'core/data/refresh_seam_overrides.dart';
 
@@ -24,6 +27,12 @@ import 'core/data/refresh_seam_overrides.dart';
 class _FakeHeroesRepository implements HeroesRepository {
   @override
   Future<List<HeroSummary>> loadHeroes() async => const [];
+}
+
+class _FakeItemsRepository implements ItemsRepository {
+  @override
+  Future<ItemIndex> loadItems() async =>
+      const ItemIndex(schemaVersion: 1, locale: 'english', items: []);
 }
 
 void main() {
@@ -46,7 +55,11 @@ void main() {
             (context, hero) =>
                 SizedBox(key: ValueKey<String>(hero.portraitUrl)),
           ),
+          itemIconBuilderProvider.overrideWithValue(
+            (context, url, name) => SizedBox(key: ValueKey<String>(url)),
+          ),
           heroesRepositoryProvider.overrideWithValue(_FakeHeroesRepository()),
+          itemsRepositoryProvider.overrideWithValue(_FakeItemsRepository()),
           ...refreshSeamOverrides(),
         ],
         child: const AegisApp(),
@@ -108,10 +121,10 @@ void main() {
       await tester.tap(navLabel(label));
       await tester.pumpAndSettle();
       await expectSelected(label);
-      // The selected tab's screen is the one on screen. The Heroes tab is no
-      // longer a placeholder (issue 02) — it carries the search field that
-      // marks the real grid screen.
-      if (label == 'Heroes') {
+      // The selected tab's screen is the one on screen. The Heroes and Items
+      // tabs are no longer placeholders (issues 02 & 06) — they carry the
+      // search field that marks the real list screen.
+      if (label == 'Heroes' || label == 'Items') {
         expect(find.byType(TextField), findsOneWidget);
       } else {
         expect(find.text('$label tab'), findsWidgets);

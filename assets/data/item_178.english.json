@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 178,
+    "valve_key": "item_soul_ring",
+    "name": "Soul Ring",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/soul_ring.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 805,
+    "combination_cost": 350,
+    "components": [
+      12,
+      13,
+      13
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Sacrifice",
+        "text": "Consume 170 health to temporarily gain 170 mana.  Lasts 10 seconds.\n\nIf the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool."
+      }
+    ],
+    "notes": [
+      "If this mana is not used before the duration ends, the extra mana is lost."
+    ],
+    "lore": "A ring that feeds on the souls of those who wear it."
+  }
+}

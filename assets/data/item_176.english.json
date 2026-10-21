@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 176,
+    "valve_key": "item_ethereal_blade",
+    "name": "Ethereal Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5200,
+    "combination_cost": 900,
+    "components": [
+      24,
+      37
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          24
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Ether Blast",
+        "text": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and -30% more vulnerable to magic damage.\n\n  Enemy targets are also slowed by -80%, and take 1x the sum of all your attributes + 50 as magical damage.\nDuration: 4 seconds"
+      }
+    ],
+    "notes": [
+      "Shares cooldown with Ghost Scepter and its upgrades.",
+      "Ethereal units take -30% bonus magic damage."
+    ],
+    "lore": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 73,
+    "valve_key": "item_bracer",
+    "name": "Bracer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/bracer.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 505,
+    "combination_cost": 210,
+    "components": [
+      20,
+      13
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          0.75
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "The bracer is a common choice to toughen up defenses and increase longevity."
+  }
+}

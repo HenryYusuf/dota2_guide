@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1716,
+    "valve_key": "item_weighted_dice",
+    "name": "Weighted Dice",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/weighted_dice.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Loaded",
+        "text": "Increases your base damage maximum by 6. When calculating your base damage or creep bounty from last hits, the value is computed 2 times and the highest value is taken."
+      }
+    ],
+    "notes": []
+  }
+}

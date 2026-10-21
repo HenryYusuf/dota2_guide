@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1640,
+    "valve_key": "item_jidi_pollen_bag",
+    "name": "Jidi Pollen Bag",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/jidi_pollen_bag.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Pollinate",
+        "text": "Spreads pollen on all enemy units in a 900 unit radius for 9 seconds, decreasing their health restoration by 50% and dealing damage per second, the total equal to 9% of their maximum health."
+      }
+    ],
+    "notes": [
+      "Damage is non-lethal and classified as HP Loss."
+    ],
+    "lore": "Very dangerous. Very difficult to obtain more."
+  }
+}

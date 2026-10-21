@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 59,
+    "valve_key": "item_energy_booster",
+    "name": "Energy Booster",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/energy_booster.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 800,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat."
+  }
+}

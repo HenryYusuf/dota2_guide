@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 168,
+    "valve_key": "item_desolator",
+    "name": "Desolator",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 3500,
+    "combination_cost": null,
+    "components": [
+      8,
+      8,
+      240
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          55
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Corruption",
+        "text": "Your attacks reduce the target's armor by -6 for 7 seconds."
+      },
+      {
+        "kind": "passive",
+        "title": "Soul Stealer",
+        "text": "Desolator gains +2 damage every time an enemy hero dies while affected by Corruption, to a maximum of 30."
+      }
+    ],
+    "notes": [
+      "Armor reduction works on buildings."
+    ],
+    "lore": "A wicked weapon, used in torturing political criminals."
+  }
+}

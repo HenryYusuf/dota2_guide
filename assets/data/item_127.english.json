@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 127,
+    "valve_key": "item_blade_mail",
+    "name": "Blade Mail",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/blade_mail.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 2400,
+    "combination_cost": 450,
+    "components": [
+      3,
+      1847
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          7
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Damage Return",
+        "text": "For 5.5 seconds, return all incoming damage, increasing the percentage by 85%."
+      },
+      {
+        "kind": "passive",
+        "title": "Damage Return",
+        "text": "Everytime you are attacked, you return 10 damage plus 15% of the attack damage dealt to you."
+      }
+    ],
+    "notes": [
+      "Damage Return is calculated before any kind of reduction.",
+      "Returned damage type is the same as it was received.",
+      "Damage done by this item is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+    ],
+    "lore": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat."
+  }
+}

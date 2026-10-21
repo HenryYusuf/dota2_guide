@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 90,
+    "valve_key": "item_pipe",
+    "name": "Pipe of Insight",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pipe.png",
+    "shop_category": "support",
+    "neutral_tier": null,
+    "total_cost": 3725,
+    "combination_cost": 675,
+    "components": [
+      279,
+      31,
+      1848
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          20
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Barrier",
+        "text": "Gives a magic damage barrier that absorbs 425 damage to all nearby allies. Lasts 8 seconds.\n\nRadius: 1200"
+      },
+      {
+        "kind": "passive",
+        "title": "Insight Aura",
+        "text": "Gives allied units 8% magic resistance.\n\nRadius: 1200"
+      }
+    ],
+    "notes": [
+      "Barrier does not affect units that have been affected by Barrier within Pipe of Insight's cooldown.",
+      "Stacks multiplicatively with other sources of magic resistance."
+    ],
+    "lore": "A powerful artifact of mysterious origin, it creates barriers against magical forces."
+  }
+}

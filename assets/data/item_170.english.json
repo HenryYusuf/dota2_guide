@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 170,
+    "valve_key": "item_yasha",
+    "name": "Yasha",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/yasha.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 2100,
+    "combination_cost": 650,
+    "components": [
+      22,
+      18
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Yasha-based movement speed bonuses from multiple items do not stack."
+    ],
+    "lore": "Yasha is regarded as the swiftest weapon ever created."
+  }
+}

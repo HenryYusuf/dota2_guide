@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1585,
+    "valve_key": "item_enhancement_brawny",
+    "name": "Brawny",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_brawny.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          110,
+          150,
+          190,
+          230
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          0,
+          3,
+          6,
+          9
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Slow Resistance",
+        "values": [
+          0,
+          0,
+          0,
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

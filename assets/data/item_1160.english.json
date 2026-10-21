@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1160,
+    "valve_key": "item_avianas_feather",
+    "name": "Aviana's Feather",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/avianas_feather.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Evasion",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Free Bird",
+        "text": "When equipped hero is below 30% HP, they gain flying movement."
+      }
+    ],
+    "notes": []
+  }
+}

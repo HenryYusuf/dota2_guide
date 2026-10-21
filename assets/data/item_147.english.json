@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 147,
+    "valve_key": "item_manta",
+    "name": "Manta Style",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/manta.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4650,
+    "combination_cost": 1550,
+    "components": [
+      170,
+      1122
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          26
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Mirror Image",
+        "text": "Creates 2 images of your hero that last 18 seconds. \n\nMelee images deal 33% damage, while Ranged images deal 25%. Illusions take 300% damage. \n\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "Has a 0.1 second cast time during which you are invulnerable.",
+      "Many effects are removed upon using Manta.",
+      "Yasha based movement speed bonuses from multiple items do not stack."
+    ],
+    "lore": "An axe made of reflective materials that causes confusion amongst enemy ranks."
+  }
+}

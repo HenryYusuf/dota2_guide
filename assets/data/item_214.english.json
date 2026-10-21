@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 214,
+    "valve_key": "item_tranquil_boots",
+    "name": "Tranquil Boots",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tranquil_boots.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [
+      29,
+      244,
+      27
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          65
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          14
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Break",
+        "text": "Whenever you attack a hero or are attacked by any unit, the bonus 14 HP regen is lost and the movement speed bonus is reduced to 40 for 13 seconds.\nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [],
+    "lore": "While they increase the longevity of the wearer, this boot is not particularly reliable."
+  }
+}

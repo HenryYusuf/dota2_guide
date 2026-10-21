@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1157,
+    "valve_key": "item_safety_bubble",
+    "name": "Safety Bubble",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/safety_bubble.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Bubbled Up",
+        "text": "Equipped Hero has a 100 HP Barrier against enemy damage. Barrier fully regenerates after not receiving damage for 8 seconds. Self-inflicted damage bypasses the barrier."
+      }
+    ],
+    "notes": []
+  }
+}

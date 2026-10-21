@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1161,
+    "valve_key": "item_unwavering_condition",
+    "name": "Unwavering Condition",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/unwavering_condition.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          95
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Unwavering",
+        "text": "Hero's Max Health is set to 1800 and can't be altered by other effects or attributes."
+      }
+    ],
+    "notes": []
+  }
+}

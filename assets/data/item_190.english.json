@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 190,
+    "valve_key": "item_veil_of_discord",
+    "name": "Veil of Discord",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/veil_of_discord.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 1700,
+    "combination_cost": 350,
+    "components": [
+      473,
+      19,
+      593
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          175
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Spell Weakness",
+        "text": "Cast a 900 radius blast that causes enemy heroes to take 10% increased damage from spells.\n\nCan be cast while channeling.\n\nDuration: 16 seconds."
+      }
+    ],
+    "notes": [
+      "Spell Weakness does not stack with Bloodstone's Spell Weakness Aura."
+    ],
+    "lore": "The headwear of corrupt magi."
+  }
+}

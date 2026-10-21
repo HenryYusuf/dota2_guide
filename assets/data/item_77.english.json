@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 77,
+    "valve_key": "item_null_talisman",
+    "name": "Null Talisman",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/null_talisman.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 505,
+    "combination_cost": 210,
+    "components": [
+      20,
+      15
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          2
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Max Mana",
+        "values": [
+          3
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          1
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A small gemstone attached to several chains."
+  }
+}

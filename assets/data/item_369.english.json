@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 369,
+    "valve_key": "item_trident",
+    "name": "Trident",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/trident.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 6301,
+    "combination_cost": 1,
+    "components": [
+      259,
+      162,
+      170
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Status Resistance",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Health Regen and Lifesteal Amp",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana Regen Amplification",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Magic Damage Attack",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Combines Sange, Yasha and Kaya together."
+      }
+    ],
+    "notes": []
+  }
+}

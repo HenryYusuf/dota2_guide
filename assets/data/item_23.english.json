@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 23,
+    "valve_key": "item_staff_of_wizardry",
+    "name": "Staff of Wizardry",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/staff_of_wizardry.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A staff of magical powers passed down from the eldest mages."
+  }
+}

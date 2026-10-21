@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 309,
+    "valve_key": "item_mind_breaker",
+    "name": "Mind Breaker",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mind_breaker.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Silence Strike",
+        "text": "The next attack silences the hit enemy for 1.5 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "A bewitching blade of indeterminate form capable of piercing the psyche of even the most willful foe."
+  }
+}

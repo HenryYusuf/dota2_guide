@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 242,
+    "valve_key": "item_crimson_guard",
+    "name": "Crimson Guard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/crimson_guard.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 3725,
+    "combination_cost": 1050,
+    "components": [
+      125,
+      6
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Guard",
+        "text": "For 7 seconds, grant nearby allied heroes and buildings a 100% chance to block damage equal to 70 plus 2% of the caster's max health value from each incoming attack.\n\nRadius: 1200"
+      },
+      {
+        "kind": "passive",
+        "title": "Damage Block",
+        "text": "Grants a 60% chance to block 75 damage from incoming attacks on melee heroes, and 50 damage on ranged."
+      }
+    ],
+    "notes": [
+      "Multiple sources of damage block do not stack.",
+      "When the Guard buff is applied to ranged heroes, Guard blocks 25 less damage.",
+      "Guard does not affect units that have been affected by Guard within Crimson Guard's cooldown."
+    ],
+    "lore": "A cuirass originally built to protect against the dreaded Year Beast."
+  }
+}

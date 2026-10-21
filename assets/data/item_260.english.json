@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 260,
+    "valve_key": "item_refresher_shard",
+    "name": "Refresher Shard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/refresher_shard.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Reset Cooldowns",
+        "text": "Resets the cooldowns of all your abilities. Shares a cooldown with Refresher Orb. This item's cooldown only progresses in your hero's main inventory."
+      }
+    ],
+    "notes": [
+      "Refresher Shard is shareable."
+    ],
+    "lore": "Across an epoch of endless battle, the Immortal's will to triumph never faltered."
+  }
+}

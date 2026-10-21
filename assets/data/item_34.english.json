@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 34,
+    "valve_key": "item_magic_stick",
+    "name": "Magic Stick",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/magic_stick.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 200,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Energy Charge",
+        "text": "Instantly restores 15 health and mana per charge stored.\n\n Max 10 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability."
+      }
+    ],
+    "notes": [
+      "Gains charges for spells cast by visible enemies in 1200 range.",
+      "Certain abilities and item abilities will not add charges."
+    ],
+    "lore": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 686,
+    "valve_key": "item_quicksilver_amulet",
+    "name": "Quicksilver Amulet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/quicksilver_amulet.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          4
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          18
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Animation Speed",
+        "values": [
+          40
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Attack Projectile Speed",
+        "values": [
+          40
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Quicksilver",
+        "text": "Grants you a bonus 5% movement speed and 20 attack speed anytime one of your abilities are on cooldown."
+      }
+    ],
+    "notes": [],
+    "lore": "An enchanted talisman brimming with a mysterious substance."
+  }
+}

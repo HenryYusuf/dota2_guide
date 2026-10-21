@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 174,
+    "valve_key": "item_diffusal_blade",
+    "name": "Diffusal Blade",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/diffusal_blade.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 2500,
+    "combination_cost": 1050,
+    "components": [
+      22,
+      19
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Inhibit",
+        "text": "Targets an enemy, slowing it for 4 seconds."
+      },
+      {
+        "kind": "passive",
+        "title": "Manabreak",
+        "text": "Each attack burns 40 mana from the target, and deals 1 physical damage per burned mana. \n\nIllusions do not burn mana."
+      }
+    ],
+    "notes": [
+      "Does not stack with other diffusal blades."
+    ],
+    "lore": "An enchanted blade that allows the user to cut straight into the enemy's soul."
+  }
+}

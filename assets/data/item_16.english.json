@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 16,
+    "valve_key": "item_branches",
+    "name": "Iron Branch",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/branches.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 55,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          1
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Plant Tree",
+        "text": "Targets the ground to plant a happy little tree that lasts for 20 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "A seemingly ordinary branch, its ironlike qualities are bestowed upon the bearer."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1641,
+    "valve_key": "item_outworld_staff",
+    "name": "Outworld Staff",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/outworld_staff.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Self-Exile",
+        "text": "Makes the caster completely invulnerable and disabled for 0.7 seconds. When returning to the world, the caster takes 5% of their maximum health as damage."
+      }
+    ],
+    "notes": [
+      "Damage taken when returning is non-lethal and disables Blink Dagger and other items that are muted upon taking damage."
+    ],
+    "lore": "Proof that the lone sentinel was not always so."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 263,
+    "valve_key": "item_hurricane_pike",
+    "name": "Hurricane Pike",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4550,
+    "combination_cost": 350,
+    "components": [
+      102,
+      236
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed_range",
+        "values": [
+          130
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Hurricane Thrust",
+        "text": "Pushes you and target enemy 425 units away from each other, and for 5 seconds, allows you to make 5 attacks against the target without range restrictions and with +100 attack speed.\n\nCan be cast on self or allies to push the target 600 units in the direction it is facing.\nEnemy Range: 425"
+      }
+    ],
+    "notes": [
+      "Self-cast will use Hurricane Pike on yourself.",
+      "Hurricane Pike doesn't interrupt the target's actions.",
+      "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
+      "Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
+    ],
+    "lore": "A legendary pike once held as royal sigil of the ancient wyvern riders."
+  }
+}

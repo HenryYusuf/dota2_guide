@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 2190,
+    "valve_key": "item_dandelion_amulet",
+    "name": "Dandelion Amulet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/dandelion_amulet.png",
+    "shop_category": "neutral",
+    "neutral_tier": 3,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Magical Damage Block",
+        "text": "Every 12s, blocks up to 300 magic damage from damage instances over 75 damage."
+      }
+    ],
+    "notes": []
+  }
+}

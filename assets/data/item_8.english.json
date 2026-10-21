@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 8,
+    "valve_key": "item_mithril_hammer",
+    "name": "Mithril Hammer",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mithril_hammer.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 1600,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          24
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A hammer forged of pure mithril."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 247,
+    "valve_key": "item_moon_shard",
+    "name": "Moon Shard",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/moon_shard.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 4000,
+    "combination_cost": null,
+    "components": [
+      55,
+      55
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          140
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Bonus Night Vision",
+        "values": [
+          400
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Consume",
+        "text": "Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use."
+      },
+      {
+        "kind": "passive",
+        "title": "Shade Sight",
+        "text": "Grants bonus night vision."
+      }
+    ],
+    "notes": [],
+    "lore": "Said to be a tear from the lunar goddess Selemene."
+  }
+}

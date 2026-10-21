@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 334,
+    "valve_key": "item_imp_claw",
+    "name": "Imp Claw",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/imp_claw.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Critical Strike",
+        "text": "Empowers your next attack, causing it to be a critical strike dealing 130% damage."
+      }
+    ],
+    "notes": [],
+    "lore": "Though their tasks are largely thankless, demon hunters can often turn a profit bartering parts in Weeping Rose."
+  }
+}

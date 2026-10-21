@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1868,
+    "valve_key": "item_foragers_kit",
+    "name": "Forager's Kit",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/foragers_kit.png",
+    "shop_category": "neutral",
+    "neutral_tier": 0,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Forage",
+        "text": "When the cooldown is ready, nearby trees that can be foraged will appear. By standing next to a tree for 0.75s, you can forage the tree and find flora, fungi or a bag of gold containing 30 gold."
+      }
+    ],
+    "notes": []
+  }
+}

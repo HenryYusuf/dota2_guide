@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 54,
+    "valve_key": "item_relic",
+    "name": "Sacred Relic",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/relic.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 3400,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          55
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An ancient weapon that often turns the tides of war."
+  }
+}

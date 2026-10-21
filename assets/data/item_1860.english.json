@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1860,
+    "valve_key": "item_prophets_pendulum",
+    "name": "Prophet's Pendulum",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/prophets_pendulum.png",
+    "shop_category": "neutral",
+    "neutral_tier": 3,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Linger",
+        "text": "30% of incoming damage is delayed over 5 seconds."
+      }
+    ],
+    "notes": []
+  }
+}

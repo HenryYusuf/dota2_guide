@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1107,
+    "valve_key": "item_phylactery",
+    "name": "Phylactery",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/phylactery.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2600,
+    "combination_cost": 200,
+    "components": [
+      69,
+      1122
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          5.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.25
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Empower Spell",
+        "text": "The next Unit Target spell you cast on an enemy deals a separate 150 bonus damage to the target and slows them by 30% for 3s."
+      }
+    ],
+    "notes": [],
+    "lore": "An amulet overflowing with powerful magics."
+  }
+}

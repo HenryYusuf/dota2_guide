@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 305,
+    "valve_key": "item_royal_jelly",
+    "name": "Royal Jelly",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/royal_jelly.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Consume",
+        "text": "Consumes all charges and grants a target allied unit a buff that provides +2.5 Health Regen and +1.25 Mana Regen per charge for 8s. \n\nIf the unit is attacked by an enemy hero or Roshan, the effect is lost."
+      }
+    ],
+    "notes": [],
+    "lore": "To those who harvest olgru jelly, success serves more than mere profit--it's often the means to survival--for only the jelly itself can cure the ravages that follow a sting from the vigilant denizens of the giant hives."
+  }
+}

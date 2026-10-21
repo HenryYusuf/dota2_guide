@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1599,
+    "valve_key": "item_mana_draught",
+    "name": "Mana Draught",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/mana_draught.png",
+    "shop_category": "neutral",
+    "neutral_tier": 1,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Bottoms Up",
+        "text": "Restores 70 + 3% of the caster's maximum mana over 6 seconds. If the hero is attacked by an enemy hero or Roshan, the effect is lost.\n\nHold Control to use on an allied hero."
+      },
+      {
+        "kind": "passive",
+        "title": "Fill Up",
+        "text": "Cooldown Speed of Mana Draught is increased by 30% while in water."
+      }
+    ],
+    "notes": [],
+    "lore": "A refreshing drink best shared with friends."
+  }
+}

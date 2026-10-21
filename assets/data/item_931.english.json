@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 931,
+    "valve_key": "item_boots_of_bearing",
+    "name": "Boots of Bearing",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/boots_of_bearing.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 4225,
+    "combination_cost": null,
+    "components": [
+      214,
+      185,
+      279
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          8
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          65
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          18
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Endurance",
+        "text": "Gives +50 attack speed and +15% movement speed to nearby allies for 6 seconds. For the first 1.5 seconds allies are immune to slows.\n\n Radius: 1200"
+      },
+      {
+        "kind": "passive",
+        "title": "Swiftness Aura",
+        "text": "Grants 15 movement speed and 2.5 health regeneration to allies.  \n\nRadius: 1200\nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [],
+    "lore": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim."
+  }
+}

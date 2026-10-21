@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 26,
+    "valve_key": "item_lifesteal",
+    "name": "Morbid Mask",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/lifesteal.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Lifesteal",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Lifesteal",
+        "text": "Heals the attacker for a percentage of physical damage dealt."
+      }
+    ],
+    "notes": [],
+    "lore": "A mask that drains the energy of those caught in its gaze."
+  }
+}

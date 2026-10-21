@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 286,
+    "valve_key": "item_flying_courier",
+    "name": "Flying Courier",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/flying_courier.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 100,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [],
+    "notes": []
+  }
+}

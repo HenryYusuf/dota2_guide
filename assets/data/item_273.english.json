@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 273,
+    "valve_key": "item_kaya_and_sange",
+    "name": "Kaya and Sange",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/kaya_and_sange.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 4200,
+    "combination_cost": null,
+    "components": [
+      259,
+      162
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Strength",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          16
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Slow Resistance",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana Regen Amplification",
+        "values": [
+          30
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Spell Amplification",
+        "values": [
+          12
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Restoration Amplification",
+        "values": [
+          16
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Mana Cost/Mana Loss Reduction",
+        "values": [
+          25
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge."
+  }
+}

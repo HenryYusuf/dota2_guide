@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 50,
+    "valve_key": "item_phase_boots",
+    "name": "Phase Boots",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/phase_boots.png",
+    "shop_category": "arcane",
+    "neutral_tier": null,
+    "total_cost": 1450,
+    "combination_cost": null,
+    "components": [
+      29,
+      4,
+      2
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          50
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage (MELEE)",
+        "values": [
+          18
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage (RANGED)",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          4
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Phase",
+        "text": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.\nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [],
+    "lore": "Boots that allow the wearer to travel between the ether."
+  }
+}

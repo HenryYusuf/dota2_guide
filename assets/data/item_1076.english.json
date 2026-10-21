@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1076,
+    "valve_key": "item_specialists_array",
+    "name": "Specialist's Array",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/specialists_array.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 2550,
+    "combination_cost": 550,
+    "components": [
+      22,
+      3
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          20
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Splitshot",
+        "text": "Ranged attacks have a 30% chance to fire additional projectiles at up to 2 nearby enemies with 150 extra range and within a 120 degree angle in front of the attacker. The additional projectiles deal 20 + 75% damage of a normal attack and do not trigger on hit effects. The primary attack deals 20 + 100% damage of a normal attack."
+      }
+    ],
+    "notes": [],
+    "lore": "An impressive kit of trigger enhancements born in an aging assassin's idle mind."
+  }
+}

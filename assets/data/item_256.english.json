@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 256,
+    "valve_key": "item_aeon_disk",
+    "name": "Aeon Disk",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/aeon_disk.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 3000,
+    "combination_cost": 1200,
+    "components": [
+      61,
+      59
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health",
+        "values": [
+          250
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          300
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "COOLDOWN:",
+        "values": [
+          105,
+          125,
+          145,
+          165
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Combo Breaker",
+        "text": "When you take damage and your health falls below 70%, a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage. Cooldown increases every time it triggers.\n\nDispel Type: Strong Dispel"
+      }
+    ],
+    "notes": [],
+    "lore": "A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe."
+  }
+}

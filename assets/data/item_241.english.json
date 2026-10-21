@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 241,
+    "valve_key": "item_tango_single",
+    "name": "Tango (Shared)",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/tango_single.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 30,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Devour",
+        "text": "Consumes a target tree to gain 3.5 health regeneration for 16 seconds. Consuming an Ironwood Tree doubles the heal duration.\n\nTree Range: 165"
+      }
+    ],
+    "notes": [],
+    "lore": "Om nom nom."
+  }
+}

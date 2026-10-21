@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 279,
+    "valve_key": "item_ring_of_tarrasque",
+    "name": "Ring of Tarrasque",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/ring_of_tarrasque.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 1700,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          12
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component."
+  }
+}

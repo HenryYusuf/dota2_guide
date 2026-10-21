@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 225,
+    "valve_key": "item_nullifier",
+    "name": "Nullifier",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/nullifier.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 4350,
+    "combination_cost": null,
+    "components": [
+      54,
+      1847
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          75
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "MOVEMENT SLOW:",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Nullify",
+        "text": "Dispels the target and applies a debuff for 4 seconds. Continuously dispels and slows the target.\n\nDispel Type: Basic Dispel"
+      }
+    ],
+    "notes": [
+      "Can be cast on invulnerable units."
+    ],
+    "lore": "A dangerous weapon pilfered from an inverse dimension."
+  }
+}

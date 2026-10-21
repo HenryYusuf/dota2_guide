@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1603,
+    "valve_key": "item_gunpowder_gauntlets",
+    "name": "Gunpowder Gauntlet",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/gunpowder_gauntlets.png",
+    "shop_category": "neutral",
+    "neutral_tier": 2,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Beat the Crowd",
+        "text": "Your next attack deals an additional 120 magic damage and splashes to units within 250 units for 50% of the original attack's damage plus the additional magic damage."
+      }
+    ],
+    "notes": [],
+    "lore": "A 'harmless' prank that went entirely too far."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 232,
+    "valve_key": "item_aether_lens",
+    "name": "Aether Lens",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/aether_lens.png",
+    "shop_category": "caster",
+    "neutral_tier": null,
+    "total_cost": 2275,
+    "combination_cost": 775,
+    "components": [
+      59,
+      57
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          300
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          2.5
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          225
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Cast Range bonuses from Aether Lens and Dagon do not stack."
+    ],
+    "lore": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son."
+  }
+}

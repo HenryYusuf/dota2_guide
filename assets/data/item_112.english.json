@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 112,
+    "valve_key": "item_assault",
+    "name": "Assault Cuirass",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/assault.png",
+    "shop_category": "armor",
+    "neutral_tier": null,
+    "total_cost": 5125,
+    "combination_cost": 1300,
+    "components": [
+      86,
+      55,
+      9
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Armor",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Assault Aura",
+        "text": "Grants 30 attack speed and 5 armor to nearby allied units and structures, and decreases nearby enemy unit and structure armor by -5.\n\nRadius: 1200"
+      }
+    ],
+    "notes": [],
+    "lore": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1440,
+    "valve_key": "item_black_grimoire",
+    "name": "Black Grimoire\n(Warlock)",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/black_grimoire.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Profane Knowledge",
+        "text": "Hero kills and assists empower the Black Grimoire, granting it charges. Right-click to consume and grant 200 experience per charge. Starts on cooldown. \nThis item cannot be dropped."
+      }
+    ],
+    "notes": []
+  }
+}

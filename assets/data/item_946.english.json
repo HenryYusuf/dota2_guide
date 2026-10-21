@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 946,
+    "valve_key": "item_lance_of_pursuit",
+    "name": "Lance of Pursuit",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/lance_of_pursuit.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Mana",
+        "values": [
+          200
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Hound",
+        "text": "Attacking from behind slows enemies by 16% (8% if Ranged) and deals 20 more damage. Slow lasts 2 second(s)."
+      }
+    ],
+    "notes": [],
+    "lore": "The gleaming weapon of a tarnished knight haunted by his duties to an unworthy king."
+  }
+}

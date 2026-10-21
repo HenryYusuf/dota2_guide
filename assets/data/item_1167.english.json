@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1167,
+    "valve_key": "item_light_collector",
+    "name": "Light Collector",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/light_collector.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "",
+        "label": "DAY HP REGEN:",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "",
+        "label": "NIGHT MANA REGEN:",
+        "values": [
+          6
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          5
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Lightbreak",
+        "text": "Produce a brilliant flash of light that destroys trees in a 325 AoE."
+      },
+      {
+        "kind": "passive",
+        "title": "Unclouded",
+        "text": "Provides wearer with health regeneration during the day and mana regeneration during the night. When within a 200 distance of any trees, health and mana regeneration are decreased by 75%."
+      }
+    ],
+    "notes": []
+  }
+}

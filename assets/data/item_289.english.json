@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 289,
+    "valve_key": "item_quickening_charm",
+    "name": "Quickening Charm",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/quickening_charm.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cooldown Reduction",
+        "values": [
+          10
+        ],
+        "is_percentage": true
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Cooldown Reduction",
+        "text": "Reduces the cooldown time of all spells and items."
+      }
+    ],
+    "notes": [],
+    "lore": "An evergreen amulet of druidic origins."
+  }
+}

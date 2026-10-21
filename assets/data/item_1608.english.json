@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1608,
+    "valve_key": "item_pyrrhic_cloak",
+    "name": "Pyrrhic Cloak",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pyrrhic_cloak.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Retribution",
+        "text": "For the next 6 seconds, 75% of damage taken by the caster is reflected to the target unit as physical damage if they are within 1200 units away."
+      }
+    ],
+    "notes": [
+      "Damage done by this item is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+    ],
+    "lore": "There are generals that care far less about the survival of their troops than the destruction of their enemies."
+  }
+}

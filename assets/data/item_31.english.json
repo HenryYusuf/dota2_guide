@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 31,
+    "valve_key": "item_cloak",
+    "name": "Cloak",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/cloak.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 900,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Magic Resistance",
+        "values": [
+          18
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": [
+      "Stacks multiplicatively with other sources of magic resistance."
+    ],
+    "lore": "A cloak made of a magical material that works to dispel any magic cast on it."
+  }
+}

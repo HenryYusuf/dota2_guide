@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 306,
+    "valve_key": "item_pupils_gift",
+    "name": "Pupil's Gift",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/pupils_gift.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "SECONDARY STATS",
+        "values": [
+          15
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "other",
+        "title": "",
+        "text": "Increases both non-primary attributes."
+      }
+    ],
+    "notes": [
+      "Grants two-thirds value to each attribute for Universal Heroes"
+    ],
+    "lore": "An astounding plate of ever-replenishing, fortifying fruit."
+  }
+}

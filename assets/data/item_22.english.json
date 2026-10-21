@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 22,
+    "valve_key": "item_blade_of_alacrity",
+    "name": "Blade of Alacrity",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/blade_of_alacrity.png",
+    "shop_category": "attributes",
+    "neutral_tier": null,
+    "total_cost": 1000,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Agility",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "A long blade imbued with time magic."
+  }
+}

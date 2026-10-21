@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 2,
+    "valve_key": "item_blades_of_attack",
+    "name": "Blades of Attack",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/blades_of_attack.png",
+    "shop_category": "armaments",
+    "neutral_tier": null,
+    "total_cost": 450,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          9
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [],
+    "notes": [],
+    "lore": "The damage of these small, concealable blades should not be underestimated."
+  }
+}

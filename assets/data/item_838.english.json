@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 838,
+    "valve_key": "item_unstable_wand",
+    "name": "Pig Pole",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/unstable_wand.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Pig, Out!",
+        "text": "Turns your hero into a critter for 3 seconds and gives them +20% Movement Speed."
+      }
+    ],
+    "notes": [],
+    "lore": "A makeshift charm misplaced by a peace-loving, addlebrained enchanter."
+  }
+}

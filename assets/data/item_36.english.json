@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 36,
+    "valve_key": "item_magic_wand",
+    "name": "Magic Wand",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/magic_wand.png",
+    "shop_category": "common",
+    "neutral_tier": null,
+    "total_cost": 460,
+    "combination_cost": 150,
+    "components": [
+      34,
+      16,
+      16
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "All Attributes",
+        "values": [
+          3
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Energy Charge",
+        "text": "Instantly restores 15 health and mana per charge stored. \n\nMax 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability."
+      }
+    ],
+    "notes": [
+      "Gains charges for spells cast by visible enemies in 1200 range.",
+      "Certain abilities and item abilities will not add charges."
+    ],
+    "lore": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike."
+  }
+}

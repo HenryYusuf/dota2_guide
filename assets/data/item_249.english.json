@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 249,
+    "valve_key": "item_silver_edge",
+    "name": "Silver Edge",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/silver_edge.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 5700,
+    "combination_cost": 250,
+    "components": [
+      152,
+      51
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          70
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Attack Speed",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Shadow Walk",
+        "text": "Makes you invisible for 17 seconds, or until you attack or cast a spell.  While invisible, you move 20% faster and can move through units.  \n\nAttacking to end the invisibility will deal 300 bonus physical damage, disable their passive abilities for 5 seconds, and cap their movement speed to 200."
+      }
+    ],
+    "notes": [],
+    "lore": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath."
+  }
+}

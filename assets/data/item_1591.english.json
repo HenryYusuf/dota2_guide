@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 1591,
+    "valve_key": "item_enhancement_wise",
+    "name": "Wise",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enhancement_wise.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Experience per Minute",
+        "values": [
+          1000
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Max Mana",
+        "values": [
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [],
+    "notes": []
+  }
+}

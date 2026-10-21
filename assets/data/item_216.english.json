@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 216,
+    "valve_key": "item_enchanted_mango",
+    "name": "Enchanted Mango",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/enchanted_mango.png",
+    "shop_category": "consumables",
+    "neutral_tier": null,
+    "total_cost": 65,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          0.4
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "use",
+        "title": "Eat Mango",
+        "text": "Instantly restores 100 mana."
+      }
+    ],
+    "notes": [
+      "Hold Control to use on a nearby allied hero."
+    ],
+    "lore": "The bittersweet flavors of Jidi Isle are irresistible to amphibians."
+  }
+}

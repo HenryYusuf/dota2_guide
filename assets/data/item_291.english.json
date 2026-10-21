@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 291,
+    "valve_key": "item_force_boots",
+    "name": "Force Boots",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/force_boots.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Movement Speed",
+        "values": [
+          115
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Health Regeneration",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Force",
+        "text": "Pushes the target 750 units in the direction they are facing. Dispels if cast on an ally.\n\nDispel Type: Basic Dispel"
+      },
+      {
+        "kind": "passive",
+        "title": "Speed Unlock",
+        "text": "Completely removes the speed limit for the wearer \nMovement speed bonuses from multiple pairs of boots do not stack."
+      }
+    ],
+    "notes": [
+      "Does not trigger spell block or spell reflect."
+    ],
+    "lore": "Elusive marvels never successfully studied for proper classification in the archives."
+  }
+}

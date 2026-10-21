@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 96,
+    "valve_key": "item_sheepstick",
+    "name": "Scythe of Vyse",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/sheepstick.png",
+    "shop_category": "artifacts",
+    "neutral_tier": null,
+    "total_cost": 5200,
+    "combination_cost": 700,
+    "components": [
+      58,
+      1802
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Intelligence",
+        "values": [
+          30
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          8.5
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Hex",
+        "text": "Turns a target unit into a harmless critter for 2.8 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed.\nInstantly destroys illusions."
+      }
+    ],
+    "notes": [
+      "The target will have a base movement speed of 140, but buffs granting maximum movement speed won't be disabled."
+    ],
+    "lore": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi."
+  }
+}

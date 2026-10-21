@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 240,
+    "valve_key": "item_blight_stone",
+    "name": "Orb of Blight",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/blight_stone.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 300,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Lesser Corruption",
+        "text": "Your attacks reduce the target's armor by -2 for 3 seconds."
+      }
+    ],
+    "notes": [
+      "Does not stack with its upgrades, Desolator, or Stygian Desolator."
+    ],
+    "lore": "An unnerving stone unearthed beneath the Fields of Endless Carnage."
+  }
+}

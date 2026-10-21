@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 294,
+    "valve_key": "item_seer_stone",
+    "name": "Seer Stone",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/seer_stone.png",
+    "shop_category": "other",
+    "neutral_tier": null,
+    "total_cost": 0,
+    "combination_cost": null,
+    "components": [],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Cast Range",
+        "values": [
+          350
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Bonus Vision",
+        "values": [
+          350
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Mana_regen",
+        "values": [
+          10
+        ],
+        "is_percentage": false
+      }
+    ],
+    "effects": [
+      {
+        "kind": "active",
+        "title": "Reveal",
+        "text": "Reveal a target 800 area of the map for 6 seconds."
+      }
+    ],
+    "notes": [],
+    "lore": "The curious creation of a wizard who professed to hail from another time."
+  }
+}

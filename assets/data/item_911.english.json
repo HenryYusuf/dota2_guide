@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "item": {
+    "id": 911,
+    "valve_key": "item_revenants_brooch",
+    "name": "Revenant's Brooch",
+    "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/items/revenants_brooch.png",
+    "shop_category": "weapons",
+    "neutral_tier": null,
+    "total_cost": 3300,
+    "combination_cost": 650,
+    "components": [
+      149,
+      473
+    ],
+    "attributes": [
+      {
+        "sign": "+",
+        "label": "Damage",
+        "values": [
+          35
+        ],
+        "is_percentage": false
+      },
+      {
+        "sign": "+",
+        "label": "Spell Lifesteal",
+        "values": [
+          15
+        ],
+        "is_percentage": true
+      }
+    ],
+    "effects": [
+      {
+        "kind": "passive",
+        "title": "Phantom Critical",
+        "text": "Grants each attack a 30% chance to deal an additional 80% of the attack's damage as bonus magic damage."
+      }
+    ],
+    "notes": [
+      "Counts as a Critical Strike for purposes of stacking with other sources of Critical Strike.",
+      "Phantom Critical does not work against buildings."
+    ],
+    "lore": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death."
+  }
+}
