@@ -3,7 +3,14 @@
 // offline on first launch (ADR-0001: datafeeds only, never KV extraction).
 //
 // Usage:
-//   dart run tool/snapshot.dart [--locale english] [--out assets/data] [--heroes-only] [--items-only] [--patches-only]
+//   dart run tool/snapshot.dart [--validate] [--locale english] [--out assets/data] [--heroes-only] [--items-only] [--patches-only]
+//
+// Modes:
+//   (default): fetches official feeds and emits/overwrites app-schema JSON
+//              into the bundled assets directory.
+//   --validate: re-pulls official feeds, diffs their schema shape against
+//               the committed snapshot without writing files, and exits non-zero
+//               on drift with a detailed report (pre-release release gate).
 //
 // Emits the roster index (`heroes.<locale>.json`) plus one detail file per
 // Hero (`hero_<id>.<locale>.json`), the Item index (`items.<locale>.json`)
@@ -38,14 +45,37 @@ import 'package:dota2_guide/features/patches/patch_feed_to_detail.dart';
 import 'package:dota2_guide/features/patches/patch_feed_to_index.dart';
 import 'package:dota2_guide/features/patches/patch_index.dart';
 
+import 'schema_validator.dart';
+
 Future<void> main(List<String> arguments) async {
   final locale = _flagValue(arguments, '--locale') ?? 'english';
   final outDir = _flagValue(arguments, '--out') ?? 'assets/data';
   final heroesOnly = arguments.contains('--heroes-only');
   final itemsOnly = arguments.contains('--items-only');
   final patchesOnly = arguments.contains('--patches-only');
+  final isValidate = arguments.contains('--validate');
 
   final feed = HttpDatafeedClient();
+
+  if (isValidate) {
+    stdout.writeln(
+      'Validating official datafeeds against committed snapshot in $outDir ($locale)...',
+    );
+    final report = await validateSnapshot(
+      feed: feed,
+      snapshotDir: outDir,
+      locale: locale,
+      heroesOnly: heroesOnly,
+      itemsOnly: itemsOnly,
+      patchesOnly: patchesOnly,
+      onProgress: stdout.writeln,
+    );
+    stdout.write(report.formatReport());
+    if (report.hasDrift) {
+      exitCode = 1;
+    }
+    return;
+  }
 
   if (!itemsOnly && !patchesOnly) {
     stdout.writeln('Fetching herolist feed (language=$locale)…');

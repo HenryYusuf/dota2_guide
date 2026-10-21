@@ -6,7 +6,7 @@
 
 **Status:** ready-for-agent
 
-- [ ] Validate mode re-pulls the feeds, diffs schema shape against the committed snapshot, and exits non-zero on drift; usage documented
-- [ ] CI runs parsing, repository, and widget suites on every change
-- [ ] Cross-screen widget smoke: all four tabs plus About render and navigate with fake repositories
-- [ ] Release checklist written and committed, with validate-before-snapshot as a required step
+- [x] Validate mode re-pulls the feeds, diffs schema shape against the committed snapshot, and exits non-zero on drift; usage documented
+- [x] CI runs parsing, repository, and widget suites on every change
+- [x] Cross-screen widget smoke: all four tabs plus About render and navigate with fake repositories
+- [x] Release checklist written and committed, with validate-before-snapshot as a required step
