@@ -7,9 +7,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import 'item_detail.dart';
 import 'items_providers.dart';
+import 'recipe_tree.dart';
 import 'shop_categories.dart';
 
 /// One Item's detail page, pushed from the Items list as `/items/:id`.
@@ -90,6 +92,10 @@ class _DetailBody extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         _CostCard(item: item),
+        if (item.components.isNotEmpty) ...[
+          const SizedBox(height: 12),
+          _RecipeCard(itemId: item.id, buildIcon: buildIcon),
+        ],
         if (item.attributes.isNotEmpty) ...[
           const SizedBox(height: 12),
           _AttributesCard(item: item),
@@ -183,6 +189,138 @@ class _CostCard extends StatelessWidget {
         if (item.combinationCost case final int combinationCost)
           row('Combination', '$combinationCost gold'),
       ],
+    );
+  }
+}
+
+/// The Recipe tree: components rendered as indented rows with icon, name, and
+/// price; components that are themselves combined Items auto-expand one level
+/// deeper so there are never dead ends; every row taps through to that Item's
+/// detail page. A combined-cost row at the top stays consistent with the
+/// component prices shown.
+class _RecipeCard extends ConsumerWidget {
+  const _RecipeCard({required this.itemId, required this.buildIcon});
+
+  final int itemId;
+  final ItemIconBuilder buildIcon;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final treeAsync = ref.watch(recipeTreeProvider(itemId));
+
+    return treeAsync.when(
+      loading: () => const _SectionCard(
+        key: ValueKey<String>('item-recipe-section'),
+        title: 'Recipe',
+        children: [
+          SizedBox(
+            height: 48,
+            child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
+          ),
+        ],
+      ),
+      error: (_, _) => const _SectionCard(
+        key: ValueKey<String>('item-recipe-section'),
+        title: 'Recipe',
+        children: [Text("Couldn't load recipe.")],
+      ),
+      data: (rootNodes) {
+        if (rootNodes.isEmpty) return const SizedBox.shrink();
+
+        final combinedCost = rootNodes.combinedCost;
+        final flattened = rootNodes.flatten();
+        final seenIds = <int>{};
+
+        return _SectionCard(
+          key: const ValueKey<String>('item-recipe-section'),
+          title: 'Recipe',
+          children: [
+            Padding(
+              key: const ValueKey<String>('recipe-combined-cost-row'),
+              padding: const EdgeInsets.symmetric(vertical: 2),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Combined cost',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                  ),
+                  Text(
+                    '$combinedCost gold',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ],
+              ),
+            ),
+            const Divider(height: 12),
+            for (final (index, node) in flattened.indexed)
+              _RecipeRow(
+                key: ValueKey<String>(
+                  seenIds.add(node.item.id)
+                      ? 'recipe-row-${node.item.id}'
+                      : 'recipe-row-${node.item.id}-$index',
+                ),
+                node: node,
+                buildIcon: buildIcon,
+              ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class _RecipeRow extends StatelessWidget {
+  const _RecipeRow({super.key, required this.node, required this.buildIcon});
+
+  final RecipeTreeNode node;
+  final ItemIconBuilder buildIcon;
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+    final indent = node.depth * 24.0;
+
+    return InkWell(
+      onTap: () => context.push(ItemDetailScreen.location(node.item.id)),
+      borderRadius: BorderRadius.circular(6),
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(indent + 4, 4, 4, 4),
+        child: Row(
+          children: [
+            if (node.depth > 0) ...[
+              const Icon(
+                Icons.subdirectory_arrow_right,
+                size: 16,
+                color: Colors.white38,
+              ),
+              const SizedBox(width: 4),
+            ],
+            ClipRRect(
+              borderRadius: BorderRadius.circular(4),
+              child: SizedBox(
+                width: 28,
+                height: 28,
+                child: buildIcon(context, node.item.iconUrl, node.item.name),
+              ),
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                node.item.name,
+                style: text.bodyMedium,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            const SizedBox(width: 8),
+            Text(
+              '${node.item.totalCost} gold',
+              style: text.bodySmall?.copyWith(color: Colors.white70),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
