@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 10,
+    "valve_key": "npc_dota_hero_morphling",
+    "localized_name": "Morphling",
+    "one_liner": "Rides the waves to flank enemies",
+    "primary_attribute": "agility",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/morphling.png",
+    "attributes": {
+      "strength": {
+        "base": 16,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 33,
+        "gain": 4.2
+      },
+      "intelligence": {
+        "base": 19,
+        "gain": 1.8
+      }
+    },
+    "combat": {
+      "damage_min": 45,
+      "damage_max": 54,
+      "attack_rate": 1.5,
+      "attack_range": 350,
+      "projectile_speed": 1300,
+      "armor": 4.5,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "For dark eons the comet circled. Held in thrall to a distant sun, bound by gravity's inexorable pull, the massive ball of ice careened through the blackness between worlds, made strange by its dark journey. On the eve of the ancient war of the Vloy, it punched down through the sky and lit a glowing trail across the night, a sign both armies took for an omen. The frozen ball melted in a flash of boiling heat, as below two forces enjoined in battle across the border of a narrow river. Thus freed from its icy stasis, the Morphling was born into conflict, an elemental power at one with the tides of the ocean, capricious and unconstrained. He entered the fight, instinctively taking the form of the first general who dared set foot across the water, and then struck him dead. As the motley warriors clashed, he shifted from form to form throughout the battle, instantly absorbing the ways of these strange creatures--now a footsoldier, now an archer, now the cavalryman--until, by the time the last soldier fell, Morphling had played every part. The battle's end was his beginning."
+  },
+  "abilities": [
+    {
+      "name": "morphling_waveform",
+      "display_name": "Waveform",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_waveform.png",
+      "description": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
+      "lore": "A torrential flood takes enemies by force.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        700,
+        775,
+        850,
+        925
+      ],
+      "mana_costs": [
+        115
+      ],
+      "cooldowns": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "damages": [
+        75,
+        150,
+        225,
+        300
+      ],
+      "special_values": []
+    },
+    {
+      "name": "morphling_adaptive_strike_agi",
+      "display_name": "Adaptive Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_adaptive_strike_agi.png",
+      "description": "Launches a surge of water toward an enemy unit, stunning them, knocking them back, and dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used.\n\nKnockback distance and stun duration are based on Morphling's strength. If his strength is 50% higher than his agility, the maximum knockback distance and stun duration is used.",
+      "lore": "The Morphling calls upon his elements to crush his opponents with waves.",
+      "notes": [
+        "Projectile moves at 1150 speed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        600,
+        675,
+        750,
+        825
+      ],
+      "mana_costs": [
+        40,
+        50,
+        60,
+        70
+      ],
+      "cooldowns": [
+        17,
+        14,
+        11,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            50,
+            70,
+            90,
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE MIN AGI MULTIPLIER:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE MAX AGI MULTIPLIER:",
+          "values": [
+            1,
+            1.5,
+            2,
+            2.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN MIN:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN MAX:",
+          "values": [
+            1.4,
+            1.8,
+            2.2,
+            2.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KNOCKBACK MIN:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KNOCKBACK MAX:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "morphling_morph_agi",
+      "display_name": "Attribute Shift (Agility Gain)",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_morph_agi.png",
+      "description": "Morphling shifts its form, pulling points from Strength and pouring them into Agility at a rate of 4. The process is reversible.",
+      "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
+      "notes": [
+        "Attribute Shift can't convert stats from items.",
+        "Leveling up Agility Gain will also level up Strength Gain."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MANA COST PER SECOND:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Morphling can shift attributes while stunned. Reduces mana cost."
+    },
+    {
+      "name": "morphling_morph_str",
+      "display_name": "Attribute Shift (Strength Gain)",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_morph_str.png",
+      "description": "Morphling shifts its form, pulling points from Agility and pouring them into Strength at a rate of 4. The process is reversible.",
+      "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
+      "notes": [
+        "Attribute Shift can't convert stats from items.",
+        "Leveling up Strength Gain will also level up Agility Gain."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MANA COST PER SECOND:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Morphling can shift attributes while stunned. Reduces mana cost."
+    },
+    {
+      "name": "morphling_replicate",
+      "display_name": "Morph",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_replicate.png",
+      "description": "Morphling changes his form to match the targeted enemy, gaining their basic abilities and changing his primary attribute based on his target. Can be toggled for the duration of the ability.",
+      "lore": "Staring into Morphling produces a reflection that mimics the beholder.",
+      "notes": [
+        "You can't target yourself with Morph.",
+        "Morph won't copy Shard/Scepter abilities unless Morphling owns the respective item.",
+        "Does not trigger spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        700,
+        850,
+        1000
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        125,
+        90,
+        55
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            24
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION OUTGOING DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ILLUSION INCOMING DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Adds an alt-cast to Morph. When enabled, a strong illusion is created of the target hero that can cast all of the hero's basic abilities. If the illusion is alive when Morphling toggles the ability, he will take the place of the illusion, destroying it."
+    },
+    {
+      "name": "morphling_ebb_and_flow",
+      "display_name": "Ebb and Flow",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_ebb_and_flow.png",
+      "description": "Morphling receives bonus cast range and slow resistance based on his current Strength, and attack range and movement speed based on his current Agility. These bonuses persist if he is morphed into another hero.",
+      "notes": [
+        "Attack range bonuses during morph only apply when morphed into a Ranged hero."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "AGILITY TO ATTACK RANGE:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "AGILITY TO MOVEMENT SPEED:",
+          "values": [
+            15
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STRENGTH TO CAST RANGE:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STRENGTH TO SLOW RESISTANCE:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+15% Magic Resistance",
+    "+12s Morph Duration",
+    "+250 Waveform Range",
+    "+75 Attack Range",
+    "-3s Adaptive Strike Cooldown",
+    "+15 Agility",
+    "-40% Waveform Cooldown",
+    "+35 Strength"
+  ],
+  "facets": []
+}

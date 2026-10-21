@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 55,
+    "valve_key": "npc_dota_hero_dark_seer",
+    "localized_name": "Dark Seer",
+    "one_liner": "Pulls and manipulates his enemies' positions",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/dark_seer.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 19,
+        "gain": 1.5
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 2.7
+      }
+    },
+    "combat": {
+      "damage_min": 54,
+      "damage_max": 60,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 5.16,
+      "magic_resistance": 25,
+      "movement_speed": 295,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Fast when he needs to be, and a cunning strategist, Ish'Kafel the Dark Seer requires no edged weapons to vanquish his enemies, relying instead on the strength of his powerful mind. His talent lies in his ability to maneuver the fight to his advantage. Hailing from a place he calls 'The Land behind the wall,' Dark Seer remains an outsider here--a warrior from a realm beyond the veil of this reality.  \r\n\t\t\t\t<br><br>Once a great general among his people, and a valiant defender of the god-king Damathryx, Dark Seer's army was wiped out by a much larger force in the final days of the Great Boundaries War. Facing certain defeat, he made one last desperate act: he led the enemy forces into the maze between the walls. At the last moment, just before capture, he crossed over--then sealed the walls forever in an explosive release of dark energy. When the dust settled, he saw that he had saved his people but found himself blinking at the sun of a different world, with no way to return.  Now he is committed to proving his worth as a military strategist, and vows to show that he's the greatest tactician this strange new world has ever seen."
+  },
+  "abilities": [
+    {
+      "name": "dark_seer_vacuum",
+      "display_name": "Vacuum",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_vacuum.png",
+      "description": "Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and dealing damage.",
+      "lore": "Ish'Kafel modifies the center of gravity to a place of his choosing.",
+      "notes": [
+        "This ability interrupts channeling.",
+        "Pulls units over 0.3 seconds before dealing damage.",
+        "Trees near the center of the vacuum will be destroyed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        450,
+        500,
+        550,
+        600
+      ],
+      "mana_costs": [
+        60,
+        90,
+        120,
+        150
+      ],
+      "cooldowns": [
+        60,
+        50,
+        40,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            325,
+            400,
+            475,
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            70,
+            130,
+            190,
+            250
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "dark_seer_ion_shell",
+      "display_name": "Ion Shell",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_ion_shell.png",
+      "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it.",
+      "lore": "The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth.",
+      "notes": [
+        "Deals small amounts of damage in 0.2 second intervals.",
+        "Doesn't damage the target it is cast on.",
+        "If cast on a unit that already has Ion Shell, the new Shell replaces the old one."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            30,
+            50,
+            70,
+            90
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            20,
+            22,
+            24,
+            26
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "dark_seer_surge",
+      "display_name": "Surge",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_surge.png",
+      "description": "Charges a target friendly unit with power, giving it a brief burst of phased movement speed. Allows the unit to reach maximum movement speed and cannot be slowed.",
+      "lore": "Ish'Kafel once used his speed of mind to navigate the maze between the walls.",
+      "notes": [
+        "Units with Surge cannot be slowed unless the Surge effect is removed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        24,
+        19,
+        14,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Surged units leave behind a 150 radius trail that lasts 7s, slows enemies around it by 35% and deals 40 damage per second in 0.5s intervals. Can be put on alt-cast to disable the trail."
+    },
+    {
+      "name": "dark_seer_normal_punch",
+      "display_name": "Normal Punch",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_normal_punch.png",
+      "description": "Passive ability. Causes Dark Seer's next attack on a hero to have True Strike, knock a replica out of the victim, damaging and stunning them based on how far Dark Seer has moved in the past 3 seconds. Max power is reached after 1100 distance moved.",
+      "lore": "As a young soldier, long before he became a leader of his people, Ish'Kafel was known amongst his fellow recruits as quite the pugilist.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Passive",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "MAX STUN DURATION:",
+          "values": [
+            1.25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX KNOCKBACK DISTANCE:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "dark_seer_aggrandize",
+      "display_name": "Quick Wit",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_aggrandize.png",
+      "description": "Dark Seer gains 1 Attack Speed from each point of Intelligence.\n\nWhen Dark Seer levels up, he restores a percentage of his max health and mana.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HP/MANA RESTORE:",
+          "values": [
+            8.5
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "dark_seer_wall_of_replica",
+      "display_name": "Wall of Replica",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_wall_of_replica.png",
+      "description": "Raises a wall of warping light that slows, damages, and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
+      "lore": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks.",
+      "notes": [
+        "Doesn't create illusions from other illusions.",
+        "There cannot be more than one illusion per player per wall."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        125,
+        250,
+        375
+      ],
+      "cooldowns": [
+        100,
+        100,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "WALL DURATION:",
+          "values": [
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REPLICA DAMAGE:",
+          "values": [
+            70,
+            80,
+            90
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "REPLICA DAMAGE TAKEN:",
+          "values": [
+            200
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            25,
+            40,
+            55
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+15% Wall of Replica Illusion Damage",
+    "+65 Ion Shell Radius",
+    "+75 Vacuum AoE",
+    "-1.5s Surge Cooldown",
+    "-40s Wall of Replica Cooldown",
+    "+50 Ion Shell Damage",
+    "2 Ion Shell Charges ",
+    "350 AoE Surge"
+  ],
+  "facets": []
+}

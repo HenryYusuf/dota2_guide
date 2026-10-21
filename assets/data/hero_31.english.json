@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 31,
+    "valve_key": "npc_dota_hero_lich",
+    "localized_name": "Lich",
+    "one_liner": "Unleashes a powerful attack that bounces between enemies",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.1
+      },
+      "agility": {
+        "base": 17,
+        "gain": 1.7
+      },
+      "intelligence": {
+        "base": 28,
+        "gain": 3.4
+      }
+    },
+    "combat": {
+      "damage_min": 52,
+      "damage_max": 61,
+      "attack_rate": 1.7,
+      "attack_range": 550,
+      "projectile_speed": 900,
+      "armor": 1.83,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "In life, the frost-mage Ethreain (not yet a Lich) had used the threat of destructive ice to enslave entire kingdoms. His subjects, aided by a few desperate magicians, eventually grew bold enough to ambush him. Armed with enough charmed rope to bind him forever, they tied the frost mage to adamant weights and dropped him in a pool known chiefly for being bottomless. It wasn't.\r\n\t\t\t\t<br><br>He only fell for a year or so before an outcrop snagged him. There he rested, dead but undecaying, until the geomancer Anhil thought to verify the legend of the supposedly bottomless Black Pool. Anhil's plumbline snarled with the ropes that bound the drowned magician, and up he hauled an unexpected prize. Thinking that by rendering the dead undead, he could question the Lich about the properties of the pool, he removed the bindings and commenced a simple rite of resurrection. Even the descendants of Ethreain's enemies were long forgotten by time, so there were none to warn Anhil against imprudence. But he learned the error of his judgment almost immediately, as Lich threw off the shackles and consumed him."
+  },
+  "abilities": [
+    {
+      "name": "lich_frost_nova",
+      "display_name": "Frost Blast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_frost_nova.png",
+      "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for 4 seconds.  The primary target receives both base and area damage.",
+      "lore": "Frost-mage Ethreain has not forgotten even the simplest of ice manipulation.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        575,
+        600,
+        625,
+        650
+      ],
+      "mana_costs": [
+        110,
+        120,
+        130,
+        140
+      ],
+      "cooldowns": [
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -30,
+            -40,
+            -50,
+            -60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            40,
+            80,
+            120,
+            160
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "AREA DAMAGE:",
+          "values": [
+            80,
+            120,
+            160,
+            200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lich_frost_shield",
+      "display_name": "Frost Shield",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_frost_shield.png",
+      "description": "Applies a magical frost shield around the target, reducing damage from attacks against it. While the shield is active, ice magic will affect nearby enemy units every 1 seconds, dealing minor damage and slowing them.",
+      "lore": "First conceived of to protect him in his mortal years, the frost magic that Ethreain weaves around himself has only grown colder with time.",
+      "notes": [
+        "Spell-immune enemies are not affected by the damage or slow.",
+        "Frost Shield can be cast on buildings."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units and Buildings",
+      "pierces_spell_immunity": "Allies Yes, Enemies No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        30,
+        25,
+        20,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            45,
+            50,
+            55,
+            60
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            20,
+            25,
+            30,
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            18,
+            32,
+            46,
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lich_sinister_gaze",
+      "display_name": "Sinister Gaze",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_sinister_gaze.png",
+      "description": "CHANNELED - Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.",
+      "lore": "Mind the cold...",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        25
+      ],
+      "cooldowns": [
+        24,
+        22,
+        20,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "DISTANCE MOVED:",
+          "values": [
+            32,
+            38,
+            44,
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MANA DRAIN PER SECOND:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            1.1,
+            1.4,
+            1.7,
+            2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Sinister Gaze becomes an Area of Effect ability, affecting units within a radius of 400 in the target area. Sinister Gaze allows Lich to cast other abilities while channeling it."
+    },
+    {
+      "name": "lich_ice_spire",
+      "display_name": "Ice Spire",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_ice_spire.png",
+      "description": "Creates an Ice Spire at the target spot, slowing enemies around it. Can take 4 hero hits or 8 creep hits and when destroyed it will create a Frost Blast around it.\n\nChain Frost can be cast on the Spire and can bounce to the Spire and damage the spire by 1 hero attack if there are no other enemies in range.\n\nLich can cast Frost Shield on the Spire. Each Frost Shield tick will heal the spire by 1 hero attack.",
+      "lore": "The waters within the Black Pool remain liquid far below the point of freezing and immediately crystallize when removed.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "No",
+      "cast_ranges": [
+        750
+      ],
+      "mana_costs": [
+        150
+      ],
+      "cooldowns": [
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EFFECT RADIUS:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            15
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lich_death_charge",
+      "display_name": "Sacrifice",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_death_charge.png",
+      "description": "Sacrifice an allied creep to convert its current health into mana for Lich and give Lich its experience bounty.\n\nBegins the game on cooldown and with no charges.",
+      "notes": [
+        "Cannot sacrifice ancients or creep-heroes.",
+        "Sacrificed creeps count as denies and can give experience to enemy heroes. Lich's experience bounty and enemy heroes' deny experience are independent."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Creeps",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CURRENT HEALTH CONVERTED:",
+          "values": [
+            42
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EXPERIENCE BOUNTY:",
+          "values": [
+            69
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "lich_chain_frost",
+      "display_name": "Chain Frost",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_chain_frost.png",
+      "description": "Releases an orb of frost that bounces between nearby enemy units up to 10 times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces. Chain Frost lingers on its last target if it fails to bounce and can bounce again if new targets become available.",
+      "lore": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him.",
+      "notes": [
+        "Chain Frost cannot be disjointed.",
+        "Chain Frost has a movement speed of 850.",
+        "Chain Frost doesn't bounce to Zombies."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        750
+      ],
+      "mana_costs": [
+        180,
+        300,
+        420
+      ],
+      "cooldowns": [
+        100,
+        80,
+        60
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE EACH BOUNCE:",
+          "values": [
+            250,
+            400,
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INCREMENTAL DAMAGE:",
+          "values": [
+            15,
+            20,
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BOUNCE RANGE:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -65
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -65
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LINGER DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+10% Frost Shield Damage Reduction",
+    "+125 Frost Blast Radius and Area Damage",
+    "+0.3s Sinister Gaze Duration",
+    "-3.5s Frost Blast Cooldown",
+    "2 Frost Shield Charges",
+    "Chain Frost on Death",
+    "Frost Shield Provides +50 HP Regen",
+    "Chain Frost Unlimited Bounces"
+  ],
+  "facets": []
+}

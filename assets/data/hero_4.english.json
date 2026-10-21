@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 4,
+    "valve_key": "npc_dota_hero_bloodseeker",
+    "localized_name": "Bloodseeker",
+    "one_liner": "Chases down low health enemies with increased speed",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/bloodseeker.png",
+    "attributes": {
+      "strength": {
+        "base": 24,
+        "gain": 2.7
+      },
+      "agility": {
+        "base": 24,
+        "gain": 3.1
+      },
+      "intelligence": {
+        "base": 17,
+        "gain": 2
+      }
+    },
+    "combat": {
+      "damage_min": 59,
+      "damage_max": 65,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 6.0,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Strygwyr the Bloodseeker is a ritually sanctioned hunter, Hound of the Flayed Twins, sent down from the mist-shrouded peaks of Xhacatocatl in search of blood. The Flayed Ones require oceanic amounts of blood to keep them sated and placated, and would soon drain their mountain empire of its populace if the priests of the high plateaus did not appease them. Strygwyr therefore goes out in search of carnage. The vital energy of any blood he lets, flows immediately to the Twins through the sacred markings on his weapons and armor. Over the years, he has come to embody the energy of a vicious hound; in battle he is savage as a jackal. Beneath the Mask of the Bloodseeker, in the rush of bloody quenching, it is said that you can sometime see the features of the Flayers taking direct possession of their Hound."
+  },
+  "abilities": [
+    {
+      "name": "bloodseeker_bloodrage",
+      "display_name": "Bloodrage",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_bloodrage.png",
+      "description": "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and deal more spell damage at the cost of a percentage of his health per second.",
+      "lore": "Strygwyr shares his animalistic thirst for bloodshed.",
+      "notes": [
+        "Damage dealt to Bloodseeker is non-lethal."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        14,
+        12,
+        10,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED:",
+          "values": [
+            55,
+            80,
+            105,
+            130
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPELL AMPLIFICATION:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX HEALTH DAMAGE PER SECOND:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Bloodseeker's Bloodrage attacks now deal 1.5% of the target's max health as Pure damage."
+    },
+    {
+      "name": "bloodseeker_blood_bath",
+      "display_name": "Blood Rite",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_blood_bath.png",
+      "description": "Bloodseeker baptizes an area in sacred blood. After 2.9 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced.",
+      "lore": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle.",
+      "notes": [
+        "Total time is a 2.6 second delay plus a 0.3 second cast time."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1500
+      ],
+      "mana_costs": [
+        90,
+        100,
+        110,
+        120
+      ],
+      "cooldowns": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RITUAL AREA:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SILENCE DURATION:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            155,
+            210,
+            265
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "bloodseeker_thirst",
+      "display_name": "Thirst",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_thirst.png",
+      "description": "Bloodseeker is invigorated by the wounds of his enemies, gaining bonus movement speed when an enemy hero's health falls below 100%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
+      "lore": "Strygwyr becomes frenzied when blood is spilled.",
+      "notes": [
+        "Not triggered by Illusions.",
+        "Max movement speed bonus occurs when an enemy's health is at or below 25%.",
+        "Effects linger for 4 seconds if a target dies."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "THIRST HEALTH THRESHOLD:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX THIRST MOVE SPEED:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ACTIVE BONUS MOVE SPEED:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ACTIVE DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VISIBILITY HEALTH THRESHOLD:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "bloodseeker_sanguivore",
+      "display_name": "Sanguivore",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_sanguivore.png",
+      "description": "Bloodseeker restores some life when he kills a unit, equal to 30 health plus a percentage of the units max health.\n\nRestores for half values if an ally kills a nearby enemy hero.",
+      "notes": [
+        "Creeps lifesteal is reduced by 40%."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MAX HEALTH HEAL:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "HALF HEAL RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "bloodseeker_rupture",
+      "display_name": "Rupture",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_rupture.png",
+      "description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved.",
+      "lore": "When the Bloodseeker hunts you, injuries become fatalities.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "dispellable": "No",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        75,
+        70,
+        65
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            9,
+            10,
+            11
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE DAMAGE:",
+          "values": [
+            35,
+            45,
+            55
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "HEALTH DAMAGE:",
+          "values": [
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "PUSH DISTANCE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases initial damage and grants 2 Rupture Charges."
+    }
+  ],
+  "talents": [
+    "+200 Health",
+    "+30 Bloodrage Attack Speed",
+    "-0.7% Bloodrage Max Health DPS",
+    "+100 Blood Rite Damage",
+    "+400 Rupture Cast Range",
+    "+15 Agility",
+    "+3s Blood Rite Silence Duration",
+    "+15% Max Thirst Move Speed"
+  ],
+  "facets": []
+}

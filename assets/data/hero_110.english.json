@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 110,
+    "valve_key": "npc_dota_hero_phoenix",
+    "localized_name": "Phoenix",
+    "one_liner": "Heals and damages at the sacrifice of its own health",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/phoenix.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 3.3
+      },
+      "agility": {
+        "base": 12,
+        "gain": 1.5
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.8
+      }
+    },
+    "combat": {
+      "damage_min": 44,
+      "damage_max": 54,
+      "attack_rate": 1.7,
+      "attack_range": 500,
+      "projectile_speed": 1100,
+      "armor": 1.0,
+      "magic_resistance": 25,
+      "movement_speed": 280,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Alone across an untouched darkness gleamed the Keeper's first sun, a singular point of conscious light fated to spread warmth into the empty void. Through aeons beyond count, this blinding beacon set to coalescing its incalculable energy before bursting forth the cataclysmic flare of supernova. From this inferno raced new beacons, star progeny identical to its parent, who journeyed an unlit ocean and settled in constellatory array. In time, they too would be made to propagate through supernova flame. So would this dazzling cycle of birth and rebirth repeat until all skies hewn of Titan toil deigned to twinkle and shine.\r\n\t\t\t\t<br><br>By this ageless crucible the star that mortals would come to call Phoenix collapsed into being, and like its ancestors was thrust into an endless cosmos to find a place among its stellar brethren. Yet curiosity toward that which the dimming elders comfort in the darkness consumed the fledgling, and so over long cycles it inquired and studied. It learned that among worlds both whole and broken would soon stir a nexus of remarkable variety locked in an enduring conflict of cosmic consequence, a plane which would find itself in need of more influence than a dying sun's distant rays could provide. Thus this infant son of suns took terrestrial form, eagerly travelling to shine its warmth upon those who may need it most, and perhaps seize upon its solar destiny."
+  },
+  "abilities": [
+    {
+      "name": "phoenix_icarus_dive",
+      "display_name": "Icarus Dive",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_icarus_dive.png",
+      "description": "Phoenix dives forward in an arc with a fixed distance in the targeted direction, dealing damage over time and slowing the movement speed of any units it comes into contact with, and then orbiting back to its original position. If Phoenix casts Supernova, the dive ends.",
+      "lore": "Though no stranger to travelling the cosmic void, soaring within an atmosphere offers unique pleasures.",
+      "notes": [
+        "Icarus Dive has a 2 second travel duration, and can be cancelled by casting the ability again while in flight."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "HP COST:",
+          "values": [
+            15
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DIVE LENGTH:",
+          "values": [
+            1100,
+            1200,
+            1300,
+            1400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            10,
+            15,
+            20,
+            25
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "phoenix_fire_spirits",
+      "display_name": "Fire Spirits",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_fire_spirits.png",
+      "description": "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced.",
+      "lore": "The ever-collapsing core of Phoenix often emits short-lived bursts of conscious light.",
+      "notes": [
+        "Fire Spirits reveal the area they strike for 1 second."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1400
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        50,
+        40,
+        30,
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "HP COST:",
+          "values": [
+            20
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SPIRIT DURATION:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED SLOW:",
+          "values": [
+            -35,
+            -70,
+            -105,
+            -140
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Causes Fire Spirits to become a passive charge-based ability. Has 7 second replenish time."
+    },
+    {
+      "name": "phoenix_sun_ray",
+      "display_name": "Sun Ray",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_sun_ray.png",
+      "description": "Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals allies for a base amount plus a percentage of their max health. The percentage increases as the beam continues to fire.",
+      "lore": "The vent through which such stellar energy flows is mere atoms wide.",
+      "notes": [
+        "Sun Ray has a width of 130 units, and a length of 1200 units.",
+        "Sun Ray is canceled if Phoenix gets stunned, silenced, cycloned, hexed or slept.",
+        "Phoenix can use items and abilities without canceling Sun Ray."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "HEALTH COST PER SECOND:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BASE DAMAGE PER SECOND:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HEALTH AS DAMAGE:",
+          "values": [
+            1.5,
+            3,
+            4.5,
+            6
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BASE HEAL PER SECOND:",
+          "values": [
+            7,
+            10,
+            13,
+            16
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HEALTH AS HEAL:",
+          "values": [
+            0.4,
+            0.8,
+            1.2,
+            1.6
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Allows Sun Ray to be cast during Supernova."
+    },
+    {
+      "name": "phoenix_dying_light",
+      "display_name": "Dying Light",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_dying_light.png",
+      "description": "Phoenix deals 3.5% of its missing health as magic damage to all enemies in a 400 radius every second.",
+      "notes": [
+        "Dying Light deals damage while Phoenix is transformed during Supernova."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "phoenix_supernova",
+      "display_name": "Supernova",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_supernova.png",
+      "description": "The Phoenix willingly ends its current life for the chance to be reborn. Transforms into a burning sun that scorches enemies in a huge area. The sun can be destroyed by attacks from enemy Heroes. After 6 seconds the sun explodes, stunning all nearby enemies while restoring Phoenix to full health and mana with refreshed abilities.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "The solar crucible of a Supernova may be fatal, yet from its flames arise new beacons to wander infinity.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        450
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        120
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            50,
+            80,
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.6,
+            2,
+            2.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            6,
+            8,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases number of attacks to destroy Supernova and allows Phoenix to cast Supernova on an allied hero, bringing both into the sun to be reborn together."
+    }
+  ],
+  "talents": [
+    "+25% Icarus Dive Slow",
+    "+1% Dying Light Missing Health as Damage",
+    "+20 Fire Spirits Damage Per Second",
+    "+25 Health Regen",
+    "+1.25% Max Health Sun Ray Damage",
+    "+0.6s Supernova Stun Duration",
+    "+2 Supernova Hit Count",
+    "+1000 Icarus Dive Cast Range"
+  ],
+  "facets": []
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 84,
+    "valve_key": "npc_dota_hero_ogre_magi",
+    "localized_name": "Ogre Magi",
+    "one_liner": "Uses a touch of luck to amplify his skills",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ogre_magi.png",
+    "attributes": {
+      "strength": {
+        "base": 26,
+        "gain": 4
+      },
+      "agility": {
+        "base": 14,
+        "gain": 1.5
+      },
+      "intelligence": {
+        "base": 0,
+        "gain": 0
+      }
+    },
+    "combat": {
+      "damage_min": 71,
+      "damage_max": 77,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 6.33,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The ordinary ogre is the creature for whom the phrase 'As dumb as a bag of rock hammers' was coined. In his natural state, an ogre is supremely incapable of doing or deciding anything. Clothed in dirt, he sometimes finds himself accidentally draped in animal skins after eating lanekill. Not an especially social creature, he is most often found affectionately consorting with the boulders or tree-stumps he has mistaken for kin (a factor that may explain the ogre's low rate of reproduction).  However, once every generation or so, the ogre race is blessed with the birth of a two-headed Ogre Magi, who is immediately given the traditional name of Aggron Stonebreak, the name of the first and perhaps only wise ogre in their line's history.\r\n\t\t\t\t<br><br>With two heads, Ogre Magi finds it possible to function at a level most other creatures manage with one. And while the Ogre Magi will win no debates (even with itself), it is graced with a divine quality known as Dumb Luck--a propensity for serendipitous strokes of fortune which have allowed the ogre race to flourish in spite of enemies, harsh weather, and an inability to feed itself.  It's as if the Goddess of Luck, filled with pity for the sadly inept species, has taken Ogre Magi under her wing. And who could blame her? Poor things."
+  },
+  "abilities": [
+    {
+      "name": "ogre_magi_fireblast",
+      "display_name": "Fireblast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_fireblast.png",
+      "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
+      "lore": "The Ogre Magi is easily amused, entertained for hours by playing with fire.",
+      "notes": [
+        "When Multicast, Fireblast hits the same target each time with a 0.6 seconds interval."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        525
+      ],
+      "mana_costs": [
+        70,
+        85,
+        100,
+        115
+      ],
+      "cooldowns": [
+        11,
+        10,
+        9,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FIREBLAST DAMAGE:",
+          "values": [
+            70,
+            130,
+            190,
+            250
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Fireblast is refined, reducing cooldown by 1s and increasing cast speed by 25%."
+    },
+    {
+      "name": "ogre_magi_ignite",
+      "display_name": "Ignite",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_ignite.png",
+      "description": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
+      "lore": "Batter up!",
+      "notes": [
+        "Multicast makes this spell have a chance to cast multiple times at random enemy units in a 1400 area of effect.",
+        "Ignite hitting an already affected unit adds to the burn duration."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700,
+        800,
+        900,
+        1000
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        17
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DAMAGE:",
+          "values": [
+            20,
+            30,
+            40,
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            -25
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "ogre_magi_bloodlust",
+      "display_name": "Bloodlust",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_bloodlust.png",
+      "description": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attack speed if cast on Ogre himself. Can be cast on towers.",
+      "lore": "'Running's not as fun as hitting... Not one bit fun.'",
+      "notes": [
+        "When multicast, nearby allies will be selected randomly in an 700 area of effect to receive Bloodlust."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units and Buildings",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        40,
+        50,
+        60,
+        70
+      ],
+      "cooldowns": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS MOVE SPEED:",
+          "values": [
+            6,
+            8,
+            10,
+            12
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            35,
+            50,
+            65,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SELF BONUS ATTACK SPEED:",
+          "values": [
+            40,
+            60,
+            80,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            30
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ogre_magi_unrefined_fireblast",
+      "display_name": "Unrefined Fireblast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_unrefined_fireblast.png",
+      "description": "Blasts an enemy unit with a wave of fire, dealing 150 + 1.5x Ogre's Strength in damage and stunning the target. Its mana cost is 35% of Ogre Magi's current mana.",
+      "lore": "The 'who-casts-spell-first' argument between himself is solved simply by both casting at once.",
+      "notes": [
+        "When Multicast, Unrefined Fireblast hits the same target each time with a 0.6 seconds interval."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        525
+      ],
+      "mana_costs": [
+        400
+      ],
+      "cooldowns": [
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ogre_magi_smash",
+      "display_name": "Fire Shield",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_smash.png",
+      "description": "Creates a shield around the target ally, absorbing a percentage of the damage of next 3 attacks from enemy heroes. When damage is absorbed, a fireball is launched at the attacker. Can be cast on towers.",
+      "lore": "There is immense luck involved in Aggron not just setting friends on fire.",
+      "notes": [
+        "When multicast, nearby allies will be selected randomly in an 1000 area of effect to receive Fire Shield."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units and Buildings",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "FIREBALL DAMAGE:",
+          "values": [
+            160
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHIELD DURATION:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE ABSORBED:",
+          "values": [
+            85
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "ogre_magi_dumb_luck",
+      "display_name": "Dumb Luck",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_dumb_luck.png",
+      "description": "Ogre Magi's max Intelligence is 0. He receives mana and mana regeneration from Strength.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MAX MANA PER STRENGTH:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MANA REGENERATION PER STRENGTH:",
+          "values": [
+            0.02
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ogre_magi_multicast",
+      "display_name": "Multicast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_multicast.png",
+      "description": "Enables Ogre Magi to cast his abilities and items multiple times with each use. Each point of Strength adds to Multicast chance. Every 16 Strength adds 1%.",
+      "lore": "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill.",
+      "notes": [
+        "Only targeted abilities and items have a chance to be multicast.",
+        "Targeted abilities and items apply to additional enemies and neutrals in an AoE around Ogre. Fireblast and Unrefined Fireblast hit the same target multiple times."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "2X CAST CHANCE:",
+          "values": [
+            75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "3X CAST CHANCE:",
+          "values": [
+            0,
+            30,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "4X CAST CHANCE:",
+          "values": [
+            0,
+            0,
+            15
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+10 Ignite Burn Damage",
+    "+2/0.01 Dumb Luck Mana/Mana Regen Per Strength",
+    "+80 Damage",
+    "+20/35 Bloodlust / Self Attack Speed",
+    "+30 Strength",
+    "+175 Fireblast Damage",
+    "17% Fireblast chance on attack",
+    "+10% Multicast Chance"
+  ],
+  "facets": []
+}

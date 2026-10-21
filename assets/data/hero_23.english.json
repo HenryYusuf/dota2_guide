@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 23,
+    "valve_key": "npc_dota_hero_kunkka",
+    "localized_name": "Kunkka",
+    "one_liner": "Disrupts enemy positioning and disables them",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/kunkka.png",
+    "attributes": {
+      "strength": {
+        "base": 24,
+        "gain": 3.6
+      },
+      "agility": {
+        "base": 14,
+        "gain": 1.6
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 1.8
+      }
+    },
+    "combat": {
+      "damage_min": 54,
+      "damage_max": 60,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.33,
+      "magic_resistance": 25,
+      "movement_speed": 315,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men. After years of small sorties, and increasingly bold and devastating attacks, the demon fleet flung all its carnivorous ships at the Trembling Isle. Desperate, the Suicide-Mages of Cladd committed their ultimate rite, summoning a host of ancestral spirits to protect the fleet. Against the demons, this was just barely enough to turn the tide.\r\n\t\t\t\t<br><br>As Kunkka watched the demons take his ships down one by one, he had the satisfaction of wearing away their fleet with his ancestral magic. But at the battle's peak, something in the clash of demons, men and atavistic spirits must have stirred a fourth power that had been slumbering in the depths. The waves rose up in towering spouts around the few remaining ships, and Maelrawn the Tentacular appeared amid the fray. His tendrils wove among the ships, drawing demon and human craft together, churning the water and wind into a raging chaos.\r\n\t\t\t\t<br><br>What happened in the crucible of that storm, none may truly say. The Cataract roars off into the void, deserted by its former denizens. Kunkka is now The Admiral of but one ship, a ghostly rig which endlessly replays the final seconds of its destruction. Whether he died in that crash is anyone's guess. Not even Tidehunter, who summoned Maelrawn, knows for sure."
+  },
+  "abilities": [
+    {
+      "name": "kunkka_torrent",
+      "display_name": "Torrent",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_torrent.png",
+      "description": "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dealing damage and slowing movement speed.",
+      "lore": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
+      "notes": [
+        "The initial bubble effect is only visible to allies and provides vision in fog of war.",
+        "Units tossed in the air will be stunned and still able to be attacked."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1300
+      ],
+      "mana_costs": [
+        90
+      ],
+      "cooldowns": [
+        16,
+        14,
+        12,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            -40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DELAY:",
+          "values": [
+            1.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            110,
+            180,
+            250,
+            320
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kunkka_tidebringer",
+      "display_name": "Tidebringer",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_tidebringer.png",
+      "description": "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of him for a single strike.",
+      "lore": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "CLEAVE RANGE:",
+          "values": [
+            650,
+            775,
+            900,
+            1025
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE BONUS:",
+          "values": [
+            35,
+            70,
+            105,
+            140
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CLEAVE DAMAGE:",
+          "values": [
+            150
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "kunkka_x_marks_the_spot",
+      "display_name": "X Marks the Spot",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_x_marks_the_spot.png",
+      "description": "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after several seconds.  Kunkka can trigger the return at any time during the duration. Lasts twice as long on allied heroes.",
+      "lore": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "dispellable": "No",
+      "cast_ranges": [
+        550,
+        700,
+        850,
+        1000
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        24,
+        20,
+        16,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "ENEMY DELAY:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ALLIED DELAY:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RUM SPLASH RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RUM DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kunkka_admirals_rum",
+      "display_name": "Admiral's Rum",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_admirals_rum.png",
+      "description": "Damage from enemy heroes, buildings, or Roshan that would reduce Kunkka below 65% threshold causes him to douse himself with The Admiral's Rum, receiving bonus movement speed and a delayed reaction to 18% of incoming damage for 5s.",
+      "lore": "Deleterious to landlubbers, no one holds their rum like a sailor.",
+      "notes": [
+        "Damage dealt after Rum wears off is non-lethal and can never kill a hero."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        50.5
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS MOVESPEED:",
+          "values": [
+            7.75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            50.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kunkka_tidal_wave",
+      "display_name": "Tidal Wave",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_tidal_wave.png",
+      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals damage and drags enemies along it. Enemies cannot attack while being dragged.",
+      "lore": "A good sailor knows the timing of the tides like the back of his hand.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1050
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "SPEED:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            750
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            180
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DRAG DURATION:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WAVE DISTANCE:",
+          "values": [
+            1800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KNOCKBACK DISTANCE:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kunkka_ghostship",
+      "display_name": "Ghostship",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_ghostship.png",
+      "description": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage.\n\nAllied heroes touched by the Ghostship are given a 2x strong swig of The Admiral's Rum.",
+      "lore": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
+      "notes": [
+        "Actual area of effect of ship's collision is larger than the boat itself.",
+        "The boat has a movement speed of 650."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        90,
+        80,
+        70
+      ],
+      "damages": [
+        350,
+        475,
+        600
+      ],
+      "special_values": [
+        {
+          "heading": "IMPACT DELAY:",
+          "values": [
+            3.1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            2000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WIDTH:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Ghostship creates a fleet of 2 ships at the target point on a 2.5 second interval. Each ship now also fires 3 waves of cannonballs from the port and starboard side that deal 40% of Ghostship's damage as they pass through enemies."
+    }
+  ],
+  "talents": [
+    "+1s Admiral's Rum Buff Duration",
+    "Tidebringer applies 60% slow for 1s",
+    "+25% Torrent Damage/Knock Up Duration",
+    "+75 Tidebringer Damage",
+    "-4s Torrent Cooldown",
+    "+80% Tidebringer Cleave Damage",
+    "+100 Spell Area of Effect",
+    "Tidebringer Ignores 25% Armor"
+  ],
+  "facets": []
+}

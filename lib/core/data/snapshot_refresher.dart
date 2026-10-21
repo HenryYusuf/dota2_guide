@@ -17,20 +17,19 @@ import 'snapshot_manifest.dart';
 /// The refresh TTL (spec: 24 hours).
 const Duration snapshotRefreshTtl = Duration(hours: 24);
 
-/// One refreshable file: a feature-owned builder that turns live feed data
-/// into the same app-schema JSON the snapshot tool emits (so an override is
-/// just a fresher copy of the bundled asset — readers can't tell, and don't
-/// need to).
+/// One refreshable set of files: a feature-owned builder that turns live
+/// feed data into the same app-schema JSON the snapshot tool emits (so an
+/// override is just a fresher copy of the bundled asset — readers can't
+/// tell, and don't need to).
 class SnapshotUnit {
-  const SnapshotUnit({required this.name, required this.fetch});
+  const SnapshotUnit({required this.fetch});
 
-  /// The override-store unit name; should match the bundled asset's base
-  /// name (e.g. `heroes.english.json`).
-  final String name;
-
-  /// Fetches live data and returns the app-schema JSON to store. Throws on
-  /// network or feed-shape problems — the refresher keeps those silent.
-  final Future<String> Function(DatafeedClient feed) fetch;
+  /// Fetches live data and returns the app-schema JSON files to store, as
+  /// unit name → JSON. One unit may produce many files (the Heroes detail
+  /// unit produces one per Hero); names should match the bundled assets'
+  /// base names. Throws on network or feed-shape problems — the refresher
+  /// keeps those silent.
+  final Future<Map<String, String>> Function(DatafeedClient feed) fetch;
 }
 
 class SnapshotRefresher {
@@ -95,7 +94,7 @@ class SnapshotRefresher {
     // nothing visible (atomic-from-the-user's-perspective).
     final blobs = <String, String>{};
     for (final unit in units) {
-      blobs[unit.name] = await unit.fetch(feed);
+      blobs.addAll(await unit.fetch(feed));
     }
     await overrides.commit(
       manifest: SnapshotManifest(dataVersion: probedVersion, fetchedAt: at),
@@ -104,6 +103,11 @@ class SnapshotRefresher {
     return true;
   }
 }
+
+/// How the app reaches Valve's datafeeds. Overridden in tests with a fake.
+final datafeedClientProvider = Provider<DatafeedClient>(
+  (ref) => HttpDatafeedClient(),
+);
 
 /// The app's refresher, assembled from the feed client and every feature's
 /// units. Overridden in widget tests; repository tests build one over fakes.

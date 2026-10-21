@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 126,
+    "valve_key": "npc_dota_hero_void_spirit",
+    "localized_name": "Void Spirit",
+    "one_liner": "Steps in and out of the mortal plane to strike his foes",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/void_spirit.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 21,
+        "gain": 2.2
+      },
+      "intelligence": {
+        "base": 24,
+        "gain": 3.1
+      }
+    },
+    "combat": {
+      "damage_min": 18,
+      "damage_max": 22,
+      "attack_rate": 1.7,
+      "attack_range": 200,
+      "projectile_speed": 900,
+      "armor": 2.5,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Not even the other spirits claim to understand the mind and machinations of the eldest amongst them, Inai the Void Spirit. Privy to secrets that would shatter a mortal mind, the Void Spirit observes the workings of the universe from an unknowable vantage, choosing to let carefully groomed servants do his bidding -- only emerging from his Hidden Temple into the material plane when he deems that he alone can steer the course of reality along its proper path.<br><br>With an expansive perspective on existence, Inai is focused intently on a point in time beyond which he cannot see, when the fabrics of multiple realities are fated to collide. Now he steps from the aether to personally resolve the battle of the Ancients and prepare his allies for what he views as a greater conflict to come."
+  },
+  "abilities": [
+    {
+      "name": "void_spirit_aether_remnant",
+      "display_name": "Aether Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_aether_remnant.png",
+      "description": "Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
+      "lore": "Inai exists far beyond the scope of a single point in space and time.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        850
+      ],
+      "mana_costs": [
+        75,
+        80,
+        85,
+        90
+      ],
+      "cooldowns": [
+        17,
+        15,
+        13,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "WATCH RANGE:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ACTIVATION TIME:",
+          "values": [
+            0.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            90,
+            140,
+            190,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PULL DURATION:",
+          "values": [
+            1,
+            1.2,
+            1.4,
+            1.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT LIFETIME:",
+          "values": [
+            17
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Creates an additional watcher path that rotates around the remnant.  The remnant now provides True Sight, and no longer triggers on creeps, instead dealing 50% damage to them every second in both paths. Does not reveal wards."
+    },
+    {
+      "name": "void_spirit_dissimilate",
+      "display_name": "Dissimilate",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_dissimilate.png",
+      "description": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can reassemble himself. Upon exiting a portal, he damages all enemies in the area.",
+      "lore": "Inai much prefers to observe our plane free from the confines of corporeal form.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        120
+      ],
+      "cooldowns": [
+        20,
+        17,
+        14,
+        11
+      ],
+      "damages": [
+        105,
+        185,
+        265,
+        345
+      ],
+      "special_values": [
+        {
+          "heading": "PHASE DURATION:",
+          "values": [
+            1.1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT EFFECTIVENESS:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "void_spirit_resonant_pulse",
+      "display_name": "Resonant Pulse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_resonant_pulse.png",
+      "description": "Void Spirit wraps himself in a protective shield that absorbs physical damage and emits a single damaging pulse around him. The shield gains increased damage absorption for each enemy hero the pulse hits.",
+      "lore": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        115,
+        120,
+        125,
+        130
+      ],
+      "cooldowns": [
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "PULSE RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            60,
+            110,
+            160,
+            210
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BARRIER DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE BARRIER:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BARRIER AMOUNT PER HERO HIT:",
+          "values": [
+            50,
+            70,
+            90,
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE CHARGE RESTORE TIME:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SILENCE DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Causes Resonant Pulse to silence and gain 2 charges."
+    },
+    {
+      "name": "void_spirit_intrinsic_edge",
+      "display_name": "Intrinsic Edge",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_intrinsic_edge.png",
+      "description": "Void Spirit gains 15% more attack damage per point of each attribute, and 30% more HP regen from Strength, attack speed from Agility, and mana regen from Intelligence.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEALTH REGENERATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MANA REGENERATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "void_spirit_astral_step",
+      "display_name": "Astral Step",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_astral_step.png",
+      "description": "Void Spirit tears a rift through the astral plane to appear at the target location, attacking all enemies along the path. This attack inflicts a void mark that slows for 1.25 seconds and then detonates.",
+      "lore": "A small step for Inai creates great devastation on the mortal plane.",
+      "notes": [
+        "Astral Step attacks do not cleave."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        90
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RANGE:",
+          "values": [
+            800,
+            900,
+            1000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VOID MARK DAMAGE:",
+          "values": [
+            130,
+            230,
+            330
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            40,
+            60,
+            80
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1.5 Mana Regen",
+    "+40 Resonant Pulse Damage",
+    "+20% Resonant Pulse Barrier",
+    "+65 Aether Remnant Damage",
+    "Outer Dissimilate Ring",
+    "-3s Astral Step Charge Restore Time",
+    "140% Astral Step Crit",
+    "Dissimilate Roots for 2s"
+  ],
+  "facets": []
+}

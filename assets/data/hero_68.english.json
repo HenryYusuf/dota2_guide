@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 68,
+    "valve_key": "npc_dota_hero_ancient_apparition",
+    "localized_name": "Ancient Apparition",
+    "one_liner": "Launches a powerful icy blast from anywhere on the map",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ancient_apparition.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 1.9
+      },
+      "agility": {
+        "base": 20,
+        "gain": 2
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 3.1
+      }
+    },
+    "combat": {
+      "damage_min": 44,
+      "damage_max": 54,
+      "attack_rate": 1.7,
+      "attack_range": 675,
+      "projectile_speed": 1250,
+      "armor": 2.33,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Kaldr, the Ancient Apparition, is an image projected from outside time. He springs from the cold, infinite void that both predates the universe and awaits its end. Kaldr is, Kaldr was, Kaldr shall be...and what we perceive, powerful as it appears to us, is but the faintest faded echo of the true, eternal Kaldr. Some believe that as the cosmos ages and approaches its final moments, the brightness and power of Kaldr will also intensify--that the Ancient Apparition will grow younger and stronger as eternity's end draws nigh. His grip of ice will bring all matter to a stop, his image will cast a light too terrible to behold. An Apparition no longer!"
+  },
+  "abilities": [
+    {
+      "name": "ancient_apparition_cold_feet",
+      "display_name": "Cold Feet",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_cold_feet.png",
+      "description": "Places a curse on an enemy, dealing damage over time.  If the enemy unit doesn't move outside of the given range from the initial location, it will be stunned and frozen in place after 4 seconds.",
+      "lore": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity.",
+      "notes": [
+        "Deals damage every half second."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700,
+        800,
+        900,
+        1000
+      ],
+      "mana_costs": [
+        110,
+        115,
+        120,
+        125
+      ],
+      "cooldowns": [
+        15,
+        13,
+        11,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            25,
+            45,
+            65,
+            85
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BREAK DISTANCE:",
+          "values": [
+            725,
+            750,
+            775,
+            800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.8,
+            2.2,
+            2.6,
+            3
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ancient_apparition_ice_vortex",
+      "display_name": "Ice Vortex",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_ice_vortex.png",
+      "description": "Creates a vortex of icy energy that slows, deals damage, and increases magic damage done to enemies in its range.",
+      "lore": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle.",
+      "notes": [
+        "Provides vision in a small area where it is placed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        1200,
+        1200,
+        1200,
+        1200
+      ],
+      "mana_costs": [
+        40,
+        55,
+        70,
+        85
+      ],
+      "cooldowns": [
+        10,
+        8,
+        6,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INCREASED MAGIC DAMAGE:",
+          "values": [
+            -16,
+            -19,
+            -22,
+            -25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6,
+            8,
+            10,
+            12
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ancient_apparition_chilling_touch",
+      "display_name": "Chilling Touch",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_chilling_touch.png",
+      "description": "Enhances Ancient Apparition's attack with increased range and a burst of magical damage and slow.",
+      "lore": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        35
+      ],
+      "cooldowns": [
+        10,
+        7.5,
+        5,
+        2.5
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            35,
+            65,
+            95,
+            125
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.7,
+            0.8,
+            0.9,
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK RANGE BONUS:",
+          "values": [
+            60,
+            90,
+            120,
+            150
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Removes cooldown."
+    },
+    {
+      "name": "ancient_apparition_bone_chill",
+      "display_name": "Bone Chill",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_bone_chill.png",
+      "description": "When Ancient Apparition deals Magic damage to an enemy with his abilities, it is slowed for a short duration. If the target is a Hero, its Strength is also reduced. Multiple instances of this effect stack and have independent durations.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "STRENGTH REDUCTION:",
+          "values": [
+            0.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases Base Strength Reduction by 0.8."
+    },
+    {
+      "name": "ancient_apparition_ice_blast",
+      "display_name": "Ice Blast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_ice_blast.png",
+      "description": "Launches a tracer toward any location on the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touch the icy ball of hail as it travels, are Frostbitten, taking damage over time and prevented from regenerating or healing. If a Frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
+      "lore": "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power.",
+      "notes": [
+        "Upon cast, this ability is replaced by Release, used to stop the tracer on the target area.",
+        "The area of effect is 300 + 50*TimeTraveled, capped at 1000.",
+        "Kill will be granted to the source of the damage that triggers the shatter.",
+        "The shatter effect doesn't work on illusions.",
+        "The HP Freeze prevents most kinds of healing, including the fountain, except Sunder, Time Lapse and Supernova."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        175
+      ],
+      "cooldowns": [
+        50,
+        45,
+        40
+      ],
+      "damages": [
+        250,
+        325,
+        400
+      ],
+      "special_values": [
+        {
+          "heading": "PATH RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FROSTBITTEN DURATION:",
+          "values": [
+            10,
+            11,
+            12
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHATTER HEALTH THRESHOLD:",
+          "values": [
+            12,
+            13,
+            14
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            12,
+            24,
+            36
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Freezes enemies hit with the current level of Cold Feet for 50% of the duration."
+    }
+  ],
+  "talents": [
+    "+300 Chilling Touch Attack Range",
+    "+30 Cold Feet Damage Per Second",
+    "-2s Ice Vortex Cooldown",
+    "+250 Cold Feet Break Distance",
+    "+4s Ice Blast Frostbitten Duration",
+    "+100 Chilling Touch Damage",
+    "450 AoE Cold Feet",
+    "+4% Ice Blast Kill Threshold"
+  ],
+  "facets": []
+}

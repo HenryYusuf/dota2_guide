@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 82,
+    "valve_key": "npc_dota_hero_meepo",
+    "localized_name": "Meepo",
+    "one_liner": "Five are stronger than one",
+    "primary_attribute": "agility",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/meepo.png",
+    "attributes": {
+      "strength": {
+        "base": 24,
+        "gain": 2
+      },
+      "agility": {
+        "base": 17,
+        "gain": 2.1
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 1.9
+      }
+    },
+    "combat": {
+      "damage_min": 46,
+      "damage_max": 52,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 5.83,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "\"If you ask me, life is all about who you know and what you can find. When you live up in the Riftshadow Ruins, just finding food can be tough. So you need to cut corners, you need to scrounge, you need to know your strengths. Some of the beasts up there can kill you, so you need a way to trap the weak and duck the strong. On the upside, the ruins have history, and history is worth a lot to some people. There used to be a palace there, where they had all these dark rituals. Bad stuff. If you survived the ceremony, they would shatter a crystal and split your soul into pieces. They made great art though! Sculptures and such. Let me tell you: sometimes you stumble onto some of those old carvings. Take a pack full of those to town and sell them, then get yourself food for a few weeks. If luck is really on your side, you might find a Riftshadow crystal. Get it appraised and start asking around. Someone always knows some crazy fool looking for this kind of thing. If all else fails, sell it to a Magus the next time one's in town. They love that stuff. Still, whatever you do, be careful handling those crystals. You do not want one to go off on you. It really hurts.\""
+  },
+  "abilities": [
+    {
+      "name": "meepo_earthbind",
+      "display_name": "Earthbind",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_earthbind.png",
+      "description": "Tosses a net at the target point, rooting down all enemy units in an area around it.",
+      "lore": "Catching dinner in the Riftshadow Ruins can be quite the task.",
+      "notes": [
+        "Affects invisible units, revealing them.",
+        "Does not work on Debuff Immune units or Roshan."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        750,
+        900,
+        1050,
+        1200
+      ],
+      "mana_costs": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "cooldowns": [
+        16,
+        14,
+        12,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            220
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "meepo_poof",
+      "display_name": "Poof",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_poof.png",
+      "description": "Drawing mystical energies from the earth, a Meepo can teleport to another Meepo or itself after channeling for 1.5 seconds, damaging the enemy in both the departure and arrival locations. \n\nIf the ability is in alt-cast state, all Meepos will also cast Poof to the target. When cast on the ground, all Meepos except the selected one will Poof to the closest location.",
+      "lore": "Sometimes breaking one of the Riftshadow Crystals can be just the trick for getting yourself out of a bind.  Or your other self.",
+      "notes": [
+        "Can be cast through the minimap.",
+        "Can teleport to Meepo illusions."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        80
+      ],
+      "cooldowns": [
+        12,
+        10,
+        8,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            50,
+            80,
+            110,
+            140
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "meepo_ransack",
+      "display_name": "Ransack",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_ransack.png",
+      "description": "Steals health from the enemy with each strike and heals all other Meepos for that amount.\n\nReduced to 60% against creeps.",
+      "lore": "So you gonna need that, or...?",
+      "notes": [
+        "Amount healed is amplified by Health Restoration Amplification"
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "HEALTH STEAL (HEROES):",
+          "values": [
+            7,
+            10,
+            13,
+            16
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "meepo_petrify",
+      "display_name": "Dig",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_petrify.png",
+      "description": "Digs into the ground for a short duration, dispelling Meepo and causing him to become invulnerable and untargetable for 3s. Restores 25% of his max health over that duration.\n\nDISPEL TYPE: Basic Dispel",
+      "lore": "I'm diggin' here!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        125
+      ],
+      "cooldowns": [
+        40
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HP RESTORE:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "meepo_megameepo",
+      "display_name": "MegaMeepo",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_megameepo.png",
+      "description": "Primary Meepo mounts all other Meepos in a 600 radius around him on top of his shoulders. While in this form, he gains 40% of the other Meepo stats and can Fling them at enemies, dealing damage and slowing them.\n\n When cast, Earthbind generates additional nets and Poof deals 50% more damage for each Meepo on top.",
+      "lore": "Hi, Meepos!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        90
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "meepo_divided_we_stand",
+      "display_name": "Divided We Stand",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_divided_we_stand.png",
+      "description": "Meepo summons another Meepo, which levels up and shares items and experience with the main Meepo. Ability cooldowns are independent, but items share cooldowns between Meepos, except Teleport Scrolls. \n\nDamage, attack speed, health, mana, regeneration, mana burn, and proc chance bonuses from items are distributed equally among the amount of Meepos, making them 50% less effective.\n\nIf any Meepo dies, they all die.",
+      "lore": "Do I know you?",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "NUMBER OF DUPLICATES:",
+          "values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "meepo_geomancy",
+      "display_name": "Geomancy",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_geomancy.png",
+      "description": "Meepo grants stacking bonuses to himself and his clones based on their terrain.  Each Meepo grants his bonus to the other Meepos.\n\nIf there is a tree within 250 range, he receives 1 HP regen.\n\nIf he is standing on dirt, he receives 2% bonus movement speed.\n\nIf he is in the water, his attacks slow the target by 2% for 2 seconds.",
+      "notes": [
+        "Dirt includes any terrain that is not water."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "meepo_megameepo_fling",
+      "display_name": "MegaMeepo Fling",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_megameepo_fling.png",
+      "description": "In MegaMeepo form, Meepo flings the topmost meepo towards a target within a 900 range, dealing damage and slowing their movement speed.",
+      "lore": "You go first!",
+      "notes": [
+        "Does not trigger spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0.5
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -60
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+7 Strength",
+    "-1.5s Earthbind Cooldown",
+    "+15% Evasion",
+    "+40 Poof Damage",
+    "Earthbind grants True Strike on Targets",
+    "+6 Ransack Health Steal",
+    "+400 Health",
+    "-0.75s Poof Cast Duration"
+  ],
+  "facets": []
+}

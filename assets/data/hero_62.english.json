@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 62,
+    "valve_key": "npc_dota_hero_bounty_hunter",
+    "localized_name": "Bounty Hunter",
+    "one_liner": "Loots and collects bounties off of his enemies",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/bounty_hunter.png",
+    "attributes": {
+      "strength": {
+        "base": 19,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 21,
+        "gain": 2.6
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 1.9
+      }
+    },
+    "combat": {
+      "damage_min": 54,
+      "damage_max": 62,
+      "attack_rate": 1.5,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 8.5,
+      "magic_resistance": 25,
+      "movement_speed": 325,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 1000
+    },
+    "bio": "When the hunted tell tales of Gondar the Bounty Hunter, none are sure of which are true. In whispered tones they say he was abandoned as a kit, learning his skill in tracking as a matter of simple survival. Others hear he was an orphan of war, taken in by the great Soruq the Hunter to learn the master's skill with a blade as they plumbed the dark forests for big game. Still others believe he was a lowly street urchin raised among a guild of cutpurses and thieves, trained in the arts of stealth and misdirection. Around campfires in the wild countryside his quarry speaks the rumors of Gondar's work, growing ever more fearful: they say it was he who tracked down the tyrant King Goff years after the mad regent went into hiding, delivering his head and scepter as proof. That it was he who infiltrated the rebel camps at Highseat, finally bringing the legendary thief White Cape to be judged for his crimes. And that it was he who ended the career of Soruq the Hunter, condemned as a criminal for killing the Prince's prized hellkite. The tales of Gondar's incredible skill stretch on, with each daring feat more unbelievable than the last, each target more elusive. For the right price, the hunted know, anyone can be found. For the right price, even the mightiest may find fear in the shadows."
+  },
+  "abilities": [
+    {
+      "name": "bounty_hunter_shuriken_toss",
+      "display_name": "Shuriken Toss",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_shuriken_toss.png",
+      "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target's movement speed.  The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.",
+      "lore": "While the shuriken may be small, Gondar's precise aim can cause critical damage.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        375,
+        425,
+        475,
+        525
+      ],
+      "mana_costs": [
+        75,
+        85,
+        95,
+        105
+      ],
+      "cooldowns": [
+        5
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            170,
+            240,
+            310
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.35
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            375,
+            425,
+            475,
+            525
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases cast range and applies Jinada on hit."
+    },
+    {
+      "name": "bounty_hunter_jinada",
+      "display_name": "Jinada",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_jinada.png",
+      "description": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
+      "lore": "Gondar's vast experience ensures he never walks away from a transaction empty-handed.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units and Buildings",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        9,
+        7,
+        5,
+        3
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            70,
+            105,
+            140,
+            175
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLD STEAL:",
+          "values": [
+            15,
+            22,
+            29,
+            36
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "bounty_hunter_wind_walk",
+      "display_name": "Shadow Walk",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_wind_walk.png",
+      "description": "Bounty Hunter becomes invisible and gains bonus movement speed and the ability to move through other units until he attacks or casts a spell.  If he breaks the invisibility with an attack, that attack will stun the target for a short duration.",
+      "lore": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow.",
+      "notes": [
+        "Will not break most channeling of spells upon activation."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "INVISIBILITY DURATION:",
+          "values": [
+            20,
+            25,
+            30,
+            35
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FADE TIME:",
+          "values": [
+            1,
+            0.75,
+            0.5,
+            0.25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1,
+            1.2,
+            1.4,
+            1.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS SPEED:",
+          "values": [
+            11,
+            14,
+            17,
+            20
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "bounty_hunter_wind_walk_ally",
+      "display_name": "Friendly Shadow",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_wind_walk_ally.png",
+      "description": "Applies Shadow Walk and all of its bonuses to the target ally. Allied fade time is 0.5s. Does not break Bounty Hunter's invisibility when cast.",
+      "lore": "Useful for the rare instances when a contested bounty is actually wanted alive.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Unit Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "Allies Yes, Enemies No",
+      "dispellable": "No",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        15
+      ],
+      "special_values": []
+    },
+    {
+      "name": "bounty_hunter_big_game_hunter",
+      "display_name": "Big Game Hunter",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_big_game_hunter.png",
+      "description": "Bounty Hunter receives 20% more kill and assist gold if the dying enemy hero is Big Game. An enemy hero is considered Big Game if they are one of the top 3 net worth heroes on the enemy team.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "bounty_hunter_track",
+      "display_name": "Track",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_track.png",
+      "description": "Tracks an enemy hero, granting True Sight of the target, increasing the damage they take and providing information on how much gold it is carrying. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility.",
+      "lore": "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success.",
+      "notes": [
+        "Bounty Hunter will get the bonus gold if the target dies while Track is active, regardless of how it died.",
+        "Track's effect is only visible to allies.",
+        "You can see the amount of gold the target is carrying by mousing over the debuff icon above the target's ability bar.",
+        "Bonus gold is reliable gold."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        6,
+        5,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE AMPLIFICATION:",
+          "values": [
+            8,
+            12,
+            16
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SELF BONUS GOLD:",
+          "values": [
+            80,
+            160,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ALLIES BONUS GOLD:",
+          "values": [
+            40,
+            80,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+0.35s Shuriken Toss Slow",
+    "+30 Damage",
+    "-30% Damage Taken in Shadow Walk",
+    "+50 Track Gold",
+    "+190 Shuriken Toss Damage",
+    "+50 Jinada Gold Steal",
+    "Track Grants Shared Vision",
+    "No Cooldown on Jinada"
+  ],
+  "facets": []
+}

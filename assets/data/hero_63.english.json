@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 63,
+    "valve_key": "npc_dota_hero_weaver",
+    "localized_name": "Weaver",
+    "one_liner": "Rewinds time to reverse damage and position",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/weaver.png",
+    "attributes": {
+      "strength": {
+        "base": 16,
+        "gain": 2
+      },
+      "agility": {
+        "base": 17,
+        "gain": 3.3
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 2
+      }
+    },
+    "combat": {
+      "damage_min": 54,
+      "damage_max": 60,
+      "attack_rate": 1.8,
+      "attack_range": 425,
+      "projectile_speed": 900,
+      "armor": 3.83,
+      "magic_resistance": 25,
+      "movement_speed": 275,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The fabric of creation needs constant care, lest it grow tattered; for when it unravels, whole worlds come undone. It is the work of the Weavers to keep the fabric tight, to repair worn spots in the mesh of reality. They also defend from the things that gnaw and lay their eggs in frayed regions, whose young can quickly devour an entire universe if the Weavers let their attention lapse. Skitskurr was a master Weaver, charged with keeping one small patch of creation tightly woven and unfaded. But the job was not enough to satisfy. It nagged him that the original work of creation all lay in the past; the Loom had done its work and travelled on. He wanted to create rather than merely maintain--to weave worlds of his own devising.  He began making small changes to his domain, but the thrill of creation proved addictive, and his strokes became bolder, pulling against the pattern that the Loom had woven.\r\n\t\t\t\t<br><br>The guardians came, with their scissors, and Weaver's world was pared off, snipped from the cosmic tapestry, which they rewove without him in it. Skitskurr found himself alone, apart from his kind, a state that would have been torment for any other Weaver. But Skitskurr rejoiced, for now he was free. Free to create for himself, to begin anew. The raw materials he needed to weave a new reality were all around him. All he had to do was tear apart this old world at the seams."
+  },
+  "abilities": [
+    {
+      "name": "weaver_the_swarm",
+      "display_name": "The Swarm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_the_swarm.png",
+      "description": "Weaver launches a swarm of 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
+      "lore": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat.",
+      "notes": [
+        "When a beetle latches on a target, it will remain there until it is killed or the duration expires.",
+        "Beetles are Spell Immune, but can be killed in 6 attacks from a unit. Heroes deal double damage to beetles.",
+        "Beetles provide vision."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        3000
+      ],
+      "mana_costs": [
+        110,
+        105,
+        100,
+        95
+      ],
+      "cooldowns": [
+        44,
+        36,
+        28,
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            18,
+            23,
+            28,
+            33
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK INTERVAL:",
+          "values": [
+            1.2,
+            1.05,
+            0.9,
+            0.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COUNT:",
+          "values": [
+            12
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARMOR REDUCTION PER ATTACK:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            16
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "weaver_shukuchi",
+      "display_name": "Shukuchi",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_shukuchi.png",
+      "description": "Weaver shifts out of visibility, gaining max movement speed and doing harm to any enemies it passes through.",
+      "lore": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft.",
+      "notes": [
+        "Can only damage the same unit once per cast."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        65
+      ],
+      "cooldowns": [
+        15,
+        12,
+        9,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            130,
+            160,
+            190
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            175
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FADE TIME:",
+          "values": [
+            0.25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVESPEED:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Shukuchi puts a mark on enemies it damages that last 4.59 seconds. 0.2s after Weaver exits Shukuchi, enemies with a mark within 1200 range will also be attacked with a secondary Geminate attack"
+    },
+    {
+      "name": "weaver_geminate_attack",
+      "display_name": "Geminate Attack",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_geminate_attack.png",
+      "description": "Allows Weaver to dispatch two attacks at once.",
+      "lore": "Skitskurr's relationship with time is somewhat variable, causing his actions to be witnessed - and felt - more than once.",
+      "notes": [
+        "Additional attacks leave Weaver 0.25 seconds after the previous one, and have no range limit.",
+        "Bonus damage only applies to the geminated attack and not the original attack."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units and Buildings",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        425
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        9,
+        7,
+        5,
+        3
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE ON GEMINATE:",
+          "values": [
+            20,
+            35,
+            50,
+            65
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Geminate Attack will also hit units within 1200 range of the original target that have The Swarm beetles attached to them."
+    },
+    {
+      "name": "weaver_time_lapse",
+      "display_name": "Time Lapse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_time_lapse.png",
+      "description": "Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged.",
+      "notes": [
+        "Removes most negative buffs from Weaver.",
+        "Time Lapse disjoints projectiles."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Allied Heroes",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        150,
+        75,
+        0
+      ],
+      "cooldowns": [
+        70,
+        55,
+        40
+      ],
+      "special_values": [],
+      "scepter_text": "Time Lapse may target allied Heroes with 500 cast range."
+    },
+    {
+      "name": "weaver_threads_of_fate",
+      "display_name": "Threads of Fate",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_threads_of_fate.png",
+      "description": "Whenever Weaver deals damage to an enemy hero with an attack or ability, if he remains within 700 range of them for 1.5s, he establishes a Thread of Fate that briefly slows the enemy and ties Weaver and the enemy together. Each established thread of fate grants bonus damage to Weaver.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "THREAD DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "THREAD BREAK DISTANCE:",
+          "values": [
+            890
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER THREAD:",
+          "values": [
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+50 Shukuchi Movement Speed",
+    "+7 Strength",
+    "+90 Shukuchi Damage",
+    "+2 Swarm Attacks to Kill",
+    "+60 Bonus Damage On Geminate",
+    "+0.5 Swarm Armor Reduction Per Attack",
+    "-3s Shukuchi Cooldown",
+    "+1 Geminate Attack"
+  ],
+  "facets": []
+}

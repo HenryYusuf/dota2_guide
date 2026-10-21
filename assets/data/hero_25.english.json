@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 25,
+    "valve_key": "npc_dota_hero_lina",
+    "localized_name": "Lina",
+    "one_liner": "Increases attack and speed with every spell",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 21,
+        "gain": 2.4
+      },
+      "intelligence": {
+        "base": 28,
+        "gain": 4
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 57,
+      "attack_rate": 1.6,
+      "attack_range": 670,
+      "projectile_speed": 1000,
+      "armor": 3.5,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The sibling rivalries between Lina the Slayer, and her younger sister Rylai, the Crystal Maiden, were the stuff of legend in the temperate region where they spent their quarrelsome childhoods together. Lina always had the advantage, however, for while Crystal was guileless and naive, Lina's fiery ardor was tempered by cleverness and conniving. The exasperated parents of these incompatible offspring went through half a dozen homesteads, losing one to fire, the next to ice, before they realized life would be simpler if the children were separated. As the oldest, Lina was sent far south to live with a patient aunt in the blazing Desert of Misrule, a climate that proved more than comfortable for the fiery Slayer. Her arrival made quite an impression on the somnolent locals, and more than one would-be suitor scorched his fingers or went away with singed eyebrows, his advances spurned. Lina is proud and confident, and nothing can dampen her flame."
+  },
+  "abilities": [
+    {
+      "name": "lina_dragon_slave",
+      "display_name": "Dragon Slave",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_dragon_slave.png",
+      "description": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
+      "lore": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment.",
+      "notes": [
+        "Dragon Slave can hit units up to 1225 units away.",
+        "Does not trigger spell block or spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        1075
+      ],
+      "mana_costs": [
+        90,
+        100,
+        110,
+        120
+      ],
+      "cooldowns": [
+        11,
+        10,
+        9,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            65,
+            125,
+            185,
+            245
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lina_light_strike_array",
+      "display_name": "Light Strike Array",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_light_strike_array.png",
+      "description": "Summons a column of flames that damages and stuns enemies.",
+      "lore": "Lina's essence allows her to focus the sun's energies, causing air to combust at will.",
+      "notes": [
+        "Light Strike Array will destroy trees in its area of effect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST DELAY:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2,
+            1.6,
+            2,
+            2.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            80,
+            125,
+            170,
+            215
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lina_fiery_soul",
+      "display_name": "Fiery Soul",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_fiery_soul.png",
+      "description": "Grants bonus attack and movement speed each time Lina hits an enemy with a spell. Stacks with itself. Lasts 16 seconds.",
+      "lore": "Dancing flames embody Lina's playful nature, bringing out her true blazing self.",
+      "notes": [
+        "Duration refreshes each time an opponent is hit with a spell.",
+        "Using items does not trigger Fiery Soul."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK SPEED BONUS:",
+          "values": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SPEED BONUS:",
+          "values": [
+            1,
+            1.5,
+            2,
+            2.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX STACKS:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            16
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "lina_flame_cloak",
+      "display_name": "Flame Cloak",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_flame_cloak.png",
+      "description": "Grants Lina unobstructed movement and increases her spell damage and magic resistance. Grants max fiery soul stacks on activation.",
+      "lore": "A natural defense equally suited to keeping anything from unwanted sisters to snarling hellbeasts at bay.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGIC RESISTANCE:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SPELL AMP:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "lina_slow_burn",
+      "display_name": "Slow Burn",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_slow_burn.png",
+      "description": "Lina's abilities deal an additional 64% damage as burn damage over 4s.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "lina_laguna_blade",
+      "display_name": "Laguna Blade",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_laguna_blade.png",
+      "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
+      "lore": "The air around Lina becomes so intensely torrid that it scorches a foe that comes too close with white-hot lightning.",
+      "notes": [
+        "Laguna Blade has a 0.25 delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        750
+      ],
+      "mana_costs": [
+        150,
+        300,
+        450
+      ],
+      "cooldowns": [
+        70,
+        60,
+        50
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            400,
+            580,
+            760
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SUPERCHARGE DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SUPERCHARGE STACKS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Casting Laguna Blade temporarily supercharges Lina, granting her stacks of Fiery Soul."
+    }
+  ],
+  "talents": [
+    "+25 Damage",
+    "-3s Dragon Slave Cooldown",
+    "5% Fiery Soul Magic Resist Per Stack",
+    "+110 Light Strike Array Damage",
+    "-20s Laguna Blade Cooldown",
+    "+10/1% Fiery Soul Per Stack",
+    "+1s Slow Burn Duration",
+    "150% Attack Crit On Targets Affected By Slow Burn"
+  ],
+  "facets": []
+}

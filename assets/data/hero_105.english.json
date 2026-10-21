@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 105,
+    "valve_key": "npc_dota_hero_techies",
+    "localized_name": "Techies",
+    "one_liner": "Surprises enemies with invisible landmines and explosive attacks",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/techies.png",
+    "attributes": {
+      "strength": {
+        "base": 19,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.8
+      },
+      "intelligence": {
+        "base": 25,
+        "gain": 2.7
+      }
+    },
+    "combat": {
+      "damage_min": 20,
+      "damage_max": 22,
+      "attack_rate": 1.7,
+      "attack_range": 600,
+      "projectile_speed": 900,
+      "armor": 4.66,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "In the storied saga of Dredger's Bight, no business has ever been more reviled than Techies Demolitions. Then again, Dredger's Bight no longer exists. Nor does Toterin. Or even Trapper Town. In fact, if one were to track the history of Techies Demolitions they might notice that shortly after Techies appear, towns tend to disappear.\r\n\t\t\t\t<br><br>Like every inevitable disaster surrounding Techies, the obliteration of Dredger's Bight began with an invention. Tasked with designing a safer way of detonating explosives in the mines beneath the city, pyrotechnic prodigies Squee, Spleen, and Spoon developed their most outlandish creation yet: a button which, when pressed, would trigger a distant device to spark a fuse.\r\n\t\t\t\t<br><br>Overeager to test their invention, the trio stuffed barrel after barrel with flamesalt explosives, piling every corner of their tiny workshop high with the newly developed remote bombs. From this stockpile they plucked a single payload, burying it in a far away field. As they cowered in a ditch, Spleen pressed the detonator button. Yet after a moment, nothing happened. Confused, he stood up, pressing his button again and again until, finally, an explosion tore a hole in the field. Elated, Squee and Spleen turned toward home just as a massive wave of sound and force arrived to knock them over.\r\n\t\t\t\t<br><br>Bewildered, their ears ringing from the unexpected blast, they gathered in the dingy miasma to see a smoking ruin where their workshop once stood. Chunks of wood and stone continued to fall as the yawning crater before them slowly deepened into an expanding pit. The whole of Dredger's Bight shuddered, and then gradually started to slide into the mines below as its panicked residents fled.\r\n\t\t\t\t<br><br>Sitting at the edge of their sinking home they grinned and giggled, as giddy at the possibilities as they were oblivious to the scorn of their former neighbors. They wondered only one thing: how could they trigger an even bigger blast?"
+  },
+  "abilities": [
+    {
+      "name": "techies_sticky_bomb",
+      "display_name": "Sticky Bomb",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_sticky_bomb.png",
+      "description": "Lobs a Sticky Bomb towards the target area. If it lands next to an enemy hero, the bomb will stick to it, slowing its movement speed. After a few seconds the bomb will explode, dealing damage in an area around the detonation and applying a secondary slow for 3 seconds.",
+      "lore": "Such revolutionary brilliance was meant to be shared.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        100,
+        115,
+        130,
+        145
+      ],
+      "cooldowns": [
+        16,
+        13,
+        10,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "EXPLOSION DELAY:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STICK RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            95,
+            170,
+            245,
+            320
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            25,
+            35,
+            45,
+            55
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SECONDARY MOVEMENT SLOW:",
+          "values": [
+            15,
+            25,
+            35,
+            45
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EXPLOSION RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "techies_reactive_tazer",
+      "display_name": "Reactive Tazer",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_reactive_tazer.png",
+      "description": "Techies trigger an electric charge on the target ally, giving them bonus movement speed for a short period of time. Enemies attacking the target take damage and are temporarily disarmed and get a Basic Dispel.\n\nAt the end of the effect or if detonated early with the sub-ability, the charge explodes, disarming all enemies within the radius and dealing damage.",
+      "lore": "A steady bomb hand prefers an abundance of personal space.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        60
+      ],
+      "cooldowns": [
+        26,
+        22,
+        18,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISARM DURATION:",
+          "values": [
+            2.25,
+            2.5,
+            2.75,
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT BONUS:",
+          "values": [
+            18,
+            22,
+            26,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EXPLOSION RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            60,
+            110,
+            160,
+            210
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "techies_suicide",
+      "display_name": "Blast Off!",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_suicide.png",
+      "description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and stun enemies. Upon landing, the assault deals Techies non-lethal damage equal to a percentage of their current health.",
+      "lore": "Where we going?",
+      "notes": [
+        "The self-damage Techies receive from this blast is pure and non-lethal.",
+        "This ability destroys trees."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemies",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150,
+        175
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "EXPLOSION RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FULL DAMAGE:",
+          "values": [
+            200,
+            300,
+            400,
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.8,
+            1,
+            1.2,
+            1.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT HP SELF DAMAGE:",
+          "values": [
+            20
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "techies_mutually_assured_destruction",
+      "display_name": "M.A.D.",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_mutually_assured_destruction.png",
+      "description": "Techies gain a percentage of their mana pool as bonus mana regeneration.\n\nWhen Techies die, they leave behind a barrel that explodes after 1.5s, damaging enemies in an area around it. Damage is based on Techies' max mana.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MANA POOL AS REGEN:",
+          "values": [
+            0.1
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX MANA AS DAMAGE:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CURRENT MANA REGEN:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "M.A.D. becomes an active ability. Increases max mana as damage amount. Techies plant an M.A.D. which can be detonated manually with a sub-ability. Only one M.A.D. from the active ability can be placed at a time."
+    },
+    {
+      "name": "techies_minefield_sign",
+      "display_name": "Minefield Sign",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_minefield_sign.png",
+      "description": "Plant a warning sign, causing Proximity Mines within its radius to be invulnerable and deal 15% more damage. Only one sign can exist at a time. Lasts 240 seconds.\n\nWhen an enemy Hero walks within 200 units of a minefield sign, the 1000 units area around the sign will become a minefield for 10 seconds, dealing damage to enemy Heroes any time they move within its area. Minefield Sign is destroyed after this effect ends.",
+      "lore": "Watch your step!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Point Target",
+      "cast_ranges": [
+        10
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        60
+      ],
+      "special_values": [
+        {
+          "heading": "EFFECT RADIUS:",
+          "values": [
+            1000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SIGN DURATION:",
+          "values": [
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT TRIGGER AMOUNT:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "techies_land_mines",
+      "display_name": "Proximity Mines",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_land_mines.png",
+      "description": "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active 500 AoE of the mine. Mines detonate if an enemy is standing within the active AoE for 1 seconds dealing damage and temporarily reducing the enemy's Magic Resistance. The explosion deals full damage if the target is within 150 radius and decreases down to 50% on the edge. Deals 30% damage to buildings.",
+      "lore": "The bane of Toterin!",
+      "notes": [
+        "Cannot be placed within 350 AoE of another Proximity Mine.",
+        "Proximity Mines do not block neutral creep camps from spawning.",
+        "Mines last until they explode or are destroyed.",
+        "Mines are triggered by invisible units.",
+        "Grants 30 gold if destroyed by an enemy hero."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        450
+      ],
+      "mana_costs": [
+        110,
+        140,
+        170
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "EXPLOSION RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            400,
+            550,
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUILDING DAMAGE:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ACTIVATION DELAY:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGIC RESISTANCE REDUCTION:",
+          "values": [
+            15,
+            20,
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DEBUFF DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+15% Magic Resistance",
+    "-2s Proximity Mines Cooldown",
+    "+175 Blast Off! Damage",
+    "+25% Reactive Tazer Buff and Disarm Duration",
+    "+160 Sticky Bomb Damage",
+    "-15s Blast Off! Cooldown",
+    "+253 Damage",
+    "-0.8s Proximity Mines Activation Delay"
+  ],
+  "facets": []
+}

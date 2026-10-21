@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 47,
+    "valve_key": "npc_dota_hero_viper",
+    "localized_name": "Viper",
+    "one_liner": "Poisonous toxins chip away armor and slow enemies",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/viper.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 21,
+        "gain": 2.9
+      },
+      "intelligence": {
+        "base": 17,
+        "gain": 2
+      }
+    },
+    "combat": {
+      "damage_min": 48,
+      "damage_max": 50,
+      "attack_rate": 1.7,
+      "attack_range": 575,
+      "projectile_speed": 1200,
+      "armor": 1.5,
+      "magic_resistance": 25,
+      "movement_speed": 275,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The malevolent familiar of a sadistic wizard who captured and hoped to tame him, Viper was curiously glad to have been sprung from the sealed and unchanging subterranean Nether Reaches where his race had lived for millions of years, after tectonic slippage had sealed off the Netherdrakes in luminous caverns. Viper spent some time appearing to submit to the wizard's enchainments, hoping to learn what he could of the dark magics the mage practiced. But he soon realized that few spells were as deadly as the toxins that were his birthright. Exuding an acid that swiftly ate away the bars of his cage, the Netherdrake slipped free of his confines, spit poison in the old spellcaster's eyes, and soared out to let the world know that it had a new master."
+  },
+  "abilities": [
+    {
+      "name": "viper_poison_attack",
+      "display_name": "Poison Attack",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_poison_attack.png",
+      "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance deduction while dealing damage over time. Stacks up to 6 times.",
+      "lore": "The Netherdrake's inborn toxic breath quickly drains the vitality of its afflicted.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        20
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            4,
+            8,
+            12,
+            16
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            3,
+            6,
+            9,
+            12
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGIC RESISTANCE:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX STACKS:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARMOR REDUCTION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUILDING DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Increases max stacks, and causes Poison Attack to lower armor per stack and to affect buildings for reduced damage."
+    },
+    {
+      "name": "viper_nethertoxin",
+      "display_name": "Nethertoxin",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_nethertoxin.png",
+      "description": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Units in it have their attack speed slowed.",
+      "lore": "Poison from the Nether Reaches turns wounds into fatalities, and fatigue into death.",
+      "notes": [
+        "Multiple Nethertoxins do not stack."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        70
+      ],
+      "cooldowns": [
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "MIN DPS:",
+          "values": [
+            15,
+            25,
+            35,
+            45
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DPS:",
+          "values": [
+            35,
+            65,
+            95,
+            125
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DPS DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED SLOW:",
+          "values": [
+            30,
+            40,
+            50,
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6.5,
+            7,
+            7.5,
+            8
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "viper_corrosive_skin",
+      "display_name": "Corrosive Skin",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_corrosive_skin.png",
+      "description": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1200 radius. The acid exudate also increases Viper's resistance to magic.",
+      "lore": "It is not unusual for sword and shield alike to corrode in the very hands of those who attack the Netherdrake.",
+      "notes": [
+        "Stacks multiplicatively with other magic damage resistance sources.",
+        "Break prevents the application of Corrosive Skin. Does not disable Corrosive Skin application from Nosedive.",
+        "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            9,
+            18,
+            27,
+            36
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGIC RESISTANCE:",
+          "values": [
+            10,
+            15,
+            20,
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            10,
+            15,
+            20,
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX RANGE RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Corrosive Skin applies 4x the attack speed slow to enemies that are within 500 distance of Viper.  Viper's Corrosive Skin Magic Resistance and Damage per Second are gradually increased while he is in Nethertoxin, up to 50% increased effect after 4s."
+    },
+    {
+      "name": "viper_nose_dive",
+      "display_name": "Nosedive",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_nose_dive.png",
+      "description": "Viper slams into the ground, releasing a Nethertoxin and splattering each enemy in a 500 AoE for 4 seconds with the effect of Corrosive Skin.",
+      "lore": "It was thought that Netherdrake wings touch ground only in death, but some surmise that those who've witnessed more intentional landings merely haven't survived to tell the tale.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EFFECT DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "viper_predator",
+      "display_name": "Predator",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_predator.png",
+      "description": "Viper's attacks deal an additional instance of physical damage per missing health percentage of the target hero.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            0.25
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "viper_viper_strike",
+      "display_name": "Viper Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_viper_strike.png",
+      "description": "Viper slows the targeted enemy unit's movement and attack speed while also disabling their passives and dealing poison damage over time. The slowing effect reduces over the duration of the poison.",
+      "lore": "Once used to slay his sadistic summoner, the most powerful of Netherdrake infections spreads through the veins of those foolish enough to cross Viper.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        750
+      ],
+      "mana_costs": [
+        100,
+        150,
+        200
+      ],
+      "cooldowns": [
+        50,
+        40,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            70,
+            110,
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            60,
+            70,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            100,
+            140,
+            180
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1s Viper Strike Duration",
+    "+15 Corrosive Skin Damage Per Second",
+    "+20/40 Nethertoxin Min/Max Damage",
+    "+15% Poison Attack Slow / Damage",
+    "+70 Viper Strike DPS",
+    "+0.35 Predator Damage Per Missing Health",
+    "Nethertoxin Radius increases by 25 every 0.5s",
+    "-50% Viper Strike Mana Cost / Cooldown"
+  ],
+  "facets": []
+}

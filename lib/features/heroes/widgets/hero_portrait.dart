@@ -7,9 +7,15 @@ import '../../../core/theme/app_theme.dart';
 ///
 /// Portraits are never bundled (ADR-0001), so this is the Heroes grid's only
 /// networked widget: offline it degrades to a neutral silhouette instead of
-/// an error.
+/// an error. The detail page reuses it for header media and Ability icons
+/// (same URL shape, same fallback posture) via [semanticsNoun].
 class HeroPortrait extends StatelessWidget {
-  const HeroPortrait({super.key, required this.url, required this.heroName});
+  const HeroPortrait({
+    super.key,
+    required this.url,
+    required this.heroName,
+    this.semanticsNoun = 'portrait',
+  });
 
   /// Absolute CDN URL from the hero index ([HeroSummary.portraitUrl]).
   final String url;
@@ -18,11 +24,15 @@ class HeroPortrait extends StatelessWidget {
   /// image next to the name.
   final String heroName;
 
+  /// What the image IS — "portrait" for grid tiles, "ability icon" on the
+  /// detail page.
+  final String semanticsNoun;
+
   @override
   Widget build(BuildContext context) {
     return Semantics(
       image: true,
-      label: '$heroName portrait',
+      label: '$heroName $semanticsNoun',
       child: CachedNetworkImage(
         imageUrl: url,
         fit: BoxFit.cover,

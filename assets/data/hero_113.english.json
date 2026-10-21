@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 113,
+    "valve_key": "npc_dota_hero_arc_warden",
+    "localized_name": "Arc Warden",
+    "one_liner": "Creates a copy of himself to split push",
+    "primary_attribute": "universal",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/arc_warden.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.2
+      },
+      "agility": {
+        "base": 22,
+        "gain": 2.7
+      },
+      "intelligence": {
+        "base": 24,
+        "gain": 2.6
+      }
+    },
+    "combat": {
+      "damage_min": 23,
+      "damage_max": 29,
+      "attack_rate": 1.7,
+      "attack_range": 625,
+      "projectile_speed": 900,
+      "armor": 3.66,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Before the beginning of all, there existed a presence: a primordial mind, infinite, awesome, and set to inscrutable purpose. As the universe thundered into being, this mind was fragmented and scattered. Two among its greater fragments--who would come to be named Radiant and Dire--found themselves locked in vicious opposition, and began twisting all of creation to serve their conflict.\r\n\t\t\t\t<br><br>As war and cataclysm threatened the nascent cosmos, the will of a third fragment made itself known. Naming itself Zet, this intellect sought to resolve the disharmony and return all to perfect unity. Appalled by its kin's conflicting nature, Zet gathered the sum of its power. In a sudden flash, it overwhelmed its siblings, and fused the warring aspects into a stellar sphere before hurling them into the darkness to orbit a nondescript world. Harmony was restored, though only the barest fraction of Zet's strength remained. Setting its gaze on the prison, Zet chose to use its weakened power to serve as watchful warden until time's end. For uncounted aeons, this vigil stood.\r\n\t\t\t\t<br><br>Life flourished upon the world below, oblivious to the dangers imprisoned within the softly glowing moon, or of Zet's struggles to contain them. As the captives' eternal clash reverberated within, the surface of the prison shuddered, over time beginning to crack. Ultimately, Zet's depleted power proved insufficient to contain the breach, and at last the moon was shattered. The prison's ancient inhabitants had escaped to sow their conflict anew.\r\n\t\t\t\t<br><br>Flung to the farthest reaches by the prison's explosion, Zet was transformed by the dissonant energies of its former captives. No longer of single form and thought, its presence had become split among many--some lesser, some greater--each connected by a fleeting arc of consciousness. Struggling to suppress its own disunity, Zet sped toward the burgeoning conflict of its siblings, bending its fractured wills toward a singular conclusion: the aspects of the primordial mind must be made to reunite, or all must be destroyed lest the conflict spread further..."
+  },
+  "abilities": [
+    {
+      "name": "arc_warden_flux",
+      "display_name": "Flux",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_flux.png",
+      "description": "Infuses a lone enemy unit with swirling, volatile energy, dealing damage over time and slowing the target. The damage is not applied if another enemy unit is near the target.",
+      "lore": "An infinitesimal fraction of the power which imprisoned the Ancients.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        625,
+        700,
+        775,
+        850
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ALLY SEARCH RADIUS:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            15,
+            30,
+            45,
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SPEED SLOW:",
+          "values": [
+            20,
+            25,
+            30,
+            35
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Flux silences when the target is alone, deals more damage, and lasts longer."
+    },
+    {
+      "name": "arc_warden_magnetic_field",
+      "display_name": "Magnetic Field",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_magnetic_field.png",
+      "description": "Arc Warden generates a circular distortion field of magnetic energy. The Magnetic Field grants bonus attack speed and protects allied units within it by evading attacks coming from outside the field. The Magnetic Field pulls runes, and runes inside Magnetic Field automatically activate.",
+      "lore": "Time and space are of little consequence to one as old as Zet.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        60,
+        70,
+        80,
+        90
+      ],
+      "cooldowns": [
+        20,
+        19,
+        18,
+        17
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED BONUS:",
+          "values": [
+            30,
+            60,
+            90,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EVASION BONUS:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RUNE PULL FORCE:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RUNE PULL RADIUS:",
+          "values": [
+            800,
+            1200,
+            1600,
+            2000
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "arc_warden_spark_wraith",
+      "display_name": "Spark Wraith",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_spark_wraith.png",
+      "description": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
+      "lore": "Lesser fragments of Zet's original self.",
+      "notes": [
+        "Spark Wraiths can not be disjointed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        2000
+      ],
+      "mana_costs": [
+        80
+      ],
+      "cooldowns": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "SEARCH RADIUS:",
+          "values": [
+            375
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            16
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ACTIVATION DELAY:",
+          "values": [
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            170,
+            240,
+            310
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WRAITH SPEED:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.7,
+            0.8,
+            0.9,
+            1
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "arc_warden_runic_infusion",
+      "display_name": "Runic Infusion",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_runic_infusion.png",
+      "description": "Runes of Power fuse to the Self. Arc Warden gains +1.5 all attributes permanently whenever Arc Warden or the Tempest Double activates a Power Rune.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "arc_warden_tempest_double",
+      "display_name": "Tempest Double",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_tempest_double.png",
+      "description": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns.\n\nThe Tempest Double loses its sense of self and fractures over time, becoming slower and less accurate.",
+      "lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
+      "notes": [
+        "Tempest Double and Refresher Orb cannot be used by the duplicate."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        60,
+        55,
+        50
+      ],
+      "special_values": [
+        {
+          "heading": "BOUNTY:",
+          "values": [
+            70
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            18,
+            21,
+            24
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX MISS CHANCE:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX SELF SLOW:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "The Tempest Double is infused with the bonuses of Arcane, Invisibility, and Haste Runes for 12s when created.\n\nDoes not trigger Runic Infusion."
+    }
+  ],
+  "talents": [
+    "+200 Flux Cast Range",
+    "+200 Health",
+    "+20% Flux Slow",
+    "+25 Magnetic Field Attack Speed",
+    "+30s Spark Wraith Duration",
+    "-4s Magnetic Field Cooldown",
+    "+1 Runic Infusion All Attributes Bonus",
+    "+240 Spark Wraith Damage"
+  ],
+  "facets": []
+}

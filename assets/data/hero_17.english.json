@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 17,
+    "valve_key": "npc_dota_hero_storm_spirit",
+    "localized_name": "Storm Spirit",
+    "one_liner": "Zips across the map to engage in fights",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/storm_spirit.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2
+      },
+      "agility": {
+        "base": 22,
+        "gain": 2.6
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 3.7
+      }
+    },
+    "combat": {
+      "damage_min": 47,
+      "damage_max": 57,
+      "attack_rate": 1.6,
+      "attack_range": 480,
+      "projectile_speed": 1100,
+      "armor": 4.66,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Storm Spirit is literally a force of nature--the wild power of wind and weather, bottled in human form. And a boisterous, jovial, irrepressible form it is! As jolly as a favorite uncle, he injects every scene with crackling energy. But it was not always thus, and there was tragedy in his creation. Generations ago, in the plains beyond the Wailing Mountains, a good people lay starving in drought and famine. A simple elementalist, Thunderkeg by name, used a forbidden spell to summon the spirit of the storm, asking for rain. Enraged at this mortal's presumption, the Storm Celestial known as Raijin lay waste to the land, scouring it bare with winds and flood. Thunderkeg was no match for the Celestial--at least until he cast a suicidal spell that forged their fates into one: he captured the Celestial in the cage of his own body. Trapped together, Thunderkeg's boundless good humor fused with Raijin's crazed energy, creating the jovial Raijin Thunderkeg, a Celestial who walks the world in physical form."
+  },
+  "abilities": [
+    {
+      "name": "storm_spirit_static_remnant",
+      "display_name": "Static Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_static_remnant.png",
+      "description": "Creates an explosively charged image of Storm Spirit that walks to the target position and lasts for 12 seconds. Will detonate and deal damage if an enemy unit comes near it.",
+      "lore": "Raijin Thunderkeg's duality allows him to admire himself in shocking fashion.",
+      "notes": [
+        "Remnants take 0.75 second to materialize after the spell is cast.",
+        "Remnants grant unobstructed vision for their duration.",
+        "The explosion actually hits units in a 300 radius, but will only be triggered in 235.",
+        "Can be self-cast to cast in place."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "cooldowns": [
+        3.5
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT SPEED:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VISION RADIUS:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "storm_spirit_electric_vortex",
+      "display_name": "Electric Vortex",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_electric_vortex.png",
+      "description": "A vortex that pulls an enemy unit to Storm Spirit's location.",
+      "lore": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        300
+      ],
+      "mana_costs": [
+        60,
+        70,
+        80,
+        90
+      ],
+      "cooldowns": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "PULL DISTANCE:",
+          "values": [
+            180,
+            220,
+            260,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            1.1,
+            1.4,
+            1.7,
+            2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Electric Vortex affects all enemies within a radius around Storm Spirit."
+    },
+    {
+      "name": "storm_spirit_overload",
+      "display_name": "Overload",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_overload.png",
+      "description": "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies.",
+      "lore": "Pow!  Zip!  Zap!",
+      "notes": [
+        "Using items doesn't trigger Overload.",
+        "Overload charges do not stack."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -80
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -90
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ACTIVATION RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MANA COST:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED BONUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            0.8
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Can be activated to grant Storm Spirit and nearby allied heroes 3 Overload charges. Provides bonus Attack Speed. Lasts up to 12 seconds or until the charges are depleted."
+    },
+    {
+      "name": "storm_spirit_ball_lightning",
+      "display_name": "Ball Lightning",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_ball_lightning.png",
+      "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 25+7.5% of his total mana pool, and the cost per 100 units traveled is 10+0.65% of his total mana pool.  Damage is expressed in damage per 100 units traveled.",
+      "lore": "The Storm is coming in.",
+      "notes": [
+        "Abilities and items can be used while traveling.",
+        "This ability will destroy trees.",
+        "Storm Spirit is invulnerable during Ball Lightning."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        30
+      ],
+      "cooldowns": [
+        0
+      ],
+      "damages": [
+        6,
+        10,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "SPEED:",
+          "values": [
+            1400,
+            1850,
+            2300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MANA DRAIN PER 100 UNITS:",
+          "values": [
+            0.65
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "storm_spirit_galvanized",
+      "display_name": "Galvanized",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_galvanized.png",
+      "description": "Storm Spirit gains a charge of 0.2 mana regeneration per kill, and a charge every 3 levels. Loses 2 charges per death. Additionally every time he gains a charge he also gains 0.1 Mana Regen permanently.",
+      "notes": [
+        "Break disables the gaining of new stacks from kills."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+25/25% Overload Attack/Movement Speed Slow",
+    "+1.5 Mana Regen",
+    "+250 Health",
+    "+60 Static Remnant Damage",
+    "+0.2s Electric Vortex Duration",
+    "-1.25s Static Remnant Cooldown",
+    "2x Overload Attack Bounce",
+    "450 Distance Auto Remnant in Ball Lightning"
+  ],
+  "facets": []
+}

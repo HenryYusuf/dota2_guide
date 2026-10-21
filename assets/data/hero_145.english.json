@@ -1,0 +1,685 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 145,
+    "valve_key": "npc_dota_hero_kez",
+    "localized_name": "Kez",
+    "one_liner": "Flexible melee master with two sets of weapons and abilities",
+    "primary_attribute": "agility",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/kez.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.8
+      },
+      "agility": {
+        "base": 27,
+        "gain": 3.5
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 55,
+      "attack_rate": 1.9,
+      "attack_range": 225,
+      "projectile_speed": 900,
+      "armor": 5.5,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 1.0,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "\"I was born with a price on my head. As I got better at causing trouble, that price went up. Every time Queen Imperia raised the bounty, I knew I must have done something right. I think that's the worst part about being gone so long in Icewrack... I've got to get that price back up to a respectable number.\""
+  },
+  "abilities": [
+    {
+      "name": "kez_echo_slash",
+      "display_name": "Echo Slash",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_echo_slash.png",
+      "description": "Kez slashes forward in a 800 distance line with his Katana, attacking enemies in an area and applying a brief 100% impact slow. After a short delay, the area is attacked again. Heroes take bonus damage.",
+      "lore": "Kez and his master Kraw have worked tirelessly to train the Kazurai new ways to keep the flyers off balance by improving upon ancient techniques.",
+      "notes": [
+        "Destroys trees. Doesn't apply Cleave."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        75,
+        90,
+        105,
+        120
+      ],
+      "cooldowns": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            70,
+            80,
+            90,
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS HERO DAMAGE:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ECHO DELAY:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLASH RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kez_grappling_claw",
+      "display_name": "Grappling Claw",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_grappling_claw.png",
+      "description": "Kez swings on a grappling hook towards the target unit or tree.  When the grappling hook collides with the target, that unit has slowed movement speed. Upon reaching the enemy target, Kez lands an attack on them.",
+      "lore": "The Kazurai have the speed and reach to drag even the highest flyers from the skies.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        650,
+        750,
+        850,
+        950
+      ],
+      "mana_costs": [
+        40
+      ],
+      "cooldowns": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.7,
+            0.8,
+            0.9,
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            70,
+            80,
+            90,
+            100
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "kez_kazurai_katana",
+      "display_name": "Kazurai Katana",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_kazurai_katana.png",
+      "description": "Katana attacks and abilities apply a stacking damage over time to enemies that deals a percentage of the original attack's damage as additional damage over time. \n\nKez may activate the ability to impale the target with his attack, preventing them from moving or turning. The target's Katana debuff bursts, causing some of the stacks to deal damage instantly.",
+      "lore": "To fight back against the reach of Imperia and her Queensguard, the Kazurai had to become skilled in the ways of attrition.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        40
+      ],
+      "cooldowns": [
+        24,
+        18,
+        12,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            3,
+            6,
+            9,
+            12
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "IMPALE DURATION:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STACKS AS BURST DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX BURST STACKS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Kez lifesteals 100% from the impale. If the impale comes from behind the target, the target is stunned. Increases max burst stacks."
+    },
+    {
+      "name": "kez_switch_weapons",
+      "display_name": "Switch Discipline",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_switch_weapons.png",
+      "description": "Kez switches between his Kazurai Katana and Shodo Sai.\n\nHe gains different attack capabilities and abilities based on the weapon equipped. The abilities level up together, and when an ability is used, the associated alternate weapon ability also goes on cooldown.\n\nKez deals extra damage on the first Katana hit or ability after switching to Katana, and gains bonus speed after switching to Sai.",
+      "lore": "As former followers of the Shodo, the leaders of the Kazurai Order can switch effortlessly between twin disciplines of martial mastery over sai and blade.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "KATANA ATTACK RANGE:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KATANA BASE ATTACK TIME:",
+          "values": [
+            1.9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KATANA BONUS AGILITY BASE DAMAGE:",
+          "values": [
+            12
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "KATANA SWAP BONUS DAMAGE:",
+          "values": [
+            12
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SAI ATTACK RANGE:",
+          "values": [
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SAI BASE ATTACK TIME:",
+          "values": [
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SAI SWAP MOVEMENT SPEED:",
+          "values": [
+            12
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SAI SWAP SPEED DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Casting a weapon ability that would set its alternate weapon ability on cooldown does not do so if it's the first one used within 3 seconds after casting Switch Discipline or if it was already on cooldown.\n\nCasting any weapon ability refreshes the cooldown of Switch Discipline."
+    },
+    {
+      "name": "kez_raptor_dance",
+      "display_name": "Raptor Dance",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_raptor_dance.png",
+      "description": "Kez enters into an uncontrollable state for 1 second, becoming invulnerable for 0.2s and receiving a basic dispel.\n\nIf the cast completes successfully, Kez performs a series of deadly radial slashes around him that deal damage based on the max health of the target and heal Kez for a percentage of all damage dealt.",
+      "lore": "Unleash the inner fury of the Flightless to feast on the essence of your foes.",
+      "notes": [
+        "Slash Lifesteal is reduced to 20% when slashing a creep or an illusion."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "STRIKES:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            40,
+            70,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HEALTH AS DAMAGE:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLASH LIFESTEAL:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "kez_falcon_rush",
+      "display_name": "Falcon Rush",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_falcon_rush.png",
+      "description": "Kez gains the ability to rush towards enemy targets to deliver echoing secondary attacks.  While in this state, Kez has phased collision and slow resistance.",
+      "lore": "An ancient Shodo technique used to hunt faster aerial foes, stealing the advantage and delivering multiple attacks within a single flap of their prey's panicking wings.",
+      "notes": [
+        "Does not work on buildings."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemies",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        85,
+        90,
+        95,
+        100
+      ],
+      "cooldowns": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RUSH RANGE:",
+          "values": [
+            525
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RUSH SPEED:",
+          "values": [
+            850
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ECHO ATTACK DAMAGE:",
+          "values": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW RESISTANCE:",
+          "values": [
+            15,
+            30,
+            45,
+            60
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3.75,
+            4.5,
+            5.25,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ECHO PROC CHANCE REDUCTION:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "kez_talon_toss",
+      "display_name": "Talon Toss",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_talon_toss.png",
+      "description": "Kez throws a Sai at the target unit, applying a fixed damage attack and silence.",
+      "lore": "The Shodo learned to rely upon distance and disorientation to survive against much stronger opposition.",
+      "notes": [
+        "The fixed damage attack has True Strike."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        650,
+        750,
+        850,
+        950
+      ],
+      "mana_costs": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "cooldowns": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            60,
+            120,
+            180,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SILENCE DURATION:",
+          "values": [
+            2,
+            2.25,
+            2.5,
+            2.75
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "kez_shodo_sai",
+      "display_name": "Shodo Sai",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_shodo_sai.png",
+      "description": "Kez has a chance to critically strike the target when attacking with Sais.\n\nKez may activate the ability to disarm himself, lock his facing, and parry attacks and attack effects from the targeted direction for 1.5 seconds. If an attack is parried from an enemy Hero in this way, that Hero is stunned for 0.4s and gains a Mark.  When a Marked target is attacked by Kez, it will guarantee a critical strike and stun the target.\n\nThe sub-ability may be used to cancel the blocking early.",
+      "lore": "The Shodo may have lost their way, but Kez and the Kazurai can still use Shodo knowledge for the good of the people.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        30,
+        20,
+        10,
+        0
+      ],
+      "cooldowns": [
+        24,
+        18,
+        12,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "CRITICAL CHANCE:",
+          "values": [
+            20
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CRITICAL DAMAGE:",
+          "values": [
+            125,
+            150,
+            175,
+            200
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MARK STUN DURATION:",
+          "values": [
+            0.5,
+            0.6,
+            0.7,
+            0.8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MARK DURATION:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PARRY BONUS CRITICAL STRIKE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "PARRY BONUS MARK STUN:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Parrying creates a stronger Mark that deals additional stun and critical damage."
+    },
+    {
+      "name": "kez_ravens_veil",
+      "display_name": "Raven's Veil",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_ravens_veil.png",
+      "description": "Kez releases a wave of smoke that applies his Mark to nearby enemy heroes, briefly reducing their vision. Kez receives a basic dispel and gains bonus movement speed and invisibility until he attacks or casts a spell.",
+      "lore": "Eying either threat or opportunity, Shodo masters slip instantly into shadow to reset the terms of any engagement in their own favor.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "WAVE RADIUS:",
+          "values": [
+            1500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WAVE SPEED:",
+          "values": [
+            1500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            8,
+            10,
+            12
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VISION DEBUFF DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVEMENT SPEED:",
+          "values": [
+            15,
+            25,
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+6% Switch Discipline Swap Bonuses",
+    "+50 Raptor Dance Radius",
+    "+2s Falcon Rush Duration",
+    "+1 Raptor Dance Strike",
+    "+3.5% Kazurai Katana Damage Per Second",
+    "40 Bonus Attack Speed During Falcon Rush",
+    "+80% Shodo Sai Critical Strike",
+    "+1 Echo Slash Attack"
+  ],
+  "facets": []
+}

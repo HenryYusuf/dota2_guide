@@ -2,8 +2,8 @@
 // the cold-start RefreshTrigger reaches both the file store and the feed.
 // Shared so the pair can't drift between test files.
 
-import 'package:dota2_guide/core/data/datafeed_client.dart';
 import 'package:dota2_guide/core/data/file_store.dart';
+import 'package:dota2_guide/core/data/snapshot_refresher.dart';
 // Riverpod 3 keeps the Override type in misc, not the main library.
 import 'package:flutter_riverpod/misc.dart' show Override;
 

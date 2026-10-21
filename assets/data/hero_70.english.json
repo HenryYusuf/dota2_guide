@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 70,
+    "valve_key": "npc_dota_hero_ursa",
+    "localized_name": "Ursa",
+    "one_liner": "Deals more damage with every hit to the same foe",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ursa.png",
+    "attributes": {
+      "strength": {
+        "base": 25,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 18,
+        "gain": 2.8
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.5
+      }
+    },
+    "combat": {
+      "damage_min": 42,
+      "damage_max": 46,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.0,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Ulfsaar the Warrior is the fiercest member of an ursine tribe, protective of his land and his people. During the long winters, while the mothers sleep and nurse their cubs, the males patrol the lands above as tireless, vigilant defenders of their ancient ways. Hearing dim but growing rumors of a spreading evil, Ulfsaar headed out beyond the boundaries of his wild wooded homeland, intending to track down and destroy the threat at its source, before it could endanger his people. He is a proud creature with a bright strong spirit, utterly trustworthy, a staunch ally and defender."
+  },
+  "abilities": [
+    {
+      "name": "ursa_earthshock",
+      "display_name": "Earthshock",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_earthshock.png",
+      "description": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
+      "lore": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        95
+      ],
+      "cooldowns": [
+        15,
+        13,
+        11,
+        9
+      ],
+      "damages": [
+        75,
+        125,
+        175,
+        225
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            385
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            -22,
+            -28,
+            -34,
+            -40
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Earthshock applies 3 Fury Swipes to enemies hit."
+    },
+    {
+      "name": "ursa_overpower",
+      "display_name": "Overpower",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_overpower.png",
+      "description": "Using his skill in combat, Ursa gains increased attack speed and slow resistance for a number of subsequent attacks.",
+      "lore": "For a behemoth of his size, Ursa is deceptively nimble.",
+      "notes": [
+        "Missing an attack still consumes a charge of Overpower."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        45,
+        50,
+        55,
+        60
+      ],
+      "cooldowns": [
+        12,
+        11,
+        10,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACKS:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW RESISTANCE:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ursa_fury_swipes",
+      "display_name": "Fury Swipes",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_fury_swipes.png",
+      "description": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage.  If the same target is not attacked after 8 seconds, the bonus damage is lost.",
+      "lore": "In nature, the wounded rarely survive the attacks of hungry predators.",
+      "notes": [
+        "Break disables the application of new stacks.",
+        "Break does not disable the effects of existing stacks."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RESET TIME:",
+          "values": [
+            8,
+            12,
+            16,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RESET TIME (ROSHAN):",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER ATTACK:",
+          "values": [
+            12,
+            20,
+            28,
+            36
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ursa_maul",
+      "display_name": "Maul",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_maul.png",
+      "description": "Ursa gains bonus damage equal to a percentage of his Current HP.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "HEALTH AS DAMAGE:",
+          "values": [
+            1.75
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "ursa_enrage",
+      "display_name": "Enrage",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_enrage.png",
+      "description": "Ursa goes into a frenzy, providing damage reduction and status resistance. Removes any existing debuffs.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "Ulfsaar succumbs to his ancient spirit, becoming the most ferocious creature on the battlefield.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0,
+        0,
+        0
+      ],
+      "cooldowns": [
+        60,
+        45,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            80
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STATUS RESISTANCE:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4,
+            4.5,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE ABSORBED TO DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE INCREASE LINGER DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            60,
+            45,
+            30
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Reduces cooldown and allows Ursa to use Enrage while disabled."
+    }
+  ],
+  "talents": [
+    "+9s Fury Swipes Reset Time",
+    "+1.75 Mana Regen",
+    "+0.5% Maul Health As Damage",
+    "+25% Enrage Status Resistance",
+    "+300 Earthshock Radius",
+    "+6 Fury Swipes Damage",
+    "Earthshock has 2 Charges",
+    "+3 Overpower Attacks"
+  ],
+  "facets": []
+}

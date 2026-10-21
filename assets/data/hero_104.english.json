@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 104,
+    "valve_key": "npc_dota_hero_legion_commander",
+    "localized_name": "Legion Commander",
+    "one_liner": "Increases power with each duel victory",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/legion_commander.png",
+    "attributes": {
+      "strength": {
+        "base": 25,
+        "gain": 3
+      },
+      "agility": {
+        "base": 18,
+        "gain": 1.7
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 2.2
+      }
+    },
+    "combat": {
+      "damage_min": 58,
+      "damage_max": 62,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.0,
+      "magic_resistance": 25,
+      "movement_speed": 325,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "They came without warning. Within the city walls of Stonehall there came a rumble and a terrible sound, and from blackness unknown came a force of beasts numbering beyond count, wielding flame and foul sorcery, slaying and snatching mothers and sons to dark purpose. Of once-mighty Stonehall's military strength only the Bronze Legion, led by the indomitable Commander Tresdin, was near enough to answer the call of battle. They rode into their city, fighting through bloodstained alleyways and burning markets, cutting their way through the monstrous throng to the source of the sudden invasion: an ethereal rift within the city square, and at its precipice thundered their dreaded champion.\r\n\t\t\t\t<br><br>Enwrapped in a corrosive shimmer, the leader of the abyssal horde swung its massive blade, cleaving a legionnaire in two as his flesh began to spoil. Tresdin lifted her blood-stained sword and settled her sights on the beast. It turned, smiling at her through a maze of teeth. Heedless of the battle raging around them, they charged one another.\r\n\t\t\t\t<br><br>Deflecting blow after blow, the pair danced their deadly duel as the Bronze Legion met its end around them. Tresdin leapt forward as her foe swung its sword to meet her. The odds turned. The attack smashed into Tresdin suddenly, a brutal thrust from the side, but even as her balance slipped she rallied her strength for another stroke. Blade scraped on blade, beyond the hilt to the gnarled paw below, carving it in two in a fearsome spray of sparks and blood. The vile audience looked on in astonishment as she pressed the attack, driving her blade through her foe's flesh into the stampeding heart within. With a scream that split the clouds above, the beast erupted in a torrent of gore and anguish. The stygian portal wavered, the power sustaining the chasm beyond vanishing as suddenly as it had appeared. The remaining invaders fell quickly to Stonehall steel.\r\n\t\t\t\t<br><br>Though victorious, the survivors saw little to celebrate: the city lay in ruins, and survivors were few. Fires continued to spread. Unfurling her banners of war, Tresdin gathered what allies she could. Her anger smoldered as she pledged brutal vengeance upon the forces of the abyss, and damned be any who would dare stand in her way."
+  },
+  "abilities": [
+    {
+      "name": "legion_commander_overwhelming_odds",
+      "display_name": "Overwhelming Odds",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_overwhelming_odds.png",
+      "description": "Turns the foes' numbers against them, dealing a 100% impact slow for 0.3s and damage to all enemies in the area. Damage increases with each enemy unit or hero in the area, and grants Legion Commander bonus attack speed.",
+      "lore": "The archers of Stonehall are ready at Tresdin's command.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        90,
+        105,
+        120,
+        135
+      ],
+      "cooldowns": [
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            40,
+            70,
+            100,
+            130
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER HERO:",
+          "values": [
+            40,
+            70,
+            100,
+            130
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER CREEP:",
+          "values": [
+            14,
+            16,
+            18,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            50,
+            75,
+            100,
+            125
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE TO BARRIER:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BARRIER DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Overwhelming Odds has larger radius and grants an all damage barrier based on the damage it deals to enemy heroes."
+    },
+    {
+      "name": "legion_commander_press_the_attack",
+      "display_name": "Press The Attack",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_press_the_attack.png",
+      "description": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and health regen for a short time.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "The rallying horn of the Bronze Legion is able to inspire any heart.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        90
+      ],
+      "cooldowns": [
+        16,
+        15,
+        14,
+        13
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVE SPEED:",
+          "values": [
+            13,
+            16,
+            19,
+            22
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "HP REGEN:",
+          "values": [
+            24,
+            36,
+            48,
+            60
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases movement speed and becomes an 500 area of effect ability, and always affects Legion Commander when used."
+    },
+    {
+      "name": "legion_commander_moment_of_courage",
+      "display_name": "Moment of Courage",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_moment_of_courage.png",
+      "description": "When attacked a number of times, Legion Commander will counter-attack her target with bonus lifesteal.",
+      "lore": "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke.",
+      "notes": [
+        "The lifestealing strike is only triggered if being attacked."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0.3
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACKS TO TRIGGER:",
+          "values": [
+            7,
+            6,
+            5,
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LIFESTEAL:",
+          "values": [
+            55,
+            65,
+            75,
+            85
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "legion_commander_outfight_them",
+      "display_name": "Outfight Them!",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_outfight_them.png",
+      "description": "When Legion Commander or an allied Hero within 1200 range casts an ability, they gain bonus armor for 6s; allies gain 50% of the value.  This bonus stacks independently.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ARMOR:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "legion_commander_duel",
+      "display_name": "Duel",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_duel.png",
+      "description": "Legion Commander and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items, and the target enemy hero cannot use abilities. If either hero dies during the duration, the hero winning the Duel gains permanent bonus damage.",
+      "lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
+      "notes": [
+        "Duels will end if the units are pushed 2000 units apart."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        80,
+        100,
+        120
+      ],
+      "cooldowns": [
+        60,
+        55,
+        50
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4,
+            4.5,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            10,
+            20,
+            30
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "When Legion Commander wins a duel, Press the Attack is automatically triggered around her."
+    }
+  ],
+  "talents": [
+    "-2s Overwhelming Odds Cooldown",
+    "+1 Outfight Them! Armor",
+    "+40 Press The Attack HP Regen",
+    "+35 Overwhelming Odds Damage per Hero",
+    "+0.75s Duel Duration",
+    "-1 Moment of Courage Attacks To Trigger",
+    "+100% Moment of Courage Lifesteal",
+    "Duel Advances Cooldown by 30s On Victory"
+  ],
+  "facets": []
+}

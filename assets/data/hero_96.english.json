@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 96,
+    "valve_key": "npc_dota_hero_centaur",
+    "localized_name": "Centaur Warrunner",
+    "one_liner": "Reflects damage back to his attackers",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/centaur.png",
+    "attributes": {
+      "strength": {
+        "base": 28,
+        "gain": 4.3
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1
+      },
+      "intelligence": {
+        "base": 15,
+        "gain": 1.6
+      }
+    },
+    "combat": {
+      "damage_min": 62,
+      "damage_max": 64,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 0.5,
+      "magic_resistance": 25,
+      "movement_speed": 295,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "It's said that a centaur's road is paved with the corpses of the fallen.  For the one called Warrunner, it has been a long road indeed.  To outsiders, the four-legged clans of Druud are often mistaken for simple, brutish creatures.  Their language has no written form; their culture lacks pictographic traditions, structured music, formalized religion.  For centaurs, combat is the perfect articulation of thought, the highest expression of self.  If killing is an art among centaurs, then Bradwarden the Warrunner is their greatest artist.  He rose to dominance on the proving grounds of Omexe, an ancient arena where centaur clans have for millennia gathered to perform their gladiatorial rites.  As his fame spread, spectators came from far and wide to see the great centaur in action.  Always the first to step into the arena, and the last to leave, he composes a masterpiece in each guttering spray, each thrust of blood-slickened blade-length.  It is the poetry of blood on steel, flung in complex patterns across the pale sands of the killing floor.\r\n\t\t\t\t<br><br>Warrunner defeated warrior after warrior, until the arena boomed with the cheering of his name, and he found himself alone, the uncontested champion of his kind.  The great belt of Omexe was bestowed, wrapped around his broad torso, but in his victory, the death-artist found only emptiness.  For what is a warrior without a challenge?  The great centaur galloped out of Omexe that day with a new goal.  To his people, Warrunner is the greatest warrior to ever step into the arena.  Now he has set out to prove he is the greatest fighter who has ever lived."
+  },
+  "abilities": [
+    {
+      "name": "centaur_hoof_stomp",
+      "display_name": "Hoof Stomp",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_hoof_stomp.png",
+      "description": "After a brief windup, Centaur Warrunner slams the ground, stunning and damaging nearby enemy units. During the delay, he is disarmed but can move.",
+      "lore": "When the mighty hoof of the Warrunner touches soil, the tremors are felt far and wide.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        18,
+        16,
+        14,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STOMP DAMAGE:",
+          "values": [
+            70,
+            140,
+            210,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.6,
+            1.8,
+            2,
+            2.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WINDUP TIME:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "centaur_double_edge",
+      "display_name": "Double Edge",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_double_edge.png",
+      "description": "Centaur strikes a mighty blow at melee range, damaging both himself and a small area around the target. Deals extra damage based on your strength. Centaur cannot die from Double Edge.",
+      "lore": "In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage.",
+      "notes": [
+        "Double Edge deals magic type damage to both the targets and himself."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        175,
+        175,
+        175,
+        175
+      ],
+      "mana_costs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "cooldowns": [
+        3.5
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            120,
+            180,
+            240,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH DAMAGE:",
+          "values": [
+            60,
+            90,
+            120,
+            150
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS STRENGTH:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STRENGTH DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Causes Double Edge to slow enemy heroes and increase Centaur's strength per hero hit for a short time. Duration refreshes per stack, up to a max of 5 stacks."
+    },
+    {
+      "name": "centaur_return",
+      "display_name": "Retaliate",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_return.png",
+      "description": "Centaur counters all attacks, dealing damage back to the attacker. Returns a fixed amount plus a percentage of your strength. Deals half damage to towers.",
+      "lore": "Bradwarden has no need to parry his opponent's attacks; his armor-like hide does it for him.",
+      "notes": [
+        "Retaliate triggers when the attack hits.",
+        "Retaliate deals damage to towers.",
+        "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RETURN DAMAGE:",
+          "values": [
+            15,
+            25,
+            35,
+            45
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STR RETURN DAMAGE:",
+          "values": [
+            14,
+            21,
+            28,
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "centaur_work_horse",
+      "display_name": "Work Horse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_work_horse.png",
+      "description": "Centaur hitches a cart behind him. While active, Centaur gains the benefit of Stampede for the current level of Stampede, and can cast Hitch a Ride on a target ally.",
+      "lore": "It is a great honor to be offered a ride by Centaur Warrunner and a grave mistake to refuse it.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        35
+      ],
+      "special_values": [
+        {
+          "heading": "TOTAL DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "centaur_stampede",
+      "display_name": "Stampede",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_stampede.png",
+      "description": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and slow any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.",
+      "lore": "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Allies Yes, Enemies No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        100,
+        95,
+        90
+      ],
+      "special_values": [
+        {
+          "heading": "STAMPEDE DURATION:",
+          "values": [
+            3.5,
+            4,
+            4.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH MULTIPLIER DAMAGE:",
+          "values": [
+            2,
+            2.5,
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TRAMPLE RADIUS:",
+          "values": [
+            105
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "centaur_horsepower",
+      "display_name": "Horsepower",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_horsepower.png",
+      "description": "Centaur Warrunner gains 40% of his strength as bonus movement speed.\n\n This Movement speed bonus does not stack with bonuses from boots.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CURRENT SPEED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+4 Health Regen",
+    "+15 Movement Speed",
+    "+10 Strength",
+    "+30% Double Edge Strength Damage",
+    "+45 Retaliate Damage",
+    "-25s Stampede Cooldown",
+    "Gains Retaliate Aura",
+    "+1s Hoof Stomp Duration"
+  ],
+  "facets": []
+}

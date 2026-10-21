@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 33,
+    "valve_key": "npc_dota_hero_enigma",
+    "localized_name": "Enigma",
+    "one_liner": "Traps and damages enemies in a black hole",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/enigma.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 14,
+        "gain": 1
+      },
+      "intelligence": {
+        "base": 19,
+        "gain": 3.6
+      }
+    },
+    "combat": {
+      "damage_min": 19,
+      "damage_max": 25,
+      "attack_rate": 1.7,
+      "attack_range": 500,
+      "projectile_speed": 900,
+      "armor": 3.33,
+      "magic_resistance": 25,
+      "movement_speed": 280,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Nothing is known of Enigma's background. There are only stories and legends, most of them apocryphal, passed down through the ages. In truth, Enigma is a mystery for whom the only true biography is description: he is a universal force, a consumer of worlds. He is a being of the void, at times corporeal, other times ethereal. A beast between the planes. \r\n\t\t\t\t<br><br>There are stories that say he was once a great alchemist who tried to unlock the secrets of the universe and was cursed for his arrogance. Other legends tell that he is an ancient being of strange gravity, the abyss personified--a twisted voice from out the original darkness, before the first light in the universe. And there are older legends that say he is the first collapsed star, a black hole grown complicated and sentient--his motivations unknowable, his power inexorable, a force of destruction unleashed upon existence itself."
+  },
+  "abilities": [
+    {
+      "name": "enigma_malefice",
+      "display_name": "Malefice",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_malefice.png",
+      "description": "Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for multiple instances.  An instance strikes every 2 seconds.",
+      "lore": "Strange gravities pull at the core of those who would oppose you, holding them in place.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        450,
+        500,
+        550,
+        600
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.3,
+            0.5,
+            0.7,
+            0.9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER INSTANCE:",
+          "values": [
+            55,
+            70,
+            85,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INSTANCES:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases Malefice stun duration by 0.3s and creates an Eidolon next to the target every instance of Malefice stun. These Eidolons will not multiply further."
+    },
+    {
+      "name": "enigma_demonic_conversion",
+      "display_name": "Demonic Summoning",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_demonic_conversion.png",
+      "description": "Summons three fragments of Enigma himself at the cost of health.  The eidolons health is increased by 3% of Enigma's current health. These eidolons are all under Enigma's control, and repeated successful attacks cause them to multiply.  When this happens, the eidolons have their health restored.",
+      "lore": "Enigma is capable of drawing aspects of himself from other dimensions - the result is a trio of dark eidolons that hunt the corporeal plane.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        400
+      ],
+      "mana_costs": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "cooldowns": [
+        45,
+        40,
+        35,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "SPAWN COUNT:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS TO MULTIPLY:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EIDOLON HP:",
+          "values": [
+            180,
+            200,
+            220,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EIDOLON DAMAGE:",
+          "values": [
+            16,
+            28,
+            40,
+            52
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EIDOLON MAGIC RESISTANCE:",
+          "values": [
+            30,
+            40,
+            50,
+            60
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EIDOLON ATTACK RANGE:",
+          "values": [
+            380,
+            420,
+            460,
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            40
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "enigma_midnight_pulse",
+      "display_name": "Midnight Pulse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_midnight_pulse.png",
+      "description": "Steeps an area in dark resonance, dealing 5 + a percentage of the enemies current HP as damage.",
+      "lore": "A section of the world slowly descends into the void.",
+      "notes": [
+        "This ability destroys trees in its area.",
+        "Multiple instances of Midnight Pulse do not stack."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        65,
+        90,
+        115,
+        140
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT HEALTH AS DAMAGE:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "enigma_event_horizon",
+      "display_name": "Event Horizon",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_event_horizon.png",
+      "description": "Units in a 600 radius moving away from Enigma have a movespeed penalty.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "enigma_black_hole",
+      "display_name": "Black Hole",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_black_hole.png",
+      "description": "CHANNELED - Summons a vortex that sucks in nearby enemy units.  Enemies affected by Black Hole cannot move, attack, or cast spells.",
+      "lore": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        275
+      ],
+      "mana_costs": [
+        300,
+        400,
+        500
+      ],
+      "cooldowns": [
+        180,
+        170,
+        160
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            420
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Black Hole deals additional damage equivalent to 4% of the unit's Max Health per second and does a non-interrupting pull towards it in a 1000 AoE. Pulls at a rate of 150."
+    }
+  ],
+  "talents": [
+    "+10 Eidolon Attack Speed",
+    "+50 Black Hole Damage Per Second",
+    "+250 Health",
+    "+100 Event Horizon Radius",
+    "+200 Midnight Pulse Radius",
+    "+30 Eidolon Damage",
+    "+4 Malefice Instances",
+    "+4 Demonic Summoning Eidolons"
+  ],
+  "facets": []
+}

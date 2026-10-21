@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 85,
+    "valve_key": "npc_dota_hero_undying",
+    "localized_name": "Undying",
+    "one_liner": "Summons hordes of zombies to attack his foes",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/undying.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 13,
+        "gain": 1.2
+      },
+      "intelligence": {
+        "base": 27,
+        "gain": 2.8
+      }
+    },
+    "combat": {
+      "damage_min": 55,
+      "damage_max": 63,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.16,
+      "magic_resistance": 25,
+      "movement_speed": 295,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "How long has it been since he lost his name? The torn ruin of his mind no longer knows.\r\n\t\t\t\t<br><br>Dimly he recalls armor and banners and grim-faced kin riding at his side. He remembers a battle: pain and fear as pale hands ripped him from his saddle. He remembers terror as they threw him into the yawning pit of the Dead God alongside his brothers, to hear the Dirge and be consumed into nothingness. In the darkness below, time left them. Thought left them. Sanity left them. Hunger, however, did not. They turned on each other with split fingernails and shattered teeth. Then it came: distant at first, a fragile note at the edge of perception, joined by another, then another, inescapable and unending. The chorus grew into a living wall of sound pulsing in his mind until no other thought survived. With the Dirge consuming him, he opened his arms to the Dead God and welcomed his obliteration. Yet destruction was not what he'd been chosen for. The Dead God demanded war. In the belly of the great nothing, he was granted a new purpose: to spread the Dirge across the land, to rally the sleepless dead against the living. He was to become the Undying, the herald of the Dead God, to rise and fall and rise again whenever his body failed him. To trudge on through death unending, that the Dirge might never end."
+  },
+  "abilities": [
+    {
+      "name": "undying_decay",
+      "display_name": "Decay",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_decay.png",
+      "description": "Undying steals strength from all enemy heroes in an area, dealing base damage as he claims the enemy's strength for himself. Deals 2x damage to creeps.",
+      "lore": "The strength of the living is simply borrowed from the strength of the dead.",
+      "notes": [
+        "The strength stolen stacks, but can't cause a hero to have strength below 1.",
+        "The strength steal takes effect before the damage is dealt.",
+        "Affects invisible units."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        110
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            20,
+            60,
+            100,
+            140
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH STEAL:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STEAL DURATION:",
+          "values": [
+            35
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases strength steal."
+    },
+    {
+      "name": "undying_soul_rip",
+      "display_name": "Soul Rip",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_soul_rip.png",
+      "description": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Soul Rip can also be used to heal Tombstone.",
+      "lore": "Even allies feel despair in Undying's presence.",
+      "notes": [
+        "Can heal Tombstone, but can't heal or damage other buildings.",
+        "Does not rip from invisible units, invulnerable units, units in the fog of war, or spell immune enemies.",
+        "Does rip from spell immune allies, including zombies."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        750
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        15,
+        12,
+        9,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE/HEAL PER UNIT:",
+          "values": [
+            14,
+            26,
+            38,
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX UNITS:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RIP RADIUS:",
+          "values": [
+            1300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TOMBSTONE HEAL:",
+          "values": [
+            4,
+            8,
+            12,
+            16
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH GAIN:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "undying_tombstone",
+      "display_name": "Tombstone",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_tombstone.png",
+      "description": "Summons a tombstone at the target point.  Zombies will frequently spawn next to every enemy unit in the area around the Tombstone, and attack them.  Zombies have the Deathlust ability, which causes their attacks to slow the target, and if the target reaches below a certain amount of health, increases the attack and movement speed of the zombie.",
+      "lore": "Dirge calls on his fallen brothers to fight for the Dead God.",
+      "notes": [
+        "Tombstone is Spell Immune, but can be healed by Soul Rip.",
+        "Zombies and Tombstone are Spell Immune.",
+        "If their initial target dies or goes out of vision, the Zombie will die."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        125,
+        150,
+        175,
+        200
+      ],
+      "cooldowns": [
+        80
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TOMBSTONE DURATION:",
+          "values": [
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ZOMBIE SPAWN RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ZOMBIE SPAWN INTERVAL:",
+          "values": [
+            4,
+            3.6,
+            3.2,
+            2.8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ZOMBIE ATTACK DAMAGE:",
+          "values": [
+            34
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Tombstone can be cast on an allied hero to bunker inside of the tombstone. Heroes that enter the Tombstone cannot leave for 2 seconds nor can they re-enter after leaving. If the tombstone is destroyed with a hero inside, that hero gets stunned for 2 seconds."
+    },
+    {
+      "name": "undying_ceaseless_dirge",
+      "display_name": "Ceaseless Dirge",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_ceaseless_dirge.png",
+      "description": "When Undying dies he will instantly respawn in the fountain. Begins the game on cooldown. Cannot be refreshed.",
+      "lore": "Only when the Dirge of the Dead God ceases will this soldier's march finally end.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        480
+      ],
+      "special_values": []
+    },
+    {
+      "name": "undying_flesh_golem",
+      "display_name": "Flesh Golem",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_flesh_golem.png",
+      "description": "Undying transforms into a horrifying flesh golem.  While in this state, he gains a percentage increase to strength, bonus movement speed, and causes attacks to slow, apply damage amplification, and spawn Tombstone zombies.",
+      "lore": "The flesh of the recently dead add to the power of Dirge's plague.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150
+      ],
+      "cooldowns": [
+        140
+      ],
+      "special_values": [
+        {
+          "heading": "SLOW ON ATTACK:",
+          "values": [
+            30,
+            35,
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE AMPLIFICATION:",
+          "values": [
+            25,
+            30,
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE AMP DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH MULTIPLIER:",
+          "values": [
+            40,
+            50,
+            60
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVESPEED:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+30 Decay Damage",
+    "-15s Tombstone Cooldown",
+    "+12 Soul Rip Damage/Heal",
+    "+20 Zombie Damage",
+    "-2s Decay Cooldown",
+    "+4 Tombstone Attacks to Destroy",
+    "+50% Flesh Golem Strength Bonus",
+    "Tombstone On Death"
+  ],
+  "facets": []
+}

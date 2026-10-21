@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 29,
+    "valve_key": "npc_dota_hero_tidehunter",
+    "localized_name": "Tidehunter",
+    "one_liner": "Durable hero who shrugs off enemy damage",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/tidehunter.png",
+    "attributes": {
+      "strength": {
+        "base": 25,
+        "gain": 3.7
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1.5
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 50,
+      "damage_max": 56,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.5,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The Tidehunter known as Leviathan was once the champion of the Sunken Isles, but his motives are as mysterious as those of his people. We all know the importance of the Drylanders' shipping lanes, how empires may rise and fall according to who controls the open water. Far less is known of the submarine lanes, and how the warring tribes of the Meranthic Diaspora have carved out habitations through endless undersea skirmishes. In the fragile treaties between the Mer and Men, we can glimpse the extent of the drowned empires, but their politics appear complex and opaque. It would seem that Leviathan tired of such petty strife, and set off on his own, loyal only to his abyssal god, Maelrawn the Tentacular. He stalks the shallows now in search of men or meranths who stray into his path, and with a particular loathing for Admiral Kunkka, who has long been his nemesis for reasons lost in the deepest trenches of the sea."
+  },
+  "abilities": [
+    {
+      "name": "tidehunter_gush",
+      "display_name": "Gush",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_gush.png",
+      "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor.",
+      "lore": "During his championship of the Sunken Isles, Leviathan gained mastery over the open sea.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            -40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ARMOR REDUCTION:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DEBUFF DURATION:",
+          "values": [
+            4.5
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Gush becomes a ground targeted wave ability that affects enemy units in a line.  Decreases cooldown."
+    },
+    {
+      "name": "tidehunter_kraken_shell",
+      "display_name": "Kraken Shell",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_kraken_shell.png",
+      "description": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. Reduced block amount versus creeps. The hide also removes negative status effects if the damage taken crosses a threshold.\n\nCan be activated to double the block amount at the cost of 40% movement speed. Lasts 4s.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        45
+      ],
+      "cooldowns": [
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE BLOCK:",
+          "values": [
+            15,
+            35,
+            55,
+            75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE BLOCK PER KILL:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CREEP PENALTY:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE CLEANSE THRESHOLD:",
+          "values": [
+            600,
+            550,
+            500,
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE RESET INTERVAL:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tidehunter_anchor_smash",
+      "display_name": "Anchor Smash",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_anchor_smash.png",
+      "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage. The radius of Anchor Smash is Tidehunter's attack range plus 225 units.",
+      "lore": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon.",
+      "notes": [
+        "Anchor Smash works on all Ancient creeps except for Roshan.",
+        "Damage done by Anchor Smashes triggered by Kraken Shell Cleanse is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        40,
+        45,
+        50,
+        55
+      ],
+      "cooldowns": [
+        7,
+        6,
+        5,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK BONUS DAMAGE:",
+          "values": [
+            50,
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            -25,
+            -30,
+            -35,
+            -40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tidehunter_dead_in_the_water",
+      "display_name": "Dead in the Water",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_dead_in_the_water.png",
+      "description": "Tidehunter attaches a heavy anchor to an enemy hero. The hero is leashed while attached to the anchor. Attempting to move more than 350 units away from the anchor forces the hero to 100 move speed, dragging the anchor behind them. The anchor can be destroyed with 4 hero attacks.",
+      "lore": "Anchors Aweigh!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        350
+      ],
+      "mana_costs": [
+        110
+      ],
+      "cooldowns": [
+        35
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ANCHOR DRAG SPEED:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CHAIN LENGTH:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ANCHOR DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tidehunter_ravage",
+      "display_name": "Ravage",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_ravage.png",
+      "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
+      "lore": "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea.",
+      "notes": [
+        "Ravage will hit invisible units.",
+        "Ravage waves move outwards at a speed of 725."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        125,
+        225,
+        325
+      ],
+      "cooldowns": [
+        150,
+        145,
+        140
+      ],
+      "damages": [
+        275,
+        375,
+        475
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            2,
+            2.2,
+            2.4
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tidehunter_leviathans_catch",
+      "display_name": "Leviathan's Catch",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_leviathans_catch.png",
+      "description": "Whenever an enemy hero is killed by Tidehunter or dies under his debuffs, a fish appears in their place; Tidehunter can eat the fish to permanently gain 3 Health, 2 Attack Range, and 1 Bonus Damage Block.\n\nTidehunter eats a free fish every time he reaches an even hero level.",
+      "notes": [
+        "Enemies can destroy the fish.",
+        "Bonus Damage Block only applies if another source of Damage Block will be affecting the incoming physical attack."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "HEALTH GAINED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK RANGE GAINED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE BLOCK GAINED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+10% Anchor Smash Damage Reduction",
+    "+20% Gush Slow",
+    "+90 Gush Damage",
+    "-15s Ravage Cooldown",
+    "Kraken Shell Cleanse triggers Anchor Smash",
+    "-4 Gush Armor",
+    "+1s Ravage Stun Duration",
+    "Anchor Smash affects buildings"
+  ],
+  "facets": []
+}

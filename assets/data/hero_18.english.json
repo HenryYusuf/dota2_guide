@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 18,
+    "valve_key": "npc_dota_hero_sven",
+    "localized_name": "Sven",
+    "one_liner": "Cleaves down enemies with his incredible strength",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/sven.png",
+    "attributes": {
+      "strength": {
+        "base": 24,
+        "gain": 3.5
+      },
+      "agility": {
+        "base": 18,
+        "gain": 2.2
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.5
+      }
+    },
+    "combat": {
+      "damage_min": 61,
+      "damage_max": 63,
+      "attack_rate": 1.9,
+      "attack_range": 150,
+      "projectile_speed": 0,
+      "armor": 3.0,
+      "magic_resistance": 25,
+      "movement_speed": 325,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Sven is the bastard son of a Vigil Knight, born of a Pallid Meranth, raised in the Shadeshore Ruins.  With his father executed for violating the Vigil Codex, and his mother shunned by her wild race, Sven believes that honor is to be found in no social order, but only in himself.  After tending his mother through a lingering death, he offered himself as a novice to the Vigil Knights, never revealing his identity.  For thirteen years he studied in his father's school, mastering the rigid code that declared his existence an abomination.  Then, on the day that should have been his In-Swearing, he seized the Outcast Blade, shattered the Sacred Helm, and burned the Codex in the Vigil's Holy Flame.  He strode from Vigil Keep, forever solitary, following his private code to the last strict rune. Still a knight, yes...but a Rogue Knight. He answers only to himself."
+  },
+  "abilities": [
+    {
+      "name": "sven_storm_bolt",
+      "display_name": "Storm Hammer",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_storm_bolt.png",
+      "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
+      "lore": "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        110
+      ],
+      "cooldowns": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "damages": [
+        80,
+        160,
+        240,
+        320
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1,
+            1.25,
+            1.5,
+            1.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250,
+            270,
+            290,
+            310
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases cast range and applies a basic dispel on the target. Affects invulnerable units. If alt-cast, it deals an additional 180 damage and Sven travels with the Storm Hammer."
+    },
+    {
+      "name": "sven_great_cleave",
+      "display_name": "Great Cleave",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_great_cleave.png",
+      "description": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
+      "lore": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CLEAVE DISTANCE:",
+          "values": [
+            400,
+            500,
+            600,
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CLEAVE DAMAGE:",
+          "values": [
+            60,
+            70,
+            80,
+            90
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "sven_warcry",
+      "display_name": "Warcry",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_warcry.png",
+      "description": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 8 seconds.",
+      "lore": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "cooldowns": [
+        36,
+        32,
+        28,
+        24
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS SPEED:",
+          "values": [
+            6,
+            9,
+            12,
+            15
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ARMOR:",
+          "values": [
+            5,
+            8,
+            11,
+            14
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PASSIVE BONUS ARMOR:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PASSIVE RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PHYSICAL BARRIER AMOUNT:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases radius and bonus movement speed. Warcry is now undispellable and provides a 300 physical damage barrier."
+    },
+    {
+      "name": "sven_gods_strength",
+      "display_name": "God's Strength",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_gods_strength.png",
+      "description": "Sven channels his rogue strength, granting bonus damage and slow resistance for 30 seconds.",
+      "lore": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat.",
+      "notes": [
+        "The bonus damage is based on base damage and the primary attribute of Sven."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150
+      ],
+      "cooldowns": [
+        110,
+        105,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            110,
+            150,
+            190
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW RESISTANCE:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "sven_wrath_of_god",
+      "display_name": "Wrath of God",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_wrath_of_god.png",
+      "description": "Sven gains additional attack damage from Strength.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER STRENGTH:",
+          "values": [
+            0.08
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT DAMAGE BONUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+5s Warcry Duration",
+    "+20% God's Strength Slow Resistance",
+    "-12s God's Strength Cooldown",
+    "+25% Great Cleave Damage",
+    "-25% Storm Hammer Cooldown and Mana Cost",
+    "+8 Warcry Armor",
+    "+50% God's Strength Damage",
+    "+1s Storm Hammer Stun Duration"
+  ],
+  "facets": []
+}

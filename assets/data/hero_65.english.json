@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 65,
+    "valve_key": "npc_dota_hero_batrider",
+    "localized_name": "Batrider",
+    "one_liner": "Can lasso an enemy away from his team",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/batrider.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 2.9
+      },
+      "agility": {
+        "base": 13,
+        "gain": 2
+      },
+      "intelligence": {
+        "base": 22,
+        "gain": 3.2
+      }
+    },
+    "combat": {
+      "damage_min": 12,
+      "damage_max": 16,
+      "attack_rate": 1.7,
+      "attack_range": 400,
+      "projectile_speed": 900,
+      "armor": 3.16,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "There is no such thing as harmony among the creatures of the Yama Raskav Jungle. By bite, or claw, or pincer, or hoof, even the slightest sign of weakness means a swift death. They say the Rider was just a lad cutting chaff in his family's field when he was taken, swept up by a massive morde-bat looking for take-out. But this boy had a better idea, and wriggled his way from his captor's grip, onto the beast's back, and hacked it down with his tools. Emerging from the bloody wreckage and intoxicated by the thrill of flight, the boy realized he'd found his calling.\r\n\t\t\t\t<br><br>The boy grew, and every summer he'd return to his family's field, often setting out into the bush seeking to reclaim that first thrill of facing death in the form of jaws or a fatal fall. The years went on, but his fire only grew stronger. He studied the overgrowth, plunging deeper with each expedition, until finally he found his way to the caves at the heart of hostility. They say the Rider, on the eve of a scorching summer night, had nothing but a rope, a bottle of liquid courage and a burning determination to feel the skies once more, when he plunged inside..."
+  },
+  "abilities": [
+    {
+      "name": "batrider_sticky_napalm",
+      "display_name": "Sticky Napalm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_sticky_napalm.png",
+      "description": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies. Additional casts of Sticky Napalm continue to increase damage, up to 20 stacks. Applies a small amount of damage with each cast.",
+      "lore": "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents.",
+      "notes": [
+        "All damage from Batrider gets amplified, except for Radiance, Orb of Venom, Urn of Shadows, and Spirit Vessel.",
+        "Sticky Napalm does not require turning to cast.",
+        "Sticky Napalm deals 20% damage to creeps."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        22
+      ],
+      "cooldowns": [
+        3
+      ],
+      "special_values": [
+        {
+          "heading": "STACKS PER CAST:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER STACK:",
+          "values": [
+            2.5,
+            5,
+            7.5,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            375
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -0.75,
+            -1.5,
+            -2.25,
+            -3
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "TURN RATE SLOW:",
+          "values": [
+            -10,
+            -30,
+            -50,
+            -70
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "APPLICATION DAMAGE:",
+          "values": [
+            5,
+            10,
+            15,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUILDING DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Sticky Napalm no longer has a stack limit.\n\nSticky Napalm deals damage to structures."
+    },
+    {
+      "name": "batrider_flamebreak",
+      "display_name": "Flamebreak",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_flamebreak.png",
+      "description": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, slowing and dealing damage over time to enemies in the area.",
+      "lore": "A molotov cocktail is the weapon of choice for Batrider.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1300
+      ],
+      "mana_costs": [
+        110
+      ],
+      "cooldowns": [
+        22,
+        19,
+        16,
+        13
+      ],
+      "special_values": [
+        {
+          "heading": "IMPACT DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            25,
+            30,
+            35,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DURATION:",
+          "values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KNOCKBACK DISTANCE:",
+          "values": [
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            6,
+            12,
+            18,
+            24
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "batrider_firefly",
+      "display_name": "Firefly",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_firefly.png",
+      "description": "Batrider takes to the skies, moving increasingly fast and laying down a trail of flames from the air. The fire damages any enemies it touches and destroys trees below Batrider. Maximum movement speed bonus is reached at the end of Firefly's duration.",
+      "lore": "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive.  Batrider just chooses to destroy the jungle along with his foes.",
+      "notes": [
+        "During this the Batrider can fly above units, trees and impassable terrain.",
+        "If duration ends when above impassable terrain, the Batrider can get stuck.",
+        "The trail persists through Batrider's death."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        48,
+        42,
+        36,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            15
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX MOVEMENT SPEED BONUS:",
+          "values": [
+            12,
+            18,
+            24,
+            30
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "batrider_smoldering_resin",
+      "display_name": "Smoldering Resin",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_smoldering_resin.png",
+      "description": "Batrider's attacks apply a debuff that deals 20% of the attack damage every 1s for 2s.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "batrider_flaming_lasso",
+      "display_name": "Flaming Lasso",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_flaming_lasso.png",
+      "description": "Lassoes an enemy and drags them in Batrider's wake. Dragged units cannot move, attack, or use abilities.  Teleporting or blinking will break the lasso.",
+      "lore": "Few dare to ask to ride on the bat, as Batrider gives them free of charge.",
+      "notes": [
+        "Killing the target or the Batrider will break the lasso before its expiration.",
+        "If Batrider moves more than 425 units in 0.05 seconds the lasso breaks.",
+        "Batrider cannot attack while using Flaming Lasso."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        125,
+        150,
+        175
+      ],
+      "cooldowns": [
+        90,
+        75,
+        60
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            2.25,
+            2.75,
+            3.25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TOTAL DAMAGE:",
+          "values": [
+            125,
+            250,
+            375
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within 650 units. The secondary target is tethered to the first."
+    }
+  ],
+  "talents": [
+    "+5% Firefly Max Movement Speed Bonus",
+    "+1s Smoldering Resin Duration",
+    "+30 Firefly Damage Per Second",
+    "+0.75% Sticky Napalm Movement Slow",
+    "Attacks apply 1 Stack of Sticky Napalm",
+    "-6s Flamebreak Cooldown",
+    "+0.75s Flaming Lasso Duration",
+    "Flamebreak applies 4 Sticky Napalm Stacks"
+  ],
+  "facets": []
+}

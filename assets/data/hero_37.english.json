@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 37,
+    "valve_key": "npc_dota_hero_warlock",
+    "localized_name": "Warlock",
+    "one_liner": "Summons powerful demons to fight at his side",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 10,
+        "gain": 1
+      },
+      "intelligence": {
+        "base": 25,
+        "gain": 3.1
+      }
+    },
+    "combat": {
+      "damage_min": 52,
+      "damage_max": 62,
+      "attack_rate": 1.7,
+      "attack_range": 600,
+      "projectile_speed": 1200,
+      "armor": 2.66,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "As Chief Curator and Head of Acquisitions for the Arcane Archives of the Ultimyr Academy, Demnok Lannik was tireless in his pursuit of lost, rare and forbidden tomes. No cursed temple was so foreboding, no cavern path so treacherous, that any concern for his own survival could dissuade him from entering if rumors hinted that some pamphlet of primordial lore might still survive in its depths. However, so often did his investigations trigger the wrath of protector entities, that he finally found it necessary to master the arts of magic. He bent himself to learning sorcery with the same thorough obsessiveness that marked his quest for incunabula, becoming the most powerful Warlock of the Academy in less time than most practitioners required to complete a course of undergraduate work. Almost as an afterthought, he carved a staff of Dreadwood and summoned into it a captive spirit from the Outer Hells. And anticipating the day when he will have recovered every last lost spellbook, he has commenced writing his own Black Grimoire. It will undoubtedly be instructive."
+  },
+  "abilities": [
+    {
+      "name": "warlock_fatal_bonds",
+      "display_name": "Fatal Bonds",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_fatal_bonds.png",
+      "description": "Binds several visible enemy units together, causing a percentage of the damage dealt to one of them to be felt by the others.",
+      "lore": "An ancient incantation that links the vital energies of multiple lifeforms into one collective body.",
+      "notes": [
+        "The shared damage type is the same as the type of damage inflicted.",
+        "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        120,
+        130,
+        140,
+        150
+      ],
+      "cooldowns": [
+        42,
+        34,
+        26,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "ENEMIES BOUND:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHARED DAMAGE:",
+          "values": [
+            15,
+            18,
+            21,
+            24
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            18
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BIND RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "warlock_shadow_word",
+      "display_name": "Shadow Word",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_shadow_word.png",
+      "description": "Warlock whispers an incantation, casting a spell on a unit that makes it deal damage to nearby enemy units and heal nearby ally units. Target Unit will also heal or be damaged depending on whether they are ally or enemy.",
+      "lore": "Demnok's arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        650,
+        700,
+        750,
+        800
+      ],
+      "mana_costs": [
+        110,
+        120,
+        130,
+        140
+      ],
+      "cooldowns": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "HEAL/DAMAGE:",
+          "values": [
+            15,
+            25,
+            35,
+            45
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EFFECT RADIUS:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases Effect Radius. Shadow Word now applies to %additional_targets% additional units in a %cast_aoe% radius, prioritizing heroes. The healing and damage on the additional targets is reduced by %secondary_reduction%%."
+    },
+    {
+      "name": "warlock_upheaval",
+      "display_name": "Upheaval",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_upheaval.png",
+      "description": "CHANNELED - A powerful slowing and damaging current that grows stronger as it's channeled. Lasts up to 10 seconds. Enemies are slowed for 1 second after leaving the area or the spell ends.",
+      "lore": "Demnok manipulates space-time, impairing entire armies.",
+      "notes": [
+        "The slow increase is based on length of the channel, not the duration an enemy was standing in the area."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        45,
+        40,
+        35,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            575,
+            600,
+            625,
+            650
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW PER SECOND:",
+          "values": [
+            11,
+            14,
+            17,
+            20
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX SLOW:",
+          "values": [
+            55,
+            70,
+            85,
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE:",
+          "values": [
+            35,
+            60,
+            85,
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX CHANNEL DURATION:",
+          "values": [
+            10,
+            12,
+            14,
+            16
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "While channeling, Warlock spawns a minor imp every 2 seconds that lasts for 15 seconds and explodes dealing damage to all enemies around them upon death."
+    },
+    {
+      "name": "warlock_eldritch_summoning",
+      "display_name": "Eldritch Summoning",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_eldritch_summoning.png",
+      "description": "Whenever an enemy unit dies while afflicted by one or more of Warlock's abilities, a minor imp is summoned that lasts for 15 seconds and explodes on death. Imps will automatically seek out nearby units, favoring fatally bonded heroes, and will explode when reaching their prey.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "IMP HEALTH:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EXPLOSION DAMAGE:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases the health and explosion damage of minor imps."
+    },
+    {
+      "name": "warlock_rain_of_chaos",
+      "display_name": "Chaotic Offering",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_rain_of_chaos.png",
+      "description": "Summons a Golem from the depths, stunning enemies for 0.8 seconds. The Golem lives 60 seconds, takes reduced damage from spells, has increased Slow Resistance, has Permanent Immolation and Flaming Fists on attack.",
+      "lore": "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks.",
+      "notes": [
+        "This ability destroys trees in its area of effect."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        200,
+        400,
+        600
+      ],
+      "cooldowns": [
+        165
+      ],
+      "special_values": [
+        {
+          "heading": "SUMMON BLAST RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM HEALTH:",
+          "values": [
+            1500,
+            2250,
+            3000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM DAMAGE:",
+          "values": [
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM MOVEMENT SPEED:",
+          "values": [
+            320,
+            340,
+            360
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM HEALTH REGEN:",
+          "values": [
+            25,
+            50,
+            75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM GOLD BOUNTY:",
+          "values": [
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM ARMOR:",
+          "values": [
+            8,
+            12,
+            14
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GOLEM SLOW RESISTANCE:",
+          "values": [
+            60
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Calls 2 Golems."
+    }
+  ],
+  "talents": [
+    "+4% Fatal Bonds Damage",
+    "+50 Upheaval Radius",
+    "+8 Upheaval Attack Speed per second on Allies",
+    "+150 Shadow Word AoE",
+    "25% Damage Resistance for Chaotic Offering Golems",
+    "+45 Upheaval Damage",
+    "Summons a Golem on death",
+    "+5 Fatal Bonds Targets"
+  ],
+  "facets": []
+}

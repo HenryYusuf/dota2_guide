@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/about/about_screen.dart';
+import '../../features/heroes/hero_detail_screen.dart';
 import '../../features/heroes/heroes_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/items/items_screen.dart';
@@ -31,6 +32,17 @@ final routerProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: HeroesScreen.routeLocation,
                 builder: (context, state) => const HeroesScreen(),
+                // Detail nests inside the Heroes tab: pushing it keeps the
+                // tab shell (back returns to the grid), per the spec's
+                // grid → detail navigation.
+                routes: [
+                  GoRoute(
+                    path: HeroDetailScreen.routePath,
+                    builder: (context, state) => HeroDetailScreen(
+                      heroId: int.parse(state.pathParameters['id']!),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

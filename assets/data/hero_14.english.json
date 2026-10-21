@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 14,
+    "valve_key": "npc_dota_hero_pudge",
+    "localized_name": "Pudge",
+    "one_liner": "Hooks and pulls enemies towards him",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/pudge.png",
+    "attributes": {
+      "strength": {
+        "base": 25,
+        "gain": 3
+      },
+      "agility": {
+        "base": 13,
+        "gain": 1.4
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.8
+      }
+    },
+    "combat": {
+      "damage_min": 70,
+      "damage_max": 76,
+      "attack_rate": 1.7,
+      "attack_range": 175,
+      "projectile_speed": 0,
+      "armor": 2.16,
+      "magic_resistance": 25,
+      "movement_speed": 280,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "In the Fields of Endless Carnage, far to the south of Quoidge, a corpulent figure works tirelessly through the night--dismembering, disembowelling, piling up the limbs and viscera of the fallen that the battlefield might be clear by dawn. In this cursed realm, nothing can decay or decompose; no corpse may ever return to the earth from which it sprang, no matter how deep you dig the grave. Flocked by carrion birds who need him to cut their meals into beak-sized chunks, Pudge the Butcher hones his skills with blades that grow sharper the longer he uses them. Swish, swish, thunk. Flesh falls from the bone; tendons and ligaments part like wet paper. And while he always had a taste for the butchery, over the ages, Pudge has developed a taste for its byproduct as well. Starting with a gobbet of muscle here, a sip of blood there...before long he was thrusting his jaws deep into the toughest of torsos, like a dog gnawing at rags. Even those who are beyond fearing the Reaper, fear the Butcher."
+  },
+  "abilities": [
+    {
+      "name": "pudge_meat_hook",
+      "display_name": "Meat Hook",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_meat_hook.png",
+      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge, killing it if it's a non-ancient creep and dealing damage if it is an enemy otherwise.",
+      "lore": "The Butcher's hook is a symbolic nightmare, its curved blade a frightening reminder of his slaughterous intent.",
+      "notes": [
+        "Interrupts channeling spells of the primary target if it's an enemy.",
+        "Meat Hook hits invisible units.",
+        "Meat Hook can go through trees, cliffs, buildings, ancient units and Roshan.",
+        "Meat Hook can drag friendly units, but they won't be damaged.",
+        "Meat Hook can hit and drag runes to Pudge, refunding the Hook's mana cost."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        1300
+      ],
+      "mana_costs": [
+        120
+      ],
+      "cooldowns": [
+        18,
+        16,
+        14,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            150,
+            220,
+            290,
+            360
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE AS DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            1300
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "When Meat Hook hits an enemy, it deals bonus damage based on the distance pulled.\n\nWhen Meat Hook hits an ally, Meat Hook's cooldown is reduced by 50%."
+    },
+    {
+      "name": "pudge_rot",
+      "display_name": "Rot",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_rot.png",
+      "description": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself.",
+      "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
+      "notes": [
+        "Using Rot doesn't interrupt channeling.",
+        "Rot hits invisible units.",
+        "If Pudge is silenced, he can't deactivate Rot if it's activated.",
+        "Rot self-damage is non-lethal."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            -14,
+            -20,
+            -26,
+            -32
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            30,
+            60,
+            90,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEALTH RESTORATION LOSS:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Increases Rot radius by 200, damage by 90, and causes it to reduce enemy Health Restoration by 20%."
+    },
+    {
+      "name": "pudge_flesh_heap",
+      "display_name": "Meat Shield",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_flesh_heap.png",
+      "description": "Pudge covers himself with a layer of flesh that blocks damage of any type taken from any source.",
+      "lore": "The Butcher gives new meaning to the words 'meat shield.'",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        65,
+        70,
+        75,
+        80
+      ],
+      "cooldowns": [
+        20,
+        19,
+        18,
+        17
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE BLOCK:",
+          "values": [
+            8,
+            14,
+            20,
+            26
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "pudge_innate_graft_flesh",
+      "display_name": "Flesh Heap",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_innate_graft_flesh.png",
+      "description": "Pudge's skin thickens permanently every time he kills an enemy Hero, gaining 2 bonus Strength for each stack.",
+      "notes": [
+        "Enemy Heroes that die within 450 of Pudge grant a stack regardless of its killer."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "pudge_dismember",
+      "display_name": "Dismember",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_dismember.png",
+      "description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Damage is increased by Pudge's Strength and heals him for the total amount. Pudge pulls the unit at a rate of 75 units, up to a minimum of 125 range.",
+      "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
+      "notes": [
+        "If a unit becomes invisible while Dismembered, it will still be under the effects of Dismember."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        100,
+        130,
+        170
+      ],
+      "cooldowns": [
+        30,
+        25,
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            80,
+            100,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRENGTH MULTIPLIER:",
+          "values": [
+            0.3,
+            0.6,
+            0.9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            2.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            30,
+            25,
+            20
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+5 Armor",
+    "+10% Rot Slow",
+    "+8% Spell Lifesteal",
+    "+150 Meat Hook Damage",
+    "+0.75s Dismember Duration",
+    "-4s Meat Hook Cooldown",
+    "1.5x Dismember Damage/Heal",
+    "1.5x Flesh Heap and Meat Shield bonuses"
+  ],
+  "facets": []
+}

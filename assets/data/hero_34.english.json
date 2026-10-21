@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 34,
+    "valve_key": "npc_dota_hero_tinker",
+    "localized_name": "Tinker",
+    "one_liner": "Demolishes his enemies with swarms of machines",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/tinker.png",
+    "attributes": {
+      "strength": {
+        "base": 19,
+        "gain": 2.3
+      },
+      "agility": {
+        "base": 17,
+        "gain": 1.4
+      },
+      "intelligence": {
+        "base": 30,
+        "gain": 3.3
+      }
+    },
+    "combat": {
+      "damage_min": 52,
+      "damage_max": 58,
+      "attack_rate": 1.7,
+      "attack_range": 500,
+      "projectile_speed": 900,
+      "armor": 4.83,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies. Even this forbearance has led to a great deal of trouble, as Boush can attest. Once a key investigator of natural law, Boush the Tinker led a vast intellectual investigation into the workings of nature, founding a subterranean laboratory in the rumored, mist-wreathed wastes of the Violet Plateau. While scorning mages for the dangers they visit upon the world, Boush and his Tinker associates haughtily wrenched open a portal to some realm beyond comprehension and ushered in some nightmares of their own. A black mist rose from the cavernous interior of the Violet Plateau, shrouding it in permanent darkness from which sounds of horror perpetually emanate. Boush escaped with only his wits and the contraptions he carried, the sole Tinker to survive the Violet Plateau Incident."
+  },
+  "abilities": [
+    {
+      "name": "tinker_laser",
+      "display_name": "Laser",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_laser.png",
+      "description": "Fires an intense energy beam, damaging and blinding the target. Blinded targets miss all physical attacks.",
+      "lore": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        95,
+        105,
+        115,
+        125
+      ],
+      "cooldowns": [
+        19,
+        18,
+        17,
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "BLIND MISS RATE:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BLIND DURATION:",
+          "values": [
+            3,
+            3.5,
+            4,
+            4.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LASER DAMAGE:",
+          "values": [
+            75,
+            150,
+            225,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Upgrades Tinker's Laser into a Shrink Ray, reducing the main target's size, current health, and maximum health by 13% (stacking). Does not pierce debuff immunity."
+    },
+    {
+      "name": "tinker_march_of_the_machines",
+      "display_name": "March of the Machines",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_march_of_the_machines.png",
+      "description": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
+      "lore": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order.",
+      "notes": [
+        "Robots spawn at a rate of 24 per second."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        300
+      ],
+      "mana_costs": [
+        100,
+        120,
+        140,
+        160
+      ],
+      "cooldowns": [
+        35,
+        33,
+        31,
+        29
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            13,
+            22,
+            31,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL PER SECOND:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "March of the Machines applies a non-stacking heal over time when passing through allied heroes."
+    },
+    {
+      "name": "tinker_deploy_turrets",
+      "display_name": "Deploy Turrets",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_deploy_turrets.png",
+      "description": "Deploys 3 uncontrollable turrets at the target location. Enemies hit by the impact take damage and are pushed away from the landing point. If Tinker is hit, he also gets pushed by the impact. Once deployed, the turret fires missiles in the direction of the nearest enemy hero.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        100,
+        120,
+        140,
+        160
+      ],
+      "cooldowns": [
+        24,
+        22,
+        20,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "CAST DELAY:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ENEMY KNOCKBACK:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TINKER KNOCKBACK:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT DAMAGE:",
+          "values": [
+            40,
+            80,
+            120,
+            160
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MISSILE DAMAGE:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TURRET HP:",
+          "values": [
+            40,
+            80,
+            120,
+            160
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TURRET RANGE:",
+          "values": [
+            650,
+            700,
+            750,
+            800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TURRET DURATION:",
+          "values": [
+            4.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK INTERVAL:",
+          "values": [
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MISSILE SPLASH RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MISSILE SPLASH DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Turrets fire missiles 20% faster."
+    },
+    {
+      "name": "tinker_warp_grenade",
+      "display_name": "Warp Flare",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_warp_grenade.png",
+      "description": "Throws a flare towards an enemy, dealing damage, teleporting them away, rooting them and reducing their Cast and Attack Range for 2 seconds.\n\nThe target is teleported further the closer they are to Tinker.",
+      "lore": "Tinker's deadliest weapon instantly turns an enemy into space dust. Research to resolve the annoying 'perfect copy' side effect... is ongoing.",
+      "notes": [
+        "Max teleportation distance is 60% of Warp Flare's cast range, which decreases down to 0 at max cast range."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        80
+      ],
+      "cooldowns": [
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST/ATTACK RANGE REDUCTION:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "tinker_rearm",
+      "display_name": "Rearm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_rearm.png",
+      "description": "CHANNELED - Resets the cooldown on Tinker's abilities.",
+      "lore": "A new battery here, another set of rockets there, Boush continually improves on existing technology.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100,
+        150,
+        200
+      ],
+      "cooldowns": [
+        5.5,
+        5,
+        4.5
+      ],
+      "special_values": [
+        {
+          "heading": "TIME TO REARM:",
+          "values": [
+            2.75,
+            2,
+            1.25
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tinker_eureka",
+      "display_name": "Eureka!",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_eureka.png",
+      "description": "Tinker gains 1% item cooldown reduction per 3 Intelligence, up to a maximum of 60%.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ITEM COOLDOWN REDUCTION:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1s March of the Machines Duration",
+    "+10% Manacost/Manaloss Reduction",
+    "+100 Deploy Turrets Tinker Knockback",
+    "+50 Laser Damage",
+    "+60 Deploy Turrets Missile Damage",
+    "-{s:bonus_AbilityChannelTime}s Keen Conveyance Channel Time",
+    "250 AoE Laser",
+    "-0.25s Time to Rearm"
+  ],
+  "facets": []
+}

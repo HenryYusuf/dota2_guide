@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 98,
+    "valve_key": "npc_dota_hero_shredder",
+    "localized_name": "Timbersaw",
+    "one_liner": "Chops through the forest to face his foes",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/shredder.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 3.6
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.6
+      },
+      "intelligence": {
+        "base": 24,
+        "gain": 2.7
+      }
+    },
+    "combat": {
+      "damage_min": 48,
+      "damage_max": 52,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.66,
+      "magic_resistance": 25,
+      "movement_speed": 280,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Rizzrack could still hear the screams in his mind.  He worked, frantically turning wrenches, twisting screws, building and carving and forging.  Sleep eluded him; he only built.  Months had passed since he had shut himself in his uncle's workshop, and his deliverance was nearly complete.  He rubbed his back as his eyes drifted shut, and saw a blanket of flowers floating on the placid waves of Augury Bay before exploding into a cloud of pollen that silenced lives as it seized the lungs.  He woke with a choking start.  For hours the rhythmic sound of a whetstone filled the shop as he sharpened a set of massive blades, his mind filled with images of strangling vines garroting neighbors, enwrapping homes.  The flooding of Augury Bay had been nothing compared to the violent horrors the waters left to take root beyond the city walls.\r\n\t\t\t\t<br><br>But the saw-suit would make him strong and safe he thought, allowing himself this sliver of hope before the full might of his fear crashed into his fading mind.  Branches and bark and blood.  When the city fell, Rizzrack fled trees that walked, and fought, and killed.  Trees had shattered the gates and swarmed into the city.  Trees had crushed and thrashed and stomped the last that Augury Bay could muster in defense, and stalked the few fleeing refugees.  In addled silence Rizzrack unspooled the thick chain from the suit's arm, his hands quaking as he inspected each link and ran a trembling finger along the claw attached at its end.  The saw-suit was ready.\r\n\t\t\t\t<br><br>With his hand trembling he sparked the bladed machine to life.  Terror drove him, terror of what awaited him and of what he would have to face to have any hope of calming his mind.  As the saw-suit shuddered to life he knew he must face this fear, and he knew he wouldn't like it one bit."
+  },
+  "abilities": [
+    {
+      "name": "shredder_whirling_death",
+      "display_name": "Whirling Death",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_whirling_death.png",
+      "description": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area. If an enemy hero is affected, it loses some of its primary attribute for a short duration. Whirling Death will deal bonus damage per tree destroyed.",
+      "lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            60,
+            120,
+            180,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TREE BONUS DAMAGE:",
+          "values": [
+            9,
+            16,
+            23,
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STAT LOSS:",
+          "values": [
+            13
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STAT LOSS (UNIVERSAL):",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "STAT LOSS DURATION:",
+          "values": [
+            7,
+            9,
+            11,
+            13
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shredder_timber_chain",
+      "display_name": "Timber Chain",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_timber_chain.png",
+      "description": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it.  Any enemy in the path takes damage.",
+      "lore": "You never know when you might need to escape from malevolent saplings.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        750,
+        900,
+        1050,
+        1200
+      ],
+      "mana_costs": [
+        60,
+        70,
+        80,
+        90
+      ],
+      "cooldowns": [
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPEED:",
+          "values": [
+            2200,
+            2400,
+            2600,
+            2800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            45,
+            105,
+            165,
+            225
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shredder_reactive_armor",
+      "display_name": "Reactive Armor",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_reactive_armor.png",
+      "description": "Each time Timbersaw is attacked, he gains increased health regen and armor. Hero attacks are counted as 4x the amount.",
+      "lore": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
+      "notes": [
+        "Break disables the gaining of new stacks.",
+        "Break does not disable the bonuses from existing stacks."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ARMOR:",
+          "values": [
+            0.4,
+            0.5,
+            0.6,
+            0.7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS HP REGEN:",
+          "values": [
+            0.5,
+            0.6,
+            0.7,
+            0.8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX STACKS:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STACK DURATION:",
+          "values": [
+            10,
+            12,
+            14,
+            16
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Reactive Armor can now be activated to get max stacks and 150 damage barrier. Grants Timbersaw 100 + 75 barrier amount per second for each enemy hero within 450 radius of Timbersaw up to a maximum of 800. After 8 seconds, Timbersaw deals damage to every hero within 450 radius equal to 200 + his remaining barrier amount and loses all of his barrier."
+    },
+    {
+      "name": "shredder_flamethrower",
+      "display_name": "Flamethrower",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_flamethrower.png",
+      "description": "Releases a flame in the direction Timbersaw is facing. Applies a debuff that deals damage per second and slows enemy movement speed. Affects buildings for reduced damage.",
+      "lore": "A single saw can only cut so much. A single spark can burn forever.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            70
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WIDTH:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BUILDING DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DEBUFF LINGER TIME:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shredder_chakram",
+      "display_name": "Chakram",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_chakram.png",
+      "description": "Fires Timbersaw's main saw blade at the target location where it will spin in place, dealing damage in an area around it.  Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack.",
+      "lore": "The ultimate in anti-flora weaponry.",
+      "notes": [
+        "The Chakram will return if Timbersaw runs out of mana or moves over 2000 distance away."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "No",
+      "cast_ranges": [
+        1200,
+        1200,
+        1200
+      ],
+      "mana_costs": [
+        90,
+        120,
+        150
+      ],
+      "cooldowns": [
+        8,
+        8,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PASS DAMAGE:",
+          "values": [
+            75,
+            150,
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MANA COST PER SECOND:",
+          "values": [
+            10,
+            15,
+            20
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shredder_exposure_therapy",
+      "display_name": "Exposure Therapy",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_exposure_therapy.png",
+      "description": "Whenever Timbersaw destroys a tree, he gains mana.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MANA RESTORE:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+0.25 Reactive Armor Regeneration Per Stack",
+    "+1.5 Mana Regen",
+    "+2% Whirling Death Stat Loss",
+    "+6 Max / +1 Hero Attack Reactive Armor Stacks",
+    "Exposure Therapy Heals for 12 HP Per Tree Destroyed",
+    "+6% Chakram Slow",
+    "+75 Whirling Death Tree Bonus Damage",
+    "+75% Timber Chain Range/Projectile Speed"
+  ],
+  "facets": []
+}

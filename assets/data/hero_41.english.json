@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 41,
+    "valve_key": "npc_dota_hero_faceless_void",
+    "localized_name": "Faceless Void",
+    "one_liner": "Can freeze his enemies in time",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/faceless_void.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 24,
+        "gain": 3.3
+      },
+      "intelligence": {
+        "base": 15,
+        "gain": 1.5
+      }
+    },
+    "combat": {
+      "damage_min": 58,
+      "damage_max": 64,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.0,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Darkterror the Faceless Void is a visitor from Claszureme, a realm outside of time. It remains a mystery why this being from another dimension believes the struggle for the Nemesis Stones is worth entering our physical plane, but apparently an upset in the balance of power in this world has repercussions in adjacent dimensions. Time means nothing to Darkterror, except as a way to thwart his foes and aid his allies. His long-view of the cosmos has given him a remote, disconnected quality, although in battle he is quite capable of making it personal."
+  },
+  "abilities": [
+    {
+      "name": "faceless_void_time_walk",
+      "display_name": "Time Walk",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_time_walk.png",
+      "description": "Rushes to a target location while backtracking any damage taken the last 2 seconds.",
+      "lore": "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant.",
+      "notes": [
+        "Faceless Void is invulnerable while using Time Walk."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        40
+      ],
+      "cooldowns": [
+        21,
+        16,
+        11,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "RANGE:",
+          "values": [
+            650,
+            700,
+            750,
+            800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BACKTRACK DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TIME LOCK RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Applies a Time Lock to all units at the landing destination."
+    },
+    {
+      "name": "faceless_void_time_dilation",
+      "display_name": "Time Dilation",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_time_dilation.png",
+      "description": "Faceless Void envelops nearby enemies with time dilating fields to slow cooldown progression of their abilities. Each enveloped enemy gains one Time Dilation stack when applied, and one stack per ability they have on cooldown. Each stack deals damage per second and slows movement and attack speed. The duration is paused while affected by Chronosphere.",
+      "lore": "For those facing off against Darkterror, each moment seems to stretch into eternity.",
+      "notes": [
+        "Does not affect item cooldowns.",
+        "Number of stacks can change during the effect. Casting an ability will provide a stack if it goes on cooldown. If an ability cooldown ends during Time Dilation, a stack will be removed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        90
+      ],
+      "cooldowns": [
+        28,
+        24,
+        20,
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW PER STACK:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW PER STACK:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN PROGRESSION SLOW:",
+          "values": [
+            30,
+            40,
+            50,
+            60
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS DPS PER STACK:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SELF MOVESPEED PER STACK:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SELF ATTACK SPEED PER STACK:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases slow per stack. Provides Faceless Void with stacks that increase his attack and movement speed. Amount of stacks is equal to the total amount of Time Dilation stacks applied to enemies at the moment of the cast and linearly fades out over the duration."
+    },
+    {
+      "name": "faceless_void_time_lock",
+      "display_name": "Time Lock",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_time_lock.png",
+      "description": "Adds the chance for an attack to lock an enemy unit in time while attacking it a second time.",
+      "lore": "The strike of the Faceless Void lands with dimension shifting force.",
+      "notes": [
+        "Does not stack with Skull Basher."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CHANCE:",
+          "values": [
+            12,
+            16,
+            20,
+            24
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            18,
+            22,
+            26,
+            30
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "faceless_void_time_walk_reverse",
+      "display_name": "Reverse Time Walk",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_time_walk_reverse.png",
+      "description": "Available for 1.5 seconds after landing Time Walk. If used in this period, you will reverse your time walk back to your previous cast location. Does not affect health or proc scepter hits.",
+      "lore": "It's all relative.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0.5
+      ],
+      "special_values": []
+    },
+    {
+      "name": "faceless_void_distortion_field",
+      "display_name": "Distortion Field",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_distortion_field.png",
+      "description": "Enemy Attack Projectiles targetting Faceless Void or allied heroes within a 1200 radius of him get slowed by 40%, when they get  within 500 distance of their target.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "faceless_void_chronosphere",
+      "display_name": "Chronosphere",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_chronosphere.png",
+      "description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
+      "lore": "When a rift opens to Claszureme, all poor souls caught within will likely never return.",
+      "notes": [
+        "Pauses all units and buildings, friendly or enemy, except those owned by Faceless Void.",
+        "Faceless Void is never affected by Chronospheres with any owner."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        125,
+        200,
+        275
+      ],
+      "cooldowns": [
+        155,
+        145,
+        135
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3.75,
+            4.25,
+            4.75
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+6 Time Dilation DPS Per Cooldown",
+    "+0.5s Time Walk Backtrack Duration",
+    "+35 Time Lock Damage",
+    "+125 Time Walk Range",
+    "+80 Attack Speed during Chronosphere",
+    "-1s Time Walk Cooldown",
+    "+20% Backtrack Chance",
+    "+140 Chronosphere AoE"
+  ],
+  "facets": []
+}

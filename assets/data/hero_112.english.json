@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 112,
+    "valve_key": "npc_dota_hero_winter_wyvern",
+    "localized_name": "Winter Wyvern",
+    "one_liner": "Able to force her enemies to attack their own ally",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/winter_wyvern.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.7
+      },
+      "intelligence": {
+        "base": 26,
+        "gain": 3.6
+      }
+    },
+    "combat": {
+      "damage_min": 42,
+      "damage_max": 49,
+      "attack_rate": 1.7,
+      "attack_range": 450,
+      "projectile_speed": 700,
+      "armor": 3.66,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 1200
+    },
+    "bio": "Like many great poets, Auroth just wants time to write, but the Winter Wyvern's life is full of interruptions. The epics of the Eldwurms have a long and colorful history, but some fear that the remaining dragon scholars are not as prolific as they once were, with few lines added to the Eldwurm Eddas since the last age of greatness. Auroth laments: \"We forget that there is more to life than triumph and dominion over enemies. We must also live our lives in the pursuit of creative expression.\" She embarks on research expeditions, collecting books for inspiration. But all this research can be terribly distracting, and she spends less time writing than she should. Although she knows she should be lurking in her lair, adding to the Eddas, she finds herself engaged in epic battles against powerful enemies. She loots castles, raids ancient libraries ... and if she happens to heap glory on herself in the process, she tells herself that it's merely a side effect of her research. The fact is, while her skill and power on the battlefield are legendary, her scholarly travails have thus far hardly been the stuff of literary acclaim. But she is not content to stand as a protagonist of heroic lore. She wishes also to create it."
+  },
+  "abilities": [
+    {
+      "name": "winter_wyvern_arctic_burn",
+      "display_name": "Arctic Burn",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_arctic_burn.png",
+      "description": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 4% of their current health each second.",
+      "lore": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony.",
+      "notes": [
+        "This ability does not affect Roshan.",
+        "Reduces Winter Wyvern's attack point to 0.1.",
+        "The damage and slow from Arctic Burn can be dispelled."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        29,
+        26,
+        23,
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "FLIGHT DURATION:",
+          "values": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS ATTACK RANGE:",
+          "values": [
+            250,
+            275,
+            300,
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEALTH BURN:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BURN DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MANA PER SECOND:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SPEED:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Causes Arctic Burn to be a toggle ability, draining mana every second when active. Increases Winter Wyvern's movement speed."
+    },
+    {
+      "name": "winter_wyvern_splinter_blast",
+      "display_name": "Splinter Blast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_splinter_blast.png",
+      "description": "Launches a ball of brittle ice toward a unit. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a 500 base radius. Enemies struck by these splinters are slowed by 27%.",
+      "lore": "Produced slowly by specialized vesicles in her frozen gullet, Winter Wyvern blast shards of ice at her enemies.",
+      "notes": [
+        "The primary projectile moves at 1200 movement speed.",
+        "The primary projectile cannot be disjointed and cannot be targeted towards Winter Wyvern herself."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1150
+      ],
+      "mana_costs": [
+        105,
+        115,
+        125,
+        135
+      ],
+      "cooldowns": [
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "SHATTER RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            27,
+            30,
+            33,
+            36
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            80,
+            160,
+            240,
+            320
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "winter_wyvern_cold_embrace",
+      "display_name": "Cold Embrace",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_cold_embrace.png",
+      "description": "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage.",
+      "lore": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        850,
+        900,
+        950,
+        1000
+      ],
+      "mana_costs": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "cooldowns": [
+        24,
+        21,
+        18,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE HEAL PER SECOND:",
+          "values": [
+            40,
+            45,
+            50,
+            55
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HP HEAL PER SECOND:",
+          "values": [
+            1.5,
+            2.5,
+            3.5,
+            4.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ATTACK DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE BUFF DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Reduces cooldown by 4 seconds. Allied units gain bonus attack damage when emerging from the icy cocoon."
+    },
+    {
+      "name": "winter_wyvern_eldwurms_edda",
+      "display_name": "Eldwurm's Edda",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_eldwurms_edda.png",
+      "description": "Grants Winter Wyvern the item Eldwurm's Edda, which can be consumed to increase the current and maximum level of a basic ability by one and Winter Wyvern's base intelligence by 25% of its current value at the time of consumption.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "winter_wyvern_winters_curse",
+      "display_name": "Winter's Curse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_winters_curse.png",
+      "description": "Winter Wyvern dispells then freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of damage from Winter Wyvern or her controlled units. Enemy heroes which enter the cursed area after the cast add to the duration of the curse.",
+      "lore": "The oldest of the bookwurm's spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
+      "notes": [
+        "If the target dies to its allies, Winter Wyvern will receive credit for the kill.",
+        "Will only pierce the spell immunity of the primary target, not the target's surrounding allies."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        100,
+        90,
+        80
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            525
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SPEED:",
+          "values": [
+            50,
+            65,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MINIMUM DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAXIMUM DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DURATION PER HERO:",
+          "values": [
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DURATION PER CREEP:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+15 Cold Embrace Base Heal Per Second",
+    "+30 Damage",
+    "+3s Arctic Burn Debuff Duration",
+    "+175 Splinter Blast Shatter Radius",
+    "+10% Arctic Burn Slow",
+    "+100 Splinter Blast Damage",
+    "+60 Winter's Curse Attack Speed ",
+    "Splinter Blast 1s Stun"
+  ],
+  "facets": []
+}

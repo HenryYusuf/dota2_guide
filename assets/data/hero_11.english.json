@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 11,
+    "valve_key": "npc_dota_hero_nevermore",
+    "localized_name": "Shadow Fiend",
+    "one_liner": "Unleashes the souls of fallen enemies for damage",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/nevermore.png",
+    "attributes": {
+      "strength": {
+        "base": 19,
+        "gain": 2.7
+      },
+      "agility": {
+        "base": 25,
+        "gain": 3.6
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 2.2
+      }
+    },
+    "combat": {
+      "damage_min": 41,
+      "damage_max": 47,
+      "attack_rate": 1.6,
+      "attack_range": 525,
+      "projectile_speed": 1200,
+      "armor": 4.16,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "It is said that Nevermore the Shadow Fiend has the soul of a poet, and in fact he has thousands of them. Over the ages he has claimed the souls of poets, priests, emperors, beggars, slaves, philosophers, criminals and (naturally) heroes; no sort of soul escapes him. What he does with them is unknown. No one has ever peered into the Abysm whence Nevermore reaches out like an eel from among astral rocks. Does he devour them one after another? Does he mount them along the halls of an eldritch temple, or pickle the souls in necromantic brine? Is he merely a puppet, pushed through the dimensional rift by a demonic puppeteer? Such is his evil, so intense his aura of darkness, that no rational mind may penetrate it. Of course, if you really want to know where the stolen souls go, there's one sure way to find out: Add your soul to his collection. Or just wait for Nevermore."
+  },
+  "abilities": [
+    {
+      "name": "nevermore_shadowraze1",
+      "display_name": "Shadowraze",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_shadowraze1.png",
+      "description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area, dealing bonus damage based on his current Necromastery Soul amount. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadowraze damage per stack.",
+      "lore": "Nevermore's trademark for harvesting souls.",
+      "notes": [
+        "Stack duration refreshes on stack gain."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            85,
+            150,
+            215,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS PER STACK:",
+          "values": [
+            35,
+            50,
+            65,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STACK DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE PER SOUL:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Cooldown reduced by 2s per enemy hero hit. Applies a stacking 12% movement speed debuff on enemies hit."
+    },
+    {
+      "name": "nevermore_frenzy",
+      "display_name": "Feast of Souls",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_frenzy.png",
+      "description": "Shadow Fiend gains Bonus Movement and Attack Speed for 8 seconds. For the duration of the effect, every 0.5s he collects souls from 2 enemies in a 600 radius. After the effect is over, he loses the souls whose owners are still alive, retaining the rest for 8s, after which souls that are over the Necromastery max stack count are also lost.\n\n Can only collect souls once from each individual enemy.",
+      "lore": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "cooldowns": [
+        21
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            35,
+            50,
+            65,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVE SPEED:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX COLLECTION TARGETS:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SOULS PER HERO:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SOULS PER CREEP:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "nevermore_dark_lord",
+      "display_name": "Presence of the Dark Lord",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_dark_lord.png",
+      "description": "Shadow Fiend's presence reduces the armor of nearby enemies.",
+      "lore": "Even being near Nevermore eats away at one's soul.",
+      "notes": [
+        "Stacks fully with other armor reduction abilities and aura."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Aura",
+      "target": "Enemies",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ARMOR REDUCTION:",
+          "values": [
+            -2.5,
+            -4,
+            -5.5,
+            -7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "nevermore_requiem",
+      "display_name": "Requiem of Souls",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_requiem.png",
+      "description": "Shadow Fiend gathers up to 20 of his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed and magic resistance reduced for 0.6 seconds for each line hit up to a maximum of 2.15. Lines of energy are created for every soul captured through Necromastery. \n\n Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+      "lore": "The captured souls of those past slain are released to ravage their former allies.",
+      "notes": [
+        "One line is generated from Shadow Fiend for every 1 soul in his possession.",
+        "Fear and movement slow do not apply if the Requiem was released on death."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        150,
+        175,
+        200
+      ],
+      "cooldowns": [
+        120,
+        110,
+        100
+      ],
+      "damages": [
+        80,
+        120,
+        160
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT REDUCTION:",
+          "values": [
+            -20,
+            -25,
+            -30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAGIC RESIST REDUCTION:",
+          "values": [
+            -5,
+            -10,
+            -15
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "FEAR DURATION PER SOUL HIT:",
+          "values": [
+            0.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FEAR DURATION MAX:",
+          "values": [
+            2.15
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL ON RETURN:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CAST DELAY:",
+          "values": [
+            1.67
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            120,
+            110,
+            100
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Reduces cooldown and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend heals him for all the damage it dealt."
+    },
+    {
+      "name": "nevermore_necromastery",
+      "display_name": "Necromastery",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_necromastery.png",
+      "description": "Shadow Fiend steals the soul from units he kills, gaining 1 bonus damage per soul. Hero kills grant 4 souls. On death, he releases 30% of them from bondage.",
+      "lore": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
+      "notes": [
+        "Denies and neutral creeps also provide bonus damage through Necromastery.",
+        "Break disables the gaining of new stacks.",
+        "Break does not disable the bonuses from existing stacks."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SOUL:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE MAX SOULS:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT MAX SOULS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases max souls."
+    }
+  ],
+  "talents": [
+    "+30 Shadowraze Stack Damage",
+    "+30 Feast of Souls Attack Speed",
+    "+1.5 Presence Armor Reduction",
+    "+2 Feast of Souls Souls Collected Per Hero",
+    "+5 Necromastery Max Souls",
+    "+0.2s Requiem Fear per line",
+    "Feast of Souls Grants +30% Cast Speed",
+    "Shadowraze Applies Attack Damage"
+  ],
+  "facets": []
+}

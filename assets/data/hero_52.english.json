@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 52,
+    "valve_key": "npc_dota_hero_leshrac",
+    "localized_name": "Leshrac",
+    "one_liner": "Can deal heavy damage in an aura around himself",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/leshrac.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 17,
+        "gain": 2.5
+      },
+      "intelligence": {
+        "base": 22,
+        "gain": 3.5
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 53,
+      "attack_rate": 1.7,
+      "attack_range": 575,
+      "projectile_speed": 900,
+      "armor": 3.83,
+      "magic_resistance": 25,
+      "movement_speed": 325,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Leshrac, Tormented Soul, is an entity torn from the heart of nature, a liminal being that exists half in one plane of existence, half in another. His penetrating intelligence is such that he can never ignore for a moment the agonizing horror at the heart of all creation. Once a great philosopher who sought the meaning of existence, he plumbed the depths of nature with the haunted Chronoptic Crystals, and was forever altered by the hideous mysteries thereby revealed to him. Now the darkest depths of his enlightenment are illumined only by the fitful glare of his arrogance. Like other elemental characters, he is completely at one with nature, but in his case it is a nature lurid and vile. He alone sees the evil truth of reality, and has no use for those who believe the cosmos reserves a special reward for those who practice benevolence."
+  },
+  "abilities": [
+    {
+      "name": "leshrac_split_earth",
+      "display_name": "Split Earth",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_split_earth.png",
+      "description": "Splits the earth under enemies. Deals damage and stuns for a short duration.",
+      "lore": "Twisting nature to his vile will, the shifting earth consumes those unlucky enough to cross Leshrac's path.",
+      "notes": [
+        "Split Earth will destroy trees in its area of effect.",
+        "There is a 0.35 second delay before the effect is applied."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        80,
+        100,
+        120,
+        140
+      ],
+      "cooldowns": [
+        11
+      ],
+      "damages": [
+        115,
+        170,
+        225,
+        280
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DELAY:",
+          "values": [
+            0.35
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            150,
+            170,
+            190,
+            210
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.7
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Causes Split Earth to repeat in the same location 2 additional times, with a 5 second delay between each one. Each time the radius increases by 45. Split Earth echo location is visible to both teams."
+    },
+    {
+      "name": "leshrac_diabolic_edict",
+      "display_name": "Diabolic Edict",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_diabolic_edict.png",
+      "description": "Saturates the area around Leshrac with magical explosions that deal pure damage to enemy units and buildings.  The fewer units available to attack, the more damage those units will take.",
+      "lore": "Chronoptic energy bursts from one plane to the other, evaporating anything it touches.",
+      "notes": [
+        "The explosions will continue even if Leshrac is killed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units and Buildings",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        90,
+        120,
+        150,
+        180
+      ],
+      "cooldowns": [
+        22,
+        21,
+        20,
+        19
+      ],
+      "special_values": [
+        {
+          "heading": "EXPLOSIONS:",
+          "values": [
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER EXPLOSION:",
+          "values": [
+            9,
+            16,
+            23,
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TARGETS PER EXPLOSION:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "leshrac_lightning_storm",
+      "display_name": "Lightning Storm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_lightning_storm.png",
+      "description": "Summons a lightning storm that blasts the target enemy unit, then strikes any nearby enemy units. Struck enemies have their move speed slowed.",
+      "lore": "The Tormented Soul's mastery of the elements is evident in the massive storms that strike down armies before him.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        80,
+        100,
+        120,
+        140
+      ],
+      "cooldowns": [
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            90,
+            140,
+            190,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LIGHTNING STRIKES:",
+          "values": [
+            5,
+            7,
+            9,
+            11
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LIGHTNING JUMP RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "leshrac_greater_lightning_storm",
+      "display_name": "Nihilism",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_greater_lightning_storm.png",
+      "description": "Causes Leshrac and all nearby enemies to turn ethereal, preventing them from attacking, slowing them, and making them take more magic damage. Increases Leshrac's speed rather than reducing it. Does not cause Leshrac to take amplified damage.",
+      "lore": "When it serves his purpose, Leshrac briefly reduces his presence in the Terrene Plane.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "target": "Enemies",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INCREASED MAGIC DAMAGE:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "leshrac_defilement",
+      "display_name": "Defilement",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_defilement.png",
+      "description": "Leshrac gains 0.7 Area of Effect Bonus per Intelligence.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS AOE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "leshrac_pulse_nova",
+      "display_name": "Pulse Nova",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_pulse_nova.png",
+      "description": "Creates waves of damaging energy around Leshrac, one per second, to damage nearby enemy units. Drains Leshrac's mana with each pulse.",
+      "lore": "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50,
+        60,
+        70
+      ],
+      "cooldowns": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "special_values": [
+        {
+          "heading": "MANA/SEC:",
+          "values": [
+            20,
+            40,
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            80,
+            135,
+            180
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1.5 Mana Regen",
+    "+4 Armor",
+    "+80 Lightning Storm Damage",
+    "+10% Damage Reduction during Pulse Nova",
+    "Diabolic Edict Hits An Additional Target",
+    "+30 Pulse Nova Damage",
+    "+20 Diabolic Edict Explosions",
+    "Pulse Nova triggers Lightning Storm"
+  ],
+  "facets": []
+}

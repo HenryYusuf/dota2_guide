@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 32,
+    "valve_key": "npc_dota_hero_riki",
+    "localized_name": "Riki",
+    "one_liner": "Remains permanently invisible until the moment to strike",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/riki.png",
+    "attributes": {
+      "strength": {
+        "base": 18,
+        "gain": 2
+      },
+      "agility": {
+        "base": 30,
+        "gain": 2.4
+      },
+      "intelligence": {
+        "base": 14,
+        "gain": 1.3
+      }
+    },
+    "combat": {
+      "damage_min": 52,
+      "damage_max": 56,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 5.0,
+      "magic_resistance": 25,
+      "movement_speed": 315,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Riki was born middle child to the great dynasty of Tahlin. With an older brother groomed for the throne, and a younger brother coddled and kept, Riki, the small middle son, seemed born for the art of invisibility.  It was an art he cultivated, and one which ultimately saved his life on the night that his people were betrayed and his family slaughtered. Of all the royal line, he alone escaped, small and agile, unassuming, using smoke as cover. He cut his way out of the royal grounds, using the advantage of surprise, quietly slitting the throats of one enemy warrior after another. Now free of his royal responsibilities, Riki uses his talents in service to a new trade: Stealth Assassin. He silences his enemies, sharpening his skills, hoping to one day take revenge on those who killed his family and robbed him of his birthright."
+  },
+  "abilities": [
+    {
+      "name": "riki_smoke_screen",
+      "display_name": "Smoke Screen",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_smoke_screen.png",
+      "description": "Throws down a smoke bomb, silencing enemies and causing them to miss attacks.",
+      "lore": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
+      "notes": [
+        "Can be cast during Tricks of the Trade.",
+        "Doesn't prevent the use of active items."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "No",
+      "cast_ranges": [
+        550
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            425
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MISS RATE:",
+          "values": [
+            40,
+            50,
+            60,
+            70
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Enemies caught in the smoke screen have their armor reduced by 5 and cannot be targeted by their allies."
+    },
+    {
+      "name": "riki_blink_strike",
+      "display_name": "Blink Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_blink_strike.png",
+      "description": "Teleports behind the target unit, momentarily slowing them by 100% and attacking them with bonus damage if it is an enemy.",
+      "lore": "The Stealth Assassin's agile movement makes him impossible to escape.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        600,
+        700,
+        800,
+        900
+      ],
+      "mana_costs": [
+        50,
+        55,
+        60,
+        65
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            25,
+            35,
+            45,
+            55
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.75
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "riki_tricks_of_the_trade",
+      "display_name": "Tricks of the Trade",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_tricks_of_the_trade.png",
+      "description": "CHANNELED - Riki phases out of the world and periodically strikes 2 random enemy units from behind in an area around him. He has fixed attack damage while phased out.",
+      "lore": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        400
+      ],
+      "mana_costs": [
+        65
+      ],
+      "cooldowns": [
+        21,
+        18,
+        15,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            425
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK INTERVALS:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases Cast Range to 500. Allows you to target an allied unit, hiding inside them for the duration. While hiding in an allied unit, they have 15% bonus movement speed, and Tricks of the Trade lasts 1s longer and does an additional 2 attacks."
+    },
+    {
+      "name": "riki_innate_backstab",
+      "display_name": "Backstab",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_innate_backstab.png",
+      "description": "Every time Riki strikes his enemy from behind, he deals additional bonus damage equal to a multiple of his Agility.",
+      "notes": [
+        "Works when denying friendly units at 30% effectiveness.",
+        "Illusions of Riki will play Backstab animations, but not deal any bonus damage."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "AGILITY MULTIPLIER:",
+          "values": [
+            0.55
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS XP HERO KILL:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS XP ASSIST:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS XP WARD/COURIER KILL:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "riki_backstab",
+      "display_name": "Cloak and Dagger",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_backstab.png",
+      "description": "Riki fades into the shadows, becoming invisible until he attacks. Hero kills and assists grant additional experience.",
+      "lore": "Riki comes for you.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "FADE DELAY:",
+          "values": [
+            4,
+            3,
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS XP HERO KILL:",
+          "values": [
+            130,
+            260,
+            390
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS XP ASSIST:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+50 Smoke Screen Radius",
+    "+10% Cloak and Dagger Movement Speed",
+    "15% of Riki's Base damage added to Tricks of the Trade",
+    "-3s Smoke Screen Cooldown",
+    "+0.3 Backstab Multiplier",
+    "-1s Blink Strike Cooldown",
+    "-4s Tricks of the Trade Cooldown",
+    "+500 Blink Strike Cast Range"
+  ],
+  "facets": []
+}

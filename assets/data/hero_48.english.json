@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 48,
+    "valve_key": "npc_dota_hero_luna",
+    "localized_name": "Luna",
+    "one_liner": "Tears into her enemies with bouncing attacks",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/luna.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.2
+      },
+      "agility": {
+        "base": 24,
+        "gain": 3.4
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 1.9
+      }
+    },
+    "combat": {
+      "damage_min": 50,
+      "damage_max": 56,
+      "attack_rate": 1.7,
+      "attack_range": 330,
+      "projectile_speed": 900,
+      "armor": 6.0,
+      "magic_resistance": 25,
+      "movement_speed": 325,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "How had she been reduced to this?  She was once the Scourge of the Plains, a merciless leader of men and beasts, and able to sow terror wherever she dared.  Now she was far from her homeland, driven half mad from starvation and months of wandering, her army long dead or worse.  As she stood at the edge of an ancient forest, a pair of glowing eyes spied on from an elder branch.  Something beautiful and deadly sought a meal in the wilting dusk.  Without a sound, it turned and left.  Fury overtook her.  Clutching a rust-eaten dagger, she charged after the beast determined to reclaim even a shred of her past glory, but her quarry would not be caught.  Three times she cornered the creature among the rocks and trees, and three times she pounced only to witness its fading shadow darting further into the woods.  Yet the full moon shone brightly, and the creature's trail was easy to follow.\r\n\t\t\t\t<br><br>Arriving in a clearing atop a high hill, the beast's massive feline form sat in the open, attentive and waiting.  When the woman brandished her dagger, the creature reared and roared and charged.  Death, it seemed, had come for her at long last in this strange place.  She stood, calm and ready.  A flash of movement, and the beast snatched the dagger from her hand before vanishing into the forest.  Stillness.  Hooded figures approached. In reverent tones they revealed that Selemene, Goddess of the Moon, had chosen her, had guided her, had tested her. Unwittingly she had endured the sacred rites of the Dark Moon, warriors of the Nightsilver Woods.\r\n\t\t\t\t<br><br>She was offered a choice: join the Dark Moon and pledge herself to the service of Selemene, or leave and never return. She did not hesitate. Embracing her absolution, she renounced her bloody past, and took up a new mantle as Luna of the Dark Moon, the dreaded Moon Rider, ruthless and ever-loyal guardian of the Nightsilver Woods."
+  },
+  "abilities": [
+    {
+      "name": "luna_lucent_beam",
+      "display_name": "Lucent Beam",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_lucent_beam.png",
+      "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
+      "lore": "Selemene smites those who encroach upon the Nightsilver Woods.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        90,
+        100,
+        110,
+        120
+      ],
+      "cooldowns": [
+        9,
+        8,
+        7,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "BEAM DAMAGE:",
+          "values": [
+            75,
+            150,
+            225,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE BUFF DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE BUFF PER BEAM:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Grants Luna an attack damage bonus buff every time an enemy hero is hit by Lucent Beam. Lucent Beams created by Eclipse grant 0% of the damage amount."
+    },
+    {
+      "name": "luna_lunar_orbit",
+      "display_name": "Lunar Orbit",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_lunar_orbit.png",
+      "description": "Creates 4 glaives that rotate 225 radius around Luna. Any enemy unit that collides with a glaive will take a percentage of Luna's Attack Damage.",
+      "lore": "None may approach Selemene's chosen without favor from the goddess herself.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        65,
+        70,
+        75,
+        80
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COLLISION RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COLLISION DAMAGE:",
+          "values": [
+            28,
+            32,
+            36,
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            8,
+            12,
+            16,
+            20
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Increases damage reduction. While active, Luna gains 20% bonus movement speed."
+    },
+    {
+      "name": "luna_moon_glaive",
+      "display_name": "Moon Glaives",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_moon_glaive.png",
+      "description": "Empowers Luna's glaives, causing her attacks to bounce between enemy units. Deals less damage with each bounce.",
+      "lore": "Carefully sharpened, Luna's boomerang-like weapon cuts a wide swath through enemy numbers.",
+      "notes": [
+        "Moon Glaives do not proc any attack modifier except Critical Strikes."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BOUNCE RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BOUNCES:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE REDUCTION PER BOUNCE:",
+          "values": [
+            50,
+            45,
+            40,
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "luna_lunar_blessing",
+      "display_name": "Lunar Blessing",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_lunar_blessing.png",
+      "description": "Grants attack damage to Luna and nearby allied heroes within 1200 range, with Luna receiving double the attack damage bonuses. At night, Lunar Blessing is global, and Luna is blessed with bonus night vision.",
+      "lore": "The Goddess of the Moon smiles upon her kin.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Aura",
+      "target": "Allies",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE (ALLIES):",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE (SELF):",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS NIGHT VISION:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "luna_eclipse",
+      "display_name": "Eclipse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_eclipse.png",
+      "description": "Showers random nearby enemies with strikes from Luna's current level of Lucent Beam. These beams do not stun their targets, and there is a maximum number of times that a single target can be struck. Also turns day into night for a short time.",
+      "lore": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed.",
+      "notes": [
+        "Eclipse doesn't work if Luna doesn't have any points in Lucent Beam.",
+        "Beams will stop if Luna is killed.",
+        "Will not hit invisible units.",
+        "There is a 0.6 seconds gap between beams, 0.3 seconds with scepter."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        105
+      ],
+      "special_values": [
+        {
+          "heading": "TOTAL BEAMS:",
+          "values": [
+            6,
+            9,
+            12
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            675
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX BEAMS PER UNIT:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "NIGHT DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ECLIPSE DURATION:",
+          "values": [
+            2.4,
+            4.2,
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Allows Luna to cast Eclipse on an allied unit or herself and have its effects follow them, or cast it on an area. Increases total beams, reduces duration, removes the limit on beams per unit, and makes the beams appear twice as fast."
+    }
+  ],
+  "talents": [
+    "-5% Moon Glaives Damage Reduction",
+    "+0.5s Lucent Beam Ministun",
+    "+1 Lunar Orbit Glaive",
+    "+80 Lucent Beam Damage",
+    "-40s Eclipse Cooldown",
+    "1.5x Lunar Orbit Damage / Speed",
+    "+25/50 Lunar Blessing Allied/Self Damage",
+    "Lucent Beam Hits An Additional Target"
+  ],
+  "facets": []
+}

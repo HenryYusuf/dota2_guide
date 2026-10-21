@@ -21,6 +21,14 @@ abstract final class CdnUrls {
   static String heroPortrait(String valveHeroKey) =>
       '$_heroPortraits/$valveHeroKey.png';
 
+  /// Directory holding ability icons, named by the FULL ability name
+  /// (e.g. `antimage_blink`) — a flat convention, not namespaced per hero.
+  static const _abilityIcons = '$host/apps/dota2/images/dota_react/abilities';
+
+  /// Icon for the ability with the given full ability name — a 128×128 PNG.
+  static String abilityIcon(String abilityName) =>
+      '$_abilityIcons/$abilityName.png';
+
   /// Strips the `npc_dota_hero_` prefix from a Valve hero name, returning the
   /// CDN key (`npc_dota_hero_antimage` → `antimage`).
   static String heroKeyFromValveName(String valveHeroName) =>

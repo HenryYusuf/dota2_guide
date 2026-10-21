@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 43,
+    "valve_key": "npc_dota_hero_death_prophet",
+    "localized_name": "Death Prophet",
+    "one_liner": "Summons an army of ghosts to attack",
+    "primary_attribute": "universal",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/death_prophet.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.9
+      },
+      "agility": {
+        "base": 17,
+        "gain": 2.3
+      },
+      "intelligence": {
+        "base": 24,
+        "gain": 3
+      }
+    },
+    "combat": {
+      "damage_min": 22,
+      "damage_max": 32,
+      "attack_rate": 1.7,
+      "attack_range": 600,
+      "projectile_speed": 1000,
+      "armor": 3.83,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Krobelus was a Death Prophet--which is one way of saying she told fortunes for the wealthiest of those who wished to look beyond the veil. But after years of inquiring on behalf of others, she began to seek clues on her own fate. When death refused to yield its secrets, she tried to buy them with her life. But the ultimate price proved insufficient.\r\n\t\t\t\t<br><br>Death disgorged her again and again, always holding back its deepest mysteries. Her jealousy grew. Others could die for eternity--why not she? Why must she alone be cast back on the shores of life with such tiresome regularity? Why was she not worthy of the one thing all other living creatures took for granted? Still, she would not be discouraged.\r\n\t\t\t\t<br><br>Each time she returned from the grave, she brought a bit of death back with her. Wraiths followed her like fragments of her shattered soul; her blood grew thin and ectoplasmic; the feasting creatures of twilight took her for their kin.. She gave a little of her life with every demise, and it began to seem as if her end was in sight. With her dedication to death redoubled, and no client other than herself, Krobelus threw herself ever more fervently into death's abyss, intent on fulfilling the one prophecy that eluded her: That someday the Death Prophet would return from death no more."
+  },
+  "abilities": [
+    {
+      "name": "death_prophet_carrion_swarm",
+      "display_name": "Crypt Swarm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_carrion_swarm.png",
+      "description": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
+      "lore": "Krobelus' many trips to the grave gather a flock of the damned.",
+      "notes": [
+        "Can hit units up to 1110 range away.",
+        "Does not trigger spell block or spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        9,
+        8,
+        7,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            175,
+            250,
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "death_prophet_silence",
+      "display_name": "Silence",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_silence.png",
+      "description": "Fires a projectile that prevents enemy units in a target area from casting spells.",
+      "lore": "Peering into the veil of her opponent's demise, Krobelus sees a silent future.",
+      "notes": [
+        "Doesn't prevent usage of items."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3.5,
+            4,
+            4.5,
+            5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "death_prophet_spirit_siphon",
+      "display_name": "Spirit Siphon",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_spirit_siphon.png",
+      "description": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+      "lore": "Krobelus willingly shows others the path she alone cannot follow.",
+      "notes": [
+        "Cannot cast multiple on same target."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        60
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases Spirit Siphon charges by 1 and causes enemies to be feared for 1 seconds if they are siphoned for 3 seconds consecutively."
+    },
+    {
+      "name": "death_prophet_witchcraft",
+      "display_name": "Witchcraft",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_witchcraft.png",
+      "description": "Death Prophet's occult knowledge deepens with experience, gaining movement speed and spell cooldown reduction.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT SPEED:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "COOLDOWN REDUCTION:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "death_prophet_exorcism",
+      "display_name": "Exorcism",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_exorcism.png",
+      "description": "Unleashes evil spirits to drain the life of nearby enemy units and structures. Spirits need to return back to Death Prophet in order to attack again. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Deals 50% damage to buildings. Lasts 40 seconds.",
+      "lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
+      "notes": [
+        "Radius represents the area in which the spirits will acquire targets around Death Prophet.",
+        "Spirit damage isn't reduced by damage block abilities."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        200,
+        300,
+        400
+      ],
+      "cooldowns": [
+        150
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPIRITS:",
+          "values": [
+            10,
+            18,
+            26
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LIFE DRAIN:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SPIRIT DAMAGE:",
+          "values": [
+            65,
+            68,
+            71
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPIRIT BONUS DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Whenever an enemy is affected by Death Prophet's spells or when she attacks an enemy, a ghost will fly out and hit the enemy for an increased bonus of its usual damage then return to her with life."
+    }
+  ],
+  "talents": [
+    "+75 Silence AoE",
+    "+200 Health",
+    "+50 Attack Speed",
+    "-2.5s Crypt Swarm Cooldown",
+    "+6 Exorcism Spirits",
+    "+30 Spirit Siphon Damage/Heal",
+    "-22s Spirit Siphon Replenish Time",
+    "Deaths During Exorcism Extend Duration By +8s"
+  ],
+  "facets": []
+}

@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 67,
+    "valve_key": "npc_dota_hero_spectre",
+    "localized_name": "Spectre",
+    "one_liner": "Haunts her enemies and teleports to her target",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/spectre.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 2.3
+      },
+      "agility": {
+        "base": 29,
+        "gain": 2.3
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 52,
+      "damage_max": 56,
+      "attack_rate": 1.8,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.83,
+      "magic_resistance": 25,
+      "movement_speed": 295,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Just as higher states of energy seek a lower level, the Spectre known as Mercurial is a being of intense and violent energy who finds herself irresistibly drawn to scenes of strife as they unfold in the physical world. While her normal spectral state transcends sensory limitations, each time she takes on a physical manifestation, she is stricken by a loss of self--though not of purpose. In the clash of combat, her identity shatters and reconfigures, and she begins to regain awareness. She grasps that she is Mercurial the Spectre--and that all of her Haunts are but shadows of the one true Spectre. Focus comes in the struggle for survival; her true mind reasserts itself; until in the final moments of victory or defeat, she transcends matter and is restored once more to her eternal form."
+  },
+  "abilities": [
+    {
+      "name": "spectre_spectral_dagger",
+      "display_name": "Spectral Dagger",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_spectral_dagger.png",
+      "description": "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre moves faster and phases through otherwise impassable terrain.",
+      "lore": "Mercurial's dagger eclipses the physical plane in shadow, a state in which mortals cower, but spectres thrive.",
+      "notes": [
+        "There is a 1 second grace period after leaving the path where no collision is preserved.",
+        "Does not trigger spell block or spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1800
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        22,
+        20,
+        18,
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            80,
+            120,
+            160,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SPEED CHANGE:",
+          "values": [
+            14,
+            16,
+            18,
+            20
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "spectre_shadow_step",
+      "display_name": "Shadow Step",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_shadow_step.png",
+      "description": "Sends an uncontrollable illusion at a target that follows and attacks the target.\n\nThe Reality sub-ability may be used to teleport to the illusion, destroying it.",
+      "lore": "With great focus of will, Mercurial can sometimes limit the extent of her division.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "cooldowns": [
+        24,
+        21,
+        18,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            3.5,
+            4,
+            4.5,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION DAMAGE TAKEN:",
+          "values": [
+            175
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ILLUSION DAMAGE:",
+          "values": [
+            35,
+            40,
+            45,
+            50
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "spectre_dispersion",
+      "display_name": "Dispersion",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_dispersion.png",
+      "description": "Spectre disperses part of the damage dealt to her, reflecting it to all nearby enemies. The effect lessens with distance.",
+      "lore": "A daunting task lies before enemies of Mercurial - killing a shadow with blade and magic.",
+      "notes": [
+        "The reflected damage is not dealt to Spectre.",
+        "Illusions don't get this ability.",
+        "Damage is reflected before reductions, and is returned as the same damage type.",
+        "Damage done by this ability is considered reflected damage. Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE REFLECTED:",
+          "values": [
+            9,
+            12,
+            15,
+            18
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MIN RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Dispersion can be activated to increase the amount absorbed and reflected by Dispersion by 50% of its base values for 5s. Cooldown 25. Manacost 50."
+    },
+    {
+      "name": "spectre_desolate",
+      "display_name": "Desolate",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_desolate.png",
+      "description": "Spectre and her illusions deal bonus Pure damage if attacking an enemy that does not have any allied units within a 350 radius around them.",
+      "lore": "Often times, warriors find themselves alone with a vision of Mercurial - the fated question is if it is the true Spectre.",
+      "notes": [
+        "Damage is dealt before Spectre's attack.",
+        "Spectre's illusions also have Desolate."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            23.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "spectre_haunt",
+      "display_name": "Haunt",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_haunt.png",
+      "description": "Creates a spectral nemesis to haunt all enemy Heroes.\n\nHaunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself.  They ignore terrain.\n\nThe Reality sub-ability may be used to teleport to the illusion, destroying it.",
+      "lore": "At the height of combat, Mercurial's physical manifestation shatters, and the shadowy pieces haunt those who still cling to life.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        160,
+        150,
+        140
+      ],
+      "special_values": [
+        {
+          "heading": "HAUNT DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HAUNT DAMAGE:",
+          "values": [
+            35,
+            50,
+            65
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "HAUNT DAMAGE TAKEN:",
+          "values": [
+            200
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "The first time Spectre uses Reality on a Haunt illusion, enemies in a 400 area around the target are Feared away from Spectre for 2s and have their movement speed slowed by 50%.\n\nReduces cooldown by 20s."
+    }
+  ],
+  "talents": [
+    "-3s Spectral Dagger Cooldown",
+    "+12 Desolate Damage",
+    "+1s Shadow Step Duration",
+    "+80 Spectral Dagger Damage",
+    "+300 Health",
+    "+15% Spectral Dagger Slow/Bonus",
+    "+12% All Spectre Illusion Damage",
+    "+4% Dispersion"
+  ],
+  "facets": []
+}

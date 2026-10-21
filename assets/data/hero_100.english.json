@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 100,
+    "valve_key": "npc_dota_hero_tusk",
+    "localized_name": "Tusk",
+    "one_liner": "Snowballs into his enemies to stun",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/tusk.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 3.9
+      },
+      "agility": {
+        "base": 23,
+        "gain": 1.9
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 50,
+      "damage_max": 54,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.83,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "It had been a brawl to remember. There stood Ymir, the Tusk, the Terror from the Barrier, the Snowball from Cobalt, the only fighter to have bested the Bristled Bruiser in a fair fight, and now the last man standing in Wolfsden Tavern. What started as a simple bar bet of supremacy ended with four regulars, a blacksmith, and six of the Frost Brigade's best soldiers writhing against the shards and splinters of almost every bottle, mug, and chair in the building. The Tusk boasted and toasted his victory as he emptied his brew.\r\n\t\t\t\t<br><br>No sooner had the defeated regained consciousness than the cries for double-or-nothing rang out. The Tusk was pleased at the prospect, but none could think of a bet bigger than the one he just conquered. Horrified at the damage to his tavern and desperate to avoid another brawl, the barkeep had an idea. As skilled as he was, Ymir had never taken part in a real battle, never tested himself against the indiscriminate death and chaos of war. He proposed a wager to the fighter: seek out the biggest battle he could find, survive, and win it for whichever side he chose. The stakes? The next round of drinks."
+  },
+  "abilities": [
+    {
+      "name": "tusk_ice_shards",
+      "display_name": "Ice Shards",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_ice_shards.png",
+      "description": "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 4 seconds.",
+      "lore": "In the frozen tundra near the Barrier, after the last sun of autumn has set, ice can form with alarming speed.",
+      "notes": [
+        "Creates an impassable barrier."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        1400
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        23,
+        20,
+        17,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHARD DAMAGE:",
+          "values": [
+            75,
+            150,
+            225,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHARD DURATION:",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_snowball",
+      "display_name": "Snowball",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_snowball.png",
+      "description": "Tusk begins rolling into a snowball. Allies within a 325 radius can also be added to the snowball by right-clicking on them, even while the snowball is moving. Once launched, any enemies caught in the snowball's path will be stunned and take damage. Each allied Hero in the snowball will add to its damage and stun duration.",
+      "lore": "Tales are still told of the wild feat that ended the grand brawl at White Fields.",
+      "notes": [
+        "The snowball will break apart a maximum of 3 seconds after launch.",
+        "The snowball can be launched early by pressing using the Launch Snowball ability.",
+        "Doesn't carry illusions, but will carry Meepo clones and other units that Tusk controls.",
+        "Each Meepo clone added to the snowball will add its own bonus damage.",
+        "Allies can click on a snowball to add themselves to it."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        1150
+      ],
+      "mana_costs": [
+        75,
+        75,
+        75,
+        75
+      ],
+      "cooldowns": [
+        21,
+        19,
+        17,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            80,
+            140,
+            200,
+            260
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SNOWBALL SPEED:",
+          "values": [
+            575,
+            600,
+            625,
+            650
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE PER ALLY:",
+          "values": [
+            40,
+            65,
+            90,
+            115
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.6,
+            0.8,
+            1,
+            1.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION PER ALLY:",
+          "values": [
+            0.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LAUNCH TIME:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GATHER RADIUS:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_tag_team",
+      "display_name": "Tag Team",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_tag_team.png",
+      "description": "Activate to temporarily apply a negative debuff aura around you, causing enemies that are attacked under it to take bonus physical damage and reduced movement speed. Lasts 6 seconds.",
+      "lore": "Even far from Cobalt, Tusk carries the 'Barrier Chill' in his very bones.",
+      "notes": [
+        "Affects attacks from allied heroes, Tusk or any of his units."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        70
+      ],
+      "cooldowns": [
+        24,
+        21,
+        18,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DEBUFF DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_drinking_buddies",
+      "display_name": "Drinking Buddies",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_drinking_buddies.png",
+      "description": "Tusk reaches out to tag an allied unit, pulling them closer. Once tagged, both Tusk and his tagged ally gain movement speed and armor.",
+      "lore": "The only thing better than finding a good drinking buddy is finding an equally good enemy the two of you can punch.",
+      "notes": [
+        "Doesn't pull Tusk or targeted ally if they are within 250 range of each other.",
+        "Cannot be used during Snowball."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000
+      ],
+      "mana_costs": [
+        80
+      ],
+      "cooldowns": [
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVEMENT SPEED:",
+          "values": [
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ARMOR:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_walrus_kick",
+      "display_name": "Walrus Kick",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_walrus_kick.png",
+      "description": "Kicks the closest enemy unit in the drawn direction, stunning, damaging, and slowing them. Also deals damage to all heroes within 250 radius of its landing area. Cooldown is reduced by 50% if kicking a creep.",
+      "lore": "Tusk may have made his name with his fists, but the wise enemy is wary of any and all limbs.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        250
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "KICK PUSH DISTANCE:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_walrus_punch",
+      "display_name": "Walrus PUNCH!",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_walrus_punch.png",
+      "description": "Tusk connects with his mighty Walrus Punch, a critical strike with bonus damage so powerful it launches its victim into the air.",
+      "lore": "It never matters who throws the first punch, only who throws the last.",
+      "notes": [
+        "Walrus PUNCH has true strike."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        16,
+        13,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            60,
+            90,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CRITICAL DAMAGE:",
+          "values": [
+            200,
+            250,
+            300
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "AIR TIME:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "tusk_bitter_chill",
+      "display_name": "Bitter Chill",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_bitter_chill.png",
+      "description": "Passively slows the attack speed of all enemy heroes within a 350 unit radius.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            12
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+2s Tag Team Duration",
+    "+0.75s Walrus Punch Stun Duration",
+    "+325 Health",
+    "+120 Snowball Damage",
+    "-6s Snowball Cooldown",
+    "+75% Walrus Punch Crit",
+    "Ice Shards slow by 50% and deal 110 DPS",
+    "12% Chance Walrus Punch"
+  ],
+  "facets": []
+}

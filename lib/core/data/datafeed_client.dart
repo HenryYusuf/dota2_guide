@@ -12,11 +12,14 @@
 
 import 'dart:convert';
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
 /// The two feed operations the refresh path needs. Feature units receive
 /// this to build their app-schema files; tests substitute a fake.
+///
+/// Pure Dart on purpose: the snapshot tool (`tool/snapshot.dart`) imports
+/// this library, and `dart run` cannot compile anything that reaches
+/// `dart:ui` — so provider wiring lives in `snapshot_refresher.dart`.
 abstract interface class DatafeedClient {
   /// The feed's current `data_version`, or `null` when the feed serves no
   /// version block (the meta block comes and goes — a null version means
@@ -34,6 +37,21 @@ const String datafeedBaseUrl = 'https://www.dota2.com/datafeed';
 /// for `data_version` (the cheapest version check available); the Heroes
 /// refresh unit reads its data. One URL, two consumers.
 const String heroListFeedUrl = '$datafeedBaseUrl/herolist?language=english';
+
+/// Valve's per-Hero herodata feed: one Hero's complete abilities/talents/
+/// facets document (one HTTP request per Hero — the refresh unit and the
+/// snapshot tool both fan out over the roster with `mapConcurrently`'s
+/// budget).
+///
+/// The locale accepts any Valve feed language token (`english`, `russian`,
+/// …); v1 refreshes English only.
+String heroDataFeedUrl(int heroId, {String locale = 'english'}) =>
+    '$datafeedBaseUrl/herodata?language=$locale&hero_id=$heroId';
+
+/// Parallel per-Hero detail fetches, shared by the refresh unit and the
+/// snapshot tool. The feed is key-free but public — stay polite (127 Heroes
+/// × 1 request per fan-out).
+const int heroDetailFetchConcurrency = 4;
 
 /// Production client over `package:http`.
 class HttpDatafeedClient implements DatafeedClient {
@@ -77,8 +95,3 @@ class HttpDatafeedClient implements DatafeedClient {
     return inner is Map<String, dynamic> ? inner : null;
   }
 }
-
-/// How the app reaches Valve's datafeeds. Overridden in tests with a fake.
-final datafeedClientProvider = Provider<DatafeedClient>(
-  (ref) => HttpDatafeedClient(),
-);

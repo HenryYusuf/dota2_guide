@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 22,
+    "valve_key": "npc_dota_hero_zuus",
+    "localized_name": "Zeus",
+    "one_liner": "Strikes enemies near and far with lightning",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/zuus.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.1
+      },
+      "agility": {
+        "base": 11,
+        "gain": 1.2
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 3.3
+      }
+    },
+    "combat": {
+      "damage_min": 53,
+      "damage_max": 63,
+      "attack_rate": 1.7,
+      "attack_range": 380,
+      "projectile_speed": 1100,
+      "armor": 2.83,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Lord of Heaven, father of gods, Zeus treats all the Heroes as if they are his rambunctious, rebellious children. After being caught unnumbered times in the midst of trysts with countless mortal women, his divine wife finally gave him an ultimatum: 'If you love mortals so much, go and become one. If you can prove yourself faithful, then return to me as my immortal husband. Otherwise, go and die among your creatures.' Zeus found her logic (and her magic) irrefutable, and agreed to her plan. He has been on his best behavior ever since, being somewhat fonder of immortality than he is of mortals. But to prove himself worthy of his eternal spouse, he must continue to pursue victory on the field of battle."
+  },
+  "abilities": [
+    {
+      "name": "zuus_arc_lightning",
+      "display_name": "Arc Lightning",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_arc_lightning.png",
+      "description": "Hurls a bolt of lightning that leaps through nearby enemy units that deal damage.",
+      "lore": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        85,
+        90,
+        95,
+        100
+      ],
+      "cooldowns": [
+        1.6
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            105,
+            130,
+            155,
+            180
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "JUMP RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "JUMPS:",
+          "values": [
+            5,
+            7,
+            9,
+            11
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_lightning_bolt",
+      "display_name": "Lightning Bolt",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_lightning_bolt.png",
+      "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a 600 radius. Can be cast on the ground, affecting the closest enemy hero in 325 range.",
+      "lore": "A shocking punishment for rebellious heathen.",
+      "notes": [
+        "You can interrupt channeling spells and items with this ability."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        700,
+        750,
+        800,
+        850
+      ],
+      "mana_costs": [
+        120,
+        125,
+        130,
+        135
+      ],
+      "cooldowns": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            140,
+            220,
+            300,
+            380
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SIGHT RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SIGHT DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MINISTUN DURATION:",
+          "values": [
+            0.35
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_heavenly_jump",
+      "display_name": "Heavenly Jump",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_heavenly_jump.png",
+      "description": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+      "lore": "Though temporarily barred from the heavens, Zeus can still manage a measure of godly flight.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "cooldowns": [
+        26,
+        22,
+        18,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LEAP DISTANCE:",
+          "values": [
+            375,
+            450,
+            525,
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHOCK RANGE:",
+          "values": [
+            700,
+            800,
+            900,
+            1000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VISION RADIUS:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            1.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SPEED SLOW:",
+          "values": [
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK SPEED SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TARGETS:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_cloud",
+      "display_name": "Nimbus",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_cloud.png",
+      "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemies.",
+      "lore": "Where the thunder god's ire grows, storm clouds quickly gather.",
+      "notes": [
+        "Grants 125 gold if destroyed by an enemy hero.",
+        "Affects the closest enemy unit with strikes from Zeus's current level of Lightning Bolt.",
+        "Towers and creeps do half damage to the Nimbus."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        275
+      ],
+      "cooldowns": [
+        45
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "LIGHTNING BOLT BASE COOLDOWN:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HITS TO DESTROY:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CREEP HITS TO DESTROY:",
+          "values": [
+            16
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_lightning_hands",
+      "display_name": "Lightning Hands",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_lightning_hands.png",
+      "description": "Zeus gains bonus attack speed and his attacks create Arc Lightnings that deal a percentage of its damage. Can be toggled off to stop this effect.",
+      "lore": "A helping hand from Aghanim lets the fallen Lord of Heaven tap into some of his old strengths.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Toggle",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARC LIGHTNING DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_thundergods_wrath",
+      "display_name": "Thundergod's Wrath",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_thundergods_wrath.png",
+      "description": "Strikes all enemy heroes with a bolt of lightning, dealing damage no matter where they may be. Provides True Sight around each hero before they are struck.",
+      "lore": "The Lord of Heaven smites all who oppose him, near or far.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        250,
+        375,
+        500
+      ],
+      "cooldowns": [
+        130
+      ],
+      "special_values": [
+        {
+          "heading": "TRUE SIGHT RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            275,
+            425,
+            575
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "zuus_static_field",
+      "display_name": "Static Field",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/zuus_static_field.png",
+      "description": "Zeus shocks any enemy that he attacks or is hit by his abilities, causing damage equal to a percentage of their current health.",
+      "lore": "The air crackles with static when the Thundergod walks the world.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            3.45
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1 Heavenly Jump Target",
+    "+200 Health",
+    "+75 Thundergod's Wrath Damage",
+    "-20% Arc Lightning Mana Cost / Cooldown",
+    "+60 Arc Lightning Damage",
+    "+0.5s Lightning Bolt Ministun",
+    "325 AoE Lightning Bolt",
+    "3 Heavenly Jump Charges"
+  ],
+  "facets": []
+}

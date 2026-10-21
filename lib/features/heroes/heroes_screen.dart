@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
+import 'hero_detail_screen.dart';
 import 'hero_index.dart';
 import 'heroes_providers.dart';
+import 'primary_attribute_display.dart';
 
 /// Heroes tab: the offline portrait grid with attribute/complexity filters
 /// and name search (spec: user stories 1–4, all working with no network).
@@ -14,24 +17,6 @@ class HeroesScreen extends ConsumerStatefulWidget {
   @override
   ConsumerState<HeroesScreen> createState() => _HeroesScreenState();
 }
-
-/// Display labels for the four primary attributes, matching the in-game
-/// names from the glossary.
-const Map<PrimaryAttribute, String> _attributeLabels = {
-  PrimaryAttribute.strength: 'Strength',
-  PrimaryAttribute.agility: 'Agility',
-  PrimaryAttribute.intelligence: 'Intelligence',
-  PrimaryAttribute.universal: 'Universal',
-};
-
-/// Chip dots in the app's own palette, approximating the in-game attribute
-/// colours (original artwork — no Valve assets, ADR-0001).
-const Map<PrimaryAttribute, Color> _attributeColors = {
-  PrimaryAttribute.strength: Color(0xFFE04B3F),
-  PrimaryAttribute.agility: Color(0xFF5DBB63),
-  PrimaryAttribute.intelligence: Color(0xFF4FA3E3),
-  PrimaryAttribute.universal: Color(0xFFD9B44A),
-};
 
 /// Complexity values the filter offers (1 easy – 3 hard, as in-game).
 const List<int> _complexities = [1, 2, 3];
@@ -116,8 +101,8 @@ class _HeroesScreenState extends ConsumerState<HeroesScreen> {
               children: [
                 for (final attribute in PrimaryAttribute.values)
                   FilterChip(
-                    label: Text(_attributeLabels[attribute]!),
-                    avatar: _AttributeDot(_attributeColors[attribute]!),
+                    label: Text(primaryAttributeLabels[attribute]!),
+                    avatar: _AttributeDot(primaryAttributeColors[attribute]!),
                     showCheckmark: false,
                     selected: _selectedAttributes.contains(attribute),
                     onSelected: (_) => _toggle(_selectedAttributes, attribute),
@@ -199,39 +184,44 @@ class _HeroTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
+    return InkWell(
       borderRadius: BorderRadius.circular(8),
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          buildPortrait(context, hero),
-          const DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                stops: [0.45, 1],
-                colors: [Colors.transparent, Color(0xE6000000)],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(6, 0, 6, 5),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                hero.localizedName,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
+      // Grid → detail: push the Hero's page inside the Heroes tab.
+      onTap: () => context.push(HeroDetailScreen.location(hero.id)),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            buildPortrait(context, hero),
+            const DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  stops: [0.45, 1],
+                  colors: [Colors.transparent, Color(0xE6000000)],
                 ),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(6, 0, 6, 5),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  hero.localizedName,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

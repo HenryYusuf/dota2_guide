@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 7,
+    "valve_key": "npc_dota_hero_earthshaker",
+    "localized_name": "Earthshaker",
+    "one_liner": "Disrupts enemy team with his chain stuns",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/earthshaker.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 3.7
+      },
+      "agility": {
+        "base": 12,
+        "gain": 1.4
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 2.1
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 59,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 0,
+      "armor": 4.0,
+      "magic_resistance": 25,
+      "movement_speed": 315,
+      "turn_rate": 0.9,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Like a golem or gargoyle, Earthshaker was one with the earth but now walks freely upon it. Unlike those other entities, he created himself through an act of will, and serves no other master. In restless slumbers, encased in a deep seam of stone, he became aware of the life drifting freely above him. He grew curious.\r\n\t\t\t\t<br><br>During a season of tremors, the peaks of Nishai shook themselves loose of avalanches, shifting the course of rivers and turning shallow valleys into bottomless chasms. When the land finally ceased quaking, Earthshaker stepped from the settling dust, tossing aside massive boulders as if throwing off a light blanket.\r\n\t\t\t\t<br><br>He had shaped himself in the image of a mortal beast, and named himself Raigor Stonehoof. He bleeds now, and breathes, and therefore he can die. But his spirit is still that of the earth; he carries its power in the magical totem that never leaves him. And on the day he returns to dust, the earth will greet him as a prodigal son."
+  },
+  "abilities": [
+    {
+      "name": "earthshaker_fissure",
+      "display_name": "Fissure",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_fissure.png",
+      "description": "Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and damaging enemy units along its line.",
+      "lore": "The Nishian totem splits the world to its core with tectonic force.",
+      "notes": [
+        "Creeps will wait for Fissure to disappear. They will not attempt to walk around it.",
+        "Fissure is not blocked by Linken's Sphere."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        1600
+      ],
+      "mana_costs": [
+        115,
+        120,
+        125,
+        130
+      ],
+      "cooldowns": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "FISSURE DURATION:",
+          "values": [
+            6.5,
+            7,
+            7.5,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1,
+            1.2,
+            1.4,
+            1.6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "AFTERSHOCK STUN PCT:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            18,
+            17,
+            16,
+            15
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Reduces Fissure cooldown and releases an Aftershock along its path that stuns for a shortened duration when Earthshaker casts another ability."
+    },
+    {
+      "name": "earthshaker_enchant_totem",
+      "display_name": "Enchant Totem",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_enchant_totem.png",
+      "description": "Empowers Earthshaker's totem, causing it to deal extra damage and have 100 bonus attack range on the next attack.",
+      "lore": "Raigor's gorilla strength can destroy mountains.",
+      "notes": [
+        "Bonus damage is based on base damage and that given by primary attribute."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Enemy Units",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        45,
+        55,
+        65,
+        75
+      ],
+      "cooldowns": [
+        5
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS:",
+          "values": [
+            100,
+            200,
+            300,
+            400
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "JUMP DISTANCE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CLEAVE DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CLEAVE DISTANCE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            14
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Enchant Totem becomes a ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there.  Self-casting the ability will behave in the original form, without jumping. Grants Enchant Totem a cleaving attack."
+    },
+    {
+      "name": "earthshaker_aftershock",
+      "display_name": "Aftershock",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_aftershock.png",
+      "description": "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities.",
+      "lore": "The earth trembles beneath the mighty footsteps of Raigor.",
+      "notes": [
+        "Using items does not trigger Aftershock."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            65,
+            90,
+            115,
+            140
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            1,
+            1.1,
+            1.2,
+            1.3
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earthshaker_echo_slam",
+      "display_name": "Echo Slam",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_echo_slam.png",
+      "description": "Shockwaves travel through the ground, damaging enemy units.  Each enemy hit causes an echo to damage nearby units. Real heroes cause two echoes.",
+      "lore": "Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        130,
+        120,
+        110
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ECHO DAMAGE:",
+          "values": [
+            70,
+            90,
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INITIAL DAMAGE:",
+          "values": [
+            100,
+            140,
+            180
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earthshaker_slugger",
+      "display_name": "Slugger",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_slugger.png",
+      "description": "Enemies killed with Enchant Totem or Earthshaker's other abilities are sent flying, dealing damage to enemies they hit.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "SPEED:",
+          "values": [
+            1600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE (CREEPS):",
+          "values": [
+            27
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE (HEROES):",
+          "values": [
+            135
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FLYING ENEMY'S MAX HEALTH AS DAMAGE:",
+          "values": [
+            7
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+25 Base Damage",
+    "+75 Fissure Damage",
+    "+200 Fissure Range",
+    "+50 Aftershock Damage",
+    "+50 Echo Damage",
+    "+65% Enchant Totem Damage",
+    "-50% Echo Slam Cooldown",
+    "-1.5s Enchant Totem Cooldown"
+  ],
+  "facets": []
+}

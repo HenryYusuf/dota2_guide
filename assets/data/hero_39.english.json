@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 39,
+    "valve_key": "npc_dota_hero_queenofpain",
+    "localized_name": "Queen of Pain",
+    "one_liner": "Blinks in to deal massive magical damage",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/queenofpain.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 20,
+        "gain": 2.5
+      },
+      "intelligence": {
+        "base": 25,
+        "gain": 3.4
+      }
+    },
+    "combat": {
+      "damage_min": 51,
+      "damage_max": 57,
+      "attack_rate": 1.5,
+      "attack_range": 550,
+      "projectile_speed": 1500,
+      "armor": 3.33,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The Ecclesiast-King of Elze nursed a desire for pain--forbidden pain. In a less prominent political figure, such desires might be considered unwise, but in a monarch of his stature, to satisfy such thirsts would have threatened the virtue of the Divine Throne itself. Therefore he turned to his dungeon full of demonologists, promising freedom to whoever could summon a personal succubus of torment and bind it entirely to his service. The creature who arrived, Akasha by name, visited upon him such exquisite torments that he named her his Secret Queen, and he began to spend all his spare moments submitting to her clever torments--eventually abdicating all his responsibilities in his pursuit of the painful pleasures that only she could bring. Queen of Pain could bring him to the brink of death, but she was rune-bound to keep him alive. At last the King's neglect of state brought on an uprising. He was dragged from his chamber and hurled from the Tower of Invocations, and at the moment of death, Queen of Pain was let loose into the world, freed from servitude--freed to visit her sufferings on anyone she deigned to notice."
+  },
+  "abilities": [
+    {
+      "name": "queenofpain_shadow_strike",
+      "display_name": "Shadow Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/queenofpain_shadow_strike.png",
+      "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 16 seconds.  An instance of damage is dealt every 3 seconds.",
+      "lore": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims.",
+      "notes": [
+        "The affected unit slowly regains its original movement speed every second during the duration.",
+        "Units afflicted by Shadow Strike can be denied by their allies when their HP drops below 25% of their maximum health."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        450,
+        500,
+        550,
+        600
+      ],
+      "mana_costs": [
+        100,
+        105,
+        110,
+        115
+      ],
+      "cooldowns": [
+        11,
+        9,
+        7,
+        5
+      ],
+      "special_values": [
+        {
+          "heading": "INITIAL DAMAGE:",
+          "values": [
+            50,
+            80,
+            110,
+            140
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER TICK:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -25,
+            -35,
+            -45,
+            -55
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            16
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Causes Shadow Strike to become a 300 AoE Spell. When Shadow Strike ends or is re-applied to an enemy Hero, the target emits a Scream of Pain, hitting any nearby enemies."
+    },
+    {
+      "name": "queenofpain_blink",
+      "display_name": "Blink",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/queenofpain_blink.png",
+      "description": "Short distance teleportation that allows Queen of Pain to move in and out of combat.",
+      "lore": "The Secret Queen lives up to her title, making her pain impossible to escape.",
+      "notes": [
+        "You can use Blink to dodge incoming projectiles."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "cast_ranges": [
+        1075,
+        1150,
+        1225,
+        1300
+      ],
+      "mana_costs": [
+        65
+      ],
+      "cooldowns": [
+        12,
+        10,
+        8,
+        6
+      ],
+      "special_values": [],
+      "shard_text": "Releases a sonic boom when Queen of Pain blinks, at both her starting and ending locations. Deals 125 damage in a 300 AoE and silences the target for 1.75 seconds."
+    },
+    {
+      "name": "queenofpain_scream_of_pain",
+      "display_name": "Scream Of Pain",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/queenofpain_scream_of_pain.png",
+      "description": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.\n\n25% of the damage dealt to heroes is reflected back to her.",
+      "lore": "The sultry voice of Akasha beckons her opponents while stealing their souls.",
+      "notes": [
+        "Scream Of Pain will hit invisible units.",
+        "Scream Of Pain cannot be disjointed.",
+        "Damage to illusions is not reflected. Damage reflected is before reduction and non-lethal.",
+        "Reflected damage does not provide any lifesteal and cannot be reflected."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        120
+      ],
+      "cooldowns": [
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            90,
+            175,
+            260,
+            345
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "queenofpain_succubus",
+      "display_name": "Succubus",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/queenofpain_succubus.png",
+      "description": "All sources of Spell Lifesteal also apply to Pure Damage. Queen of Pain gains Spell Lifesteal that increases with proximity to her enemies. Lifesteal is at its maximum when the enemy is 150 units or closer to her and at its minimum when the enemy is 800 units or further from her.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MINIMUM LIFESTEAL:",
+          "values": [
+            2
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAXIMUM LIFESTEAL:",
+          "values": [
+            14
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "queenofpain_sonic_wave",
+      "display_name": "Sonic Wave",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/queenofpain_sonic_wave.png",
+      "description": "Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back.",
+      "lore": "Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery.",
+      "notes": [
+        "Sonic Wave can hit units up to 1150 units away."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        250,
+        400,
+        550
+      ],
+      "cooldowns": [
+        110,
+        95,
+        80
+      ],
+      "special_values": [
+        {
+          "heading": "WAVE MAX RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            325,
+            475,
+            625
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "KNOCKBACK DISTANCE:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+35 Attack Speed against Shadow Striked units",
+    "+7 Strength",
+    "-1s Shadow Strike Damage Interval",
+    "+30 Damage",
+    "+115 Scream of Pain Damage",
+    "-45s Sonic Wave Cooldown",
+    "-2s Blink Cooldown",
+    "+250 Sonic Wave Damage"
+  ],
+  "facets": []
+}

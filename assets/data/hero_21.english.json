@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 21,
+    "valve_key": "npc_dota_hero_windrunner",
+    "localized_name": "Windranger",
+    "one_liner": "Fires swift flurry of arrows at a single target",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/windrunner.png",
+    "attributes": {
+      "strength": {
+        "base": 18,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 20,
+        "gain": 2.1
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 3.2
+      }
+    },
+    "combat": {
+      "damage_min": 24,
+      "damage_max": 36,
+      "attack_rate": 1.5,
+      "attack_range": 600,
+      "projectile_speed": 1250,
+      "armor": 3.33,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The western forests guard their secrets well. One of these is Lyralei, master archer of the wood, and favored godchild of the wind.  Known now as Windranger, Lyralei's family was killed in a storm on the night of her birth--their house blown down by the gale, contents scattered to the winds. Only the newborn survived among the debris field of death and destruction.  In the quiet after the storm, the wind itself took notice of the lucky infant crying in the grass. The wind pitied the child and so lifted her into the sky and deposited her on a doorstep in a neighboring village.  In the years that followed, the wind returned occasionally to the child's life, watching from a distance while she honed her skills.  Now, after many years of training, Windranger fires her arrows true to their targets.  She moves with blinding speed, as if hastened by a wind ever at her back.  With a flurry of arrows, she slaughters her enemies, having become, nearly, a force of nature herself."
+  },
+  "abilities": [
+    {
+      "name": "windrunner_shackleshot",
+      "display_name": "Shackleshot",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_shackleshot.png",
+      "description": "Shackles the target to an enemy unit or tree in a line directly behind it.  If no unit or tree is present, the stun duration is reduced to 0.6.",
+      "lore": "Windranger's variety of bow skills includes an arrow with thick ropes attached to encumber any escaping target.",
+      "notes": [
+        "This spell can shackle two enemies together, stunning them both.",
+        "Can shackle the target to an enemy unit or tree at most 575 behind the target.",
+        "Shackleshot can be disjointed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "cooldowns": [
+        16,
+        14,
+        12,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "SHACKLE DURATION:",
+          "values": [
+            1.75,
+            2.25,
+            2.75,
+            3.25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE PER HERO:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CREEP/TREE DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE BUFF DURATION:",
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "windrunner_powershot",
+      "display_name": "Powershot",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_powershot.png",
+      "description": "CHANNELED - Windranger charges her bow for up to 1 second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages and slows enemies' movement speed along its path. For each enemy that Powershot hits, its damage and slow is reduced.",
+      "lore": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets.",
+      "notes": [
+        "Powershot will destroy trees in its area of effect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        3000
+      ],
+      "mana_costs": [
+        90,
+        100,
+        110,
+        120
+      ],
+      "cooldowns": [
+        12,
+        11,
+        10,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            170,
+            270,
+            370,
+            470
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            22,
+            28,
+            34,
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REDUCTION PER UNIT:",
+          "values": [
+            15
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            3000
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "windrunner_windrun",
+      "display_name": "Windrun",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_windrun.png",
+      "description": "Increases movement speed and adds evasion from all physical attacks.",
+      "lore": "Lyralei enchants gusts of winds to fight incoming attacks.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "MOVE SPEED BONUS:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "EVASION:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "windrunner_gale_force",
+      "display_name": "Gale Force",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_gale_force.png",
+      "description": "Vector Targeted. Summons a strong wind that pushes all enemies in the target area towards the target direction.",
+      "lore": "At last Lyralei has learned to call upon the might of her true birthright.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        125
+      ],
+      "cooldowns": [
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WIND SPEED:",
+          "values": [
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "windrunner_focusfire",
+      "display_name": "Focus Fire",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_focusfire.png",
+      "description": "Windranger channels the wind to gain 350 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage.  Extra damage from secondary item effects is not reduced.",
+      "lore": "Lyralei's ability to bombard opponents with a flurry of arrows is unparalleled - even at the expense of accuracy.",
+      "notes": [
+        "Issuing a Hold Position command will pause Windranger's attacks.",
+        "Windranger can move while attacking."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units and Buildings",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        75,
+        100,
+        125
+      ],
+      "cooldowns": [
+        50,
+        40,
+        30
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            350,
+            425,
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS PER SECOND:",
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            -25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ATTACK RANGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "windrunner_tailwind",
+      "display_name": "Tailwind",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_tailwind.png",
+      "description": "Using an ability conjures a stacking Tailwind that gives Windranger a brief burst of movement speed. Movement speed bonus gradually starts fading halfway through the Tailwind duration.\n\nPassively increases Windranger's max movement speed.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MOVE SPEED BONUS PER STACK:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX MOVESPEED:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Attacks grant Tailwind. Tailwind lasts longer and is undispellable."
+    }
+  ],
+  "talents": [
+    "+1s Powershot Slow Duration",
+    "+0.75s Windrun Duration",
+    "+40 Tailwind Max Movespeed",
+    "-15% Powershot Reduction",
+    "+0.75s Shackleshot Duration",
+    "-10% Focus Fire Damage Reduction",
+    "Powershot Executes Enemy Heroes Under 16% Max HP",
+    "Focus Fire Kills Advance Cooldown by 16s"
+  ],
+  "facets": []
+}

@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 66,
+    "valve_key": "npc_dota_hero_chen",
+    "localized_name": "Chen",
+    "one_liner": "Converts creeps to his cause, building an army",
+    "primary_attribute": "intelligence",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/chen.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 2.2
+      },
+      "agility": {
+        "base": 15,
+        "gain": 2.1
+      },
+      "intelligence": {
+        "base": 19,
+        "gain": 3.2
+      }
+    },
+    "combat": {
+      "damage_min": 48,
+      "damage_max": 58,
+      "attack_rate": 1.7,
+      "attack_range": 650,
+      "projectile_speed": 1100,
+      "armor": 1.5,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Born in the godless Hazhadal Barrens, Chen came of age among the outlaw tribes who eked out an existence in the shimmering heat of the desert.  Using an ancient form of animal enthrallment, Chen's people husbanded the hardy desert locuthi, a stunted species of burrowing dragon that melted desert sands into tubes of glass where twice-a-year rains collected.  Always on the edge of starvation and thirst, fighting amongst their neighbors and each other, Chen's clan made the mistake, one fateful day, of ambushing the wrong caravan. \r\n\t\t\t\t<br><br>In the vicious battle that followed, Chen's clan was outmatched.  The armored Knights of the Fold made short work of the enthralled locuthi, who attacked and died in waves.  With their dragons dead, the tribesmen followed. Chen struggled, and slashed, and clawed, and perished--or would have. Defeated, on his knees, he faced his execution with humility, offering his neck to the blade. Moved by Chen's obvious courage, the executioner halted his sword. Instead of the blade, Chen was given a choice: death or conversion. Chen took to the faith with a ferocity. He joined the Fold and earned his armor one bloody conversion at a time. Now, with the fanaticism of a convert, and with his powers of animal enthrallment at their peak, he seeks out unbelievers and introduces them to their final reward."
+  },
+  "abilities": [
+    {
+      "name": "chen_penitence",
+      "display_name": "Penitence",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_penitence.png",
+      "description": "Damages enemy unit, forces it to move slower and lets allies attack it more quickly.",
+      "lore": "Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        20,
+        17,
+        14,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -12,
+            -18,
+            -24,
+            -30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            50,
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "chen_holy_persuasion",
+      "display_name": "Holy Persuasion",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_holy_persuasion.png",
+      "description": "Chen takes control of an enemy or neutral creep and receives a percentage of its bounty. Its maximum health is set to 400. Converted creeps will have increased movement speed and bonus damage. Chen may globally target his own creep if it has not taken damage in the last 3 seconds to unsummon it.",
+      "lore": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
+      "notes": [
+        "Persuading a new creep above max unit count causes the oldest persuaded creep to die.",
+        "Can target Ancient creeps when Chen has Aghanim's Shard.",
+        "The health of creeps already under Chen's control does not update to the new level upon leveling Holy Persuasion further.",
+        "Fully restores the creep's mana upon converting."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        110,
+        130,
+        150,
+        170
+      ],
+      "cooldowns": [
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "MAX UNITS:",
+          "values": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CREEP MAX LEVEL:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEALTH MINIMUM:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PERCENTAGE OF BOUNTY:",
+          "values": [
+            25,
+            50,
+            75,
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MOVE SPEED BONUS:",
+          "values": [
+            5,
+            10,
+            20,
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            5,
+            10,
+            15,
+            20
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Allows Holy Persuasion to target Ancient creeps. Can control up to 1/2/3 Ancient creeps based on Hand of God's level. Additionally levels up some abilities of creeps by 1 level."
+    },
+    {
+      "name": "chen_divine_favor",
+      "display_name": "Divine Favor",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_divine_favor.png",
+      "description": "Passively provides an aura that grants increased health regeneration. Can be cast on allies to provide them with bonus armor and increasing the healing and health regeneration they receive.\n\nIf cast on Chen, all units controlled by Chen receive the buff.",
+      "lore": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "REGEN PER SEC:",
+          "values": [
+            1.5,
+            3,
+            4.5,
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARMOR:",
+          "values": [
+            5,
+            10,
+            15,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL AMPLIFICATION:",
+          "values": [
+            5,
+            10,
+            15,
+            20
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "chen_zealot",
+      "display_name": "Zealot",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_zealot.png",
+      "description": "Whenever Chen respawns, he is joined by a Zealot, a melee warrior creep with the ability to sacrifice itself to heal or deal damage to an enemy.  The Zealot receives Holy Persuasion's benefits and scales up with other lane melee creeps as game time increases and gains extra base damage.  The Zealot respawns next to Chen.\n\nZealot may be activated to teleport a unit under your control to Chen after a 6 second delay.  If Chen is targeted, it will teleport all units you control. Taking damage from enemy heroes or their units will cancel the teleport.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "ZEALOT RESPAWN TIME:",
+          "values": [
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS BASE DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "chen_hand_of_god",
+      "display_name": "Hand of God",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_hand_of_god.png",
+      "description": "Heals all allied heroes on the map as well as all units under Chen's control. A large heal is applied at first and a slow heal over time is applied for 10 seconds afterwards.",
+      "lore": "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism.",
+      "notes": [
+        "Can heal invulnerable and hidden/banished allies."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        200,
+        300,
+        400
+      ],
+      "cooldowns": [
+        150,
+        130,
+        110
+      ],
+      "special_values": [
+        {
+          "heading": "INITIAL HEAL:",
+          "values": [
+            200,
+            300,
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL PER SECOND:",
+          "values": [
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHARD HOLY PERSUASION ANCIENTS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CHANNEL RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Decreases the cooldown of Hand of God to 40s and it becomes a channelled spell that lasts for up to 6 seconds. The initial heal happens at the start of the channel, and while channeling other nearby allied units become debuff immune with 60% magic resistance and the power of the heal over time is increased by 200%."
+    }
+  ],
+  "talents": [
+    "+75 Penitence Damage",
+    "+25% Zealot Health/Damage",
+    "+12% Holy Persuasion Damage",
+    "+15% Penitence Slow",
+    "+15% Divine Favor Heal Amplification",
+    "+1300 Holy Persuasion Minimum Health",
+    "Hand of God applies a Strong Dispel",
+    "Hand of God Fully Heals Chen and His Creeps"
+  ],
+  "facets": []
+}

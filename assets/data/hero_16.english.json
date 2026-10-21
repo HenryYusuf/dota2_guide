@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 16,
+    "valve_key": "npc_dota_hero_sand_king",
+    "localized_name": "Sand King",
+    "one_liner": "Burrows to stun and slow enemies",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/sand_king.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 19,
+        "gain": 2
+      },
+      "intelligence": {
+        "base": 17,
+        "gain": 2
+      }
+    },
+    "combat": {
+      "damage_min": 19,
+      "damage_max": 29,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.16,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The sands of the Scintillant Waste are alive and sentient--the whole vast desert speaks to itself, thinking thoughts only such a vastness can conceive. But when it needs must find a form to communicate with those of more limited scope, it frees a fragment of itself, and fills a carapace of magic armor formed by the cunning Djinn of Qaldin. This essential identity calls itself Crixalis, meaning 'Soul of the Sand,' but others know it as Sand King.  Sand King takes the form of a huge arachnid, inspired by the Scintillant Waste's small but ubiquitous denizens; and this is a true outward expression of his ferocious nature. Guardian, warrior, ambassador--Sand King is all of these things, inseparable from the endless desert that gave him life."
+  },
+  "abilities": [
+    {
+      "name": "sandking_burrowstrike",
+      "display_name": "Burrowstrike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sandking_burrowstrike.png",
+      "description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces. Adds Caustic Finale poison to heroes hit\n\n Can be put on alt-cast to immediately cast in the desired direction, without walking towards the targeted location.",
+      "lore": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries.",
+      "notes": [
+        "Does not trigger spell block or spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        550,
+        625,
+        700,
+        775
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "damages": [
+        80,
+        150,
+        220,
+        290
+      ],
+      "special_values": [
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2,
+            1.4,
+            1.6,
+            1.8
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "sandking_sand_storm",
+      "display_name": "Sand Storm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sandking_sand_storm.png",
+      "description": "Sand King creates a fearsome sandstorm that damages enemy units and grants Sand King Invisibility while he is in it. The effect ends when Sand King leaves the area.",
+      "lore": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
+      "notes": [
+        "Sand Storm can be used to dodge projectiles.",
+        "Sand King briefly becomes visible upon attacking or using spells while in Sand Storm. Sand King will become invisible again in 0.7 seconds."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        85
+      ],
+      "cooldowns": [
+        40,
+        34,
+        28,
+        22
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            475,
+            550,
+            625,
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            30,
+            50,
+            70,
+            90
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BLIND:",
+          "values": [],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            16,
+            20,
+            24,
+            28
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "sandking_scorpion_strike",
+      "display_name": "Stinger",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sandking_scorpion_strike.png",
+      "description": "Sand King strikes an area, performing an attack on all enemies in the area of effect, dealing extra damage to each. Enemies within an innermost radius of 125 take 40% extra damage. Applies Caustic Finale and a slow to all enemies hit.",
+      "lore": "Crixalis is certainly capable of mercy, but the soul of the sand finds few foes worth sparing.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "cooldowns": [
+        15,
+        12,
+        9,
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            230,
+            250,
+            270,
+            290
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            50,
+            75,
+            100,
+            125
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SPEED SLOW:",
+          "values": [
+            10,
+            12,
+            14,
+            16
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "A Caustic Finale explosion that deals %caustic_damage_pct%% damage is created around every enemy hero hit in Stinger's innermost radius. Does not apply to strikes created by Aghanim's Scepter upgrade."
+    },
+    {
+      "name": "sandking_caustic_finale",
+      "display_name": "Caustic Finale",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sandking_caustic_finale.png",
+      "description": "Sand King's attacks inject a venom that causes enemy units to violently explode when they die that does a flat amount of damage and an additional amount based on the dying units max health.",
+      "lore": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "EXPLODE RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            17
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HEALTH DAMAGE:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "sandking_epicenter",
+      "display_name": "Epicenter",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/sandking_epicenter.png",
+      "description": "After a cast point of 2 seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt.",
+      "lore": "Many an explorer was lost to the quicksands of the Scintillant Waste.",
+      "notes": [
+        "The pulses are centered on Sand King, not where he first cast the spell."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        150,
+        225,
+        300
+      ],
+      "cooldowns": [
+        120,
+        110,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "PULSES:",
+          "values": [
+            12,
+            16,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER PULSE:",
+          "values": [
+            60,
+            70,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INCREMENTAL RADIUS:",
+          "values": [
+            13
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            -30,
+            -40,
+            -50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -30,
+            -40,
+            -50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DEBUFF DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "EPICENTER DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "When the pulses start, 3 Stinger attack areas are created every 0.5s at random locations, each measuring 35% of the Epicenter's current radius, that apply 40% of Stinger damage to enemies hit. Shard pulses cause 1 attack(s).",
+      "shard_text": "Every 3s causes a small single Epicenter Pulse around Sand King."
+    }
+  ],
+  "talents": [
+    "+12% Stinger Slow",
+    "+100 Caustic Finale Radius",
+    "+25 Sand Storm Damage Per Second",
+    "+200 Burrowstrike Cast Range",
+    "-3s Burrowstrike Cooldown",
+    "+6 Epicenter Pulses",
+    "+125 Stinger Damage",
+    "35% Sand Storm Slow and Blind"
+  ],
+  "facets": []
+}

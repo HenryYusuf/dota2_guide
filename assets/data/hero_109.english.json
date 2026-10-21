@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 109,
+    "valve_key": "npc_dota_hero_terrorblade",
+    "localized_name": "Terrorblade",
+    "one_liner": "Transforms into a powerful ranged demon",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/terrorblade.png",
+    "attributes": {
+      "strength": {
+        "base": 18,
+        "gain": 2
+      },
+      "agility": {
+        "base": 23,
+        "gain": 4
+      },
+      "intelligence": {
+        "base": 19,
+        "gain": 1.6
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 55,
+      "attack_rate": 1.5,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 9.83,
+      "magic_resistance": 25,
+      "movement_speed": 315,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Terrorblade is the demon marauder--an outlaw hellion whom even other demons fear. A cosmic iconoclast, he stole from the Demon Lords, ignored the codified rites that should have bound his behavior, and broke every law of the seven Infernal Regions. For his crimes, he was taught this lesson: even Hell has a hell. A short, brutal trial ensued, with many dead on all sides, and he was finally incarcerated in Foulfell, a hidden dimension where demonkind imprison their own.\r\n\t\t\t\t<br><br>But Foulfell is no normal prison. In this dark mirror of reality, demons are sentenced to gaze eternally into the twisted reflection of their own souls. But instead of suffering, Terrorblade made himself master of his own reflected worst self--a raging, thieving demon of unimaginable power. With his inner beast under sway, he destroyed the fractal prison walls and burst free to turn his terror loose upon all creation."
+  },
+  "abilities": [
+    {
+      "name": "terrorblade_reflection",
+      "display_name": "Reflection",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_reflection.png",
+      "description": "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Affected enemy heroes have movement and attack speeds slowed and attacked by their reflection.",
+      "lore": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy.  Now it is a lesson he teaches others.",
+      "notes": [
+        "Reflections are untargetable, invulnerable illusions, that will be destroyed if the slow debuff is removed.",
+        "Reflections can only attack their source."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "cooldowns": [
+        23,
+        20,
+        17,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "REFLECTION DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REFLECTION DAMAGE:",
+          "values": [
+            30,
+            45,
+            60,
+            75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SPEED SLOW:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_conjure_image",
+      "display_name": "Conjure Image",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_conjure_image.png",
+      "description": "Creates an illusion of Terrorblade that deals damage.",
+      "lore": "There's only one thing more dangerous than facing Terrorblade.  Facing MORE Terrorblades!",
+      "notes": [
+        "Illusions created by Conjure Image are visually different for enemies."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        50,
+        60,
+        70,
+        80
+      ],
+      "cooldowns": [
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "ILLUSION DURATION:",
+          "values": [
+            34
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION DAMAGE:",
+          "values": [
+            25,
+            30,
+            35,
+            40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ILLUSION DAMAGE TAKEN:",
+          "values": [
+            250
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CURRENT HP COST:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_metamorphosis",
+      "display_name": "Metamorphosis",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_metamorphosis.png",
+      "description": "Terrorblade transforms into a powerful demon with a ranged attack. Any of Terrorblade's illusions that are within 1200 range will also be transformed by Metamorphosis.",
+      "lore": "Temper, temper. The rage rises up and takes control.  Meet Terrorblade's own worst self.",
+      "notes": [
+        "Cooldowns of items that are different for ranged and melee units will be based on which form Terrorblade was in when the item was used."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        145,
+        140,
+        135,
+        130
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            35,
+            40,
+            45,
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TRANSFORMATION TIME:",
+          "values": [
+            0.35
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE ATTACK TIME:",
+          "values": [
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK RANGE:",
+          "values": [
+            450,
+            500,
+            550,
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION AURA RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_demon_zeal",
+      "display_name": "Demon Zeal",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_demon_zeal.png",
+      "description": "Costs part of Terrorblade's current HP to cast, providing Terrorblade and nearby illusions bonus movement, HP Regen and attack speed. Does not affect Reflection illusions. Can't be cast while in Metamorphosis and Metamorphosis will remove Demon Zeal.",
+      "lore": "Fear is fueled by confusion when Terrorblade's enemies see that the first cut he makes is one to embolden himself.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        45
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVEMENT SPEED:",
+          "values": [
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS HEALTH REGEN:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CURRENT HEALTH COST:",
+          "values": [
+            20
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_terror_wave",
+      "display_name": "Terror Wave",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_terror_wave.png",
+      "description": "Causes a wave to travel outwards in all directions forcing enemy heroes to become Feared upon impact and dealing damage, and grants Terrorblade Metamorphosis for a short time.",
+      "lore": "A shockwave of power strong enough to break the walls of Foulfell itself.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        90
+      ],
+      "special_values": [
+        {
+          "heading": "FEAR DURATION:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "METAMORPHOSIS DURATION:",
+          "values": [
+            15
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_sunder",
+      "display_name": "Sunder",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_sunder.png",
+      "description": "Severs the life from both Terrorblade and a target hero, exchanging a percentage of both units' current health. Some health points must remain.",
+      "lore": "You didn't need that life, did you?  The demon marauder steals that which you hold most dear.",
+      "notes": [
+        "Debuff Immune enemies don't get their HP modified."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Units",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        475
+      ],
+      "mana_costs": [
+        100,
+        75,
+        50
+      ],
+      "cooldowns": [
+        110,
+        75,
+        40
+      ],
+      "special_values": [
+        {
+          "heading": "MINIMUM HP SWAP:",
+          "values": [
+            35,
+            30,
+            25
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "terrorblade_dark_unity",
+      "display_name": "Dark Unity",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_dark_unity.png",
+      "description": "Nearby Illusions created by Terrorblade have bonus attack damage.",
+      "notes": [
+        "Reflection Illusions are also affected."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE BONUS:",
+          "values": [
+            60
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+1s Reflection Duration",
+    "-2s Conjure Image Cooldown",
+    "-10s Metamorphosis Cooldown",
+    "-25% Sunder Minimum HP Swap",
+    "+10 All Attributes",
+    "+8s Conjure Image Duration",
+    "-30s Sunder Cooldown",
+    "+30s Metamorphosis Duration"
+  ],
+  "facets": []
+}

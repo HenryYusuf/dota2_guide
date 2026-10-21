@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 64,
+    "valve_key": "npc_dota_hero_jakiro",
+    "localized_name": "Jakiro",
+    "one_liner": "Freezes and burns enemies with magic",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/jakiro.png",
+    "attributes": {
+      "strength": {
+        "base": 25,
+        "gain": 2.6
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1.2
+      },
+      "intelligence": {
+        "base": 26,
+        "gain": 3.3
+      }
+    },
+    "combat": {
+      "damage_min": 53,
+      "damage_max": 61,
+      "attack_rate": 1.7,
+      "attack_range": 400,
+      "projectile_speed": 1100,
+      "armor": 3.5,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Even among magical beasts, a twin-headed dragon is a freak. Equal parts ice and fire, cunning and rage, the creature known as Jakiro glides over charred and ice-bound battlefields, laying waste to any who would bear arms against it. Pyrexae dragon clutches always contain two fledglings. Famous for their viciousness even from the first moments of life, newly hatched dragons of this species will try to kill their sibling while still in the nest. Only the strongest survive. In this way is the strength of the Pyrexae line ensured. By some accident of nature, the freak Jakiro hatched from a single egg, combining in a single individual the full range of abilities found within the diverse Pyrexae species. Trapped within the armature of its monstrous body, the powers of ice and fire combine, and now no enemy is safe."
+  },
+  "abilities": [
+    {
+      "name": "jakiro_dual_breath",
+      "display_name": "Dual Breath",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_dual_breath.png",
+      "description": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro. The ice slows enemies, while the fire delivers damage over time.",
+      "lore": "Pyrexae dragons have tremendously dangerous breath for each branch of the species; combining them is unimaginable.",
+      "notes": [
+        "Can hit units up to 1025 range away.",
+        "Has a 0.2 second interval between each breath.",
+        "Does not trigger spell block or spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        850
+      ],
+      "mana_costs": [
+        135,
+        150,
+        165,
+        180
+      ],
+      "cooldowns": [
+        12,
+        11,
+        10,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "START RADIUS:",
+          "values": [
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "END RADIUS:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DAMAGE:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            -25,
+            -30,
+            -35,
+            -40
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -25,
+            -30,
+            -35,
+            -40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "jakiro_ice_path",
+      "display_name": "Ice Path",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_ice_path.png",
+      "description": "Creates a path of ice that stuns and damages enemies that touch it.",
+      "lore": "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold.",
+      "notes": [
+        "It takes 0.2 seconds for the path to reach its full extent.",
+        "The stun is removed once Ice Path is destroyed."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        1100
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        20,
+        17,
+        14,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "FORMATION DELAY:",
+          "values": [
+            0.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX STUN DURATION:",
+          "values": [
+            1.25,
+            1.5,
+            1.75,
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PATH DURATION:",
+          "values": [
+            3,
+            3.5,
+            4,
+            4.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "jakiro_liquid_fire",
+      "display_name": "Liquid Fire",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_liquid_fire.png",
+      "description": "Jakiro burns his enemies in an area of effect with fire added to his attack, while slowing their attacks. Shares a cooldown with Liquid Frost.",
+      "lore": "The left maw of Jakiro opens, laying waste to any in its path.",
+      "notes": [
+        "Works on both units and buildings."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units and Buildings",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        20
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            -30,
+            -40,
+            -50,
+            -60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DAMAGE:",
+          "values": [
+            12,
+            24,
+            36,
+            48
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUILDING DAMAGE:",
+          "values": [
+            75
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Jakiro's Liquid Fire has no mana cost and no longer shares a cooldown with Liquid Frost."
+    },
+    {
+      "name": "jakiro_liquid_ice",
+      "display_name": "Liquid Frost",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_liquid_ice.png",
+      "description": "Jakiro chill his enemies with ice added to his attack, slowing movement for 5 seconds and increasing damage taken from Jakiro's attacks and abilities. This effect does not apply to buildings. Shares a cooldown with Liquid Fire.",
+      "lore": "The right maw of Jakiro opens, punishing all with bitter frost.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        20
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            15,
+            20,
+            25,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "IMPACT DAMAGE:",
+          "values": [
+            8,
+            16,
+            24,
+            32
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE:",
+          "values": [
+            8,
+            16,
+            24,
+            32
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Jakiro's Liquid Frost has no mana cost and no longer shares a cooldown with Liquid Fire."
+    },
+    {
+      "name": "jakiro_double_trouble",
+      "display_name": "Double Trouble",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_double_trouble.png",
+      "description": "Jakiro's attacks launch an attack from each head, but deal less damage each.",
+      "notes": [
+        "The second attack ignores Damage Block."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK DAMAGE REDUCTION:",
+          "values": [
+            51
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "jakiro_macropyre",
+      "display_name": "Macropyre",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_macropyre.png",
+      "description": "Jakiro exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire.",
+      "lore": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures.",
+      "notes": [
+        "Units hit by Macropyre will continue to be affected after they leave the area for 1 additional seconds."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        1400
+      ],
+      "mana_costs": [
+        225,
+        325,
+        425
+      ],
+      "cooldowns": [
+        90,
+        80,
+        70
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            100,
+            150,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FLAME WIDTH:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases Macropyre duration and causes it to deal Pure damage. Jakiro emits two walls of ice along the edges of the Macropyre that slow any enemies trying to cross them by 60%."
+    }
+  ],
+  "talents": [
+    "+30 Liquid Fire Attack Speed Slow",
+    "+100 Ice Path Damage",
+    "+175 Attack Range",
+    "-3.5s Dual Breath Cooldown",
+    "+0.4s Ice Path Stun Duration",
+    "+25 Macropyre Damage",
+    "+100% Dual Breath Damage and Range",
+    "+3.5% Liquid Frost and Fire Max Health Damage"
+  ],
+  "facets": []
+}

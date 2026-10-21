@@ -19,8 +19,9 @@ import 'in_memory_file_store.dart';
 void main() {
   const unitUrl = 'feed://roster';
   final rosterUnit = SnapshotUnit(
-    name: 'heroes.english.json',
-    fetch: (feed) async => jsonEncode(await feed.fetchJson(unitUrl)),
+    fetch: (feed) async => {
+      'heroes.english.json': jsonEncode(await feed.fetchJson(unitUrl)),
+    },
   );
 
   final t0 = DateTime.utc(2026, 10, 21, 8);
@@ -165,6 +166,30 @@ void main() {
       expect(await store.readOrNull('heroes.english.json'), contains('Second'));
     });
 
+    test('one unit may commit many files in a single cycle', () async {
+      // The Heroes detail unit emits one file per Hero; every name the unit
+      // returns must land in the same atomic commit.
+      final multiUnit = SnapshotUnit(
+        fetch: (feed) async => {
+          'hero_1.english.json': '{"id":1}',
+          'hero_2.english.json': '{"id":2}',
+        },
+      );
+      feed.version = 3;
+      feed.documents[unitUrl] = roster('First');
+      final multi = SnapshotRefresher(
+        feed: feed,
+        units: [rosterUnit, multiUnit],
+        overrides: store,
+        clock: () => now,
+      );
+
+      expect(await multi.refresh(), isTrue);
+      expect(await store.readOrNull('heroes.english.json'), contains('First'));
+      expect(await store.readOrNull('hero_1.english.json'), '{"id":1}');
+      expect(await store.readOrNull('hero_2.english.json'), '{"id":2}');
+    });
+
     test('feed serves no version: always refetch on probe', () async {
       feed.version = null; // observed live: the meta block comes and goes
       feed.documents[unitUrl] = roster('First');
@@ -220,13 +245,16 @@ void main() {
       // previous generation. The unit here parses strictly, like the real
       // `heroesSnapshotUnit` does via `heroIndexFromFeed`.
       SnapshotUnit strictUnit() => SnapshotUnit(
-        name: 'heroes.english.json',
         fetch: (feed) async {
           final doc = await feed.fetchJson(unitUrl);
           final data = doc['result']! as Map<String, dynamic>;
           final heroes = data['heroes']! as List<dynamic>;
           // Throws TypeError on a non-map element.
-          return jsonEncode(heroes.map((h) => (h as Map)['name_loc']).toList());
+          return {
+            'heroes.english.json': jsonEncode(
+              heroes.map((h) => (h as Map)['name_loc']).toList(),
+            ),
+          };
         },
       );
 

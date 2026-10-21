@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 57,
+    "valve_key": "npc_dota_hero_omniknight",
+    "localized_name": "Omniknight",
+    "one_liner": "Tanky frontliner who protects and heals his allies",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/omniknight.png",
+    "attributes": {
+      "strength": {
+        "base": 22,
+        "gain": 3.1
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1.7
+      },
+      "intelligence": {
+        "base": 18,
+        "gain": 2.1
+      }
+    },
+    "combat": {
+      "damage_min": 53,
+      "damage_max": 63,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.5,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Purist Thunderwrath was a hard-fighting, road-worn, deeply committed knight, sworn to the order in which he had grown up as squire to elder knights of great reputation. He had spent his entire life in the service of the Omniscience, the All Seeing One. Theirs was a holy struggle, and so embedded was he in his duty that he never questioned it so long as he had the strength to fight and the impetuous valor that comes with youth. But over the long years of the crusade, as his elders passed away and were buried in sorry graves at the side of muddy tracks, as his bond-brothers fell in battle to uncouth creatures that refused to bow to the Omniscience, as his own squires were chewed away by ambush and plague and bad water, he began to question the meaning of his vows--the meaning of the whole crusade.\r\n\t\t\t\t<br><br>After deep meditation, he parted ways with his army and commenced a long trek back to the cave-riddled cliffs of Emauracus, and there he set a challenge to the priests of the Omniscience. No knight had ever questioned them before, and they tried to throw him into the pit of sacrifice, but Purist would not be moved. For as he faced them down, he began to glow with a holy light, and they saw that the Omniscience had chosen to reveal Itself to him. The Elder Hierophant led him on a journey of weeks down into the deepest chamber, the holy of holies, where waited not some abstract concept of wisdom and insight, not some carved relic requiring an injection of imagination to believe in, but the old one itself. It had not merely dwelt in those rocks for billions of aeons; no, It had created them.\r\n\t\t\t\t<br><br>The Omniscience had formed the immense mineral shell of the planet around itself, as a defense against the numerous terrors of space. Thus the All Seeing One claimed to have created the world, and given the other truths revealed to Purist on that day, the knight had no reason to refute the story. Perhaps the Omniscience is a liar, deep in its prison of stone, and not the world's creator at all, but Omniknight never again questioned his faith. His campaign had meaning at last. And there can be no question that the glorious powers that imbue him, and give his companions such strength in battle, are real beyond any doubt."
+  },
+  "abilities": [
+    {
+      "name": "omniknight_purification",
+      "display_name": "Purification",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_purification.png",
+      "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
+      "lore": "Priests of the Omniscience are adept at removing impurities from fellow warriors.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        90,
+        105,
+        120,
+        135
+      ],
+      "cooldowns": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "HEAL/DAMAGE:",
+          "values": [
+            90,
+            160,
+            230,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE RADIUS:",
+          "values": [
+            260
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "After a 3s delay, the target is Purified again with 65% effectiveness."
+    },
+    {
+      "name": "omniknight_martyr",
+      "display_name": "Repel",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_martyr.png",
+      "description": "Grants Debuff Immunity with 60% magic resistance, as well as bonus HP Regen.",
+      "lore": "The All Seeing One casts down his protection over those that Purist calls friend.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700
+      ],
+      "mana_costs": [
+        90,
+        105,
+        120,
+        135
+      ],
+      "cooldowns": [
+        40,
+        35,
+        30,
+        25
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS HP REGEN:",
+          "values": [
+            8,
+            12,
+            16,
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGIC RESISTANCE:",
+          "values": [
+            60
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "omniknight_hammer_of_purity",
+      "display_name": "Hammer of Purity",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_hammer_of_purity.png",
+      "description": "Omniknight imbues his hammer with holy power, causing his attack to have increased range, deal pure damage based on a percentage of his base damage and slow his target for a short duration.\n\n Omniknight heals for 40% of the damage dealt over 4s.",
+      "lore": "The knight is merely a means to move the hammer.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "cooldowns": [
+        13,
+        10,
+        7,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS BASE DAMAGE:",
+          "values": [
+            30,
+            50,
+            70,
+            90
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            25,
+            45,
+            65,
+            85
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE BONUS:",
+          "values": [
+            75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            0.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW:",
+          "values": [
+            75
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "omniknight_degen_aura",
+      "display_name": "Degen Aura",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_degen_aura.png",
+      "description": "Degenerates the movement capabilities of enemy units that stray too near, slowing their movement speed.",
+      "lore": "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith.",
+      "notes": [
+        "Does not affect Debuff Immune units."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Aura",
+      "target": "Enemies",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            11
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "omniknight_guardian_angel",
+      "display_name": "Guardian Angel",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_guardian_angel.png",
+      "description": "Omniknight calls upon a Guardian Angel that grants immunity from physical damage to all allied units near Omniknight.",
+      "lore": "The All Seeing One casts down his protection over those that Purist calls friend.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        100,
+        90,
+        80
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            4,
+            4.75,
+            5.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            700
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS HEALTH RESTORATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ],
+      "scepter_text": "Guardian Angel has global radius, affects buildings, and amplifies health restoration."
+    }
+  ],
+  "talents": [
+    "+200 Repel Cast Range",
+    "+30 Base Damage",
+    "-0.5s Hammer of Purity Cooldown",
+    "-20s Guardian Angel Cooldown",
+    "+150 Degen Aura Radius",
+    "-3s Purification Cooldown",
+    "+160 Purification Damage/Heal",
+    "+75% Hammer of Purity Bonus Base Damage"
+  ],
+  "facets": []
+}

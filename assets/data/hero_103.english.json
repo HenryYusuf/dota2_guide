@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 103,
+    "valve_key": "npc_dota_hero_elder_titan",
+    "localized_name": "Elder Titan",
+    "one_liner": "Damages and disables with his astral spirit",
+    "primary_attribute": "strength",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/elder_titan.png",
+    "attributes": {
+      "strength": {
+        "base": 26,
+        "gain": 3
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.8
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 1.6
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 59,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.66,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Well may you ask, \"How did this world take its form?\" Why of all the worlds in creation, has this one its strange properties, its diverse and motley collection of creatures, cultures and lore? \"The answer,\" One whispers, \"lies with the Titans.\"\r\n\t\t\t\t<br><br>These original progenitors were there near the Beginning--if not actual witnesses to the creation, then born with it still echoing in their ears. Stamped with the earliest energies of the universe, they wished nothing more than to continue as creators themselves. Thus they bent to the task of shaping matter to their will: hammering and heating, bending and blasting. And when matter proved less challenging than they liked, they turned their tools upon themselves, reshaping their minds and reforging their spirits until they had become beings of great endurance. Reality itself became the ultimate object of their smithing. Yet, along the way, they sometimes erred. In cases of great ambition, mistakes are unavoidable.\r\n\t\t\t\t<br><br>The one we know as the Elder Titan was a great innovator, one who studied at the forge of creation. In honing his skills, he shattered something that could never be repaired, only thrown aside. He fell into his own broken world, a shattered soul himself. There he dwelt among the jagged shards and fissured planes, along with other lost fragments that had sifted down through the cracks in the early universe. And this is why the world we know resembles an isle of castaways, survivors of a wreck now long forgotten. Forgotten, that is, by all but the One who blames himself. He spends his time forever seeking a way to accomplish the repairs, that he might rejoin the parts of his broken soul, that we and the world alike might all be mended. This is the One we know as Elder Titan."
+  },
+  "abilities": [
+    {
+      "name": "elder_titan_echo_stomp",
+      "display_name": "Echo Stomp",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_echo_stomp.png",
+      "description": "CHANNELED - Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.",
+      "lore": "The force of creation still echoes in the stomp of the Titan.",
+      "notes": [
+        "If a unit is hit by Astral Spirit and Elder Titan, they will take both instances of damage."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "CAST TIME:",
+          "values": [
+            1.7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            475
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLEEP DURATION:",
+          "values": [
+            2,
+            2.8,
+            3.6,
+            4.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STOMP DAMAGE:",
+          "values": [
+            65,
+            110,
+            155,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WAKEUP DAMAGE THRESHOLD:",
+          "values": [
+            100,
+            150,
+            200,
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "COOLDOWN:",
+          "values": [
+            14,
+            13,
+            12,
+            11
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Lowers Cooldown. Echo Stomp may be placed on alt-cast to allow Elder Titan to take the place of the Astral Spirit as it completes its stomp."
+    },
+    {
+      "name": "elder_titan_ancestral_spirit",
+      "display_name": "Astral Spirit",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_ancestral_spirit.png",
+      "description": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through.\n\nThe Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities.",
+      "lore": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        23,
+        21,
+        19,
+        17
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS SPEED (CREEPS):",
+          "values": [
+            1.5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS SPEED (HEROES):",
+          "values": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS DAMAGE (CREEPS):",
+          "values": [
+            3,
+            7,
+            11,
+            15
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE (HEROES):",
+          "values": [
+            17,
+            38,
+            59,
+            80
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Causes Elder Titan to become debuff immune and gain 50% magic resistance for 2 seconds per affected enemy Hero when the spirit returns."
+    },
+    {
+      "name": "elder_titan_natural_order",
+      "display_name": "Natural Order",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_natural_order.png",
+      "description": "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit.",
+      "lore": "As it was at the beginning, Elder Titan makes it so again.",
+      "notes": [
+        "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Aura",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            375
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE ARMOR REDUCTION:",
+          "values": [
+            40,
+            60,
+            80,
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BASE RESIST REDUCTION:",
+          "values": [
+            40,
+            60,
+            80,
+            100
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Every %tick_rate%s that enemy heroes stay under the effect of Natural Order, their armor is reduced by %armor_per_tick%, and magic resistance is reduced by %magic_resistance_per_tick%%. Stacks up to %max_stacks% times."
+    },
+    {
+      "name": "elder_titan_momentum",
+      "display_name": "Momentum",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_momentum.png",
+      "description": "Elder Titan gains armor equal to a percentage of his bonus movement speed.",
+      "notes": [
+        "Bonus movement speed is any movement speed above his base movement speed.",
+        "Momentum does not reduce Elder Titan's Armor if he is slowed below his base movement speed."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS SPEED TO ARMOR:",
+          "values": [
+            7
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "elder_titan_earth_splitter",
+      "display_name": "Earth Splitter",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_earth_splitter.png",
+      "description": "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage.",
+      "lore": "That which he created, the titan tears asunder.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        2400
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        100,
+        95,
+        90
+      ],
+      "special_values": [
+        {
+          "heading": "IMPLODE DELAY:",
+          "values": [
+            2.7182
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CRACK WIDTH:",
+          "values": [
+            315
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CRACK LENGTH:",
+          "values": [
+            2400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            40,
+            45,
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            3,
+            4,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX HP AS DAMAGE:",
+          "values": [
+            34,
+            42,
+            50
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+2.5% Astral Spirit Bonus Move Speed Per Hero",
+    "+150 Echo Stomp Wake Damage",
+    "+75 Echo Stomp Damage",
+    "20% of Bonus Movement Speed as Attack Speed",
+    "+30 Astral Spirit Bonus Damage per Hero",
+    "+150 Natural Order Radius",
+    "-60s Earth Splitter Cooldown",
+    "+100% Cleave"
+  ],
+  "facets": []
+}

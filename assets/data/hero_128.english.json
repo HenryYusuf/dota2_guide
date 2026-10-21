@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 128,
+    "valve_key": "npc_dota_hero_snapfire",
+    "localized_name": "Snapfire",
+    "one_liner": "Mows down her enemies with heavy artillery and trusty lizard",
+    "primary_attribute": "universal",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/snapfire.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 3.5
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.9
+      },
+      "intelligence": {
+        "base": 21,
+        "gain": 2.2
+      }
+    },
+    "combat": {
+      "damage_min": 27,
+      "damage_max": 33,
+      "attack_rate": 1.8,
+      "attack_range": 400,
+      "projectile_speed": 1800,
+      "armor": 3.66,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Beatrix Snapfire and her dragon toad Mortimer are a welcome sight to the ragged folk who scratch out lives along the desert routes and oases scattered throughout Nanarak, the rain-forsaken gateway to the Outlands.<br><br>As well known for her unrivaled skills as a weaponsmith as for dispensing wisdom, mirth, and the meanest firesnap cookies the world has ever seen, Beadie's survived to a ripe old age in a young keen's trade by being quick with her wits and even quicker with her guns.<br><br>Indeed, the Outlands are littered with the bones of bandits and ne'er-do-wells who thought to take advantage of her small stature and propensity for kindness."
+  },
+  "abilities": [
+    {
+      "name": "snapfire_scatterblast",
+      "display_name": "Scatterblast",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_scatterblast.png",
+      "description": "Snapfire unloads with a wide blast that damages and slows enemies in a cone. Damage is increased by 25% and Movement Slow, Attack Slow and Slow Duration are increased by 50% for enemies caught at point-blank range.",
+      "lore": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        85,
+        90,
+        95,
+        100
+      ],
+      "cooldowns": [
+        17,
+        14,
+        11,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACK SLOW:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "POINT-BLANK RANGE:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "snapfire_firesnap_cookie",
+      "display_name": "Firesnap Cookie",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_firesnap_cookie.png",
+      "description": "Snapfire feeds a potent cookie to Mortimer or an ally, causing them to hop a short distance. The hopping unit stuns and damages enemies in the landing zone.",
+      "lore": "With the help of a secret mixture that pairs Beadie's baking skills with her passion for black powder, these battle biscuits pack a punch.",
+      "notes": [
+        "The cookie projectile has a speed of 1200."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        105
+      ],
+      "cooldowns": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "special_values": [
+        {
+          "heading": "HOP DISTANCE:",
+          "values": [
+            425
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT DAMAGE:",
+          "values": [
+            60,
+            130,
+            200,
+            270
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT STUN DURATION:",
+          "values": [
+            1,
+            1.4,
+            1.8,
+            2.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HEAL AMOUNT:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Firesnap cookies become even more potent, healing the target and launching a Mortimer Kiss that does 40% impact damage to the landing destination."
+    },
+    {
+      "name": "snapfire_lil_shredder",
+      "display_name": "Lil' Shredder",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_lil_shredder.png",
+      "description": "Snapfire heats up her mounted turret to rapidly fire 5 attacks dealing fixed damage plus a percentage of her attack damage. Each attack reduces the enemy's armor. Provides bonus attack range for the duration.",
+      "lore": "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang.",
+      "notes": [
+        "Sets base attack time to 1s for the duration.",
+        "Attack modifiers have a chance to proc on Lil' Shredder attacks."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        70,
+        80,
+        90,
+        100
+      ],
+      "cooldowns": [
+        24,
+        20,
+        16,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE PER SHOT:",
+          "values": [
+            20,
+            35,
+            50,
+            65
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BONUS RANGE:",
+          "values": [
+            160,
+            240,
+            320,
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARMOR LOSS PER STACK:",
+          "values": [
+            0.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ARMOR LOSS DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "snapfire_gobble_up",
+      "display_name": "Gobble Up",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_gobble_up.png",
+      "description": "Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies. The unit stays in his belly up to 0 seconds.",
+      "lore": "SHLORP!",
+      "notes": [
+        "Snapfire earns the creep's bounty after it has been spat out and died."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        120
+      ],
+      "cooldowns": [
+        40
+      ],
+      "special_values": []
+    },
+    {
+      "name": "snapfire_spit_creep",
+      "display_name": "Spit Out",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_spit_creep.png",
+      "description": "Mortimer spits out the unit that's in his mouth, causing impact damage and stun in a large area. The glob leaves a pool of firespit based on the current level of Mortimer Kisses, that slows and applies damage over time. Spit Out has a no minimum launch range.",
+      "lore": "SPITTOOO!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        3000
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.2
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "snapfire_mortimer_kisses",
+      "display_name": "Mortimer Kisses",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_mortimer_kisses.png",
+      "description": "Snapfire's friend launches a barrage of firespit globs over 5.5 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
+      "lore": "Little did Beadie know when she adopted Mortimer, dragon toads--which aren't even toads at all--share more than just a name with their distant draconic cousins.",
+      "notes": [
+        "Can be cancelled by pressing Stop, Hold Position, or using another ability.",
+        "Has a minimum travel time of 0.8 and maximum travel time of 2."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        3000
+      ],
+      "mana_costs": [
+        125,
+        150,
+        175
+      ],
+      "cooldowns": [
+        120,
+        110,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "GLOB COUNT:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER GLOB:",
+          "values": [
+            170,
+            250,
+            330
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BURN DPS:",
+          "values": [
+            60,
+            80,
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ENEMY MOVEMENT SLOW:",
+          "values": [
+            15,
+            20,
+            25
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "FIRESPIT POOL DURATION:",
+          "values": [
+            3.5
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "snapfire_boomstick",
+      "display_name": "Boomstick",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_boomstick.png",
+      "description": "Snapfire deals more damage to nearby enemies.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MIN DAMAGE AMP:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAX DAMAGE AMP:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MIN DAMAGE RANGE:",
+          "values": [
+            495
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE RANGE:",
+          "values": [
+            50
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+70 Scatterblast Damage",
+    "+30 Mortimer Kisses Burn DPS",
+    "+2 Lil' Shredder attacks",
+    "+125 Cast Range",
+    "+2 Lil' Shredder Targets",
+    "2 Firesnap Cookie Charges",
+    "+60% Lil' Shredder Attack Damage",
+    "+6 Mortimer Kisses Launched"
+  ],
+  "facets": []
+}

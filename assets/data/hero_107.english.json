@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 107,
+    "valve_key": "npc_dota_hero_earth_spirit",
+    "localized_name": "Earth Spirit",
+    "one_liner": "Disables and repositions his enemies",
+    "primary_attribute": "strength",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/earth_spirit.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 3.8
+      },
+      "agility": {
+        "base": 17,
+        "gain": 2.4
+      },
+      "intelligence": {
+        "base": 17,
+        "gain": 2.1
+      }
+    },
+    "combat": {
+      "damage_min": 48,
+      "damage_max": 52,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 2.83,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Deep amid the Upland crags and cliffs there runs a seam of sacred jade long foresworn by highland miners. From this rare material, the likeness of the great general Kaolin was carved and buried at the head of a stone funerary army ten thousand strong--a force of soldiers and holy men, jesters and acrobats, carved by crafstmen and entombed for millennia in the dark embrace of the Earth.\r\n\t\t\t\t<br><br>What the craftsmen had not known was that within the strange seam of jade flowed the spirit of the Earth itself--an elemental force at one with the planet. When the force within the carved jade found itself cut off from the life's blood of the world, it gathered its strength over the course of a thousand years and dug itself free and into the light. Now the great Kaolin Earth Spirit strides the Upland roads, fighting for the spirit of the Earth; and in times of need calls forth remnants of his buried army still locked in the loving embrace of the soil."
+  },
+  "abilities": [
+    {
+      "name": "earth_spirit_boulder_smash",
+      "display_name": "Boulder Smash",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_boulder_smash.png",
+      "description": "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest unit in a 200 radius, prioritizing Stone Remnants. The travelling unit or Remnant damages all enemy units it hits.  If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units.",
+      "lore": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        150
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        20,
+        17,
+        14,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "REMNANT SMASH RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            110,
+            180,
+            250,
+            320
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW AMOUNT:",
+          "values": [
+            50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            1.75,
+            2.5,
+            3.25,
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TRAVEL SPEED:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE:",
+          "values": [
+            500,
+            600,
+            700,
+            800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE (REMNANT):",
+          "values": [
+            2000
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earth_spirit_rolling_boulder",
+      "display_name": "Rolling Boulder",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_rolling_boulder.png",
+      "description": "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, dealing 60 + 100% STR damage and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer.",
+      "lore": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
+      "notes": [
+        "Rolling over a Stone Remnant will destroy the Remnant.",
+        "The boulder has a radius of 160.",
+        "Earth Spirit is untargetable and invulnerable while rolling."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        3000
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        16,
+        12,
+        8,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "SPEED:",
+          "values": [
+            1000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPEED (REMNANT):",
+          "values": [
+            1600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE:",
+          "values": [
+            800
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DISTANCE MULTIPLIER (REMNANT):",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            60,
+            70,
+            80,
+            90
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.3,
+            0.5,
+            0.7,
+            0.9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ROCK BONUS STUN DURATION:",
+          "values": [
+            0.3,
+            0.5,
+            0.7,
+            0.9
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earth_spirit_geomagnetic_grip",
+      "display_name": "Geomagnetic Grip",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_geomagnetic_grip.png",
+      "description": "Earth Spirit pulls the target Stone Remnant or Allied Unit. Enemies struck by the gripped target will be silenced.\n\nPulled Remnants also deal damage to struck enemies.\n\nCast range is reduced when targeting an ally.",
+      "lore": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
+      "notes": [
+        "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
+        "Geomagnetic Grip can also target allied creeps."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1000,
+        1100,
+        1200,
+        1300
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        13
+      ],
+      "special_values": [
+        {
+          "heading": "REMNANT DAMAGE:",
+          "values": [
+            75,
+            150,
+            225,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT PULL SPEED:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SILENCE DURATION:",
+          "values": [
+            2.3,
+            2.7,
+            3.1,
+            3.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ALLIED UNIT PULL SPEED:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ALLIED UNIT CAST RANGE:",
+          "values": [
+            550,
+            600,
+            650,
+            700
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Decreases cooldown to 3s and increases allied unit cast range and pull speed."
+    },
+    {
+      "name": "earth_spirit_stone_caller",
+      "display_name": "Stone Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_stone_caller.png",
+      "description": "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time. Stone Remnant has 7 charges.\n\nEarth Spirit passively gains 3% bonus damage per unused Stone Remnant charge, and gains an additional 7.5% bonus damage for 10s when a Stone Remnant is targeted with an ability (does not stack).",
+      "lore": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "cast_ranges": [
+        1100
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CHARGES:",
+          "values": [
+            7
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earth_spirit_petrify",
+      "display_name": "Enchant Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_petrify.png",
+      "description": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies. \nCan be cast on Stone Remnants. Has a 5 second cooldown when used that way.\nHas a larger cast range when cast on an ally hero.",
+      "lore": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army.",
+      "notes": [
+        "Earth Spirit himself can be targeted by Boulder Smash if he is enchanted."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        175
+      ],
+      "mana_costs": [
+        150
+      ],
+      "cooldowns": [
+        45
+      ],
+      "special_values": [
+        {
+          "heading": "REMNANT DURATION:",
+          "values": [
+            2.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHATTER DAMAGE:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SHATTER RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST RANGE ON ALLIES:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "earth_spirit_magnetize",
+      "display_name": "Magnetize",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_magnetize.png",
+      "description": "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by Geomagnetic Grip or Boulder Smash, all magnetized heroes share the effects.",
+      "lore": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        350
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        100,
+        90,
+        80
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            45,
+            90,
+            135
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAGNETIZE DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REMNANT REFRESH/EXPLOSION RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "-2s Boulder Smash Cooldown",
+    "+150 Rolling Boulder Distance",
+    "+0.3s Rolling Boulder Stun Duration",
+    "+80 Boulder Smash Damage",
+    "+35 Magnetize Damage Per Second",
+    "+200 Geomagnetic Grip Remnant Damage",
+    "Earth Spirit Magnetizes himself",
+    "+250% Rolling Boulder Damage from Strength"
+  ],
+  "facets": []
+}

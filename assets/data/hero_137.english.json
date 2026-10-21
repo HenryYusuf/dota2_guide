@@ -1,0 +1,465 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 137,
+    "valve_key": "npc_dota_hero_primal_beast",
+    "localized_name": "Primal Beast",
+    "one_liner": "Stomps over everything and smashes enemies into messy bits",
+    "primary_attribute": "strength",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/primal_beast.png",
+    "attributes": {
+      "strength": {
+        "base": 26,
+        "gain": 4.3
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1
+      },
+      "intelligence": {
+        "base": 16,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 62,
+      "damage_max": 64,
+      "attack_rate": 1.8,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.5,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast.<br><br>A creature hatched into an existence devoid of all feeling but hunger and pain, aeons of carnage shaped the Primal Beast into the apex predator on a planet filled with violent terrors. Desperately banished by would-be masters with failed hopes to control him, the Beast was cast into a new world — one where he could ascend from mere hungry predator into an invasive killing machine with nothing able to stand in his way.<br><br>For thousands of years, the Mistwood served as massive stomping ground for the Beast's destructive play — and even the feared durana beasts made for tasty snacks. Indeed, there could be no rivals for the Beast's territory, only minor annoyances. Until one such tiny annoyance employed vile trickery to trap the unstoppable Beast in the Gleipnir.<br><br>There he might have remained subdued for eternity, were it not for the unpredictable powers of the Continuum Device. Now, freed from both Gleipnir and Vault, far afield from the Mistwood, and much closer to inhabited lands, the Beast sets his snout towards new slaughters and the delights of savage destruction — and the paltry fires of civilization will do little to keep this ageless monster at bay."
+  },
+  "abilities": [
+    {
+      "name": "primal_beast_onslaught",
+      "display_name": "Onslaught",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_onslaught.png",
+      "description": "Primal Beast charges up and then runs in the chosen direction, knocking back enemies and allies alike. Enemy units are damaged and stunned on impact. The longer the charge duration, the farther Primal Beast's momentum will carry him. \n\n Can be cancelled at any time with the Stop command.",
+      "lore": "The Beast's single-minded focus on chosen prey leaves all other considerations scattered in his ruinous wake.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        120
+      ],
+      "cooldowns": [
+        25,
+        22,
+        19,
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "RUN SPEED:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DISTANCE:",
+          "values": [
+            2000
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            75,
+            170,
+            265,
+            360
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "TIME TO MAX CHARGE:",
+          "values": [
+            1.7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.7,
+            1,
+            1.3,
+            1.6
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "primal_beast_trample",
+      "display_name": "Trample",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_trample.png",
+      "description": "Primal Beast stomps over everything. For every 140 units traveled, all enemies around the Beast receive damage. Deals base damage plus a multiplier of Primal Beast's attack damage. Primal Beast is disarmed for the duration of the ability.",
+      "lore": "As the only member of his species to arrive on this world, locals can only speculate on the Beast's size relative to his kin. Such observation would prove easier of course if the subject didn't eat everything it sees and destroy most of what it doesn't.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        30,
+        27,
+        24,
+        21
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE AOE:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            15,
+            30,
+            45,
+            60
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            5.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK DAMAGE MULTIPLIER:",
+          "values": [
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "primal_beast_uproar",
+      "display_name": "Uproar",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_uproar.png",
+      "description": "The Beast's temper causes every instance of 50 hero damage or more to grant a stack of Uproar.  \n\n When activated, Primal Beast releases a roar that slows surrounding enemies and grants the Beast additional attack damage and armor for 7 seconds based on his current stacks of Uproar.",
+      "lore": "Already draped in a broken patchwork of barding and chains upon appearing in the mistwoods, the Beast tolerates no further attempts at subjugation.",
+      "notes": [
+        "Primal Beast cannot gain Uproar stacks from self damage.",
+        "Break disables the gaining of new stacks."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS DAMAGE PER STACK:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX STACKS:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SLOW PER STACK:",
+          "values": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ROAR RADIUS:",
+          "values": [
+            900
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ROAR ARMOR BONUS PER STACK:",
+          "values": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPLIT DELAY:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BREAK DURATION:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "When Primal Beast activates Uproar, he releases 3 waves of 2 projectiles per stack of uproar each in a circle around him. Projectiles deal damage and Break enemies hit. After a short delay, each projectile splinters in two."
+    },
+    {
+      "name": "primal_beast_rock_throw",
+      "display_name": "Rock Throw",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_rock_throw.png",
+      "description": "Primal Beast throws a rock at the target location that stuns and damages enemies. The rock cannot be thrown within a minimum range of Primal Beast. After landing, the rock splits into 3 additional fragments that land behind the initial target location.\n\n Rock Throw increases stacks of Uproar for each hero hit.",
+      "lore": "AGAIN WITH THE ROCKS!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        1800
+      ],
+      "mana_costs": [
+        85
+      ],
+      "cooldowns": [
+        20
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MIN RANGE:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MIN TRAVEL TIME:",
+          "values": [
+            0.65
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX TRAVEL TIME:",
+          "values": [
+            1.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            1.4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FRAGMENT FLIGHT DISTANCE:",
+          "values": [
+            525
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FRAGMENT IMPACT RADIUS:",
+          "values": [
+            185
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "primal_beast_pulverize",
+      "display_name": "Pulverize",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_pulverize.png",
+      "description": "CHANNELED - Primal Beast channels his rage, grabbing the target enemy and slamming them into the ground repeatedly, damaging and mini-stunning any enemies caught in the AoE. Each consecutive hit deals bonus damage. Lasts 2.29 seconds.",
+      "lore": "Though none are certain whether his utterances have true meaning, most concede the Beast's powerful grip and tendency to smash his enemies into naught but pulp and pieces communicates his intent well enough.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        200
+      ],
+      "mana_costs": [
+        100
+      ],
+      "cooldowns": [
+        45,
+        40,
+        35
+      ],
+      "special_values": [
+        {
+          "heading": "AOE RADIUS:",
+          "values": [
+            575
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HIT INTERVAL:",
+          "values": [
+            0.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HIT DAMAGE:",
+          "values": [
+            100,
+            175,
+            250
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DAMAGE PER HIT:",
+          "values": [
+            20,
+            40,
+            60
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "primal_beast_colossal",
+      "display_name": "Colossal",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_colossal.png",
+      "description": "Primal Beast has 10% base Slow Resistance and gains 0.5% bonus Area of Effect and 1% Slow Resistance for every 100 Max Health.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "SLOW RESISTANCE:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "AREA OF EFFECT BONUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+25 Damage",
+    "+25% Magic Resistance During Trample",
+    "-5s Trample Cooldown",
+    "+6 Uproar Armor Per Stack",
+    "+20% Trample Attack Multiplier",
+    "Basic Self-Dispel on Uproar Cast",
+    "Colossal 2x Bonuses During Trample",
+    "+67% Pulverize Duration"
+  ],
+  "facets": []
+}

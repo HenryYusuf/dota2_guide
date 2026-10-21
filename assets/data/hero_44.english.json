@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 44,
+    "valve_key": "npc_dota_hero_phantom_assassin",
+    "localized_name": "Phantom Assassin",
+    "one_liner": "Blinks onto her foes with critical strikes",
+    "primary_attribute": "agility",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/phantom_assassin.png",
+    "attributes": {
+      "strength": {
+        "base": 19,
+        "gain": 2.2
+      },
+      "agility": {
+        "base": 22,
+        "gain": 3.4
+      },
+      "intelligence": {
+        "base": 15,
+        "gain": 1.7
+      }
+    },
+    "combat": {
+      "damage_min": 57,
+      "damage_max": 59,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 4.66,
+      "magic_resistance": 25,
+      "movement_speed": 310,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Through a process of divination, children are selected for upbringing by the Sisters of the Veil, an order that considers assassination a sacred part of the natural order.  The Veiled Sisters identify targets through meditation and oracular utterances.  They accept no contracts, and never seem to pursue targets for political or mercenary reasons. Their killings bear no relation to any recognizable agenda, and can seem to be completely random:  A figure of great power is no more likely to be eliminated than a peasant or a well digger. Whatever pattern the killings may contain, it is known only to them. They treat their victims as sacrifices, and death at their hand is considered an honor. Raised with no identity except that of their order, any Phantom Assassin can take the place of any other; their number is not known. Perhaps there are many, perhaps there are few. Nothing is known of what lies under the Phantom Veil. Except that this one, from time to time, when none are near enough to hear, is known to stir her veils with the forbidden whisper of her own name: Mortred."
+  },
+  "abilities": [
+    {
+      "name": "phantom_assassin_stifling_dagger",
+      "display_name": "Stifling Dagger",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_stifling_dagger.png",
+      "description": "Throws a dagger slowing the enemy unit's movement speed, dealing 65+30% of Phantom Assassin's attack damage as physical damage and applying attack effects from items and abilities.",
+      "lore": "The first skill learned by the Sisters of the Veil often signals an incoming hit.",
+      "notes": [
+        "If an attack effect is chance-based, the chance of its application will be the same as its chance to occur.",
+        "Spell-immune enemies are not affected by Stifling Dagger's slow.",
+        "Stifling Dagger grants vision around its location while it travels and upon impact."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "damage_type": "Physical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700,
+        850,
+        1000,
+        1150
+      ],
+      "mana_costs": [
+        30
+      ],
+      "cooldowns": [
+        6
+      ],
+      "special_values": [
+        {
+          "heading": "MOVE SLOW:",
+          "values": [
+            -50
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            2.1,
+            2.4,
+            2.7,
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            65,
+            70,
+            75,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK DAMAGE:",
+          "values": [
+            30,
+            45,
+            60,
+            75
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "phantom_assassin_phantom_strike",
+      "display_name": "Phantom Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_phantom_strike.png",
+      "description": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an enemy unit.",
+      "lore": "Mortred's silken veil is the last thing her unfortunate target sees.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        650,
+        750,
+        850,
+        950
+      ],
+      "mana_costs": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "cooldowns": [
+        0.1
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS ATTACK SPEED:",
+          "values": [
+            80,
+            120,
+            160,
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "phantom_assassin_blur",
+      "display_name": "Blur",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_blur.png",
+      "description": "Phantom Assassin blurs her body, disjointing incoming projectiles, increasing her movement speed, causing her to be impossible to see until she comes near enemy heroes or towers.",
+      "lore": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
+      "notes": [
+        "Attacking Roshan with a regular attack will dispel Blur."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "target": "Allied Heroes",
+      "dispellable": "No",
+      "cast_ranges": [
+        500
+      ],
+      "mana_costs": [
+        50
+      ],
+      "cooldowns": [
+        45
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            30
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VANISH RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "VANISH BUFFER:",
+          "values": [
+            0.8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS MOVEMENT SPEED:",
+          "values": [
+            9.5
+          ],
+          "is_percentage": true
+        }
+      ],
+      "shard_text": "Decreases Cooldown by 10s. Any time Phantom Assassin gets a hero kill, her ability cooldowns advance 60% of their max cooldown values."
+    },
+    {
+      "name": "phantom_assassin_fan_of_knives",
+      "display_name": "Fan of Knives",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_fan_of_knives.png",
+      "description": "Phantom Assassin releases sharp blades around her, dealing a percentage of each victim's max health on impact and applying Break.",
+      "lore": "A sister is generally given a single name, but powerful names often have plentiful allies.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        80
+      ],
+      "cooldowns": [
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "MAX HEALTH DAMAGE:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "BREAK DURATION:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "phantom_assassin_immaterial",
+      "display_name": "Immaterial",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_immaterial.png",
+      "description": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks.\n\nStacks diminishingly with other sources of Evasion.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "BONUS EVASION:",
+          "values": [
+            25,
+            35,
+            45,
+            55
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "phantom_assassin_coup_de_grace",
+      "display_name": "Coup de Grace",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_coup_de_grace.png",
+      "description": "Phantom Assassin refines her combat abilities, acquiring a chance of gaining Deadly Focus with each attack. When attacking with Deadly Focus, Phantom Assassin will consume the buff and guarantee a critical hit. Stifling Dagger has a bonus chance to cause Deadly Focus.",
+      "lore": "A divine strike, Mortred honors her opponent by choosing them for death.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CHANCE OF DEADLY FOCUS:",
+          "values": [
+            17
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAGGER CHANCE OF DEADLY FOCUS:",
+          "values": [
+            34
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CRITICAL DAMAGE:",
+          "values": [
+            200,
+            325,
+            450
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ATTACKS TO TRIGGER:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DEADLY FOCUS DURATION:",
+          "values": [
+            6,
+            8,
+            10
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+0.8s Phantom Strike Duration",
+    "-2s Stifling Dagger Cooldown",
+    "+20% Immaterial Evasion",
+    "+15% Stifling Dagger Damage",
+    "+200 Phantom Strike Cast Range",
+    "+60 Phantom Strike Attack Speed",
+    "+10% Coup de Grace chance",
+    "Triple Strike Stifling Dagger"
+  ],
+  "facets": []
+}

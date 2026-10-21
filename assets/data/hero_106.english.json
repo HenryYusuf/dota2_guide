@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 106,
+    "valve_key": "npc_dota_hero_ember_spirit",
+    "localized_name": "Ember Spirit",
+    "one_liner": "Rapidly strikes and chains his foes",
+    "primary_attribute": "agility",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/ember_spirit.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 21,
+        "gain": 3.2
+      },
+      "intelligence": {
+        "base": 20,
+        "gain": 2.2
+      }
+    },
+    "combat": {
+      "damage_min": 51,
+      "damage_max": 55,
+      "attack_rate": 1.7,
+      "attack_range": 150,
+      "projectile_speed": 900,
+      "armor": 3.5,
+      "magic_resistance": 25,
+      "movement_speed": 295,
+      "turn_rate": 0.8,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Lost within the Wailing Mountains, the Fortress of Flares lay abandoned, its training halls empty, its courtyard covered in leaves and dust. Upon a dais in its sealed temple rests a topaz cauldron filled with ancient ash, remnants of a pyre for the warrior-poet Xin. For three generations, Xin taught his acolytes the Bonds of the Guardian Flame, a series of mantras to train the mind and body for the harsh realities beyond the fortress walls.\r\n\t\t\t\t<br><br>However, in teaching a warrior's way he earned a warrior's rivals, and in his autumn Xin was bested and slain. His followers spread to the wind. Yet as years turned to centuries and followers to descendants, his teachings endured by subtle whisper and deed. Touched by the teacher's lasting legacy, the Burning Celestial, inquisitive aspect of fire, cast himself to the Fortress of Flares and reignited the pyre ash. From these glowing embers emerged an image of Xin, wreathed in flame, his thoughtful countenance prepared to train and to teach, and to spread the fires of knowledge to all who seek guidance."
+  },
+  "abilities": [
+    {
+      "name": "ember_spirit_searing_chains",
+      "display_name": "Searing Chains",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_searing_chains.png",
+      "description": "Ember Spirit unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second.",
+      "lore": "Xin's harshest lessons often employed the use of red-hot chains.",
+      "notes": [
+        "Targets are chosen randomly around Xin.",
+        "Does not affect Debuff Immune or invisible units."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        400
+      ],
+      "mana_costs": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "cooldowns": [
+        13,
+        12,
+        11,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            1.25,
+            1.75,
+            2.25,
+            2.75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            400
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            100
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "UNIT COUNT:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ember_spirit_sleight_of_fist",
+      "display_name": "Sleight of Fist",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_sleight_of_fist.png",
+      "description": "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location.  Deals bonus damage to heroes.",
+      "lore": "The studied warrior must whip and weave through its enemies, burning each without pause.",
+      "notes": [
+        "Targets are determined when the spell is cast.",
+        "A regular attack is done to each target every 0.25 seconds.",
+        "Any attack modifier that Xin has (such as Critical Strike, Bash, Cleave, or Orb effects) will be applied normally on these attacks.",
+        "Abilities and items can be used while Sleight of Fist is active."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        75
+      ],
+      "cooldowns": [
+        13,
+        11,
+        9,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            250,
+            350,
+            450,
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS HERO DAMAGE:",
+          "values": [
+            40,
+            80,
+            120,
+            160
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACK INTERVAL:",
+          "values": [
+            0.25
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ember_spirit_flame_guard",
+      "display_name": "Flame Guard",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_flame_guard.png",
+      "description": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken. Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active. If the shield is broken, the damage is also lost.",
+      "lore": "An enemy should never be allowed to approach without difficulty.",
+      "notes": [
+        "Magic damage reduction is calculated before any reductions.",
+        "The damage lingers for an additional 0.5 seconds after application."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "No Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        400
+      ],
+      "mana_costs": [
+        65,
+        80,
+        95,
+        110
+      ],
+      "cooldowns": [
+        32
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            12,
+            14,
+            16,
+            18
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            20,
+            30,
+            40,
+            50
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            500
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PERCENTAGE ABSORBED:",
+          "values": [
+            70
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "MAGIC BARRIER:",
+          "values": [
+            60,
+            140,
+            220,
+            300
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "ember_spirit_activate_fire_remnant",
+      "display_name": "Activate Fire Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_activate_fire_remnant.png",
+      "description": "Select the Fire Remnant to arrive at.",
+      "lore": "With blazing speed does a spirit fly!",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        99999
+      ],
+      "mana_costs": [
+        100,
+        125,
+        150
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": []
+    },
+    {
+      "name": "ember_spirit_immolation",
+      "display_name": "Immolation",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_immolation.png",
+      "description": "Ember Spirit is continuously burning, dealing damage per second to all nearby enemies at all times.",
+      "notes": [
+        "Break does not disable Immolation for Fire Remnants when upgraded with Aghanim's Shard."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE PER SECOND:",
+          "values": [
+            10
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Grants Fire Remnants the current level of Immolation, and increases the damage per second and radius."
+    },
+    {
+      "name": "ember_spirit_fire_remnant",
+      "display_name": "Fire Remnant",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_fire_remnant.png",
+      "description": "Sends a Fire Remnant that runs to the target location at 250% Ember Spirit's speed. Using Activate Fire Remnant, Ember Spirit will dash out to all active Fire Remnants, destroying them and dealing damage in an area and then moving to the nearest Remnant.  Ember Spirit will end at the Remnant closest to the targeted location.",
+      "lore": "By the spirit's power are Xin's teachings spread anew.",
+      "notes": [
+        "Starts with 3 charges (maximum)."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        1400
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0.5
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            100,
+            200,
+            300
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            45
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "RANGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPEED MULTIPLIER:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX CHARGES:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CHARGE RADIUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases cast range, initial remnant speed, and maximum charges.",
+      "shard_text": "If an enemy hero dies near Ember Spirit, a Fire Remnant charge will be replenished. Additionally, when Ember Spirit dies a Fire Remnant is spawned at his location."
+    }
+  ],
+  "talents": [
+    "+12 Damage",
+    "+165 Flame Guard Barrier Amount",
+    "+100% Flame Guard Damage Per Second",
+    "+0.8s Searing Chains Duration",
+    "+50 Sleight of Fist Hero Damage",
+    "+50 Searing Chains Damage",
+    "2 Sleight of Fist Charges",
+    "-12s Remnant Charge Restore Time"
+  ],
+  "facets": []
+}

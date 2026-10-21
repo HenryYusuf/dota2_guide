@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 27,
+    "valve_key": "npc_dota_hero_shadow_shaman",
+    "localized_name": "Shadow Shaman",
+    "one_liner": "Summons powerful serpent wards to deal damage",
+    "primary_attribute": "intelligence",
+    "complexity": 1,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/shadow_shaman.png",
+    "attributes": {
+      "strength": {
+        "base": 20,
+        "gain": 2.3
+      },
+      "agility": {
+        "base": 16,
+        "gain": 1.6
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 3.3
+      }
+    },
+    "combat": {
+      "damage_min": 63,
+      "damage_max": 70,
+      "attack_rate": 1.7,
+      "attack_range": 400,
+      "projectile_speed": 900,
+      "armor": 4.66,
+      "magic_resistance": 25,
+      "movement_speed": 285,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Born in the Bleeding Hills, Rhasta was just a starving youngling when picked up by a travelling con-man.  For two pins of copper, the old con-man would tell your fortune. For three, he'd castrate your pig, for five, he'd circumcise your sons. For a good meal, he'd don his shaman garb, read from his ancient books, and lay a curse upon your enemies. His strange new youngling, part hill troll, part...something else, worked as assistant and lent an air of the exotic to the con-man's trade. \r\n\t\t\t\t<br><br>Always one step ahead of cheated customers, one town ahead of a pursuing patronage, the two trekked across the blighted lands until one day the con-man realized that the little youngling could actually do what he only pretended at. His ward had a gift--a gift that customers valued. And so the youngling Rhasta was thrust before the crowds, and the trade-name Shadow Shaman was born. The two continued from town to town, conjuring for money as Shadow Shaman's reputation grew. Eventually, the pair's duplicitous past caught up with them, and they were ambushed by a mob of swindled ex-clients. The con-man was slain, and for the first time, Rhasta used his powers for darkness, massacring the attackers. He buried his beloved master, and now uses his powers to destroy any who would seek to do him harm."
+  },
+  "abilities": [
+    {
+      "name": "shadow_shaman_ether_shock",
+      "display_name": "Ether Shock",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_ether_shock.png",
+      "description": "Creates a cone of ethereal energy that strikes multiple enemy units.",
+      "lore": "Originally used to open shows with the travelling con-man, Rhasta's lightning display shocks adversaries in more ways than one.",
+      "notes": [
+        "Can hit secondary targets up to 1000 distance away."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "cast_ranges": [
+        600
+      ],
+      "mana_costs": [
+        90,
+        105,
+        120,
+        135
+      ],
+      "cooldowns": [
+        14,
+        12,
+        10,
+        8
+      ],
+      "special_values": [
+        {
+          "heading": "TARGETS:",
+          "values": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            125,
+            190,
+            255,
+            320
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shadow_shaman_voodoo",
+      "display_name": "Hex",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_voodoo.png",
+      "description": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
+      "lore": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared.",
+      "notes": [
+        "Instantly destroys illusions.",
+        "The target will have a base movement speed of 100, but buffs granting maximum movement speed won't be disabled."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        550
+      ],
+      "mana_costs": [
+        130,
+        150,
+        170,
+        190
+      ],
+      "cooldowns": [
+        24,
+        20,
+        16,
+        12
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            2,
+            2.3,
+            2.6,
+            2.9
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shadow_shaman_shackles",
+      "display_name": "Shackles",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_shackles.png",
+      "description": "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, absorbing their life energy over time.",
+      "lore": "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        450
+      ],
+      "mana_costs": [
+        125,
+        140,
+        155,
+        170
+      ],
+      "cooldowns": [
+        14,
+        13,
+        12,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "TOTAL DAMAGE/HEAL:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DURATION:",
+          "values": [
+            2.4,
+            3,
+            3.6,
+            4.2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            450
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increase cast range. Every 0.9 seconds, shackled units emit a radial Ether Shock hitting all other units within 600 of the target for 100% of Ether Shock's normal damage. Shackles can now also be cast on allies and Mass Serpent Wards that stay within 2000 units of Shadow Shaman. Allied units are not disabled by Shackle."
+    },
+    {
+      "name": "shadow_shaman_fowl_play",
+      "display_name": "Fowl Play",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_fowl_play.png",
+      "description": "When taking lethal damage, Shadow Shaman receives a strong dispel and survives as a 1 HP chicken with increased movement speed. Incoming damage is reduced to zero for a short duration and additional chickens are created to confuse the enemy. Cooldown resets when Shadow Shaman respawns.\n\nDISPEL TYPE: Strong Dispel",
+      "lore": "Rhasta had to learn early on how to stay one step ahead of those who (rightfully or wrongfully) wished him harm.",
+      "notes": [
+        "Lethal Damage from Axe's Culling Blade and Necrophos's Reaper's Scythe will not be prevented.",
+        "Incoming damage reduction buff will prevent certain sources of HP removal from killing Shadow Shaman."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        120
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVESPEED BONUS:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "TOTAL CHICKENS:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INVULNERABLE TIME:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases the amount of time incoming damage is reduced to 1 seconds. When Fowl Play is triggered, Shadow Shaman becomes invulnerable for 0.1 seconds. %chicken_illusions% additional uncontrollable chickens are created that last for %ally_voodoo_duration% seconds. While Shadow Shaman is transformed, he can now use items."
+    },
+    {
+      "name": "shadow_shaman_urnaconda",
+      "display_name": "Urnaconda",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_urnaconda.png",
+      "description": "Throw a snake jar at the target location, damaging all enemies in the AoE and creating a Massive Serpent Ward that has 4x the base Serpent Ward damage and health there that lasts 15s.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "target": "Enemies",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        650
+      ],
+      "mana_costs": [
+        140
+      ],
+      "cooldowns": [
+        50
+      ],
+      "special_values": [
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            225
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT DAMAGE:",
+          "values": [
+            275
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "shadow_shaman_mass_serpent_ward",
+      "display_name": "Mass Serpent Ward",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_mass_serpent_ward.png",
+      "description": "Summons 10 Serpent Wards to attack enemy units and structures. The Wards are immune to magic. Creeps deal half damage to the Serpent Ward.",
+      "lore": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Physical",
+      "cast_ranges": [
+        550
+      ],
+      "mana_costs": [
+        200,
+        350,
+        550
+      ],
+      "cooldowns": [
+        110,
+        105,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            45
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "HITS TO DESTROY:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "WARD DAMAGE:",
+          "values": [
+            50,
+            85,
+            120
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MEGA WARD HEALTH:",
+          "values": [
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MEGA WARD DAMAGE:",
+          "values": [
+            200,
+            340,
+            480
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Allows to create a Mega Ward using the Urnaconda ability."
+    }
+  ],
+  "talents": [
+    "+170 Shackles Total Damage",
+    "+1.75 Mana Regen",
+    "+160 Serpent Wards Attack Range",
+    "Hex Breaks",
+    "+1.5s Shackles Duration",
+    "+50% Serpent Wards Max HP",
+    "+250 Ether Shock Damage",
+    "+1 Ward Attack Targets"
+  ],
+  "facets": []
+}

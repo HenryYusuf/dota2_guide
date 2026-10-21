@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 87,
+    "valve_key": "npc_dota_hero_disruptor",
+    "localized_name": "Disruptor",
+    "one_liner": "Traps and silences foes in his static storm",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/disruptor.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 15,
+        "gain": 1.4
+      },
+      "intelligence": {
+        "base": 21,
+        "gain": 2.9
+      }
+    },
+    "combat": {
+      "damage_min": 48,
+      "damage_max": 52,
+      "attack_rate": 1.7,
+      "attack_range": 625,
+      "projectile_speed": 1200,
+      "armor": 2.5,
+      "magic_resistance": 25,
+      "movement_speed": 300,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "High on the wind-ravaged steppes of Druud, a gifted young stormcrafter called Disruptor was the first to unlock the secrets of the summer squalls.  Constantly under assault from both seasonal storms and encroachment from civilized kingdoms to the South, the upland Oglodi have for centuries struggled to subsist atop the endless tablelands.  They are the fractured remnant of a once-great civilization, a fallen tribe, their stormcraft strange and inscrutable, cobbled together from scraps of lost knowledge which even they no longer fully understand.  For those on the high plain, weather has become a kind of religion, worshiped as both the giver and taker of life.  But the electrical storms that bring life-sustaining rains arrive at a cost, and many are the charred and smoking corpses left in their wake.  \r\n\t\t\t\t<br><br>Although small for his kind, Disruptor is fearless, and driven by an insatiable curiosity.  As a youth, while still unblooded and without a stryder, he explored the ruins of the ancestral cities, searching through collapsed and long-moldering libraries, rummaging through rusting manufactories.  He took what he needed and returned to his tribe.  Adapting a coil of ancient design, he harnessed the power of electrical differential and now calls down the thunder whenever he wishes.  Part magic, part craftsmanship, his coils hold in their glowing plates the power of life and death--a power wielded with precision against the landed castes to the South, and any interlopers who cross into ancient Oglodi lands."
+  },
+  "abilities": [
+    {
+      "name": "disruptor_thunder_strike",
+      "display_name": "Thunder Strike",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_thunder_strike.png",
+      "description": "Repeatedly strikes the targeted unit with lightning.  Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.3 seconds.  Provides vision of its target.",
+      "lore": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        115,
+        120,
+        125,
+        130
+      ],
+      "cooldowns": [
+        18,
+        15,
+        12,
+        9
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            260
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRIKES:",
+          "values": [
+            4
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRIKE INTERVAL:",
+          "values": [
+            2
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STRIKE DAMAGE:",
+          "values": [
+            30,
+            60,
+            90,
+            120
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Increases the cast range and strike count of Thunder Strike. It can now also be ground targeted, where it will lie dormant for up to 4 seconds and attach to the first enemy that comes within the radius."
+    },
+    {
+      "name": "disruptor_glimpse",
+      "display_name": "Glimpse",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_glimpse.png",
+      "description": "Teleports the target hero back to where it was 4 seconds ago.  Instantly kills illusions. Deals damage equal to a percentage of the distance glimpsed, that cannot go over a damage maximum.",
+      "lore": "Playing with electricity can have unexpected results.",
+      "notes": [
+        "The travel time is a function of the distance the target will travel."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        600,
+        1000,
+        1400,
+        1800
+      ],
+      "mana_costs": [
+        70,
+        85,
+        100,
+        115
+      ],
+      "cooldowns": [
+        24,
+        22,
+        20,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "MIN DAMAGE:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "GLIMPSE DISTANCE TO DAMAGE:",
+          "values": [
+            20,
+            25,
+            30,
+            35
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "disruptor_kinetic_field",
+      "display_name": "Kinetic Field",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_kinetic_field.png",
+      "description": "After a short formation time, creates a circular barrier of kinetic energy that enemies can't pass.",
+      "lore": "The stryder is immune to the gale-force winds that will consume its adversaries.",
+      "notes": [
+        "Debuff Immune units can travel through the field."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        70
+      ],
+      "cooldowns": [
+        20,
+        18,
+        16,
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FORMATION DELAY:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            2.6,
+            3.2,
+            3.8,
+            4.4
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Both shapes have an independent cooldown."
+    },
+    {
+      "name": "disruptor_kinetic_fence",
+      "display_name": "Kinetic Fence",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_kinetic_fence.png",
+      "description": "After a short formation time, creates a wall out of kinetic energy that enemies cannot pass.",
+      "lore": "For a brief moment, it's as if the wind itself had turned solid.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "shard",
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        70
+      ],
+      "cooldowns": [
+        14
+      ],
+      "special_values": [
+        {
+          "heading": "LENGTH:",
+          "values": [
+            1200
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "FORMATION DELAY:",
+          "values": [
+            1
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4.4
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "disruptor_electromagnetic_repulsion",
+      "display_name": "Electromagnetic Repulsion",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_electromagnetic_repulsion.png",
+      "description": "Whenever Disruptor takes more than 250 damage from any source within 400 radius, all nearby enemies within take damage equal to 1.5x of Disruptor's Intelligence, and are pushed back up to a 400 distance away.",
+      "lore": "Safe harbor found inside the storm.",
+      "notes": [
+        "After 7s, the damage counter is reset."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "dispellable": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        5
+      ],
+      "special_values": []
+    },
+    {
+      "name": "disruptor_static_storm",
+      "display_name": "Static Storm",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_static_storm.png",
+      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration.  The damage starts off weak, but increases in power over the duration.",
+      "lore": "A summer squall in Druud is a hardship that only an Oglodi can survive.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        800
+      ],
+      "mana_costs": [
+        125,
+        175,
+        225
+      ],
+      "cooldowns": [
+        100,
+        85,
+        70
+      ],
+      "special_values": [
+        {
+          "heading": "RADIUS:",
+          "values": [
+            550
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PULSES:",
+          "values": [
+            20
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE PER SECOND:",
+          "values": [
+            200,
+            275,
+            350
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Mutes items."
+    }
+  ],
+  "talents": [
+    "+20 Movement Speed",
+    "+15 Thunder Strike Damage per Strike",
+    "+15%/300 Glimpse Distance To Damage/Max",
+    "+60 Static Storm Max DPS",
+    "+1s Kinetic Field Duration",
+    "+75 Static Storm Radius",
+    "2 Glimpse Charges",
+    "+6 Thunder Strike Strikes"
+  ],
+  "facets": []
+}

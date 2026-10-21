@@ -18,7 +18,10 @@ Future<void> main() async {
         appSupportDirProvider.overrideWithValue(appSupport.path),
         // Feature refresh units; core never imports a feature, so the
         // composition happens here, at the root.
-        snapshotUnitsProvider.overrideWithValue(const [heroesSnapshotUnit]),
+        snapshotUnitsProvider.overrideWithValue(const [
+          heroesSnapshotUnit,
+          heroDetailSnapshotUnit,
+        ]),
       ],
       child: const AegisApp(),
     ),

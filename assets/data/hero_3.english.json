@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 3,
+    "valve_key": "npc_dota_hero_bane",
+    "localized_name": "Bane",
+    "one_liner": "Puts his enemies to sleep, incapacitating them",
+    "primary_attribute": "universal",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/bane.png",
+    "attributes": {
+      "strength": {
+        "base": 23,
+        "gain": 2.5
+      },
+      "agility": {
+        "base": 23,
+        "gain": 2.5
+      },
+      "intelligence": {
+        "base": 23,
+        "gain": 2.5
+      }
+    },
+    "combat": {
+      "damage_min": 24,
+      "damage_max": 30,
+      "attack_rate": 1.7,
+      "attack_range": 425,
+      "projectile_speed": 900,
+      "armor": 3.83,
+      "magic_resistance": 25,
+      "movement_speed": 305,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 1200
+    },
+    "bio": "When the gods have nightmares, it is Bane Elemental who brings them.  Also known as Atropos, Bane was born from the midnight terrors of the goddess Nyctasha.  A force of terror too powerful to be contained by sleep, he surfaced from her slumbers, fed upon her immortality, and stole his vaporous form from her inky blood.  He is the essence of fear.  Mortals who hear his voice hear their darkest secrets whispered in their ear.  He calls to the hidden fear in every Hero's heart.  Wakefulness is no protection, for Bane's black blood, continuously dripping, is a tar that traps his enemies in nightmare.  In the presence of Bane, every Hero remembers to fear the dark."
+  },
+  "abilities": [
+    {
+      "name": "bane_enfeeble",
+      "display_name": "Enfeeble",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_enfeeble.png",
+      "description": "Deals damage every second and lowers the enemy's total attack damage and cast range.",
+      "lore": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Pure",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        700,
+        800,
+        900,
+        1000
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        22,
+        17,
+        12,
+        7
+      ],
+      "special_values": [
+        {
+          "heading": "ATTACK DAMAGE REDUCTION:",
+          "values": [
+            55,
+            60,
+            65,
+            70
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "CAST RANGE REDUCTION:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            12,
+            18,
+            24,
+            30
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "bane_brain_sap",
+      "display_name": "Brain Sap",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_brain_sap.png",
+      "description": "Feasts on the vital energies of an enemy unit, healing Bane and dealing damage.",
+      "lore": "Atropos finds no greater pleasure than to harvest the fear he creates.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        625
+      ],
+      "mana_costs": [
+        105,
+        120,
+        135,
+        150
+      ],
+      "cooldowns": [
+        17,
+        15,
+        13,
+        11
+      ],
+      "special_values": [
+        {
+          "heading": "HEAL/DAMAGE:",
+          "values": [
+            90,
+            160,
+            230,
+            300
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Reduces cooldown by 3. Causes Brain Sap to become a 550 AoE spell. Secondary targets only heal for 30%."
+    },
+    {
+      "name": "bane_nightmare",
+      "display_name": "Nightmare",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_nightmare.png",
+      "description": "Puts the target enemy or friendly Hero to sleep. Sleeping units walk in Bane's chosen direction and are awakened when damaged. If the target was directly attacked, the Nightmare passes to the attacking unit. Bane can attack and damage Nightmared targets freely.\n\n Can be put on alt-cast to have the target stand still.",
+      "lore": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep.",
+      "notes": [
+        "In the first second of Nightmare, the unit is invulnerable.",
+        "Bane can wake himself from Nightmare.",
+        "On cast, replaced with Nightmare End: Ends all ongoing Nightmares on any affected units."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Heroes",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        550,
+        600,
+        650,
+        700
+      ],
+      "mana_costs": [
+        120,
+        130,
+        140,
+        150
+      ],
+      "cooldowns": [
+        25,
+        22,
+        19,
+        16
+      ],
+      "special_values": [
+        {
+          "heading": "WALK SPEED:",
+          "values": [
+            110
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "bane_fiends_grip",
+      "display_name": "Fiend's Grip",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_fiends_grip.png",
+      "description": "CHANNELED - Grips an enemy unit, disabling it and causing heavy damage over time, while stealing mana every 0.5 seconds based on the unit's maximum mana.",
+      "lore": "Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "Yes",
+      "damage_type": "Pure",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        625
+      ],
+      "mana_costs": [
+        200,
+        300,
+        400
+      ],
+      "cooldowns": [
+        120,
+        110,
+        100
+      ],
+      "special_values": [
+        {
+          "heading": "MANA DRAIN PER SECOND:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            70,
+            110,
+            150
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            4.75,
+            5.25,
+            5.75
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Reduces Fiend's Grip cooldown by 40s. Fiend's Grip now creates two uncontrollable illusions that are also channeling Fiend's Grip on the target. Illusions take 225% incoming damage and immediately die if they are interrupted. Damage does not stack."
+    },
+    {
+      "name": "bane_ichor_of_nyctasha",
+      "display_name": "Ichor of Nyctasha",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_ichor_of_nyctasha.png",
+      "description": "Every time Bane kills an enemy hero or they die under the effect of Bane's debuff, they receive a Terror for the rest of the game that decreases their status resistance to Bane's subsequent debuffs.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "damage_type": "Pure",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "MAX TERRORS PER HERO:",
+          "values": [
+            6
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STATUS RESISTANCE PER TERROR:",
+          "values": [
+            4
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+125 Brain Sap Cast Range",
+    "+20% Enfeeble Cast Range Reduction",
+    "+13 Enfeeble Damage Per Second",
+    "+5% Fiend's Grip Max Mana Drain",
+    "-3s Nightmare Cooldown",
+    "+30 Movement Speed",
+    "+275 Brain Sap Damage/Heal",
+    "+3s Fiend's Grip Duration"
+  ],
+  "facets": []
+}

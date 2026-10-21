@@ -12,4 +12,5 @@ The app needs offline-first hero/item/patch data, and the reverse-engineered ref
 
 - Creeps, buildings, and the Dota 1 section have no legally clean data source and are permanently out of scope.
 - Per-level ability values must be derived from `special_values[]` in `herodata`, not read from a Valve table.
+- Decode *logic* replicated from Valve's front-end `main.js` (behaviour/damage/dispel bitmask tables, `%token%` substitution rules — see `hero_feed_to_detail.dart`) is not a data source: every value it renders still originates in the datafeed document. Only the mapping code is copied.
 - The app ships Valve attribution plus an "unofficial — not affiliated with Valve" disclaimer; CDN hotlinking is a consciously accepted ambiguity (no Valve term permits or forbids it).

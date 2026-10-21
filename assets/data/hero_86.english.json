@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 86,
+    "valve_key": "npc_dota_hero_rubick",
+    "localized_name": "Rubick",
+    "one_liner": "Steals the spells of his enemies to use against them",
+    "primary_attribute": "intelligence",
+    "complexity": 3,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/rubick.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2
+      },
+      "agility": {
+        "base": 23,
+        "gain": 2.2
+      },
+      "intelligence": {
+        "base": 24,
+        "gain": 3.7
+      }
+    },
+    "combat": {
+      "damage_min": 49,
+      "damage_max": 55,
+      "attack_rate": 1.7,
+      "attack_range": 550,
+      "projectile_speed": 1125,
+      "armor": 4.83,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.7,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "Any mage can cast a spell or two, and a few may even study long enough to become a wizard, but only the most talented are allowed to be recognized as a Magus. Yet as with any sorcerer's circle, a sense of community has never guaranteed competitive courtesy.\r\n\t\t\t\t<br><br>Already a renowned duelist and scholar of the grander world of sorcery, it had never occurred to Rubick that he might perhaps be Magus material until he was in the midst of his seventh assassination attempt. As he casually tossed the twelfth of a string of would-be killers from a high balcony, it dawned on him how utterly unimaginative the attempts on his life had become. Where once the interruption of a fingersnap or firehand might have put a cheerful spring in his step, it had all become so very predictable. He craved greater competition. Therefore, donning his combat mask, he did what any wizard seeking to ascend the ranks would do: he announced his intention to kill a Magus.\r\n\t\t\t\t<br><br>Rubick quickly discovered that to threaten one Magus is to threaten them all, and they fell upon him in force. Each antagonist's spell was an unstoppable torrent of energy, and every attack a calculated killing blow. But very soon something occurred that Rubick's foes found unexpected: their arts appeared to turn against them. Inside the magic maelstrom, Rubick chuckled, subtly reading and replicating the powers of one in order to cast it against another, sowing chaos among those who had allied against him. Accusations of betrayal began to fly, and soon the sorcerers turned one upon another without suspecting who was behind their undoing.\r\n\t\t\t\t<br><br>When the battle finally drew to a close, all were singed and frozen, soaked and cut and pierced. More than one lay dead by an ally's craft. Rubick stood apart, sore but delighted in the week's festivities. None had the strength to argue when he presented his petition of assumption to the Hidden Council, and the Insubstantial Eleven agreed as one to grant him the title of Grand Magus."
+  },
+  "abilities": [
+    {
+      "name": "rubick_telekinesis",
+      "display_name": "Telekinesis",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_telekinesis.png",
+      "description": "Rubick uses his telekinetic powers to lift the enemy into the air briefly and then hurls them back at the ground. The unit lands on the ground with such force that it stuns nearby enemies.",
+      "lore": "Even the Grandest Magus may use his powers for enjoyment.",
+      "notes": [
+        "While the target is in the air, Rubick may use a secondary ability to throw the enemy in a targeted direction.",
+        "When the unit lands, it isn't affected by the area of effect stun."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "dispellable": "Strong Dispel",
+      "cast_ranges": [
+        550,
+        575,
+        600,
+        625
+      ],
+      "mana_costs": [
+        110
+      ],
+      "cooldowns": [
+        22,
+        19,
+        16,
+        13
+      ],
+      "special_values": [
+        {
+          "heading": "LIFT DURATION:",
+          "values": [
+            0.95,
+            1.2,
+            1.45,
+            1.7
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STUN DURATION:",
+          "values": [
+            0.9,
+            1.1,
+            1.3,
+            1.5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "IMPACT RADIUS:",
+          "values": [
+            300,
+            325,
+            350,
+            375
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX THROW DISTANCE:",
+          "values": [
+            375
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Allows you to target yourself or allies with Telekinesis. Throw distance is increased to 225 and throw delay is reduced to 0.5 seconds."
+    },
+    {
+      "name": "rubick_fade_bolt",
+      "display_name": "Fade Bolt",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_fade_bolt.png",
+      "description": "Rubick creates a powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack and spell damage. Each jump deals less damage.",
+      "lore": "Rubick's favorite spell for dispatching would-be assassins is a rather simple conjuration.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        800,
+        800,
+        800,
+        800
+      ],
+      "mana_costs": [
+        110,
+        125,
+        140,
+        155
+      ],
+      "cooldowns": [
+        16,
+        14,
+        12,
+        10
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE:",
+          "values": [
+            85,
+            165,
+            245,
+            325
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "JUMP REDUCTION:",
+          "values": [
+            6
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            6,
+            12,
+            18,
+            24
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DEBUFF DURATION:",
+          "values": [
+            9
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "rubick_arcane_supremacy",
+      "display_name": "Arcane Supremacy",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_arcane_supremacy.png",
+      "description": "Rubick's mastery of the arcane allows him to have a larger cast range and bonus spell amplification.",
+      "lore": "Not every magus can be a Grand Magus...",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            60,
+            120,
+            180,
+            240
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "SPELL AMP:",
+          "values": [
+            11,
+            16,
+            21,
+            26
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "rubick_spell_steal",
+      "display_name": "Spell Steal",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_spell_steal.png",
+      "description": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
+      "lore": "...but even their lesser magics can be a source of much utility.",
+      "notes": [
+        "Cannot steal item abilities.",
+        "Rubick will steal the Aghanim's Shard version of the ability, if he himself has an Aghanim's Shard.",
+        "Does not trigger spell reflect."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        1000,
+        1000,
+        1000
+      ],
+      "mana_costs": [
+        25,
+        25,
+        25
+      ],
+      "cooldowns": [
+        16,
+        10,
+        4
+      ],
+      "special_values": [
+        {
+          "heading": "CAST RANGE:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "STOLEN MANA COST REDUCTION:",
+          "values": [],
+          "is_percentage": true
+        },
+        {
+          "heading": "STOLEN SPELL COOLDOWN REDUCTION:",
+          "values": [
+            10,
+            20,
+            30
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "DURATION:",
+          "values": [
+            180,
+            240,
+            300
+          ],
+          "is_percentage": false
+        }
+      ],
+      "scepter_text": "Increases the number of spells that can be stolen to 2. Increases cast range, and upgrades stolen spells to their Scepter version.",
+      "shard_text": "Upgrades stolen spells to their Shard version."
+    },
+    {
+      "name": "rubick_curiosity",
+      "display_name": "Curiosity",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_curiosity.png",
+      "description": "Rubick gains 1 stack of Curiosity per level that grants him 1 base damage, 0.3% Buff/Debuff Duration, and 2 AOE Bonus. \n\nIf Rubick sees an enemy Hero cast an ability within 1200 distance of him, he gains 2 Curiosity for 20 seconds.  If an enemy Hero dies while Rubick has Curiosity from them and he damaged them in the last 3 seconds, he gains 1 Curiosity permanently.",
+      "notes": [],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "CURIOSITY GAINED:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BUFF/DEBUFF AMP:",
+          "values": [
+            0
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "AREA OF EFFECT BONUS:",
+          "values": [
+            0
+          ],
+          "is_percentage": false
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "-2s Telekinesis Cooldown",
+    "+200 Health",
+    "-40% Stolen Spells Mana Cost",
+    "-4s Fade Bolt Cooldown",
+    "+12% Fade Bolt Damage Reduction",
+    "Telekinesis Landing Deals 300 Damage",
+    "1.5x Curiosity Bonuses",
+    "+40% Spell Amp For Stolen Spells"
+  ],
+  "facets": []
+}

@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "locale": "english",
+  "hero": {
+    "id": 121,
+    "valve_key": "npc_dota_hero_grimstroke",
+    "localized_name": "Grimstroke",
+    "one_liner": "Disables enemies with a swipe of his brush",
+    "primary_attribute": "intelligence",
+    "complexity": 2,
+    "portrait_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/grimstroke.png",
+    "attributes": {
+      "strength": {
+        "base": 21,
+        "gain": 2.4
+      },
+      "agility": {
+        "base": 18,
+        "gain": 1.9
+      },
+      "intelligence": {
+        "base": 25,
+        "gain": 3.8
+      }
+    },
+    "combat": {
+      "damage_min": 47,
+      "damage_max": 51,
+      "attack_rate": 1.7,
+      "attack_range": 600,
+      "projectile_speed": 900,
+      "armor": 3.0,
+      "magic_resistance": 25,
+      "movement_speed": 290,
+      "turn_rate": 0.6,
+      "sight_range_day": 1800,
+      "sight_range_night": 800
+    },
+    "bio": "The people of Ashkavor crowded around the temple square, eager to witness the ascension of their new guardian -- to stand near the man as he bound their souls to his own. But as his final brush strokes fell against the runestone, and the bond of a new Ascended One was forged, everyone -- even those who'd stayed in their homes -- could sense that something had gone terribly wrong.<br><br>He knew the cause instantly. The droplets of ichor he'd procured to amplify the potency of his inkpots had instead contaminated them, and the power of the binding spell he'd cast now threatened to consume him. An inky corruption snaked upward from the runestone, along the handle of his brush, soon overtaking his hands. From there it spread quickly. Once it overcame his face and his mouth, he couldn't have screamed even if he'd wanted to.<br><br>All of his life he'd calculated on how to attain ever greater powers than the limits presented by his teachers would allow--going so far as to break the sacred prohibition against augmenting the inks. Indeed, with the wellspring of the Ascended bond open to him, he felt a measure of power coursing into his soul like he'd never imagined. His greatest triumph was upon him, if he could only survive it.<br><br>He drew deep from the power of the bond, pushing back against the corrupted ink flow. A great moan filled the air -- the collective cry of his people. Some swayed on their feet. The weakest collapsed. Many tried to run. And still deeper he pulled from their bloodline reservoir. But it wasn't enough to stop the ink tide.<br><br>It was only when the breath trapped in his lungs began to fail him, and the inkpool darkness fully encased him, that he saw his way out. The bond he'd made with the Ashkavoran people -- his people -- meant to be drawn upon only in service of their protection... It flowed two ways.<br><br>With a final surge of strength -- this time directed by more than just blind repulsion -- he pushed the ink torrent into the bond itself.<br><br>Slowly, he felt the tide retreat... and heard the awful wails of his people as the corruption in turn rolled over them. When at last the ink relented, his eyes opened upon a world changed. The Ashkavoran people as he knew them were gone. Every last soul was transformed into terrifying shades of their former selves -- comprised no longer of blood and bone, only viscid, tainted ink."
+  },
+  "abilities": [
+    {
+      "name": "grimstroke_dark_artistry",
+      "display_name": "Stroke of Fate",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_dark_artistry.png",
+      "description": "Grimstroke paints a curved path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits.\n\n Can be put on alt-cast to have the path be straight.",
+      "lore": "The corruptive force of Grimstroke's ink, drawn from the reservoir of his fallen people, consumes any enemy caught in its path.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Point Target",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        1400
+      ],
+      "mana_costs": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "cooldowns": [
+        11,
+        9,
+        7,
+        5
+      ],
+      "special_values": [
+        {
+          "heading": "BASE DAMAGE:",
+          "values": [
+            100,
+            160,
+            220,
+            280
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DMG PER HERO:",
+          "values": [
+            20,
+            40,
+            60,
+            80
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BONUS DMG PER ILLUSION/CREEP:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SLOW:",
+          "values": [
+            50,
+            60,
+            70,
+            80
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "SLOW DURATION:",
+          "values": [
+            1.75
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "grimstroke_ink_creature",
+      "display_name": "Phantom's Embrace",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_ink_creature.png",
+      "description": "Summons a phantom that moves quickly towards the target, latching to it when she arrives. Once latched, the phantom damages and silences. If she survives the full latch duration she rends her victim for heavy damage and refreshes Phantom's Embrace's cooldown.\n\nHero attacks against the phantom count as 3 attacks each.",
+      "lore": "Grimstroke holds no sorrow for the downfall of his people. Only for Yaovhi, she who was most dear to him, does he feel even a semblance of longing.",
+      "notes": [
+        "The phantom falls off if the target becomes invisible or spell immune.",
+        "The phantom will return if the target dies during the latch."
+      ],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Units",
+      "pierces_spell_immunity": "No",
+      "damage_type": "Magical",
+      "dispellable": "No",
+      "cast_ranges": [
+        900
+      ],
+      "mana_costs": [
+        80,
+        100,
+        120,
+        140
+      ],
+      "cooldowns": [
+        30,
+        26,
+        22,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "LATCH DURATION:",
+          "values": [
+            5
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ATTACKS TO DESTROY:",
+          "values": [
+            6,
+            6,
+            9,
+            9
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "PHANTOM DPS:",
+          "values": [
+            10,
+            20,
+            30,
+            40
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "REND DAMAGE:",
+          "values": [
+            120,
+            200,
+            280,
+            360
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "grimstroke_spirit_walk",
+      "display_name": "Ink Swell",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_spirit_walk.png",
+      "description": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it applies damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
+      "lore": "Now that the rise of the ink tide no longer threatens to overwhelm Grimstroke, its tendrils of power are never far from his hand.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "behavior_tag": "Unit Target",
+      "target": "Allied Units",
+      "pierces_spell_immunity": "Allies Yes, Enemies No",
+      "damage_type": "Magical",
+      "dispellable": "Yes",
+      "cast_ranges": [
+        650,
+        700,
+        750,
+        800
+      ],
+      "mana_costs": [
+        120,
+        130,
+        140,
+        150
+      ],
+      "cooldowns": [
+        27,
+        24,
+        21,
+        18
+      ],
+      "special_values": [
+        {
+          "heading": "BUFF DURATION:",
+          "values": [
+            3
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MOVEMENT SPEED BONUS:",
+          "values": [
+            20
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "RADIUS:",
+          "values": [
+            375
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX DAMAGE:",
+          "values": [
+            90,
+            180,
+            270,
+            360
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX STUN DURATION:",
+          "values": [
+            1.6,
+            2,
+            2.4,
+            2.8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "INK TENDRILS DPS:",
+          "values": [
+            30,
+            45,
+            60,
+            75
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "MAX THRESHOLD DURATION:",
+          "values": [
+            2.5
+          ],
+          "is_percentage": false
+        }
+      ],
+      "shard_text": "Ink Swell dispels the allied unit when cast. Causes Ink Swell to deal 40% more damage and heal the target for 40% of the damage Ink Swell deals.\n\nDISPEL TYPE: Basic Dispel"
+    },
+    {
+      "name": "grimstroke_dark_portrait",
+      "display_name": "Dark Portrait",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_dark_portrait.png",
+      "description": "Creates an ink illusion of a target enemy hero. Illusion is debuff immune, has 90% magic resistance, and has bonus movement speed and attack damage.",
+      "lore": "No dark creation is beyond the skill of the master's hand.",
+      "notes": [],
+      "is_innate": false,
+      "is_ultimate": false,
+      "granted_by": "scepter",
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "cast_ranges": [
+        1200
+      ],
+      "mana_costs": [
+        200
+      ],
+      "cooldowns": [
+        35
+      ],
+      "special_values": [
+        {
+          "heading": "ILLUSION DURATION:",
+          "values": [
+            25
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "ILLUSION OUTGOING DAMAGE:",
+          "values": [
+            125
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ILLUSION DAMAGE TAKEN:",
+          "values": [
+            275
+          ],
+          "is_percentage": true
+        },
+        {
+          "heading": "ILLUSION MOVESPEED BONUS:",
+          "values": [
+            30
+          ],
+          "is_percentage": true
+        }
+      ]
+    },
+    {
+      "name": "grimstroke_soul_chain",
+      "display_name": "Soulbind",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_soul_chain.png",
+      "description": "Binds a targeted enemy hero to its nearest allied hero within the bind radius, preventing both from moving away from each other. Any unit-targeted ability that either bound hero receives also gets cast on the other hero. If the bind is broken before the duration expires, the initial target will be bound to its nearest allied hero in the radius.",
+      "lore": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals...",
+      "notes": [
+        "If bound to another unit, affected units are leashed and prevented from blinking.",
+        "Provides vision of both leashed units."
+      ],
+      "is_innate": false,
+      "is_ultimate": true,
+      "behavior_tag": "Unit Target",
+      "target": "Enemy Heroes",
+      "pierces_spell_immunity": "Yes",
+      "dispellable": "No",
+      "cast_ranges": [
+        700,
+        800,
+        900
+      ],
+      "mana_costs": [
+        150,
+        200,
+        250
+      ],
+      "cooldowns": [
+        70,
+        65,
+        60
+      ],
+      "special_values": [
+        {
+          "heading": "DURATION:",
+          "values": [
+            6,
+            7,
+            8
+          ],
+          "is_percentage": false
+        },
+        {
+          "heading": "BIND RADIUS:",
+          "values": [
+            600
+          ],
+          "is_percentage": false
+        }
+      ]
+    },
+    {
+      "name": "grimstroke_ink_trail",
+      "display_name": "Ink Trail",
+      "icon_url": "https://cdn.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_ink_trail.png",
+      "description": "Grimstroke's attacks and spells cause affected enemy heroes to leave a trail of Ink behind them and deal less damage to Grimstroke for 4s.",
+      "notes": [
+        "Provides vision over affected heroes.",
+        "Grimstroke's illusions (including Dark Portrait) also have Ink Trail."
+      ],
+      "is_innate": true,
+      "is_ultimate": false,
+      "behavior_tag": "Passive",
+      "pierces_spell_immunity": "No",
+      "cast_ranges": [
+        0
+      ],
+      "mana_costs": [
+        0
+      ],
+      "cooldowns": [
+        0
+      ],
+      "special_values": [
+        {
+          "heading": "DAMAGE REDUCTION:",
+          "values": [
+            5
+          ],
+          "is_percentage": true
+        }
+      ]
+    }
+  ],
+  "talents": [
+    "+65 Phantom's Embrace DPS",
+    "-4s Ink Swell Cooldown",
+    "+25% Soulbind Spell Damage",
+    "+15% Ink Swell Movement Speed",
+    "+80% Stroke of Fate Damage",
+    "+2 Attacks to Destroy Phantom",
+    "+150 Ink Swell Radius",
+    "+70% Stroke of Fate Speed and Travel Range"
+  ],
+  "facets": []
+}
