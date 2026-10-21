@@ -56,6 +56,69 @@ class DraftSessionState {
 
   bool get isEmpty => alliedHeroIds.isEmpty && enemyHeroIds.isEmpty;
 
+  /// Returns the hero currently occupying [target], if any.
+  HeroSummary? heroAt(DraftSlotTarget target) {
+    final slots = target.team == DraftTeam.ally ? alliedSlots : enemySlots;
+    return slots[target.index];
+  }
+
+  /// Returns the next empty slot target after [current], checking the same team
+  /// first then falling back to the opposing team.
+  DraftSlotTarget? nextEmptySlot(DraftSlotTarget current) {
+    final sameTeamSlots = current.team == DraftTeam.ally
+        ? alliedSlots
+        : enemySlots;
+    final nextSameTeam = sameTeamSlots.indexWhere((s) => s == null);
+    if (nextSameTeam != -1) {
+      return DraftSlotTarget(team: current.team, index: nextSameTeam);
+    }
+
+    final otherTeam = current.team == DraftTeam.ally
+        ? DraftTeam.enemy
+        : DraftTeam.ally;
+    final otherTeamSlots = otherTeam == DraftTeam.ally
+        ? alliedSlots
+        : enemySlots;
+    final nextOtherTeam = otherTeamSlots.indexWhere((s) => s == null);
+    if (nextOtherTeam != -1) {
+      return DraftSlotTarget(team: otherTeam, index: nextOtherTeam);
+    }
+    return null;
+  }
+
+  /// Returns a copy of the state with [hero] assigned to [target].
+  DraftSessionState withSlotAssigned(DraftSlotTarget target, HeroSummary hero) {
+    final isAlly = target.team == DraftTeam.ally;
+    final currentSlots = isAlly ? alliedSlots : enemySlots;
+    final updatedSlots = List<HeroSummary?>.from(currentSlots);
+    updatedSlots[target.index] = hero;
+
+    final updated = copyWith(
+      alliedSlots: isAlly ? updatedSlots : null,
+      enemySlots: !isAlly ? updatedSlots : null,
+    );
+    final nextFocus = updated.nextEmptySlot(target);
+    return updated.copyWith(focusedSlot: () => nextFocus);
+  }
+
+  /// Returns a copy of the state with [target] cleared.
+  DraftSessionState withSlotCleared(DraftSlotTarget target) {
+    final isAlly = target.team == DraftTeam.ally;
+    final currentSlots = isAlly ? alliedSlots : enemySlots;
+    if (currentSlots[target.index] == null) {
+      return copyWith(focusedSlot: () => target);
+    }
+
+    final updatedSlots = List<HeroSummary?>.from(currentSlots);
+    updatedSlots[target.index] = null;
+
+    return copyWith(
+      alliedSlots: isAlly ? updatedSlots : null,
+      enemySlots: !isAlly ? updatedSlots : null,
+      focusedSlot: () => target,
+    );
+  }
+
   DraftSessionState copyWith({
     List<HeroSummary?>? alliedSlots,
     List<HeroSummary?>? enemySlots,
@@ -99,53 +162,12 @@ class DraftSessionNotifier extends Notifier<DraftSessionState> {
     }
 
     if (target == null) return;
-
-    final isAlly = target.team == DraftTeam.ally;
-    final currentSlots = isAlly ? state.alliedSlots : state.enemySlots;
-    final updatedSlots = List<HeroSummary?>.from(currentSlots);
-    updatedSlots[target.index] = hero;
-
-    // Find next empty slot on the same team to advance focus smoothly
-    DraftSlotTarget? nextFocus;
-    final nextEmptySameTeam = updatedSlots.indexWhere((s) => s == null);
-    if (nextEmptySameTeam != -1) {
-      nextFocus = DraftSlotTarget(team: target.team, index: nextEmptySameTeam);
-    } else {
-      // If same team is full, check the other team
-      final otherSlots = isAlly ? state.enemySlots : state.alliedSlots;
-      final otherEmpty = otherSlots.indexWhere((s) => s == null);
-      if (otherEmpty != -1) {
-        nextFocus = DraftSlotTarget(
-          team: isAlly ? DraftTeam.enemy : DraftTeam.ally,
-          index: otherEmpty,
-        );
-      }
-    }
-
-    state = state.copyWith(
-      alliedSlots: isAlly ? updatedSlots : null,
-      enemySlots: !isAlly ? updatedSlots : null,
-      focusedSlot: () => nextFocus,
-    );
+    state = state.withSlotAssigned(target, hero);
   }
 
   /// Clears the hero in [target] slot and focuses it.
   void clearSlot(DraftSlotTarget target) {
-    final isAlly = target.team == DraftTeam.ally;
-    final currentSlots = isAlly ? state.alliedSlots : state.enemySlots;
-    if (currentSlots[target.index] == null) {
-      focusSlot(target);
-      return;
-    }
-
-    final updatedSlots = List<HeroSummary?>.from(currentSlots);
-    updatedSlots[target.index] = null;
-
-    state = state.copyWith(
-      alliedSlots: isAlly ? updatedSlots : null,
-      enemySlots: !isAlly ? updatedSlots : null,
-      focusedSlot: () => target,
-    );
+    state = state.withSlotCleared(target);
   }
 
   /// Resets all 10 slots and clears focus.

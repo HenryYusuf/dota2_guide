@@ -22,9 +22,6 @@ final matchupMatrixProvider = FutureProvider<MatchupMatrix>((ref) {
   return ref.watch(matchupMatrixRepositoryProvider).loadMatchupMatrix();
 });
 
-/// Backwards-compatible alias for [DraftCandidate].
-typedef RankedHero = DraftCandidate;
-
 /// The candidate heroes evaluated and ranked in real time by the [DraftEngine].
 final draftRankedHeroesProvider = Provider<AsyncValue<List<DraftCandidate>>>((
   ref,

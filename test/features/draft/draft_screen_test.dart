@@ -281,7 +281,7 @@ void main() {
   );
 
   testWidgets(
-    'Reset Draft button clears all slots and restores baseline ranking',
+    'Reset Draft button clears all slots upon confirmation and restores baseline ranking',
     (tester) async {
       await tester.pumpWidget(buildSubject());
       await tester.pumpAndSettle();
@@ -300,6 +300,19 @@ void main() {
       await tester.tap(resetBtn);
       await tester.pumpAndSettle();
 
+      // Dialog appears
+      expect(find.text('Reset Draft'), findsWidgets);
+      expect(
+        find.text(
+          'Are you sure you want to clear all 10 slots and reset the draft?',
+        ),
+        findsOneWidget,
+      );
+
+      // Confirm
+      await tester.tap(find.widgetWithText(FilledButton, 'Reset'));
+      await tester.pumpAndSettle();
+
       // Baseline restored
       expect(find.text('65.0%'), findsOneWidget);
       expect(find.text('52.0%'), findsOneWidget);
@@ -307,4 +320,25 @@ void main() {
       expect(find.text('Ranked by baseline win rate'), findsOneWidget);
     },
   );
+
+  testWidgets('long-pressing an assigned slot clears it', (tester) async {
+    await tester.pumpWidget(buildSubject());
+    await tester.pumpAndSettle();
+
+    // Assign Axe to enemy slot 0
+    await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Axe'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('-15.0%'), findsOneWidget);
+
+    // Long press enemy slot 0
+    await tester.longPress(find.byKey(const ValueKey('enemy_slot_0')));
+    await tester.pumpAndSettle();
+
+    // Slot 0 is now empty, baseline win rate ranking restored
+    expect(find.text('65.0%'), findsOneWidget);
+    expect(find.text('Ranked by baseline win rate'), findsOneWidget);
+  });
 }

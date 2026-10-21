@@ -25,6 +25,34 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
     super.dispose();
   }
 
+  Future<void> _showResetConfirmation(BuildContext context) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) {
+        return AlertDialog(
+          title: const Text('Reset Draft'),
+          content: const Text(
+            'Are you sure you want to clear all 10 slots and reset the draft?',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(dialogContext).pop(false),
+              child: const Text('Cancel'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.of(dialogContext).pop(true),
+              child: const Text('Reset'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed == true && mounted) {
+      ref.read(draftSessionProvider.notifier).resetDraft();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final rankedHeroesAsync = ref.watch(draftRankedHeroesProvider);
@@ -41,7 +69,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
           IconButton(
             icon: const Icon(Icons.restart_alt),
             tooltip: 'Reset Draft',
-            onPressed: () => draftNotifier.resetDraft(),
+            onPressed: () => _showResetConfirmation(context),
           ),
         ],
       ),
@@ -61,12 +89,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                     prefixKey: 'allied_slot',
                     slots: draftSession.alliedSlots,
                     focusedSlot: draftSession.focusedSlot,
-                    onFocusSlot: (index) => draftNotifier.focusSlot(
-                      DraftSlotTarget(team: DraftTeam.ally, index: index),
-                    ),
-                    onClearSlot: (index) => draftNotifier.clearSlot(
-                      DraftSlotTarget(team: DraftTeam.ally, index: index),
-                    ),
+                    notifier: draftNotifier,
                   ),
                   const SizedBox(height: 12),
                   _TeamSlotsSection(
@@ -76,12 +99,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                     prefixKey: 'enemy_slot',
                     slots: draftSession.enemySlots,
                     focusedSlot: draftSession.focusedSlot,
-                    onFocusSlot: (index) => draftNotifier.focusSlot(
-                      DraftSlotTarget(team: DraftTeam.enemy, index: index),
-                    ),
-                    onClearSlot: (index) => draftNotifier.clearSlot(
-                      DraftSlotTarget(team: DraftTeam.enemy, index: index),
-                    ),
+                    notifier: draftNotifier,
                   ),
                   const SizedBox(height: 16),
                   const Divider(),
@@ -205,8 +223,7 @@ class _TeamSlotsSection extends ConsumerWidget {
     required this.prefixKey,
     required this.slots,
     required this.focusedSlot,
-    required this.onFocusSlot,
-    required this.onClearSlot,
+    required this.notifier,
   });
 
   final DraftTeam team;
@@ -215,8 +232,7 @@ class _TeamSlotsSection extends ConsumerWidget {
   final String prefixKey;
   final List<HeroSummary?> slots;
   final DraftSlotTarget? focusedSlot;
-  final ValueChanged<int> onFocusSlot;
-  final ValueChanged<int> onClearSlot;
+  final DraftSessionNotifier notifier;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -251,15 +267,24 @@ class _TeamSlotsSection extends ConsumerWidget {
         Row(
           children: List.generate(5, (index) {
             final hero = slots[index];
-            final isFocused =
-                focusedSlot?.team == team && focusedSlot?.index == index;
+            final target = DraftSlotTarget(team: team, index: index);
+            final isFocused = focusedSlot == target;
 
             return Expanded(
               child: Padding(
                 padding: EdgeInsets.only(right: index < 4 ? 6 : 0),
                 child: InkWell(
                   key: ValueKey('${prefixKey}_$index'),
-                  onTap: () => onFocusSlot(index),
+                  onTap: () {
+                    if (hero != null) {
+                      notifier.focusSlot(target);
+                    } else {
+                      notifier.focusSlot(target);
+                    }
+                  },
+                  onLongPress: hero != null
+                      ? () => notifier.clearSlot(target)
+                      : null,
                   borderRadius: BorderRadius.circular(6),
                   child: Container(
                     height: 56,
@@ -320,7 +345,7 @@ class _TeamSlotsSection extends ConsumerWidget {
                                 top: 1,
                                 right: 1,
                                 child: GestureDetector(
-                                  onTap: () => onClearSlot(index),
+                                  onTap: () => notifier.clearSlot(target),
                                   behavior: HitTestBehavior.opaque,
                                   child: Container(
                                     padding: const EdgeInsets.all(2),
@@ -365,10 +390,10 @@ class _HeroRosterRow extends ConsumerWidget {
     final portraitBuilder = ref.watch(portraitBuilderProvider);
 
     final isAssigned = candidate.isAssigned;
-    final isAdvantage = candidate.hasAdvantageScore;
+    final isAdvantage = candidate.hasAdvantage;
 
     final badgeColor = isAdvantage
-        ? ((candidate.advantageScore ?? 0.0) >= 0
+        ? ((candidate.advantage ?? 0.0) >= 0
               ? Colors.greenAccent
               : Colors.redAccent)
         : (candidate.baseWinRate >= 0.50
