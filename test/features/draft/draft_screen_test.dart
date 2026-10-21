@@ -162,4 +162,149 @@ void main() {
       findsOneWidget,
     );
   });
+
+  testWidgets(
+    'tapping an empty slot focuses it, and tapping a roster hero assigns that hero',
+    (tester) async {
+      await tester.pumpWidget(buildSubject());
+      await tester.pumpAndSettle();
+
+      // Tap enemy slot 0
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+
+      // Tap Axe in roster
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      // Axe is now assigned to enemy_slot_0
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('enemy_slot_0')),
+          matching: find.text('Axe'),
+        ),
+        findsOneWidget,
+      );
+
+      // Enemy slot 1 is now focused (auto-advanced)
+    },
+  );
+
+  testWidgets(
+    'assigning an enemy hero re-ranks candidate roster by Advantage with percentage badges',
+    (tester) async {
+      await tester.pumpWidget(buildSubject());
+      await tester.pumpAndSettle();
+
+      // Focus enemy slot 0 and assign Axe
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      // Candidate roster should now show Advantage badges:
+      // Anti-Mage (-15.0%) and Bane (-17.0%)
+      expect(find.text('-15.0%'), findsOneWidget);
+      expect(find.text('-17.0%'), findsOneWidget);
+
+      // AM should now be higher than Bane
+      final amPos = tester.getTopLeft(find.text('Anti-Mage')).dy;
+      final banePos = tester.getTopLeft(find.text('Bane')).dy;
+      expect(amPos, lessThan(banePos));
+
+      // Subtitle indicates advantage ranking
+      expect(find.textContaining('Advantage vs 1 enemy'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'assigned heroes are visually marked as picked and cannot be assigned again',
+    (tester) async {
+      await tester.pumpWidget(buildSubject());
+      await tester.pumpAndSettle();
+
+      // Focus enemy slot 0 and assign Axe
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      // Axe should have a PICKED badge
+      expect(find.text('PICKED'), findsOneWidget);
+
+      // Focus enemy slot 1
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_1')));
+      await tester.pumpAndSettle();
+
+      // Attempt to tap Axe in the roster again
+      await tester.tap(find.text('Axe').last);
+      await tester.pumpAndSettle();
+
+      // Enemy slot 1 should still be empty
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('enemy_slot_1')),
+          matching: find.text('Axe'),
+        ),
+        findsNothing,
+      );
+    },
+  );
+
+  testWidgets(
+    'clearing an assigned slot removes the hero and updates recommendations',
+    (tester) async {
+      await tester.pumpWidget(buildSubject());
+      await tester.pumpAndSettle();
+
+      // Assign Axe to enemy slot 0
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('-15.0%'), findsOneWidget);
+
+      // Clear enemy slot 0 (via clear button or slot tap)
+      final clearBtn = find.descendant(
+        of: find.byKey(const ValueKey('enemy_slot_0')),
+        matching: find.byIcon(Icons.close),
+      );
+      expect(clearBtn, findsOneWidget);
+      await tester.tap(clearBtn);
+      await tester.pumpAndSettle();
+
+      // Slot 0 is empty again
+      expect(find.text('65.0%'), findsOneWidget);
+      expect(find.text('Ranked by baseline win rate'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'Reset Draft button clears all slots and restores baseline ranking',
+    (tester) async {
+      await tester.pumpWidget(buildSubject());
+      await tester.pumpAndSettle();
+
+      // Assign Axe to enemy slot 0
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('-15.0%'), findsOneWidget);
+
+      // Tap Reset Draft button
+      final resetBtn = find.byTooltip('Reset Draft');
+      expect(resetBtn, findsOneWidget);
+      await tester.tap(resetBtn);
+      await tester.pumpAndSettle();
+
+      // Baseline restored
+      expect(find.text('65.0%'), findsOneWidget);
+      expect(find.text('52.0%'), findsOneWidget);
+      expect(find.text('40.0%'), findsOneWidget);
+      expect(find.text('Ranked by baseline win rate'), findsOneWidget);
+    },
+  );
 }

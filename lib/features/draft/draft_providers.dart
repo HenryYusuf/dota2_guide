@@ -4,7 +4,12 @@ import '../../core/data/refresh_epoch.dart';
 import '../../core/data/snapshot_source.dart';
 import '../heroes/hero_index.dart';
 import '../heroes/heroes_providers.dart';
+import 'draft_engine.dart';
+import 'draft_session.dart';
 import 'matchup_matrix_repository.dart';
+
+export 'draft_engine.dart';
+export 'draft_session.dart';
 
 /// Provider for the [MatchupMatrixRepository] seam.
 final matchupMatrixRepositoryProvider = Provider<MatchupMatrixRepository>(
@@ -17,21 +22,16 @@ final matchupMatrixProvider = FutureProvider<MatchupMatrix>((ref) {
   return ref.watch(matchupMatrixRepositoryProvider).loadMatchupMatrix();
 });
 
-/// A hero paired with their baseline empirical win rate.
-class RankedHero {
-  const RankedHero({required this.hero, required this.baseWinRate});
+/// Backwards-compatible alias for [DraftCandidate].
+typedef RankedHero = DraftCandidate;
 
-  final HeroSummary hero;
-  final double baseWinRate;
-
-  /// Win rate formatted as percentage string, e.g. "52.4%".
-  String get winRatePercentage => '${(baseWinRate * 100).toStringAsFixed(1)}%';
-}
-
-/// The hero roster ranked by baseline win rate in descending order (highest win rate first).
-final draftRankedHeroesProvider = Provider<AsyncValue<List<RankedHero>>>((ref) {
+/// The candidate heroes evaluated and ranked in real time by the [DraftEngine].
+final draftRankedHeroesProvider = Provider<AsyncValue<List<DraftCandidate>>>((
+  ref,
+) {
   final heroesAsync = ref.watch(heroesProvider);
   final matrixAsync = ref.watch(matchupMatrixProvider);
+  final draftSession = ref.watch(draftSessionProvider);
 
   if (heroesAsync.isLoading || matrixAsync.isLoading) {
     return const AsyncValue.loading();
@@ -46,15 +46,12 @@ final draftRankedHeroesProvider = Provider<AsyncValue<List<RankedHero>>>((ref) {
   final heroes = heroesAsync.value ?? const <HeroSummary>[];
   final matrix = matrixAsync.value ?? MatchupMatrix.empty();
 
-  final ranked = heroes.map((h) {
-    return RankedHero(hero: h, baseWinRate: matrix.getBaseWinRate(h.id));
-  }).toList();
-
-  ranked.sort((a, b) {
-    final cmp = b.baseWinRate.compareTo(a.baseWinRate);
-    if (cmp != 0) return cmp;
-    return a.hero.localizedName.compareTo(b.hero.localizedName);
-  });
+  final ranked = DraftEngine.rankCandidates(
+    matrix: matrix,
+    heroes: heroes,
+    enemyHeroIds: draftSession.enemyHeroIds,
+    alliedHeroIds: draftSession.alliedHeroIds,
+  );
 
   return AsyncValue.data(ranked);
 });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../heroes/hero_index.dart';
 import '../heroes/heroes_providers.dart';
 import 'draft_providers.dart';
 
@@ -27,9 +28,23 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
   @override
   Widget build(BuildContext context) {
     final rankedHeroesAsync = ref.watch(draftRankedHeroesProvider);
+    final draftSession = ref.watch(draftSessionProvider);
+    final draftNotifier = ref.read(draftSessionProvider.notifier);
+
+    final hasEnemies = draftSession.enemyHeroIds.isNotEmpty;
+    final enemyCount = draftSession.enemyHeroIds.length;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Draft Picker')),
+      appBar: AppBar(
+        title: const Text('Draft Picker'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.restart_alt),
+            tooltip: 'Reset Draft',
+            onPressed: () => draftNotifier.resetDraft(),
+          ),
+        ],
+      ),
       body: CustomScrollView(
         slivers: [
           // 5v5 Draft Board
@@ -40,15 +55,33 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _TeamSlotsSection(
+                    team: DraftTeam.ally,
                     teamName: 'Allies',
                     teamColor: const Color(0xFF3B82F6),
                     prefixKey: 'allied_slot',
+                    slots: draftSession.alliedSlots,
+                    focusedSlot: draftSession.focusedSlot,
+                    onFocusSlot: (index) => draftNotifier.focusSlot(
+                      DraftSlotTarget(team: DraftTeam.ally, index: index),
+                    ),
+                    onClearSlot: (index) => draftNotifier.clearSlot(
+                      DraftSlotTarget(team: DraftTeam.ally, index: index),
+                    ),
                   ),
                   const SizedBox(height: 12),
                   _TeamSlotsSection(
+                    team: DraftTeam.enemy,
                     teamName: 'Enemies',
                     teamColor: const Color(0xFFEF4444),
                     prefixKey: 'enemy_slot',
+                    slots: draftSession.enemySlots,
+                    focusedSlot: draftSession.focusedSlot,
+                    onFocusSlot: (index) => draftNotifier.focusSlot(
+                      DraftSlotTarget(team: DraftTeam.enemy, index: index),
+                    ),
+                    onClearSlot: (index) => draftNotifier.clearSlot(
+                      DraftSlotTarget(team: DraftTeam.enemy, index: index),
+                    ),
                   ),
                   const SizedBox(height: 16),
                   const Divider(),
@@ -64,7 +97,9 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                       const SizedBox(width: 8),
                       Flexible(
                         child: Text(
-                          'Ranked by baseline win rate',
+                          hasEnemies
+                              ? 'Advantage vs $enemyCount ${enemyCount == 1 ? 'enemy' : 'enemies'}'
+                              : 'Ranked by baseline win rate',
                           style: Theme.of(context).textTheme.bodySmall
                               ?.copyWith(color: Colors.white70),
                           overflow: TextOverflow.ellipsis,
@@ -108,9 +143,11 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
           // Hero Roster List
           rankedHeroesAsync.when(
             data: (rankedList) {
-              final visible = rankedList.where((rh) {
+              final visible = rankedList.where((candidate) {
                 if (_query.isEmpty) return true;
-                return rh.hero.localizedName.toLowerCase().contains(_query);
+                return candidate.hero.localizedName.toLowerCase().contains(
+                  _query,
+                );
               }).toList();
 
               if (visible.isEmpty) {
@@ -128,7 +165,13 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate((context, index) {
                     final item = visible[index];
-                    return _HeroRosterRow(rankedHero: item, rank: index + 1);
+                    return _HeroRosterRow(
+                      candidate: item,
+                      rank: index + 1,
+                      onTap: item.isAssigned
+                          ? null
+                          : () => draftNotifier.assignHero(item.hero),
+                    );
                   }, childCount: visible.length),
                 ),
               );
@@ -154,19 +197,31 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
   }
 }
 
-class _TeamSlotsSection extends StatelessWidget {
+class _TeamSlotsSection extends ConsumerWidget {
   const _TeamSlotsSection({
+    required this.team,
     required this.teamName,
     required this.teamColor,
     required this.prefixKey,
+    required this.slots,
+    required this.focusedSlot,
+    required this.onFocusSlot,
+    required this.onClearSlot,
   });
 
+  final DraftTeam team;
   final String teamName;
   final Color teamColor;
   final String prefixKey;
+  final List<HeroSummary?> slots;
+  final DraftSlotTarget? focusedSlot;
+  final ValueChanged<int> onFocusSlot;
+  final ValueChanged<int> onClearSlot;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final portraitBuilder = ref.watch(portraitBuilderProvider);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -195,29 +250,94 @@ class _TeamSlotsSection extends StatelessWidget {
         const SizedBox(height: 6),
         Row(
           children: List.generate(5, (index) {
+            final hero = slots[index];
+            final isFocused =
+                focusedSlot?.team == team && focusedSlot?.index == index;
+
             return Expanded(
               child: Padding(
                 padding: EdgeInsets.only(right: index < 4 ? 6 : 0),
-                child: Container(
+                child: InkWell(
                   key: ValueKey('${prefixKey}_$index'),
-                  height: 52,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.05),
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(
-                      color: teamColor.withValues(alpha: 0.3),
-                      width: 1,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      '${index + 1}',
-                      style: TextStyle(
-                        color: teamColor.withValues(alpha: 0.5),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                  onTap: () => onFocusSlot(index),
+                  borderRadius: BorderRadius.circular(6),
+                  child: Container(
+                    height: 56,
+                    decoration: BoxDecoration(
+                      color: isFocused
+                          ? teamColor.withValues(alpha: 0.15)
+                          : Colors.white.withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: isFocused
+                            ? teamColor
+                            : teamColor.withValues(alpha: 0.3),
+                        width: isFocused ? 2 : 1,
                       ),
                     ),
+                    clipBehavior: Clip.antiAlias,
+                    child: hero == null
+                        ? Center(
+                            child: Text(
+                              '${index + 1}',
+                              style: TextStyle(
+                                color: isFocused
+                                    ? teamColor
+                                    : teamColor.withValues(alpha: 0.5),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                            ),
+                          )
+                        : Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              portraitBuilder(context, hero),
+                              Positioned(
+                                bottom: 0,
+                                left: 0,
+                                right: 0,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 2,
+                                    vertical: 1,
+                                  ),
+                                  color: Colors.black87,
+                                  child: Text(
+                                    hero.localizedName,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 1,
+                                right: 1,
+                                child: GestureDetector(
+                                  onTap: () => onClearSlot(index),
+                                  behavior: HitTestBehavior.opaque,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: const BoxDecoration(
+                                      color: Colors.black54,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.close,
+                                      size: 13,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                   ),
                 ),
               ),
@@ -230,75 +350,112 @@ class _TeamSlotsSection extends StatelessWidget {
 }
 
 class _HeroRosterRow extends ConsumerWidget {
-  const _HeroRosterRow({required this.rankedHero, required this.rank});
+  const _HeroRosterRow({
+    required this.candidate,
+    required this.rank,
+    required this.onTap,
+  });
 
-  final RankedHero rankedHero;
+  final DraftCandidate candidate;
   final int rank;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final portraitBuilder = ref.watch(portraitBuilderProvider);
-    final winRate = rankedHero.baseWinRate;
-    final isPositive = winRate >= 0.50;
 
-    return Container(
-      margin: const EdgeInsets.only(bottom: 6),
-      decoration: BoxDecoration(
-        color: Theme.of(context).cardTheme.color ?? const Color(0xFF1C1C1E),
-        borderRadius: BorderRadius.circular(8),
+    final isAssigned = candidate.isAssigned;
+    final isAdvantage = candidate.hasAdvantageScore;
+
+    final badgeColor = isAdvantage
+        ? ((candidate.advantageScore ?? 0.0) >= 0
+              ? Colors.greenAccent
+              : Colors.redAccent)
+        : (candidate.baseWinRate >= 0.50
+              ? Colors.greenAccent
+              : Colors.redAccent);
+
+    final badgeText = isAdvantage
+        ? candidate.advantagePercentage
+        : candidate.baseWinRatePercentage;
+
+    final content = ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+      onTap: onTap,
+      leading: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            width: 24,
+            child: Text(
+              '$rank',
+              style: const TextStyle(
+                color: Colors.white54,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(4),
+            child: SizedBox(
+              width: 48,
+              height: 36,
+              child: portraitBuilder(context, candidate.hero),
+            ),
+          ),
+        ],
       ),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-        leading: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SizedBox(
-              width: 24,
-              child: Text(
-                '$rank',
-                style: const TextStyle(
-                  color: Colors.white54,
-                  fontSize: 12,
+      title: Text(
+        candidate.hero.localizedName,
+        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+      ),
+      trailing: isAssigned
+          ? Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(color: Colors.white24),
+              ),
+              child: const Text(
+                'PICKED',
+                style: TextStyle(
+                  color: Colors.white70,
                   fontWeight: FontWeight.bold,
+                  fontSize: 11,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            )
+          : Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: badgeColor.withValues(alpha: 0.15),
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(color: badgeColor.withValues(alpha: 0.3)),
+              ),
+              child: Text(
+                badgeText,
+                style: TextStyle(
+                  color: badgeColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
                 ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4),
-              child: SizedBox(
-                width: 48,
-                height: 36,
-                child: portraitBuilder(context, rankedHero.hero),
-              ),
-            ),
-          ],
-        ),
-        title: Text(
-          rankedHero.hero.localizedName,
-          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
-        ),
-        trailing: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-          decoration: BoxDecoration(
-            color: (isPositive ? Colors.green : Colors.redAccent).withValues(
-              alpha: 0.15,
-            ),
-            borderRadius: BorderRadius.circular(6),
-            border: Border.all(
-              color: (isPositive ? Colors.green : Colors.redAccent).withValues(
-                alpha: 0.3,
-              ),
-            ),
-          ),
-          child: Text(
-            rankedHero.winRatePercentage,
-            style: TextStyle(
-              color: isPositive ? Colors.greenAccent : Colors.redAccent,
-              fontWeight: FontWeight.bold,
-              fontSize: 12,
-            ),
-          ),
-        ),
+    );
+
+    final cardColor =
+        Theme.of(context).cardTheme.color ?? const Color(0xFF1C1C1E);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 6),
+      child: Material(
+        color: cardColor,
+        borderRadius: BorderRadius.circular(8),
+        clipBehavior: Clip.antiAlias,
+        child: isAssigned ? Opacity(opacity: 0.45, child: content) : content,
       ),
     );
   }

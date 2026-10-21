@@ -4,12 +4,12 @@
 
 **Blocked by:** 02: Draft Shell, Matchup Matrix Pipeline & Initial Draft Screen
 
-**Status:** ready-for-agent
+**Status:** ready-for-human
 
-- [ ] A pure-Dart calculation engine implements the normalized Advantage formula and arithmetic mean aggregation for multiple enemy picks.
-- [ ] An in-memory state notifier manages draft selections (allied and enemy slots) with actions to assign, clear, and reset slots.
-- [ ] Tapping an empty slot on the draft board focuses it, and tapping a hero in the candidate roster assigns that hero to the slot.
-- [ ] Selected enemy heroes cause the candidate roster to immediately re-order by descending Advantage score, showing percentage badges (+X.X% / -X.X%).
-- [ ] Assigned heroes (allies and enemies) are visually marked and excluded from selection as candidate counter picks.
-- [ ] A "Reset Draft" action resets all 10 slots to empty and restores baseline ranking.
-- [ ] Unit tests verify Advantage calculation math and exclusion logic; widget tests verify selection and re-ranking interactions.
+- [x] A pure-Dart calculation engine implements the normalized Advantage formula and arithmetic mean aggregation for multiple enemy picks.
+- [x] An in-memory state notifier manages draft selections (allied and enemy slots) with actions to assign, clear, and reset slots.
+- [x] Tapping an empty slot on the draft board focuses it, and tapping a hero in the candidate roster assigns that hero to the slot.
+- [x] Selected enemy heroes cause the candidate roster to immediately re-order by descending Advantage score, showing percentage badges (+X.X% / -X.X%).
+- [x] Assigned heroes (allies and enemies) are visually marked and excluded from selection as candidate counter picks.
+- [x] A "Reset Draft" action resets all 10 slots to empty and restores baseline ranking.
+- [x] Unit tests verify Advantage calculation math and exclusion logic; widget tests verify selection and re-ranking interactions.
