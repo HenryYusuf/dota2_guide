@@ -29,6 +29,22 @@ abstract final class CdnUrls {
   static String abilityIcon(String abilityName) =>
       '$_abilityIcons/$abilityName.png';
 
+  /// Directory holding ability demo videos — TWO levels deep, unlike the
+  /// flat icon path: the hero's folder, then the full ability name
+  /// (`abilities/antimage/antimage_blink.webm`, verified live 2026-10-21;
+  /// the flat form 404s).
+  static const _abilityVideos = '$host/apps/dota2/videos/dota_react/abilities';
+
+  /// Demo video (WebM) for the ability with the given full ability name,
+  /// under the folder of the given Valve hero key.
+  ///
+  /// The feed carries no video field, so this convention IS the discovery
+  /// mechanism: some abilities have no file and 404 — callers must degrade
+  /// rather than assume the video exists (ADR-0001: streamed, never
+  /// bundled).
+  static String abilityDemoVideo(String heroKey, String abilityName) =>
+      '$_abilityVideos/$heroKey/$abilityName.webm';
+
   /// Strips the `npc_dota_hero_` prefix from a Valve hero name, returning the
   /// CDN key (`npc_dota_hero_antimage` → `antimage`).
   static String heroKeyFromValveName(String valveHeroName) =>

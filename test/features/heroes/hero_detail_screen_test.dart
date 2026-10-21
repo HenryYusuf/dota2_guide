@@ -7,6 +7,8 @@
 // when empty, a four-tier talent tree, lore — plus grid→detail navigation
 // with override-preferred reads (refreshed data wins).
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,6 +19,7 @@ import 'package:dota2_guide/core/data/file_store.dart';
 import 'package:dota2_guide/core/data/override_store.dart';
 import 'package:dota2_guide/core/data/snapshot_manifest.dart';
 import 'package:dota2_guide/core/data/snapshot_refresher.dart';
+import 'package:dota2_guide/features/heroes/ability_video_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_detail.dart';
 import 'package:dota2_guide/features/heroes/hero_detail_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_detail_screen.dart';
@@ -224,6 +227,38 @@ class _FailingDetailRepository implements HeroDetailRepository {
   }
 }
 
+/// The demo-video seam, faked: either hands back a (fake) cached file or
+/// throws the CDN-shaped failure, and records every URL it was asked for so
+/// the test can pin the two-level path convention.
+class _FakeVideoRepository implements AbilityVideoRepository {
+  _FakeVideoRepository({this.error}) : file = null;
+
+  _FakeVideoRepository.playable()
+    : error = null,
+      file = File(r'C:\cache\antimage_blink.webm');
+
+  /// The failure to throw instead of serving a file (404 vs transport).
+  final Object? error;
+
+  /// The local file "already in the cache".
+  final File? file;
+
+  final List<String> requestedUrls = <String>[];
+
+  @override
+  Future<File> videoFileFor(String cdnUrl) async {
+    requestedUrls.add(cdnUrl);
+    final Object? error = this.error;
+    if (error != null) throw error;
+    return file!;
+  }
+}
+
+/// The video_player layer, stubbed: the only networked/platform widget on
+/// this screen besides the icons, findable by the ability it was handed.
+Widget _stubVideo(BuildContext context, File video, String abilityName) =>
+    SizedBox(key: ValueKey<String>('demo-video-$abilityName'));
+
 /// The CDN layer, stubbed: header media and ability icons are the only
 /// networked widgets on this screen, each findable by the URL it was handed.
 Widget _stubHeader(BuildContext context, HeroDetail detail) =>
@@ -240,6 +275,7 @@ void main() {
     WidgetTester tester, {
     HeroDetail? detail,
     HeroDetailRepository? repository,
+    AbilityVideoRepository? videoRepository,
   }) async {
     tester.view.physicalSize = const Size(1080, 4000);
     tester.view.devicePixelRatio = 1;
@@ -252,6 +288,9 @@ void main() {
           ),
           heroHeaderBuilderProvider.overrideWithValue(_stubHeader),
           abilityIconBuilderProvider.overrideWithValue(_stubIcon),
+          abilityDemoVideoBuilderProvider.overrideWithValue(_stubVideo),
+          if (videoRepository != null)
+            abilityVideoRepositoryProvider.overrideWithValue(videoRepository),
         ],
         child: const MaterialApp(home: HeroDetailScreen(heroId: 1)),
       ),
@@ -261,6 +300,19 @@ void main() {
 
   Finder card(String abilityName) =>
       find.byKey(ValueKey<String>('ability-$abilityName'));
+
+  /// Expands the Blink card and taps its demo play control — the shared
+  /// setup every demo-behaviour test starts from.
+  Future<Finder> tapDemoPlay(WidgetTester tester) async {
+    final blink = card('antimage_blink');
+    await tester.tap(find.descendant(of: blink, matching: find.text('Blink')));
+    await tester.pumpAndSettle();
+    await tester.tap(
+      find.byKey(const ValueKey<String>('ability-demo-play-antimage_blink')),
+    );
+    await tester.pumpAndSettle();
+    return blink;
+  }
 
   testWidgets(
     'renders the collapsing header, attributes, combat stats, and lore',
@@ -572,6 +624,118 @@ void main() {
       find.descendant(
         of: shardCard,
         matching: find.text('Grants a chance to reflect.'),
+      ),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets(
+    'an ability card offers an in-place demo play control that streams '
+    'through the CDN path convention',
+    (tester) async {
+      final videos = _FakeVideoRepository.playable();
+      await pumpDetail(tester, videoRepository: videos);
+
+      final blink = card('antimage_blink');
+
+      // The play control lives inside the expanded card, not on a route of
+      // its own; tapping it streams the demo inline via the injected player.
+      await tester.tap(
+        find.descendant(of: blink, matching: find.text('Blink')),
+      );
+      await tester.pumpAndSettle();
+      final play = find.descendant(
+        of: blink,
+        matching: find.byKey(
+          const ValueKey<String>('ability-demo-play-antimage_blink'),
+        ),
+      );
+      expect(play, findsOneWidget);
+      await tester.tap(play);
+      await tester.pumpAndSettle();
+
+      expect(
+        find.descendant(
+          of: blink,
+          matching: find.byKey(
+            const ValueKey<String>('demo-video-antimage_blink'),
+          ),
+        ),
+        findsOneWidget,
+      );
+
+      // The requested URL follows the verified two-level convention: hero
+      // folder + full ability name (.webm), never the flat icon-style path.
+      expect(videos.requestedUrls, [
+        'https://cdn.steamstatic.com/apps/dota2/videos/dota_react/abilities/'
+            'antimage/antimage_blink.webm',
+      ]);
+    },
+  );
+
+  testWidgets(
+    'a missing demo degrades inline: description and stats stay visible',
+    (tester) async {
+      // The CDN has no video at that URL — the discovery-time 404 the spec
+      // calls a normal state.
+      await pumpDetail(
+        tester,
+        videoRepository: _FakeVideoRepository(
+          error: VideoUnavailableException('https://example/none.webm'),
+        ),
+      );
+
+      final blink = await tapDemoPlay(tester);
+
+      // Small inline degraded state — and the card's content stays the point.
+      expect(
+        find.descendant(of: blink, matching: find.text('No demo video')),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(
+          of: blink,
+          matching: find.text('Short distance teleportation.'),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(
+          of: blink,
+          matching: find.text('875 / 950 / 1025 / 1100'),
+        ),
+        findsOneWidget,
+      );
+      expect(
+        find.descendant(of: blink, matching: find.text('DEBUFF DURATION:')),
+        findsOneWidget,
+      );
+    },
+  );
+
+  testWidgets('a failed demo download degrades the same quiet way', (
+    tester,
+  ) async {
+    await pumpDetail(
+      tester,
+      videoRepository: _FakeVideoRepository(
+        error: VideoDownloadException(
+          'https://example/offline.webm',
+          'offline',
+        ),
+      ),
+    );
+
+    final blink = await tapDemoPlay(tester);
+
+    expect(
+      find.descendant(of: blink, matching: find.text('No demo video')),
+      findsOneWidget,
+    );
+    expect(
+      find.descendant(
+        of: blink,
+        matching: find.text('Short distance teleportation.'),
       ),
       findsOneWidget,
     );

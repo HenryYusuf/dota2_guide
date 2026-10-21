@@ -1,12 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
+import '../../core/data/file_store.dart';
 import '../../core/data/refresh_epoch.dart';
 import '../../core/data/snapshot_source.dart';
+import 'ability_video_repository.dart';
 import 'hero_detail.dart';
 import 'hero_detail_repository.dart';
 import 'hero_index.dart';
 import 'heroes_repository.dart';
+import 'widgets/ability_demo_player.dart';
 import 'widgets/hero_portrait.dart';
 
 /// Builds the widget that shows one Hero's portrait.
@@ -91,4 +97,30 @@ final abilityIconBuilderProvider = Provider<AbilityIconBuilder>(
         heroName: ability.displayName,
         semanticsNoun: 'ability icon',
       ),
+);
+
+/// The demo-video repository seam: first play downloads into the ~300 MB
+/// disk cache, replays read the cache with no network. Constructed lazily
+/// on first play, so rendering a card never touches storage; widget tests
+/// substitute a fake.
+final abilityVideoRepositoryProvider = Provider<AbilityVideoRepository>(
+  (ref) => CdnAbilityVideoRepository(
+    client: http.Client(),
+    cacheDir: Directory('${ref.watch(appSupportDirProvider)}/ability_videos'),
+  ),
+);
+
+/// Builds the widget that plays one Ability's cached demo video, inline on
+/// the card. Injected through a provider so widget tests never touch the
+/// `video_player` platform (same posture as the icon/portrait builders).
+typedef AbilityDemoVideoBuilder = Widget Function(
+  BuildContext context,
+  File video,
+  String abilityName,
+);
+
+final abilityDemoVideoBuilderProvider = Provider<AbilityDemoVideoBuilder>(
+  (ref) =>
+      (context, video, abilityName) =>
+          AbilityDemoPlayer(video: video, abilityName: abilityName),
 );

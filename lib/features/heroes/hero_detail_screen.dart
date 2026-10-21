@@ -5,14 +5,19 @@
 // (override-preferred, offline by construction); media arrives through the
 // injected builders, so widget tests never touch the CDN (ADR-0001).
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/cdn/cdn_urls.dart';
 import '../../core/theme/app_theme.dart';
+import 'ability_video_repository.dart';
 import 'hero_detail.dart';
 import 'hero_index.dart';
 import 'heroes_providers.dart';
 import 'primary_attribute_display.dart';
+import 'widgets/ability_demo_player.dart';
 
 /// One Hero's detail page, pushed from the Heroes grid as `/heroes/:id`.
 class HeroDetailScreen extends ConsumerWidget {
@@ -353,6 +358,9 @@ class _AbilitiesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The demo-video CDN path is keyed on the hero's Valve folder name
+    // (e.g. `antimage`), so every card needs it for its play control.
+    final heroKey = CdnUrls.heroKeyFromValveName(detail.hero.valveKey);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -364,7 +372,11 @@ class _AbilitiesSection extends StatelessWidget {
           ),
         ),
         for (final ability in detail.abilities) ...[
-          _AbilityCard(ability: ability, buildIcon: buildIcon),
+          _AbilityCard(
+            ability: ability,
+            buildIcon: buildIcon,
+            heroKey: heroKey,
+          ),
           const SizedBox(height: 8),
         ],
       ],
@@ -390,10 +402,18 @@ enum AbilityMark {
 /// One expandable Ability card: identity and marks always visible; the
 /// description, costs, and per-level table expand in place.
 class _AbilityCard extends StatefulWidget {
-  const _AbilityCard({required this.ability, required this.buildIcon});
+  const _AbilityCard({
+    required this.ability,
+    required this.buildIcon,
+    required this.heroKey,
+  });
 
   final AbilityDetail ability;
   final AbilityIconBuilder buildIcon;
+
+  /// The hero's Valve CDN folder name (e.g. `antimage`) — the demo-video
+  /// path is keyed on it.
+  final String heroKey;
 
   @override
   State<_AbilityCard> createState() => _AbilityCardState();
@@ -464,7 +484,7 @@ class _AbilityCardState extends State<_AbilityCard> {
           if (_expanded)
             Padding(
               padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-              child: _ExpandedBody(ability: ability),
+              child: _ExpandedBody(ability: ability, heroKey: widget.heroKey),
             ),
         ],
       ),
@@ -498,9 +518,13 @@ class _MarkBadge extends StatelessWidget {
 }
 
 class _ExpandedBody extends StatelessWidget {
-  const _ExpandedBody({required this.ability});
+  const _ExpandedBody({required this.ability, required this.heroKey});
 
   final AbilityDetail ability;
+
+  /// The hero's Valve CDN folder name (e.g. `antimage`) — the demo-video
+  /// path is keyed on it.
+  final String heroKey;
 
   @override
   Widget build(BuildContext context) {
@@ -527,6 +551,10 @@ class _ExpandedBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // The demo video sits above the description, the way the official
+        // site's tooltip leads with it; a missing/failed demo is a quiet
+        // inline note, never an error, so the texts below stay the point.
+        _AbilityDemo(heroKey: heroKey, ability: ability),
         Text(ability.description, style: text.bodyMedium),
         if (tags.isNotEmpty)
           Padding(
@@ -603,6 +631,105 @@ class _ExpandedBody extends StatelessWidget {
     );
   }
 }
+
+/// The in-place demo control on an expanded Ability card: a small play
+/// button; first tap streams (and caches) the Valve CDN demo, then the
+/// video plays inline. A missing demo or a failed download degrades to a
+/// quiet note — the card's description and stats stay the point.
+class _AbilityDemo extends ConsumerStatefulWidget {
+  const _AbilityDemo({required this.heroKey, required this.ability});
+
+  /// The hero's Valve CDN folder name (e.g. `antimage`).
+  final String heroKey;
+
+  final AbilityDetail ability;
+
+  @override
+  ConsumerState<_AbilityDemo> createState() => _AbilityDemoState();
+}
+
+class _AbilityDemoState extends ConsumerState<_AbilityDemo> {
+  /// What the control shows: idle play button → loading → inline video,
+  /// or the degraded note when the CDN has no demo / the download failed.
+  _DemoPhase _phase = _DemoPhase.idle;
+  File? _video;
+
+  Future<void> _play() async {
+    setState(() => _phase = _DemoPhase.loading);
+    final url = CdnUrls.abilityDemoVideo(widget.heroKey, widget.ability.name);
+    final File file;
+    try {
+      file = await ref.read(abilityVideoRepositoryProvider).videoFileFor(url);
+    } on AbilityVideoException {
+      // Missing demo or failed download — both degrade the same quiet way.
+      if (mounted) setState(() => _phase = _DemoPhase.unavailable);
+      return;
+    }
+    if (!mounted) return;
+    setState(() {
+      _video = file;
+      _phase = _DemoPhase.playing;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    switch (_phase) {
+      case _DemoPhase.idle:
+        return Align(
+          alignment: Alignment.centerLeft,
+          child: InkWell(
+            key: ValueKey<String>('ability-demo-play-${widget.ability.name}'),
+            borderRadius: BorderRadius.circular(6),
+            onTap: _play,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.play_circle_outline,
+                    size: 18,
+                    color: Colors.white54,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    'Play demo',
+                    style: Theme.of(context).textTheme.labelMedium
+                        ?.copyWith(color: Colors.white54),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      case _DemoPhase.loading:
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 8),
+          child: Center(
+            child: SizedBox(
+              width: 18,
+              height: 18,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            ),
+          ),
+        );
+      case _DemoPhase.unavailable:
+        return DemoUnavailable(
+          key: ValueKey<String>(
+            'ability-demo-unavailable-${widget.ability.name}',
+          ),
+        );
+      case _DemoPhase.playing:
+        final video = _video;
+        if (video == null) return const SizedBox.shrink();
+        final buildVideo = ref.watch(abilityDemoVideoBuilderProvider);
+        return buildVideo(context, video, widget.ability.name);
+    }
+  }
+}
+
+enum _DemoPhase { idle, loading, playing, unavailable }
 
 /// One cost row: "Cast Range: 875 / 950 / 1025 / 1100" — one value per
 /// Ability level, the way the site's tooltip shows them.
