@@ -1,5 +1,8 @@
 import '../heroes/hero_index.dart';
+import 'hero_roles.dart';
 import 'matchup_matrix.dart';
+
+export 'hero_roles.dart';
 
 /// Candidate hero evaluated for draft recommendations.
 class DraftCandidate {
@@ -33,6 +36,10 @@ class DraftCandidate {
 /// Pure Dart calculation engine for the Draft Picker.
 class DraftEngine {
   const DraftEngine._();
+
+  static CompositionDiagnostics evaluateComposition(
+    List<HeroRoleLevels> alliedRoles,
+  ) => CompositionDiagnostics.fromRoles(alliedRoles);
 
   /// Calculates normalized Advantage for a hero against an opposing enemy hero.
   ///

@@ -101,7 +101,14 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                     focusedSlot: draftSession.focusedSlot,
                     notifier: draftNotifier,
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
+                  _CompositionDiagnosticsSection(
+                    hasAllies: draftSession.alliedHeroIds.isNotEmpty,
+                    diagnosticsAsync: ref.watch(
+                      draftCompositionDiagnosticsProvider,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
                   const Divider(),
                   const SizedBox(height: 8),
                   Row(
@@ -124,6 +131,11 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                         ),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 8),
+                  _PositionFilterBar(
+                    selectedPosition: draftSession.selectedPosition,
+                    onSelected: (pos) => draftNotifier.setPositionFilter(pos),
                   ),
                   const SizedBox(height: 8),
                   TextField(
@@ -481,6 +493,217 @@ class _HeroRosterRow extends ConsumerWidget {
         borderRadius: BorderRadius.circular(8),
         clipBehavior: Clip.antiAlias,
         child: isAssigned ? Opacity(opacity: 0.45, child: content) : content,
+      ),
+    );
+  }
+}
+
+class _CompositionDiagnosticsSection extends StatelessWidget {
+  const _CompositionDiagnosticsSection({
+    required this.hasAllies,
+    required this.diagnosticsAsync,
+  });
+
+  final bool hasAllies;
+  final AsyncValue<CompositionDiagnostics> diagnosticsAsync;
+
+  @override
+  Widget build(BuildContext context) {
+    if (!hasAllies) return const SizedBox.shrink();
+
+    return diagnosticsAsync.when(
+      data: (diagnostics) {
+        return Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: diagnostics.isBalanced
+                ? Colors.green.withValues(alpha: 0.12)
+                : Colors.amber.withValues(alpha: 0.10),
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: diagnostics.isBalanced
+                  ? Colors.green.withValues(alpha: 0.3)
+                  : Colors.amber.withValues(alpha: 0.3),
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    diagnostics.isBalanced
+                        ? Icons.check_circle_rounded
+                        : Icons.warning_amber_rounded,
+                    size: 16,
+                    color: diagnostics.isBalanced
+                        ? Colors.greenAccent
+                        : Colors.amberAccent,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    'Composition Diagnostics',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.5,
+                      color: diagnostics.isBalanced
+                          ? Colors.greenAccent
+                          : Colors.amberAccent,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 6,
+                runSpacing: 4,
+                children: [
+                  for (final arch in diagnostics.archetypes)
+                    _RoleScoreChip(
+                      label: arch.label,
+                      points: arch.points,
+                      threshold: arch.threshold,
+                      fulfilled: arch.fulfilled,
+                    ),
+                ],
+              ),
+              if (diagnostics.alerts.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                for (final alert in diagnostics.alerts)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          '• ',
+                          style: TextStyle(
+                            color: Colors.amberAccent,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            alert,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              ] else ...[
+                const SizedBox(height: 8),
+                const Row(
+                  children: [
+                    Text(
+                      '• ',
+                      style: TextStyle(color: Colors.greenAccent, fontSize: 12),
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Team composition is well-balanced',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ],
+          ),
+        );
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
+    );
+  }
+}
+
+class _RoleScoreChip extends StatelessWidget {
+  const _RoleScoreChip({
+    required this.label,
+    required this.points,
+    required this.threshold,
+    required this.fulfilled,
+  });
+
+  final String label;
+  final int points;
+  final int threshold;
+  final bool fulfilled;
+
+  @override
+  Widget build(BuildContext context) {
+    final color = fulfilled ? Colors.greenAccent : Colors.white60;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: fulfilled
+            ? Colors.green.withValues(alpha: 0.15)
+            : Colors.white.withValues(alpha: 0.05),
+        borderRadius: BorderRadius.circular(4),
+        border: Border.all(
+          color: fulfilled
+              ? Colors.green.withValues(alpha: 0.4)
+              : Colors.white12,
+        ),
+      ),
+      child: Text(
+        '$label $points/$threshold',
+        style: TextStyle(
+          color: color,
+          fontSize: 11,
+          fontWeight: fulfilled ? FontWeight.bold : FontWeight.normal,
+        ),
+      ),
+    );
+  }
+}
+
+class _PositionFilterBar extends StatelessWidget {
+  const _PositionFilterBar({
+    required this.selectedPosition,
+    required this.onSelected,
+  });
+
+  final DraftPosition? selectedPosition;
+  final ValueChanged<DraftPosition?> onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          ChoiceChip(
+            key: const ValueKey('pos_filter_all'),
+            label: const Text('All'),
+            selected: selectedPosition == null,
+            onSelected: (_) => onSelected(null),
+          ),
+          const SizedBox(width: 6),
+          for (final pos in DraftPosition.values)
+            Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: ChoiceChip(
+                key: ValueKey('pos_filter_${pos.name}'),
+                label: Text(pos.label),
+                tooltip: '${pos.label}: ${pos.laneDescription}',
+                selected: selectedPosition == pos,
+                onSelected: (selected) {
+                  onSelected(selected ? pos : null);
+                },
+              ),
+            ),
+        ],
       ),
     );
   }

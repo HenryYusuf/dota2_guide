@@ -13,7 +13,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:dota2_guide/app.dart';
 import 'package:dota2_guide/features/draft/draft_providers.dart';
-import 'package:dota2_guide/features/draft/matchup_matrix_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_detail.dart';
 import 'package:dota2_guide/features/heroes/hero_detail_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
@@ -250,6 +249,11 @@ class _FakeMatchupMatrixRepository implements MatchupMatrixRepository {
   Future<MatchupMatrix> loadMatchupMatrix() async => MatchupMatrix.empty();
 }
 
+class _FakeHeroRolesRepository implements HeroRolesRepository {
+  @override
+  Future<Map<int, HeroRoleLevels>> loadHeroRoles() async => const {};
+}
+
 class _FakePatchDetailRepository implements PatchDetailRepository {
   @override
   Future<PatchDetail> loadPatchDetail(String patchNumber) async {
@@ -317,6 +321,9 @@ void main() {
           ),
           matchupMatrixRepositoryProvider.overrideWithValue(
             _FakeMatchupMatrixRepository(),
+          ),
+          heroRolesRepositoryProvider.overrideWithValue(
+            _FakeHeroRolesRepository(),
           ),
           newsRepositoryProvider.overrideWithValue(_FakeNewsRepository()),
           ...refreshSeamOverrides(),

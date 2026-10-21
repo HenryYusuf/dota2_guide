@@ -2,6 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../heroes/hero_index.dart';
+import 'hero_roles.dart';
+
+export 'hero_roles.dart';
 
 /// The two sides of a bilateral draft.
 enum DraftTeam { ally, enemy }
@@ -33,6 +36,7 @@ class DraftSessionState {
     List<HeroSummary?>? alliedSlots,
     List<HeroSummary?>? enemySlots,
     this.focusedSlot,
+    this.selectedPosition,
   }) : alliedSlots = List.unmodifiable(
          alliedSlots ?? List<HeroSummary?>.filled(5, null),
        ),
@@ -43,6 +47,7 @@ class DraftSessionState {
   final List<HeroSummary?> alliedSlots;
   final List<HeroSummary?> enemySlots;
   final DraftSlotTarget? focusedSlot;
+  final DraftPosition? selectedPosition;
 
   List<int> get alliedHeroIds =>
       alliedSlots.whereType<HeroSummary>().map((h) => h.id).toList();
@@ -123,11 +128,15 @@ class DraftSessionState {
     List<HeroSummary?>? alliedSlots,
     List<HeroSummary?>? enemySlots,
     DraftSlotTarget? Function()? focusedSlot,
+    DraftPosition? Function()? selectedPosition,
   }) {
     return DraftSessionState(
       alliedSlots: alliedSlots ?? this.alliedSlots,
       enemySlots: enemySlots ?? this.enemySlots,
       focusedSlot: focusedSlot != null ? focusedSlot() : this.focusedSlot,
+      selectedPosition: selectedPosition != null
+          ? selectedPosition()
+          : this.selectedPosition,
     );
   }
 }
@@ -136,6 +145,11 @@ class DraftSessionState {
 class DraftSessionNotifier extends Notifier<DraftSessionState> {
   @override
   DraftSessionState build() => DraftSessionState();
+
+  /// Sets or clears the active competitive position filter.
+  void setPositionFilter(DraftPosition? position) {
+    state = state.copyWith(selectedPosition: () => position);
+  }
 
   /// Sets the currently active slot target on the board.
   void focusSlot(DraftSlotTarget? target) {

@@ -4,7 +4,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:dota2_guide/features/draft/draft_providers.dart';
 import 'package:dota2_guide/features/draft/draft_screen.dart';
-import 'package:dota2_guide/features/draft/matchup_matrix_repository.dart';
 import 'package:dota2_guide/features/heroes/hero_index.dart';
 import 'package:dota2_guide/features/heroes/heroes_providers.dart';
 import 'package:dota2_guide/features/heroes/heroes_repository.dart';
@@ -25,6 +24,15 @@ class _FakeMatchupMatrixRepository implements MatchupMatrixRepository {
 
   @override
   Future<MatchupMatrix> loadMatchupMatrix() async => matrix;
+}
+
+class _FakeHeroRolesRepository implements HeroRolesRepository {
+  _FakeHeroRolesRepository([this.roles = const {}]);
+
+  final Map<int, HeroRoleLevels> roles;
+
+  @override
+  Future<Map<int, HeroRoleLevels>> loadHeroRoles() async => roles;
 }
 
 class _ErrorMatchupMatrixRepository implements MatchupMatrixRepository {
@@ -77,31 +85,50 @@ void main() {
     },
   });
 
-  Widget buildSubject({
+  final testRoles = {
+    1: HeroRoleLevels.fromList(const [3, 0, 1, 0, 0, 0, 3, 0, 0]),
+    2: HeroRoleLevels.fromList(const [1, 0, 0, 2, 0, 3, 0, 0, 3]),
+    3: HeroRoleLevels.fromList(const [0, 2, 1, 3, 0, 1, 0, 0, 0]),
+  };
+
+  Future<void> pumpDraft(
+    WidgetTester tester, {
     MatchupMatrixRepository? matrixRepo,
     HeroesRepository? heroesRepo,
-  }) {
-    return ProviderScope(
-      overrides: [
-        portraitBuilderProvider.overrideWithValue(
-          (context, hero) => SizedBox(key: ValueKey<String>(hero.portraitUrl)),
-        ),
-        heroesRepositoryProvider.overrideWithValue(
-          heroesRepo ?? _FakeHeroesRepository(testHeroes),
-        ),
-        matchupMatrixRepositoryProvider.overrideWithValue(
-          matrixRepo ?? _FakeMatchupMatrixRepository(testMatrix),
-        ),
-      ],
-      child: const MaterialApp(home: DraftScreen()),
+    HeroRolesRepository? rolesRepo,
+  }) async {
+    tester.view.physicalSize = const Size(1080, 2400);
+    tester.view.devicePixelRatio = 2.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          portraitBuilderProvider.overrideWithValue(
+            (context, hero) =>
+                SizedBox(key: ValueKey<String>(hero.portraitUrl)),
+          ),
+          heroesRepositoryProvider.overrideWithValue(
+            heroesRepo ?? _FakeHeroesRepository(testHeroes),
+          ),
+          matchupMatrixRepositoryProvider.overrideWithValue(
+            matrixRepo ?? _FakeMatchupMatrixRepository(testMatrix),
+          ),
+          heroRolesRepositoryProvider.overrideWithValue(
+            rolesRepo ?? _FakeHeroRolesRepository(testRoles),
+          ),
+        ],
+        child: const MaterialApp(home: DraftScreen()),
+      ),
     );
+    await tester.pumpAndSettle();
   }
 
   testWidgets('renders 5 allied slots, 5 enemy slots, and hero roster', (
     tester,
   ) async {
-    await tester.pumpWidget(buildSubject());
-    await tester.pumpAndSettle();
+    await pumpDraft(tester);
 
     expect(find.text('Draft Picker'), findsOneWidget);
     expect(find.text('Allies'), findsOneWidget);
@@ -117,8 +144,7 @@ void main() {
   testWidgets('sorts hero roster by baseline win rate in descending order', (
     tester,
   ) async {
-    await tester.pumpWidget(buildSubject());
-    await tester.pumpAndSettle();
+    await pumpDraft(tester);
 
     // Sorted order should be: Axe (65.0%), Bane (52.0%), Anti-Mage (40.0%)
     expect(find.text('Axe'), findsOneWidget);
@@ -138,8 +164,7 @@ void main() {
   });
 
   testWidgets('filters roster by search query', (tester) async {
-    await tester.pumpWidget(buildSubject());
-    await tester.pumpAndSettle();
+    await pumpDraft(tester);
 
     await tester.enterText(find.byType(TextField), 'anti');
     await tester.pumpAndSettle();
@@ -152,10 +177,7 @@ void main() {
   testWidgets('shows quiet error message when matchup matrix fails to load', (
     tester,
   ) async {
-    await tester.pumpWidget(
-      buildSubject(matrixRepo: _ErrorMatchupMatrixRepository()),
-    );
-    await tester.pumpAndSettle();
+    await pumpDraft(tester, matrixRepo: _ErrorMatchupMatrixRepository());
 
     expect(
       find.textContaining('Unable to load draft recommendations'),
@@ -166,8 +188,7 @@ void main() {
   testWidgets(
     'tapping an empty slot focuses it, and tapping a roster hero assigns that hero',
     (tester) async {
-      await tester.pumpWidget(buildSubject());
-      await tester.pumpAndSettle();
+      await pumpDraft(tester);
 
       // Tap enemy slot 0
       await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
@@ -193,8 +214,7 @@ void main() {
   testWidgets(
     'assigning an enemy hero re-ranks candidate roster by Advantage with percentage badges',
     (tester) async {
-      await tester.pumpWidget(buildSubject());
-      await tester.pumpAndSettle();
+      await pumpDraft(tester);
 
       // Focus enemy slot 0 and assign Axe
       await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
@@ -220,8 +240,7 @@ void main() {
   testWidgets(
     'assigned heroes are visually marked as picked and cannot be assigned again',
     (tester) async {
-      await tester.pumpWidget(buildSubject());
-      await tester.pumpAndSettle();
+      await pumpDraft(tester);
 
       // Focus enemy slot 0 and assign Axe
       await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
@@ -254,8 +273,7 @@ void main() {
   testWidgets(
     'clearing an assigned slot removes the hero and updates recommendations',
     (tester) async {
-      await tester.pumpWidget(buildSubject());
-      await tester.pumpAndSettle();
+      await pumpDraft(tester);
 
       // Assign Axe to enemy slot 0
       await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
@@ -283,8 +301,7 @@ void main() {
   testWidgets(
     'Reset Draft button clears all slots upon confirmation and restores baseline ranking',
     (tester) async {
-      await tester.pumpWidget(buildSubject());
-      await tester.pumpAndSettle();
+      await pumpDraft(tester);
 
       // Assign Axe to enemy slot 0
       await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
@@ -322,8 +339,7 @@ void main() {
   );
 
   testWidgets('long-pressing an assigned slot clears it', (tester) async {
-    await tester.pumpWidget(buildSubject());
-    await tester.pumpAndSettle();
+    await pumpDraft(tester);
 
     // Assign Axe to enemy slot 0
     await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));

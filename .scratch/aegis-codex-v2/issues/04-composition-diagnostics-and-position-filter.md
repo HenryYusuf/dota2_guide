@@ -4,11 +4,11 @@
 
 **Blocked by:** 03: Bilateral Draft Board & Real-Time Counter Recommendations
 
-**Status:** ready-for-agent
+**Status:** ready-for-human
 
-- [ ] The calculation engine evaluates cumulative team role points across Disabler, Durable, Initiator, and Support from official hero role data.
-- [ ] Visual diagnostic indicators display warning alerts when essential combat thresholds are missing (e.g. "Draft lacks reliable stuns/disable").
-- [ ] The candidate roster includes horizontal Position filter chips (All, Pos 1, Pos 2, Pos 3, Pos 4, Pos 5) mapped from official role levels.
-- [ ] Tapping a Position filter narrows the visible counter recommendations to heroes suitable for that competitive position while preserving Advantage sorting.
-- [ ] Adding heroes that fulfill missing roles dynamically resolves the diagnostic warning alerts.
-- [ ] Unit tests verify role threshold evaluation and position classification; widget tests verify filtering and alert updates.
+- [x] The calculation engine evaluates cumulative team role points across Disabler, Durable, Initiator, and Support from official hero role data.
+- [x] Visual diagnostic indicators display warning alerts when essential combat thresholds are missing (e.g. "Draft lacks reliable stuns/disable").
+- [x] The candidate roster includes horizontal Position filter chips (All, Pos 1, Pos 2, Pos 3, Pos 4, Pos 5) mapped from official role levels.
+- [x] Tapping a Position filter narrows the visible counter recommendations to heroes suitable for that competitive position while preserving Advantage sorting.
+- [x] Adding heroes that fulfill missing roles dynamically resolves the diagnostic warning alerts.
+- [x] Unit tests verify role threshold evaluation and position classification; widget tests verify filtering and alert updates.
