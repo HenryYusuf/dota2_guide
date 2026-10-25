@@ -248,8 +248,9 @@ void main() {
       await tester.tap(find.text('Axe'));
       await tester.pumpAndSettle();
 
-      // Axe should have a PICKED badge
+      // Axe should have a PICKED badge and show no numerical rank
       expect(find.text('PICKED'), findsOneWidget);
+      expect(find.text('—'), findsOneWidget);
 
       // Focus enemy slot 1
       await tester.tap(find.byKey(const ValueKey('enemy_slot_1')));
@@ -299,6 +300,36 @@ void main() {
   );
 
   testWidgets(
+    'tapping an assigned slot clears it and leaves it focused for replacement',
+    (tester) async {
+      await pumpDraft(tester);
+
+      // Assign Axe to enemy slot 0
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Axe'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('-15.0%'), findsOneWidget);
+
+      // Tap the assigned slot directly
+      await tester.tap(find.byKey(const ValueKey('enemy_slot_0')));
+      await tester.pumpAndSettle();
+
+      // Slot 0 is now empty and Axe is removed
+      expect(
+        find.descendant(
+          of: find.byKey(const ValueKey('enemy_slot_0')),
+          matching: find.text('Axe'),
+        ),
+        findsNothing,
+      );
+      // Recommendations revert to baseline
+      expect(find.text('Ranked by baseline win rate'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
     'Reset Draft button clears all slots upon confirmation and restores baseline ranking',
     (tester) async {
       await pumpDraft(tester);
@@ -312,6 +343,8 @@ void main() {
       expect(find.text('-15.0%'), findsOneWidget);
 
       // Tap Reset Draft button
+      // Verify prominent Reset button exists with label in AppBar
+      expect(find.widgetWithText(TextButton, 'Reset'), findsOneWidget);
       final resetBtn = find.byTooltip('Reset Draft');
       expect(resetBtn, findsOneWidget);
       await tester.tap(resetBtn);

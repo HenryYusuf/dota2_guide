@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/theme/app_theme.dart';
 import 'hero_detail_screen.dart';
 import 'hero_index.dart';
 import 'heroes_providers.dart';
@@ -80,68 +81,138 @@ class _HeroesScreenState extends ConsumerState<HeroesScreen> {
       appBar: AppBar(title: const Text('Heroes')),
       body: Column(
         children: [
+          // Search Bar
           Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             child: TextField(
               controller: _searchController,
               onChanged: (value) => setState(() => _query = value),
               textInputAction: TextInputAction.search,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 hintText: 'Search heroes',
-                prefixIcon: Icon(Icons.search),
-                isDense: true,
-                border: OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.search, size: 20),
+                suffixIcon: _query.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear, size: 18),
+                        onPressed: () {
+                          _searchController.clear();
+                          setState(() => _query = '');
+                        },
+                      )
+                    : null,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
-            child: Wrap(
-              spacing: 8,
+
+          // Primary Attribute Filter Chips
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
               children: [
                 for (final attribute in PrimaryAttribute.values)
-                  FilterChip(
-                    label: Text(primaryAttributeLabels[attribute]!),
-                    avatar: _AttributeDot(primaryAttributeColors[attribute]!),
-                    showCheckmark: false,
-                    selected: _selectedAttributes.contains(attribute),
-                    onSelected: (_) => _toggle(_selectedAttributes, attribute),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: FilterChip(
+                      label: Text(primaryAttributeLabels[attribute]!),
+                      avatar: _AttributeDot(primaryAttributeColors[attribute]!),
+                      showCheckmark: false,
+                      selected: _selectedAttributes.contains(attribute),
+                      selectedColor: primaryAttributeColors[attribute]!
+                          .withValues(alpha: 0.25),
+                      side: BorderSide(
+                        color: _selectedAttributes.contains(attribute)
+                            ? primaryAttributeColors[attribute]!
+                            : AppTheme.border,
+                        width: 1,
+                      ),
+                      onSelected: (_) =>
+                          _toggle(_selectedAttributes, attribute),
+                    ),
                   ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
-            child: Wrap(
-              spacing: 8,
+
+          const SizedBox(height: 6),
+
+          // Complexity Filter Chips
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
               children: [
                 for (final complexity in _complexities)
-                  FilterChip(
-                    label: Text('Complexity $complexity'),
-                    selected: _selectedComplexities.contains(complexity),
-                    onSelected: (_) =>
-                        _toggle(_selectedComplexities, complexity),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: FilterChip(
+                      label: Text('Complexity $complexity'),
+                      selected: _selectedComplexities.contains(complexity),
+                      showCheckmark: false,
+                      selectedColor: AppTheme.gold.withValues(alpha: 0.22),
+                      side: BorderSide(
+                        color: _selectedComplexities.contains(complexity)
+                            ? AppTheme.gold
+                            : AppTheme.border,
+                        width: 1,
+                      ),
+                      onSelected: (_) =>
+                          _toggle(_selectedComplexities, complexity),
+                    ),
                   ),
               ],
             ),
           ),
+
+          const SizedBox(height: 8),
+
+          // Heroes Grid
           Expanded(
             child: heroesAsync.when(
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => const Center(
+                child: SizedBox(
+                  width: 32,
+                  height: 32,
+                  child: CircularProgressIndicator(strokeWidth: 2.5),
+                ),
+              ),
               error: (error, stackTrace) =>
                   const Center(child: Text("Couldn't load heroes.")),
               data: (heroes) {
                 final visible = _visibleHeroes(heroes);
                 if (visible.isEmpty) {
-                  return const Center(child: Text('No heroes match.'));
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.shield_outlined,
+                            size: 48,
+                            color: AppTheme.textMuted.withValues(alpha: 0.6),
+                          ),
+                          const SizedBox(height: 12),
+                          const Text(
+                            'No heroes match.',
+                            style: TextStyle(
+                              color: AppTheme.textSecondary,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
                 }
                 return GridView.builder(
-                  padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                     maxCrossAxisExtent: 160,
                     childAspectRatio: 16 / 9,
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 8,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
                   ),
                   itemCount: visible.length,
                   itemBuilder: (context, index) => _HeroTile(
@@ -169,7 +240,13 @@ class _AttributeDot extends StatelessWidget {
     return Container(
       width: 10,
       height: 10,
-      decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+      decoration: BoxDecoration(
+        color: color,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(color: color.withValues(alpha: 0.5), blurRadius: 4),
+        ],
+      ),
     );
   }
 }
@@ -184,43 +261,89 @@ class _HeroTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(8),
-      // Grid → detail: push the Hero's page inside the Heroes tab.
-      onTap: () => context.push(HeroDetailScreen.location(hero.id)),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            buildPortrait(context, hero),
-            const DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: [0.45, 1],
-                  colors: [Colors.transparent, Color(0xE6000000)],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(6, 0, 6, 5),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Text(
-                  hero.localizedName,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
+    final attrColor =
+        primaryAttributeColors[hero.primaryAttribute] ?? AppTheme.textSecondary;
+
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: attrColor.withValues(alpha: 0.35),
+          width: 1.2,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.3),
+            blurRadius: 6,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(9),
+          // Grid → detail: push the Hero's page inside the Heroes tab.
+          onTap: () => context.push(HeroDetailScreen.location(hero.id)),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(9),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                buildPortrait(context, hero),
+                // Gradient scrim for optimal text contrast
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      stops: [0.35, 1],
+                      colors: [Colors.transparent, Color(0xF0080B10)],
+                    ),
                   ),
                 ),
-              ),
+                // Primary Attribute dot indicator (top left)
+                Positioned(
+                  top: 5,
+                  left: 5,
+                  child: Container(
+                    width: 7,
+                    height: 7,
+                    decoration: BoxDecoration(
+                      color: attrColor,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: attrColor.withValues(alpha: 0.7),
+                          blurRadius: 3,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Hero Name (bottom center)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(4, 0, 4, 4),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Text(
+                      hero.localizedName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.2,
+                        shadows: [Shadow(color: Colors.black, blurRadius: 4)],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/theme/app_theme.dart';
 import 'item_detail_screen.dart';
 import 'item_index.dart';
 import 'items_providers.dart';
@@ -22,6 +23,16 @@ class ItemsScreen extends ConsumerStatefulWidget {
 /// Neutral tiers the filter offers (1–5 as in-game; the feed stores them
 /// 0-based and [neutralTierLabel] does the +1).
 const List<int> _neutralTiers = [0, 1, 2, 3, 4];
+
+/// Maps neutral tier index (0-4) to authentic Dota neutral tier color.
+Color _tierColor(int tier) => switch (tier) {
+  0 => AppTheme.tier1,
+  1 => AppTheme.tier2,
+  2 => AppTheme.tier3,
+  3 => AppTheme.tier4,
+  4 => AppTheme.tier5,
+  _ => AppTheme.textSecondary,
+};
 
 class _ItemsScreenState extends ConsumerState<ItemsScreen> {
   final TextEditingController _searchController = TextEditingController();
@@ -75,48 +86,102 @@ class _ItemsScreenState extends ConsumerState<ItemsScreen> {
       appBar: AppBar(title: const Text('Items')),
       body: Column(
         children: [
+          // Search Field
           Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             child: TextField(
               controller: _searchController,
               onChanged: (value) => setState(() => _query = value),
               textInputAction: TextInputAction.search,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 hintText: 'Search items',
-                prefixIcon: Icon(Icons.search),
-                isDense: true,
-                border: OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.search, size: 20),
+                suffixIcon: _query.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear, size: 18),
+                        onPressed: () {
+                          _searchController.clear();
+                          setState(() => _query = '');
+                        },
+                      )
+                    : null,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
-            child: Wrap(
-              spacing: 8,
+
+          // Neutral Tier Filter Chips
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
               children: [
                 for (final tier in _neutralTiers)
-                  FilterChip(
-                    key: ValueKey<String>('neutral-tier-$tier'),
-                    label: Text('Tier ${neutralTierLabel(tier)}'),
-                    selected: _selectedNeutralTiers.contains(tier),
-                    onSelected: (_) => _toggleTier(tier),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: FilterChip(
+                      key: ValueKey<String>('neutral-tier-$tier'),
+                      label: Text('Tier ${neutralTierLabel(tier)}'),
+                      selected: _selectedNeutralTiers.contains(tier),
+                      showCheckmark: false,
+                      selectedColor: _tierColor(tier).withValues(alpha: 0.22),
+                      side: BorderSide(
+                        color: _selectedNeutralTiers.contains(tier)
+                            ? _tierColor(tier)
+                            : AppTheme.border,
+                        width: 1,
+                      ),
+                      onSelected: (_) => _toggleTier(tier),
+                    ),
                   ),
               ],
             ),
           ),
+
+          const SizedBox(height: 8),
+
+          // Items List
           Expanded(
             child: itemsAsync.when(
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => const Center(
+                child: SizedBox(
+                  width: 32,
+                  height: 32,
+                  child: CircularProgressIndicator(strokeWidth: 2.5),
+                ),
+              ),
               error: (error, stackTrace) =>
                   const Center(child: Text("Couldn't load items.")),
               data: (index) {
                 final visible = _visibleItems(index.items);
                 if (visible.isEmpty) {
-                  return const Center(child: Text('No items match.'));
+                  return Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.inventory_2_outlined,
+                            size: 48,
+                            color: AppTheme.textMuted.withValues(alpha: 0.6),
+                          ),
+                          const SizedBox(height: 12),
+                          const Text(
+                            'No items match.',
+                            style: TextStyle(
+                              color: AppTheme.textSecondary,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
                 }
                 final rows = _sectionRows(visible);
                 return ListView.builder(
-                  padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
                   itemCount: rows.length,
                   itemBuilder: (context, position) => switch (rows[position]) {
                     _CategoryHeaderRow(:final category, :final count) =>
@@ -179,10 +244,28 @@ class _SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(4, 12, 4, 4),
-      child: Text(
-        '${category.label} ($count)',
-        style: Theme.of(context).textTheme.titleMedium,
+      padding: const EdgeInsets.fromLTRB(4, 16, 4, 8),
+      child: Row(
+        children: [
+          Container(
+            width: 3,
+            height: 14,
+            decoration: BoxDecoration(
+              color: AppTheme.gold,
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            '${category.label} ($count)',
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: AppTheme.textPrimary,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -199,26 +282,88 @@ class _ItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
     final tier = item.neutralTier;
-    return ListTile(
-      key: ValueKey<String>('item-tile-${item.id}'),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 4),
-      leading: ClipRRect(
-        borderRadius: BorderRadius.circular(6),
-        child: SizedBox(
-          width: 40,
-          height: 40,
-          child: buildIcon(context, item.iconUrl, item.name),
+    final tierColor = tier != null ? _tierColor(tier) : null;
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 6),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: tierColor != null
+              ? tierColor.withValues(alpha: 0.35)
+              : AppTheme.border,
+          width: 1,
         ),
       ),
-      title: Text(item.name, style: text.titleSmall),
-      subtitle: tier == null
-          ? null
-          : Text(
-              'Tier ${neutralTierLabel(tier)}',
-              style: text.labelSmall?.copyWith(color: Colors.white54),
+      child: Material(
+        color: Colors.transparent,
+        child: ListTile(
+          key: ValueKey<String>('item-tile-${item.id}'),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 10,
+            vertical: 2,
+          ),
+          leading: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(
+                color: tierColor != null
+                    ? tierColor.withValues(alpha: 0.6)
+                    : Colors.white.withValues(alpha: 0.15),
+                width: 1,
+              ),
             ),
-      // List → detail: push the Item's page inside the Items tab.
-      onTap: () => context.push(ItemDetailScreen.location(item.id)),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(7),
+              child: SizedBox(
+                width: 42,
+                height: 42,
+                child: buildIcon(context, item.iconUrl, item.name),
+              ),
+            ),
+          ),
+          title: Text(
+            item.name,
+            style: text.titleSmall?.copyWith(
+              fontWeight: FontWeight.w600,
+              color: AppTheme.textPrimary,
+            ),
+          ),
+          subtitle: tier == null
+              ? null
+              : Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 2),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 1,
+                      ),
+                      decoration: BoxDecoration(
+                        color: tierColor?.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        'Tier ${neutralTierLabel(tier)}',
+                        style: text.labelSmall?.copyWith(
+                          color: tierColor ?? Colors.white70,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+          trailing: const Icon(
+            Icons.chevron_right,
+            size: 18,
+            color: AppTheme.textMuted,
+          ),
+          // List → detail: push the Item's page inside the Items tab.
+          onTap: () => context.push(ItemDetailScreen.location(item.id)),
+        ),
+      ),
     );
   }
 }

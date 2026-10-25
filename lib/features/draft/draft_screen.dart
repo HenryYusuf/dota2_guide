@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/theme/app_theme.dart';
 import '../heroes/hero_index.dart';
 import '../heroes/heroes_providers.dart';
+import '../heroes/primary_attribute_display.dart';
 import 'draft_providers.dart';
 
 /// Draft tab: the offline Draft Picker 5v5 drafting screen.
@@ -41,6 +43,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
             ),
             FilledButton(
               onPressed: () => Navigator.of(dialogContext).pop(true),
+              style: FilledButton.styleFrom(backgroundColor: AppTheme.primary),
               child: const Text('Reset'),
             ),
           ],
@@ -66,10 +69,16 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
       appBar: AppBar(
         title: const Text('Draft Picker'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.restart_alt),
-            tooltip: 'Reset Draft',
-            onPressed: () => _showResetConfirmation(context),
+          Tooltip(
+            message: 'Reset Draft',
+            child: TextButton.icon(
+              icon: const Icon(Icons.restart_alt, size: 18),
+              label: const Text('Reset'),
+              style: TextButton.styleFrom(
+                foregroundColor: AppTheme.textSecondary,
+              ),
+              onPressed: () => _showResetConfirmation(context),
+            ),
           ),
         ],
       ),
@@ -85,7 +94,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                   _TeamSlotsSection(
                     team: DraftTeam.ally,
                     teamName: 'Allies',
-                    teamColor: const Color(0xFF3B82F6),
+                    teamColor: AppTheme.radiant,
                     prefixKey: 'allied_slot',
                     slots: draftSession.alliedSlots,
                     focusedSlot: draftSession.focusedSlot,
@@ -95,7 +104,7 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                   _TeamSlotsSection(
                     team: DraftTeam.enemy,
                     teamName: 'Enemies',
-                    teamColor: const Color(0xFFEF4444),
+                    teamColor: AppTheme.dire,
                     prefixKey: 'enemy_slot',
                     slots: draftSession.enemySlots,
                     focusedSlot: draftSession.focusedSlot,
@@ -110,14 +119,17 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                   ),
                   const SizedBox(height: 12),
                   const Divider(),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Hero Roster',
                         style: Theme.of(context).textTheme.titleMedium
-                            ?.copyWith(fontWeight: FontWeight.bold),
+                            ?.copyWith(
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.3,
+                            ),
                       ),
                       const SizedBox(width: 8),
                       Flexible(
@@ -126,7 +138,10 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                               ? 'Advantage vs $enemyCount ${enemyCount == 1 ? 'enemy' : 'enemies'}'
                               : 'Ranked by baseline win rate',
                           style: Theme.of(context).textTheme.bodySmall
-                              ?.copyWith(color: Colors.white70),
+                              ?.copyWith(
+                                color: AppTheme.textSecondary,
+                                fontWeight: FontWeight.w500,
+                              ),
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -147,11 +162,8 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
                       hintText: 'Search hero...',
                       isDense: true,
                       contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 12,
+                        horizontal: 14,
                         vertical: 10,
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
                       ),
                       suffixIcon: _query.isNotEmpty
                           ? IconButton(
@@ -183,7 +195,15 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
               if (visible.isEmpty) {
                 return const SliverFillRemaining(
                   hasScrollBody: false,
-                  child: Center(child: Text('No heroes match your search.')),
+                  child: Center(
+                    child: Text(
+                      'No heroes match your search.',
+                      style: TextStyle(
+                        color: AppTheme.textSecondary,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
                 );
               }
 
@@ -208,15 +228,24 @@ class _DraftScreenState extends ConsumerState<DraftScreen> {
             },
             loading: () => const SliverFillRemaining(
               hasScrollBody: false,
-              child: Center(child: CircularProgressIndicator()),
+              child: Center(
+                child: SizedBox(
+                  width: 32,
+                  height: 32,
+                  child: CircularProgressIndicator(strokeWidth: 2.5),
+                ),
+              ),
             ),
             error: (err, _) => SliverFillRemaining(
               hasScrollBody: false,
               child: Center(
-                child: Text(
-                  'Unable to load draft recommendations: $err',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white70),
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Text(
+                    'Unable to load draft recommendations: $err',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: AppTheme.textSecondary),
+                  ),
                 ),
               ),
             ),
@@ -261,21 +290,27 @@ class _TeamSlotsSection extends ConsumerWidget {
               decoration: BoxDecoration(
                 color: teamColor,
                 shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: teamColor.withValues(alpha: 0.6),
+                    blurRadius: 4,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 6),
+            const SizedBox(width: 8),
             Text(
               teamName,
               style: TextStyle(
                 color: teamColor,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w800,
                 fontSize: 13,
-                letterSpacing: 0.5,
+                letterSpacing: 0.8,
               ),
             ),
           ],
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 8),
         Row(
           children: List.generate(5, (index) {
             final hero = slots[index];
@@ -289,28 +324,35 @@ class _TeamSlotsSection extends ConsumerWidget {
                   key: ValueKey('${prefixKey}_$index'),
                   onTap: () {
                     if (hero != null) {
-                      notifier.focusSlot(target);
-                    } else {
-                      notifier.focusSlot(target);
+                      notifier.clearSlot(target);
                     }
+                    notifier.focusSlot(target);
                   },
                   onLongPress: hero != null
                       ? () => notifier.clearSlot(target)
                       : null,
-                  borderRadius: BorderRadius.circular(6),
+                  borderRadius: BorderRadius.circular(8),
                   child: Container(
-                    height: 56,
+                    height: 58,
                     decoration: BoxDecoration(
                       color: isFocused
-                          ? teamColor.withValues(alpha: 0.15)
-                          : Colors.white.withValues(alpha: 0.05),
-                      borderRadius: BorderRadius.circular(6),
+                          ? teamColor.withValues(alpha: 0.20)
+                          : AppTheme.surfaceElevated,
+                      borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: isFocused
                             ? teamColor
-                            : teamColor.withValues(alpha: 0.3),
+                            : teamColor.withValues(alpha: 0.35),
                         width: isFocused ? 2 : 1,
                       ),
+                      boxShadow: isFocused
+                          ? [
+                              BoxShadow(
+                                color: teamColor.withValues(alpha: 0.3),
+                                blurRadius: 6,
+                              ),
+                            ]
+                          : null,
                     ),
                     clipBehavior: Clip.antiAlias,
                     child: hero == null
@@ -321,7 +363,7 @@ class _TeamSlotsSection extends ConsumerWidget {
                                 color: isFocused
                                     ? teamColor
                                     : teamColor.withValues(alpha: 0.5),
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w800,
                                 fontSize: 13,
                               ),
                             ),
@@ -337,15 +379,15 @@ class _TeamSlotsSection extends ConsumerWidget {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 2,
-                                    vertical: 1,
+                                    vertical: 1.5,
                                   ),
-                                  color: Colors.black87,
+                                  color: const Color(0xE6080B10),
                                   child: Text(
                                     hero.localizedName,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 9,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w700,
                                     ),
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
@@ -354,20 +396,20 @@ class _TeamSlotsSection extends ConsumerWidget {
                                 ),
                               ),
                               Positioned(
-                                top: 1,
-                                right: 1,
+                                top: 2,
+                                right: 2,
                                 child: GestureDetector(
                                   onTap: () => notifier.clearSlot(target),
                                   behavior: HitTestBehavior.opaque,
                                   child: Container(
                                     padding: const EdgeInsets.all(2),
                                     decoration: const BoxDecoration(
-                                      color: Colors.black54,
+                                      color: Colors.black87,
                                       shape: BoxShape.circle,
                                     ),
                                     child: const Icon(
                                       Icons.close,
-                                      size: 13,
+                                      size: 12,
                                       color: Colors.white,
                                     ),
                                   ),
@@ -405,12 +447,8 @@ class _HeroRosterRow extends ConsumerWidget {
     final isAdvantage = candidate.hasAdvantage;
 
     final badgeColor = isAdvantage
-        ? ((candidate.advantage ?? 0.0) >= 0
-              ? Colors.greenAccent
-              : Colors.redAccent)
-        : (candidate.baseWinRate >= 0.50
-              ? Colors.greenAccent
-              : Colors.redAccent);
+        ? ((candidate.advantage ?? 0.0) >= 0 ? AppTheme.agility : AppTheme.dire)
+        : (candidate.baseWinRate >= 0.50 ? AppTheme.agility : AppTheme.dire);
 
     final badgeText = isAdvantage
         ? candidate.advantagePercentage
@@ -423,43 +461,59 @@ class _HeroRosterRow extends ConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
-            width: 24,
+            width: 26,
             child: Text(
-              '$rank',
+              isAssigned ? '—' : '$rank',
               style: const TextStyle(
-                color: Colors.white54,
+                color: AppTheme.textMuted,
                 fontSize: 12,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(4),
-            child: SizedBox(
-              width: 48,
-              height: 36,
-              child: portraitBuilder(context, candidate.hero),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(
+                color:
+                    primaryAttributeColors[candidate.hero.primaryAttribute]
+                        ?.withValues(alpha: 0.4) ??
+                    AppTheme.border,
+                width: 1,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: SizedBox(
+                width: 48,
+                height: 36,
+                child: portraitBuilder(context, candidate.hero),
+              ),
             ),
           ),
         ],
       ),
       title: Text(
         candidate.hero.localizedName,
-        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+        style: const TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 14,
+          color: AppTheme.textPrimary,
+        ),
       ),
       trailing: isAssigned
           ? Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.1),
+                color: Colors.white.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(6),
                 border: Border.all(color: Colors.white24),
               ),
               child: const Text(
                 'PICKED',
                 style: TextStyle(
-                  color: Colors.white70,
-                  fontWeight: FontWeight.bold,
+                  color: AppTheme.textMuted,
+                  fontWeight: FontWeight.w700,
                   fontSize: 11,
                   letterSpacing: 0.5,
                 ),
@@ -468,30 +522,31 @@ class _HeroRosterRow extends ConsumerWidget {
           : Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: badgeColor.withValues(alpha: 0.15),
+                color: badgeColor.withValues(alpha: 0.16),
                 borderRadius: BorderRadius.circular(6),
-                border: Border.all(color: badgeColor.withValues(alpha: 0.3)),
+                border: Border.all(color: badgeColor.withValues(alpha: 0.35)),
               ),
               child: Text(
                 badgeText,
                 style: TextStyle(
                   color: badgeColor,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800,
                   fontSize: 12,
                 ),
               ),
             ),
     );
 
-    final cardColor =
-        Theme.of(context).cardTheme.color ?? const Color(0xFF1C1C1E);
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 6),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 6),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppTheme.border, width: 1),
+      ),
+      clipBehavior: Clip.antiAlias,
       child: Material(
-        color: cardColor,
-        borderRadius: BorderRadius.circular(8),
-        clipBehavior: Clip.antiAlias,
+        color: Colors.transparent,
         child: isAssigned ? Opacity(opacity: 0.45, child: content) : content,
       ),
     );
@@ -513,17 +568,17 @@ class _CompositionDiagnosticsSection extends StatelessWidget {
 
     return diagnosticsAsync.when(
       data: (diagnostics) {
+        final isBalanced = diagnostics.isBalanced;
+        final statusColor = isBalanced ? AppTheme.agility : AppTheme.gold;
+
         return Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: diagnostics.isBalanced
-                ? Colors.green.withValues(alpha: 0.12)
-                : Colors.amber.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(8),
+            color: statusColor.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: diagnostics.isBalanced
-                  ? Colors.green.withValues(alpha: 0.3)
-                  : Colors.amber.withValues(alpha: 0.3),
+              color: statusColor.withValues(alpha: 0.3),
+              width: 1,
             ),
           ),
           child: Column(
@@ -532,24 +587,20 @@ class _CompositionDiagnosticsSection extends StatelessWidget {
               Row(
                 children: [
                   Icon(
-                    diagnostics.isBalanced
+                    isBalanced
                         ? Icons.check_circle_rounded
                         : Icons.warning_amber_rounded,
                     size: 16,
-                    color: diagnostics.isBalanced
-                        ? Colors.greenAccent
-                        : Colors.amberAccent,
+                    color: statusColor,
                   ),
                   const SizedBox(width: 6),
                   Text(
                     'Composition Diagnostics',
                     style: TextStyle(
                       fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w800,
                       letterSpacing: 0.5,
-                      color: diagnostics.isBalanced
-                          ? Colors.greenAccent
-                          : Colors.amberAccent,
+                      color: statusColor,
                     ),
                   ),
                 ],
@@ -576,18 +627,15 @@ class _CompositionDiagnosticsSection extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           '• ',
-                          style: TextStyle(
-                            color: Colors.amberAccent,
-                            fontSize: 12,
-                          ),
+                          style: TextStyle(color: statusColor, fontSize: 12),
                         ),
                         Expanded(
                           child: Text(
                             alert,
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: AppTheme.textPrimary,
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                             ),
@@ -602,13 +650,13 @@ class _CompositionDiagnosticsSection extends StatelessWidget {
                   children: [
                     Text(
                       '• ',
-                      style: TextStyle(color: Colors.greenAccent, fontSize: 12),
+                      style: TextStyle(color: AppTheme.agility, fontSize: 12),
                     ),
                     Expanded(
                       child: Text(
                         'Team composition is well-balanced',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: AppTheme.textPrimary,
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                         ),
@@ -642,18 +690,18 @@ class _RoleScoreChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = fulfilled ? Colors.greenAccent : Colors.white60;
+    final color = fulfilled ? AppTheme.agility : AppTheme.textSecondary;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
       decoration: BoxDecoration(
         color: fulfilled
-            ? Colors.green.withValues(alpha: 0.15)
-            : Colors.white.withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(4),
+            ? AppTheme.agility.withValues(alpha: 0.15)
+            : AppTheme.surfaceElevated,
+        borderRadius: BorderRadius.circular(6),
         border: Border.all(
           color: fulfilled
-              ? Colors.green.withValues(alpha: 0.4)
-              : Colors.white12,
+              ? AppTheme.agility.withValues(alpha: 0.4)
+              : AppTheme.border,
         ),
       ),
       child: Text(
@@ -661,7 +709,7 @@ class _RoleScoreChip extends StatelessWidget {
         style: TextStyle(
           color: color,
           fontSize: 11,
-          fontWeight: fulfilled ? FontWeight.bold : FontWeight.normal,
+          fontWeight: fulfilled ? FontWeight.w700 : FontWeight.w500,
         ),
       ),
     );

@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/theme/app_theme.dart';
+import 'latest_patch_card.dart';
 import 'patch_detail_screen.dart';
-import 'patch_index.dart';
 import 'patches_providers.dart';
 
 /// Formats a UTC date as "Month Day, Year" (e.g. "September 15, 2026").
@@ -39,7 +39,13 @@ class PatchesScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Patches')),
       body: patchesAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => const Center(
+          child: SizedBox(
+            width: 32,
+            height: 32,
+            child: CircularProgressIndicator(strokeWidth: 2.5),
+          ),
+        ),
         error: (error, stackTrace) =>
             const Center(child: Text("Couldn't load patches.")),
         data: (index) {
@@ -59,119 +65,93 @@ class PatchesScreen extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             children: [
               if (latest != null) ...[
-                _PinnedLatestPatchCard(
+                LatestPatchCard(
                   patch: latest,
                   onTap: () => context.push(
                     PatchDetailScreen.location(latest.patchNumber),
                   ),
                 ),
                 const SizedBox(height: 20),
-                Text(
-                  'PAST PATCHES',
-                  style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    color: Colors.white60,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.1,
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      width: 3,
+                      height: 14,
+                      decoration: BoxDecoration(
+                        color: AppTheme.textMuted,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      'PAST PATCHES',
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                        color: AppTheme.textPrimary,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.1,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 10),
               ],
               for (final patch in olderPatches)
-                Card(
+                Container(
                   margin: const EdgeInsets.only(bottom: 8),
-                  child: ListTile(
-                    title: Text(
-                      patch.patchName,
-                      style: const TextStyle(fontWeight: FontWeight.w600),
-                    ),
-                    subtitle: Text(
-                      formatPatchDate(patch.releaseDate),
-                      style: const TextStyle(color: Colors.white70),
-                    ),
-                    trailing: const Icon(
-                      Icons.chevron_right,
-                      color: Colors.white38,
-                    ),
-                    onTap: () => context.push(
-                      PatchDetailScreen.location(patch.patchNumber),
+                  decoration: BoxDecoration(
+                    color: AppTheme.surface,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppTheme.border, width: 1),
+                  ),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 2,
+                      ),
+                      leading: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: AppTheme.surfaceHighlight,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: const Icon(
+                          Icons.history_edu,
+                          size: 18,
+                          color: AppTheme.textSecondary,
+                        ),
+                      ),
+                      title: Text(
+                        patch.patchName,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: AppTheme.textPrimary,
+                          fontSize: 15,
+                        ),
+                      ),
+                      subtitle: Text(
+                        formatPatchDate(patch.releaseDate),
+                        style: const TextStyle(
+                          color: AppTheme.textSecondary,
+                          fontSize: 12,
+                        ),
+                      ),
+                      trailing: const Icon(
+                        Icons.chevron_right,
+                        color: AppTheme.textMuted,
+                        size: 20,
+                      ),
+                      onTap: () => context.push(
+                        PatchDetailScreen.location(patch.patchNumber),
+                      ),
                     ),
                   ),
                 ),
             ],
           );
         },
-      ),
-    );
-  }
-}
-
-class _PinnedLatestPatchCard extends StatelessWidget {
-  const _PinnedLatestPatchCard({required this.patch, required this.onTap});
-
-  final PatchSummary patch;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 3,
-      color: AppTheme.surface,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: const BorderSide(color: AppTheme.primary, width: 1.5),
-      ),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppTheme.primary.withValues(alpha: 0.2),
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: const Text(
-                      'Latest Patch',
-                      style: TextStyle(
-                        color: AppTheme.primary,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward,
-                    color: AppTheme.primary,
-                    size: 20,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              Text(
-                patch.patchName,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                formatPatchDate(patch.releaseDate),
-                style: const TextStyle(color: Colors.white70),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
