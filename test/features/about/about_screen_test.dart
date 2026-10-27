@@ -30,7 +30,14 @@ void main() {
     expect(find.textContaining('Valve datafeeds'), findsOneWidget);
     expect(find.textContaining('Steam CDN'), findsOneWidget);
     expect(find.textContaining('Steam news feed'), findsOneWidget);
-    expect(find.text('Last updated: 2026-10-21'), findsOneWidget);
+    expect(
+      find.textContaining('OpenDota public match aggregates'),
+      findsOneWidget,
+    );
+
+    final lastUpdatedFinder = find.text('Last updated: 2026-10-21');
+    await tester.scrollUntilVisible(lastUpdatedFinder, 100);
+    expect(lastUpdatedFinder, findsOneWidget);
   });
 
   testWidgets('falls back to bundled snapshot when no manifest exists', (
@@ -39,6 +46,8 @@ void main() {
     await tester.pumpWidget(_subject(null));
     await tester.pumpAndSettle();
 
-    expect(find.text('Last updated: bundled snapshot'), findsOneWidget);
+    final lastUpdatedFinder = find.text('Last updated: bundled snapshot');
+    await tester.scrollUntilVisible(lastUpdatedFinder, 100);
+    expect(lastUpdatedFinder, findsOneWidget);
   });
 }

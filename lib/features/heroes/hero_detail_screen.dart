@@ -13,6 +13,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/cdn/cdn_urls.dart';
 import '../../core/theme/app_theme.dart';
 import '../patches/hero_patch_deltas.dart';
+import '../patches/latest_patch_card.dart';
 import '../patches/patches_providers.dart';
 import 'ability_video_repository.dart';
 import 'hero_detail.dart';
@@ -1215,6 +1216,13 @@ class _PatchDeltaEntry extends StatelessWidget {
                 ),
               ),
             ),
+            if (delta.timestamp > 0) ...[
+              const SizedBox(width: 8),
+              Text(
+                formatPatchDate(delta.releaseDate),
+                style: text.bodySmall?.copyWith(color: Colors.white54),
+              ),
+            ],
           ],
         ),
         if (delta.stats.isNotEmpty) ...[

@@ -203,6 +203,18 @@ class AboutScreen extends ConsumerWidget {
                     style: TextStyle(color: AppTheme.textSecondary),
                   ),
                 ),
+                Divider(height: 1),
+                ListTile(
+                  leading: Icon(Icons.analytics, color: AppTheme.radiant),
+                  title: Text(
+                    'Draft matchup statistics',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+                  subtitle: Text(
+                    'OpenDota public match aggregates',
+                    style: TextStyle(color: AppTheme.textSecondary),
+                  ),
+                ),
               ],
             ),
           ),

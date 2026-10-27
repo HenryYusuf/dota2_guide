@@ -7,25 +7,6 @@ import 'latest_patch_card.dart';
 import 'patch_detail_screen.dart';
 import 'patches_providers.dart';
 
-/// Formats a UTC date as "Month Day, Year" (e.g. "September 15, 2026").
-String formatPatchDate(DateTime date) {
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  return '${months[date.month - 1]} ${date.day}, ${date.year}';
-}
-
 /// Patches tab: lists patches with the latest pinned at the top.
 class PatchesScreen extends ConsumerWidget {
   const PatchesScreen({super.key});

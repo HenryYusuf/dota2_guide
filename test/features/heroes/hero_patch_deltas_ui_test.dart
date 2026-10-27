@@ -260,6 +260,7 @@ void main() {
       );
       expect(find.text('Changelog'), findsOneWidget);
       expect(find.text('Patch 7.41f'), findsOneWidget);
+      expect(find.text('September 15, 2026'), findsOneWidget);
       expect(find.text('Patch 7.41d'), findsOneWidget);
 
       // Verify stat and talent notes appear
